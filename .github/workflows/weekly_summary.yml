@@ -30,7 +30,7 @@ jobs:
 
       - id: stage
         run: |
-          git add weekly_summaries/ power_rankings/
+          git add seasons/2026-27/weekly_summaries/ seasons/2026-27/power_rankings/
           if git diff --staged --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
@@ -46,8 +46,8 @@ jobs:
 
       - if: steps.stage.outputs.changed == 'true'
         run: |
-          SUMMARY_FILE=$(ls -v weekly_summaries/GW*_summary.md | tail -1)
-          RANKINGS_FILE=$(ls -v power_rankings/GW*_power_rankings.md | tail -1)
+          SUMMARY_FILE=$(ls -v seasons/2026-27/weekly_summaries/GW*_summary.md | tail -1)
+          RANKINGS_FILE=$(ls -v seasons/2026-27/power_rankings/GW*_power_rankings.md | tail -1)
           GW=$(basename "$SUMMARY_FILE" | grep -oE '[0-9]+')
 
           {

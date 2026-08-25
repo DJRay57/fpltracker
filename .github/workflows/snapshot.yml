@@ -25,6 +25,6 @@ jobs:
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add player_status_log.csv free_agents_log.csv
+          git add seasons/2026-27/player_status_log.csv seasons/2026-27/free_agents_log.csv
           git diff --staged --quiet || git commit -m "Daily snapshot $(date -u +%Y-%m-%d)"
           git push
