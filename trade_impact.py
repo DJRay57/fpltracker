@@ -67,11 +67,18 @@ def main():
     os.makedirs(SEASON_DIR, exist_ok=True)
     out_path = os.path.join(SEASON_DIR, "trade_impact.md")
 
+    trade_master_name, trade_master_stats = max(agg.items(), key=lambda kv: kv[1]["net"])
+    trade_master_net = trade_master_stats["net"]
+
     lines = ["# Trade Impact\n"]
     lines.append(
         "_Every accepted waiver move, ranked by points scored so far by the player "
         "brought in vs. the player dropped._\n"
     )
+    if trade_master_net > 0:
+        lines.append(f"**Trade Master: {trade_master_name}** (+{trade_master_net} pts net)\n")
+    else:
+        lines.append("**Trade Master:** no one's net positive yet.\n")
 
     lines.append("## Manager Leaderboard\n")
     lines.append("| Net | Manager | Key Moves |")
