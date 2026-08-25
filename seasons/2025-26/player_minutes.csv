@@ -1,0 +1,380 @@
+player_name,player_id,dropped_by,drop_gw,gameweek,minutes,total_points,was_home,team_h_score,team_a_score
+Foden,414,Greg,2,1,0,0,False,0,4
+Foden,414,Greg,2,2,15,1,True,0,2
+Foden,414,Greg,2,3,0,0,False,2,1
+Foden,414,Greg,2,4,90,12,True,3,0
+Foden,414,Greg,2,5,67,3,False,1,1
+Foden,414,Greg,2,6,90,1,True,5,1
+Foden,414,Greg,2,7,90,3,False,0,1
+Foden,414,Greg,2,8,90,3,True,2,0
+Foden,414,Greg,2,9,90,1,False,1,0
+Foden,414,Greg,2,10,89,4,True,3,1
+Foden,414,Greg,2,11,90,3,True,3,0
+Foden,414,Greg,2,12,86,2,False,2,1
+Foden,414,Greg,2,13,90,15,True,3,2
+Foden,414,Greg,2,14,90,17,False,4,5
+Foden,414,Greg,2,15,68,12,True,3,0
+Foden,414,Greg,2,16,90,11,False,0,3
+Foden,414,Greg,2,17,90,3,True,3,0
+Foden,414,Greg,2,18,90,2,False,1,2
+Foden,414,Greg,2,19,90,3,False,0,0
+Foden,414,Greg,2,20,90,2,True,1,1
+Foden,414,Greg,2,21,72,2,True,1,1
+Foden,414,Greg,2,22,45,1,False,2,0
+Foden,414,Greg,2,23,29,1,True,2,0
+Foden,414,Greg,2,24,2,1,False,2,2
+Foden,414,Greg,2,25,0,0,False,1,2
+Foden,414,Greg,2,26,70,5,True,3,0
+Foden,414,Greg,2,27,3,1,True,2,1
+Foden,414,Greg,2,28,0,0,False,0,1
+Foden,414,Greg,2,29,76,2,True,2,2
+Foden,414,Greg,2,30,16,1,False,1,1
+Foden,414,Greg,2,32,14,1,False,0,3
+Foden,414,Greg,2,33,5,1,True,2,1
+Foden,414,Greg,2,33,0,0,False,0,1
+Foden,414,Greg,2,35,16,1,False,3,3
+Foden,414,Greg,2,36,30,1,True,3,0
+Foden,414,Greg,2,36,81,12,True,3,0
+Foden,414,Greg,2,37,34,1,False,1,1
+Foden,414,Greg,2,38,90,2,True,1,2
+O.Dango,83,Greg,2,1,0,0,False,4,2
+O.Dango,83,Greg,2,2,83,13,True,1,0
+O.Dango,83,Greg,2,3,90,2,False,2,1
+O.Dango,83,Greg,2,4,17,1,True,2,2
+O.Dango,83,Greg,2,5,25,1,False,3,1
+O.Dango,83,Greg,2,6,74,2,True,3,1
+O.Dango,83,Greg,2,7,22,0,True,0,1
+O.Dango,83,Greg,2,8,75,3,False,0,2
+O.Dango,83,Greg,2,9,90,11,True,3,2
+O.Dango,83,Greg,2,10,74,2,False,2,0
+O.Dango,83,Greg,2,11,90,4,True,3,1
+O.Dango,83,Greg,2,12,64,5,False,2,1
+O.Dango,83,Greg,2,13,90,12,True,3,1
+O.Dango,83,Greg,2,14,90,2,False,2,0
+O.Dango,83,Greg,2,15,87,4,False,2,0
+O.Dango,83,Greg,2,16,90,2,True,1,1
+O.Dango,83,Greg,2,17,0,0,False,0,2
+O.Dango,83,Greg,2,18,0,0,True,4,1
+O.Dango,83,Greg,2,19,0,0,True,0,0
+O.Dango,83,Greg,2,20,0,0,False,2,4
+O.Dango,83,Greg,2,21,0,0,True,3,0
+O.Dango,83,Greg,2,22,13,1,False,2,0
+O.Dango,83,Greg,2,23,53,1,True,0,2
+O.Dango,83,Greg,2,24,59,8,False,0,1
+O.Dango,83,Greg,2,25,90,12,False,2,3
+O.Dango,83,Greg,2,26,90,1,True,1,1
+O.Dango,83,Greg,2,27,90,2,True,0,2
+O.Dango,83,Greg,2,28,71,5,False,3,4
+O.Dango,83,Greg,2,29,86,3,False,0,0
+O.Dango,83,Greg,2,30,84,8,True,2,2
+O.Dango,83,Greg,2,31,13,1,False,0,0
+O.Dango,83,Greg,2,32,90,2,True,2,2
+O.Dango,83,Greg,2,33,90,3,True,0,0
+O.Dango,83,Greg,2,34,90,1,False,2,1
+O.Dango,83,Greg,2,35,89,6,True,3,0
+O.Dango,83,Greg,2,36,22,1,False,3,0
+O.Dango,83,Greg,2,37,90,15,True,2,2
+O.Dango,83,Greg,2,38,90,2,False,1,1
+Ballard,531,Greg,3,1,90,17,True,3,0
+Ballard,531,Greg,3,2,8,1,False,2,0
+Ballard,531,Greg,3,3,0,0,True,2,1
+Ballard,531,Greg,3,4,0,0,False,0,0
+Ballard,531,Greg,3,5,53,1,True,1,1
+Ballard,531,Greg,3,6,15,1,False,0,1
+Ballard,531,Greg,3,7,53,3,False,2,0
+Ballard,531,Greg,3,8,90,10,True,2,0
+Ballard,531,Greg,3,9,90,2,False,1,2
+Ballard,531,Greg,3,10,90,4,True,1,1
+Ballard,531,Greg,3,11,90,10,True,2,2
+Ballard,531,Greg,3,12,90,1,False,1,0
+Ballard,531,Greg,3,13,90,3,True,3,2
+Ballard,531,Greg,3,14,90,4,False,1,1
+Ballard,531,Greg,3,15,90,1,False,3,0
+Ballard,531,Greg,3,16,90,8,True,1,0
+Ballard,531,Greg,3,17,90,9,False,0,0
+Ballard,531,Greg,3,18,0,0,True,1,1
+Ballard,531,Greg,3,19,0,0,True,0,0
+Ballard,531,Greg,3,20,24,1,False,1,1
+Ballard,531,Greg,3,21,78,1,False,3,0
+Ballard,531,Greg,3,22,90,4,True,2,1
+Ballard,531,Greg,3,23,90,2,False,3,1
+Ballard,531,Greg,3,24,90,9,True,3,0
+Ballard,531,Greg,3,25,90,1,False,3,0
+Ballard,531,Greg,3,26,90,4,True,0,1
+Ballard,531,Greg,3,27,90,4,True,1,3
+Ballard,531,Greg,3,28,90,4,False,1,1
+Ballard,531,Greg,3,29,90,9,False,0,1
+Ballard,531,Greg,3,30,63,4,True,0,1
+Ballard,531,Greg,3,31,0,0,False,1,2
+Ballard,531,Greg,3,32,0,0,True,1,0
+Ballard,531,Greg,3,33,27,0,False,4,3
+Ballard,531,Greg,3,34,90,0,True,0,5
+Ballard,531,Greg,3,35,23,-2,False,1,1
+Ballard,531,Greg,3,36,0,0,True,0,0
+Ballard,531,Greg,3,37,0,0,False,1,3
+Ballard,531,Greg,3,38,0,0,True,2,1
+N.Williams,508,Greg,7,1,90,1,True,3,1
+N.Williams,508,Greg,7,2,90,2,False,1,1
+N.Williams,508,Greg,7,3,90,1,True,0,3
+N.Williams,508,Greg,7,4,90,0,False,3,0
+N.Williams,508,Greg,7,5,90,10,False,1,1
+N.Williams,508,Greg,7,6,90,1,True,0,1
+N.Williams,508,Greg,7,7,90,0,False,2,0
+N.Williams,508,Greg,7,8,90,1,True,0,3
+N.Williams,508,Greg,7,9,90,1,False,2,0
+N.Williams,508,Greg,7,10,90,1,True,2,2
+N.Williams,508,Greg,7,11,90,2,True,3,1
+N.Williams,508,Greg,7,12,90,13,False,0,3
+N.Williams,508,Greg,7,13,90,1,True,0,2
+N.Williams,508,Greg,7,14,90,8,False,0,1
+N.Williams,508,Greg,7,15,90,1,False,3,0
+N.Williams,508,Greg,7,16,90,7,True,3,0
+N.Williams,508,Greg,7,17,90,2,False,1,0
+N.Williams,508,Greg,7,18,90,1,True,1,2
+N.Williams,508,Greg,7,19,90,1,True,0,2
+N.Williams,508,Greg,7,20,90,1,False,3,1
+N.Williams,508,Greg,7,21,90,4,False,1,2
+N.Williams,508,Greg,7,22,90,6,True,0,0
+N.Williams,508,Greg,7,23,90,8,False,0,2
+N.Williams,508,Greg,7,24,44,-2,True,1,1
+N.Williams,508,Greg,7,25,0,0,False,3,1
+N.Williams,508,Greg,7,26,90,8,True,0,0
+N.Williams,508,Greg,7,27,90,4,True,0,1
+N.Williams,508,Greg,7,28,55,0,False,2,1
+N.Williams,508,Greg,7,29,89,1,False,2,2
+N.Williams,508,Greg,7,30,90,5,True,0,0
+N.Williams,508,Greg,7,31,90,15,False,0,3
+N.Williams,508,Greg,7,32,90,11,True,1,1
+N.Williams,508,Greg,7,33,90,2,True,4,1
+N.Williams,508,Greg,7,34,90,5,False,0,5
+N.Williams,508,Greg,7,35,45,1,False,1,3
+N.Williams,508,Greg,7,36,90,2,True,1,1
+N.Williams,508,Greg,7,37,90,1,False,3,2
+N.Williams,508,Greg,7,38,90,2,True,1,1
+Cherki,417,Jason,4,1,17,6,False,0,4
+Cherki,417,Jason,4,2,53,1,True,0,2
+Cherki,417,Jason,4,3,0,0,False,2,1
+Cherki,417,Jason,4,4,0,0,True,3,0
+Cherki,417,Jason,4,5,0,0,False,1,1
+Cherki,417,Jason,4,6,0,0,True,5,1
+Cherki,417,Jason,4,7,0,0,False,0,1
+Cherki,417,Jason,4,8,5,1,True,2,0
+Cherki,417,Jason,4,9,14,1,False,1,0
+Cherki,417,Jason,4,10,72,10,True,3,1
+Cherki,417,Jason,4,11,52,1,True,3,0
+Cherki,417,Jason,4,12,76,7,False,2,1
+Cherki,417,Jason,4,13,15,4,True,3,2
+Cherki,417,Jason,4,14,8,0,False,4,5
+Cherki,417,Jason,4,15,81,12,True,3,0
+Cherki,417,Jason,4,16,90,6,False,0,3
+Cherki,417,Jason,4,17,66,4,True,3,0
+Cherki,417,Jason,4,18,88,13,False,1,2
+Cherki,417,Jason,4,19,90,5,False,0,0
+Cherki,417,Jason,4,20,90,4,True,1,1
+Cherki,417,Jason,4,21,17,1,True,1,1
+Cherki,417,Jason,4,22,45,1,False,2,0
+Cherki,417,Jason,4,23,72,3,True,2,0
+Cherki,417,Jason,4,24,68,8,False,2,2
+Cherki,417,Jason,4,25,29,1,False,1,2
+Cherki,417,Jason,4,26,19,1,True,3,0
+Cherki,417,Jason,4,27,32,1,True,2,1
+Cherki,417,Jason,4,28,87,3,False,0,1
+Cherki,417,Jason,4,29,81,5,True,2,2
+Cherki,417,Jason,4,30,30,1,False,1,1
+Cherki,417,Jason,4,32,75,10,False,0,3
+Cherki,417,Jason,4,33,84,10,True,2,1
+Cherki,417,Jason,4,33,90,3,False,0,1
+Cherki,417,Jason,4,35,90,5,False,3,3
+Cherki,417,Jason,4,36,59,1,True,3,0
+Cherki,417,Jason,4,36,11,4,True,3,0
+Cherki,417,Jason,4,37,34,1,False,1,1
+Cherki,417,Jason,4,38,32,1,True,1,2
+Schade,120,Jason,2,1,45,1,False,3,1
+Schade,120,Jason,2,2,78,3,True,1,0
+Schade,120,Jason,2,3,89,0,False,2,1
+Schade,120,Jason,2,4,90,7,True,2,2
+Schade,120,Jason,2,5,90,2,False,3,1
+Schade,120,Jason,2,6,90,4,True,3,1
+Schade,120,Jason,2,7,90,1,True,0,1
+Schade,120,Jason,2,8,90,6,False,0,2
+Schade,120,Jason,2,9,78,7,True,3,2
+Schade,120,Jason,2,10,90,1,False,2,0
+Schade,120,Jason,2,11,90,8,True,3,1
+Schade,120,Jason,2,12,90,2,False,2,1
+Schade,120,Jason,2,13,74,3,True,3,1
+Schade,120,Jason,2,14,59,1,False,2,0
+Schade,120,Jason,2,15,90,1,False,2,0
+Schade,120,Jason,2,16,0,0,True,1,1
+Schade,120,Jason,2,17,90,3,False,0,2
+Schade,120,Jason,2,18,90,20,True,4,1
+Schade,120,Jason,2,19,79,3,True,0,0
+Schade,120,Jason,2,20,63,6,False,2,4
+Schade,120,Jason,2,21,90,6,True,3,0
+Schade,120,Jason,2,22,81,1,False,2,0
+Schade,120,Jason,2,23,90,2,True,0,2
+Schade,120,Jason,2,24,41,-2,False,0,1
+Schade,120,Jason,2,25,0,0,False,2,3
+Schade,120,Jason,2,26,0,0,True,1,1
+Schade,120,Jason,2,27,45,1,True,0,2
+Schade,120,Jason,2,28,71,7,False,3,4
+Schade,120,Jason,2,29,90,3,False,0,0
+Schade,120,Jason,2,30,67,2,True,2,2
+Schade,120,Jason,2,31,76,3,False,0,0
+Schade,120,Jason,2,32,90,5,True,2,2
+Schade,120,Jason,2,33,90,3,True,0,0
+Schade,120,Jason,2,34,72,2,False,2,1
+Schade,120,Jason,2,35,79,3,True,3,0
+Schade,120,Jason,2,36,90,2,False,3,0
+Schade,120,Jason,2,37,27,1,True,2,2
+Schade,120,Jason,2,38,90,7,False,1,1
+Calvert-Lewin,691,Jason,14,2,0,0,False,5,0
+Calvert-Lewin,691,Jason,14,3,20,1,True,0,0
+Calvert-Lewin,691,Jason,14,4,68,2,False,1,0
+Calvert-Lewin,691,Jason,14,5,90,11,False,1,3
+Calvert-Lewin,691,Jason,14,6,90,2,True,2,2
+Calvert-Lewin,691,Jason,14,7,90,2,True,1,2
+Calvert-Lewin,691,Jason,14,8,90,2,False,2,0
+Calvert-Lewin,691,Jason,14,9,86,2,True,2,1
+Calvert-Lewin,691,Jason,14,10,64,2,False,3,0
+Calvert-Lewin,691,Jason,14,11,16,1,False,3,1
+Calvert-Lewin,691,Jason,14,12,19,1,True,1,2
+Calvert-Lewin,691,Jason,14,13,45,7,False,3,2
+Calvert-Lewin,691,Jason,14,14,85,9,True,3,1
+Calvert-Lewin,691,Jason,14,15,90,6,True,3,3
+Calvert-Lewin,691,Jason,14,16,90,9,False,1,1
+Calvert-Lewin,691,Jason,14,17,86,13,True,4,1
+Calvert-Lewin,691,Jason,14,18,84,8,False,1,1
+Calvert-Lewin,691,Jason,14,19,20,1,False,0,0
+Calvert-Lewin,691,Jason,14,20,90,2,True,1,1
+Calvert-Lewin,691,Jason,14,21,86,8,False,4,3
+Calvert-Lewin,691,Jason,14,22,90,2,True,1,0
+Calvert-Lewin,691,Jason,14,23,90,2,False,1,1
+Calvert-Lewin,691,Jason,14,24,84,2,True,0,4
+Calvert-Lewin,691,Jason,14,25,90,7,True,3,1
+Calvert-Lewin,691,Jason,14,26,0,0,False,2,2
+Calvert-Lewin,691,Jason,14,27,90,2,False,1,1
+Calvert-Lewin,691,Jason,14,28,90,2,True,0,1
+Calvert-Lewin,691,Jason,14,29,90,2,True,0,1
+Calvert-Lewin,691,Jason,14,30,90,0,False,0,0
+Calvert-Lewin,691,Jason,14,31,90,2,True,0,0
+Calvert-Lewin,691,Jason,14,32,90,2,False,1,2
+Calvert-Lewin,691,Jason,14,33,90,6,True,3,0
+Calvert-Lewin,691,Jason,14,33,90,2,False,2,2
+Calvert-Lewin,691,Jason,14,35,90,6,True,3,1
+Calvert-Lewin,691,Jason,14,36,90,7,False,1,1
+Calvert-Lewin,691,Jason,14,37,90,7,True,1,0
+Calvert-Lewin,691,Jason,14,38,68,2,False,3,0
+Szoboszlai,387,Jason,18,1,90,2,True,4,2
+Szoboszlai,387,Jason,18,2,90,2,False,2,3
+Szoboszlai,387,Jason,18,3,90,13,True,1,0
+Szoboszlai,387,Jason,18,4,90,3,False,0,1
+Szoboszlai,387,Jason,18,5,90,1,True,2,1
+Szoboszlai,387,Jason,18,6,90,5,False,2,1
+Szoboszlai,387,Jason,18,7,90,1,False,2,1
+Szoboszlai,387,Jason,18,8,90,4,True,1,2
+Szoboszlai,387,Jason,18,9,90,10,False,3,2
+Szoboszlai,387,Jason,18,10,90,2,True,2,0
+Szoboszlai,387,Jason,18,11,90,1,False,3,0
+Szoboszlai,387,Jason,18,12,90,2,True,0,3
+Szoboszlai,387,Jason,18,13,90,3,False,0,2
+Szoboszlai,387,Jason,18,14,90,2,True,1,1
+Szoboszlai,387,Jason,18,15,90,8,False,3,3
+Szoboszlai,387,Jason,18,16,82,3,True,2,0
+Szoboszlai,387,Jason,18,17,90,1,False,1,2
+Szoboszlai,387,Jason,18,18,0,0,True,2,1
+Szoboszlai,387,Jason,18,19,90,3,True,0,0
+Szoboszlai,387,Jason,18,20,90,2,False,2,2
+Szoboszlai,387,Jason,18,21,90,3,False,0,0
+Szoboszlai,387,Jason,18,22,90,0,True,1,1
+Szoboszlai,387,Jason,18,23,90,13,False,3,2
+Szoboszlai,387,Jason,18,24,90,5,True,4,1
+Szoboszlai,387,Jason,18,25,90,8,True,1,2
+Szoboszlai,387,Jason,18,26,0,0,False,0,1
+Szoboszlai,387,Jason,18,27,90,3,False,0,1
+Szoboszlai,387,Jason,18,28,90,4,True,5,2
+Szoboszlai,387,Jason,18,29,90,5,False,2,1
+Szoboszlai,387,Jason,18,30,90,11,True,1,1
+Szoboszlai,387,Jason,18,31,90,3,False,2,1
+Szoboszlai,387,Jason,18,32,90,5,True,2,0
+Szoboszlai,387,Jason,18,33,90,5,False,1,2
+Szoboszlai,387,Jason,18,34,90,1,True,3,1
+Szoboszlai,387,Jason,18,35,90,13,False,3,2
+Szoboszlai,387,Jason,18,36,90,2,True,1,1
+Szoboszlai,387,Jason,18,37,90,9,False,4,2
+Szoboszlai,387,Jason,18,38,90,2,True,1,1
+Igor Jesus,526,Piers,2,1,11,1,True,3,1
+Igor Jesus,526,Piers,2,2,2,1,False,1,1
+Igor Jesus,526,Piers,2,3,17,1,True,0,3
+Igor Jesus,526,Piers,2,4,0,0,False,3,0
+Igor Jesus,526,Piers,2,5,15,1,False,1,1
+Igor Jesus,526,Piers,2,6,30,1,True,0,1
+Igor Jesus,526,Piers,2,7,26,1,False,2,0
+Igor Jesus,526,Piers,2,8,45,1,True,0,3
+Igor Jesus,526,Piers,2,9,45,1,False,2,0
+Igor Jesus,526,Piers,2,10,77,5,True,2,2
+Igor Jesus,526,Piers,2,11,58,1,True,3,1
+Igor Jesus,526,Piers,2,12,85,2,False,0,3
+Igor Jesus,526,Piers,2,13,74,2,True,0,2
+Igor Jesus,526,Piers,2,14,90,9,False,0,1
+Igor Jesus,526,Piers,2,15,90,2,False,3,0
+Igor Jesus,526,Piers,2,16,84,2,True,3,0
+Igor Jesus,526,Piers,2,17,71,2,False,1,0
+Igor Jesus,526,Piers,2,18,90,5,True,1,2
+Igor Jesus,526,Piers,2,19,61,2,True,0,2
+Igor Jesus,526,Piers,2,20,82,2,False,3,1
+Igor Jesus,526,Piers,2,21,90,2,False,1,2
+Igor Jesus,526,Piers,2,22,75,2,True,0,0
+Igor Jesus,526,Piers,2,23,67,9,False,0,2
+Igor Jesus,526,Piers,2,24,69,2,True,1,1
+Igor Jesus,526,Piers,2,25,53,1,False,3,1
+Igor Jesus,526,Piers,2,26,19,1,True,0,0
+Igor Jesus,526,Piers,2,27,76,2,True,0,1
+Igor Jesus,526,Piers,2,28,82,5,False,2,1
+Igor Jesus,526,Piers,2,29,78,5,False,2,2
+Igor Jesus,526,Piers,2,30,62,2,True,0,0
+Igor Jesus,526,Piers,2,31,70,8,False,0,3
+Igor Jesus,526,Piers,2,32,88,2,True,1,1
+Igor Jesus,526,Piers,2,33,45,7,True,4,1
+Igor Jesus,526,Piers,2,34,66,14,False,0,5
+Igor Jesus,526,Piers,2,35,45,5,False,1,3
+Igor Jesus,526,Piers,2,36,82,1,True,1,1
+Igor Jesus,526,Piers,2,37,83,2,False,3,2
+Igor Jesus,526,Piers,2,38,90,2,True,1,1
+Tavernier,84,Piers,7,1,90,4,False,4,2
+Tavernier,84,Piers,7,2,77,11,True,1,0
+Tavernier,84,Piers,7,3,80,3,False,0,1
+Tavernier,84,Piers,7,4,85,2,True,2,1
+Tavernier,84,Piers,7,5,74,3,True,0,0
+Tavernier,84,Piers,7,6,30,1,False,2,2
+Tavernier,84,Piers,7,7,60,3,True,3,1
+Tavernier,84,Piers,7,8,90,5,False,3,3
+Tavernier,84,Piers,7,9,90,11,True,2,0
+Tavernier,84,Piers,7,10,90,2,False,3,1
+Tavernier,84,Piers,7,11,90,2,False,4,0
+Tavernier,84,Piers,7,12,90,7,True,2,2
+Tavernier,84,Piers,7,13,90,1,False,3,2
+Tavernier,84,Piers,7,14,30,1,True,0,1
+Tavernier,84,Piers,7,15,90,5,True,0,0
+Tavernier,84,Piers,7,16,90,12,False,4,4
+Tavernier,84,Piers,7,17,90,2,True,1,1
+Tavernier,84,Piers,7,18,90,1,False,4,1
+Tavernier,84,Piers,7,19,90,3,False,2,2
+Tavernier,84,Piers,7,20,90,2,True,2,3
+Tavernier,84,Piers,7,21,86,5,True,3,2
+Tavernier,84,Piers,7,22,70,8,False,1,1
+Tavernier,84,Piers,7,23,0,0,True,3,2
+Tavernier,84,Piers,7,24,0,0,False,0,2
+Tavernier,84,Piers,7,25,0,0,True,1,1
+Tavernier,84,Piers,7,26,0,0,False,1,2
+Tavernier,84,Piers,7,27,10,1,False,0,0
+Tavernier,84,Piers,7,28,80,7,True,1,1
+Tavernier,84,Piers,7,29,90,2,True,0,0
+Tavernier,84,Piers,7,30,90,3,False,0,0
+Tavernier,84,Piers,7,31,90,2,True,2,2
+Tavernier,84,Piers,7,32,90,2,False,1,2
+Tavernier,84,Piers,7,33,88,7,False,1,2
+Tavernier,84,Piers,7,33,90,2,True,2,2
+Tavernier,84,Piers,7,35,85,3,True,3,0
+Tavernier,84,Piers,7,36,77,2,False,0,1
+Tavernier,84,Piers,7,37,90,2,True,1,1
+Tavernier,84,Piers,7,38,90,10,False,1,1

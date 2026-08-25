@@ -1,0 +1,64 @@
+name: Weekly gameweek summary
+
+on:
+  schedule:
+    # Tuesdays 09:00 UTC -- gives the weekend's matches time to finalize
+    # (bonus points, provisional stats) before summarizing.
+    - cron: "0 9 * * 2"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  summary:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      - run: python weekly_summary.py
+      - run: python power_rankings.py
+
+      - id: stage
+        run: |
+          git add weekly_summaries/ power_rankings/
+          if git diff --staged --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - if: steps.stage.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "Weekly summary $(date -u +%Y-%m-%d)"
+          git push
+
+      - if: steps.stage.outputs.changed == 'true'
+        run: |
+          SUMMARY_FILE=$(ls -v weekly_summaries/GW*_summary.md | tail -1)
+          RANKINGS_FILE=$(ls -v power_rankings/GW*_power_rankings.md | tail -1)
+          GW=$(basename "$SUMMARY_FILE" | grep -oE '[0-9]+')
+
+          {
+            echo "@DJRay57 — new gameweek data is up."
+            echo
+            cat "$SUMMARY_FILE"
+            echo
+            cat "$RANKINGS_FILE"
+          } > issue_body.md
+
+          gh issue create \
+            --title "GW${GW} summary + power rankings" \
+            --body-file issue_body.md \
+            --assignee DJRay57
