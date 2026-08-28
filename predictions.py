@@ -17,8 +17,13 @@ Two predictive features, sharing the same per-manager projection:
 Methodology caveats (stated on the page, not hidden):
 - `ep_next` isn't exposed by the Draft API -- pulled from the classic
   FPL API instead (fantasy.premierleague.com), which shares element ids.
-- Projections assume each manager's starting XI stays as last set; a
-  trade or lineup change before the next deadline isn't accounted for.
+- Projections start from each manager's last known starting XI (from
+  target_gw, since next_gw's picks aren't queryable until its deadline
+  passes), then apply any accepted trade effective for next_gw as a
+  like-for-like swap in that same XI slot -- if the trade dropped a
+  bench player, or the manager rearranges their XI beyond what the
+  trade implies, that's not captured. A bench-only lineup shuffle with
+  no trade behind it also isn't accounted for.
 - SIGMA (assumed per-manager, per-gameweek scoring std-dev) is a fixed
   estimate, not fit to this league's own data -- there's only 1 GW of
   real variance to fit to right now, which isn't enough to trust.
@@ -105,12 +110,25 @@ def main():
         ]
         season_ppg[lid] = sum(own_scores) / len(own_scores) if own_scores else 0
 
+    # Accepted trades effective for next_gw, per entry_id: swap the dropped
+    # player for the acquired one if the dropped player was a starter --
+    # otherwise the last known (target_gw) starting XI is still the best
+    # available signal, since next_gw's own picks aren't queryable yet.
+    transactions = fetch(f"{DRAFT_BASE}/draft/league/{LEAGUE_ID}/transactions")["transactions"]
+    pending_swaps = {}
+    for t in transactions:
+        if t["result"] == "a" and t["event"] == next_gw:
+            pending_swaps.setdefault(t["entry"], []).append((t["element_out"], t["element_in"]))
+
     xi_projection = {}
     for lid, info in entry_lookup.items():
         picks = fetch(f"{DRAFT_BASE}/entry/{info['entry_id']}/event/{target_gw}")["picks"]
-        xi_projection[lid] = sum(
-            ep_next.get(p["element"], 0) for p in picks if p["position"] <= 11
-        )
+        starters = {p["element"] for p in picks if p["position"] <= 11}
+        for element_out, element_in in pending_swaps.get(info["entry_id"], []):
+            if element_out in starters:
+                starters.discard(element_out)
+                starters.add(element_in)
+        xi_projection[lid] = sum(ep_next.get(e, 0) for e in starters)
 
     projected_mean = {
         lid: 0.5 * season_ppg[lid] + 0.5 * xi_projection[lid]
