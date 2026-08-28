@@ -1,10 +1,10 @@
-name: Weekly gameweek summary
+name: Gameweek data refresh
 
 on:
   schedule:
-    # Tuesdays 09:00 UTC -- gives the weekend's matches time to finalize
-    # (bonus points, provisional stats) before summarizing.
-    - cron: "0 9 * * 2"
+    # Sun/Tue/Thu 09:00 UTC -- catches both weekend and midweek fixture rounds,
+    # and keeps trade/waiver data current between gameweeks too.
+    - cron: "0 9 * * 0,2,4"
   workflow_dispatch: {}
 
 permissions:
@@ -27,10 +27,13 @@ jobs:
 
       - run: python weekly_summary.py
       - run: python power_rankings.py
+      - run: python trade_impact.py
+      - run: python predictions.py
+      - run: python lineup_impact.py
 
       - id: stage
         run: |
-          git add seasons/2026-27/weekly_summaries/ seasons/2026-27/power_rankings/
+          git add seasons/2026-27/weekly_summaries/ seasons/2026-27/power_rankings/ seasons/2026-27/*.md
           if git diff --staged --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
@@ -56,6 +59,14 @@ jobs:
             cat "$SUMMARY_FILE"
             echo
             cat "$RANKINGS_FILE"
+            echo
+            [ -f seasons/2026-27/trade_impact.md ] && cat seasons/2026-27/trade_impact.md
+            echo
+            [ -f seasons/2026-27/h2h_predictions.md ] && cat seasons/2026-27/h2h_predictions.md
+            echo
+            [ -f seasons/2026-27/season_projection.md ] && cat seasons/2026-27/season_projection.md
+            echo
+            [ -f seasons/2026-27/lineup_impact.md ] && cat seasons/2026-27/lineup_impact.md
           } > issue_body.md
 
           gh issue create \
