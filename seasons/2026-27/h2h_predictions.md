@@ -1,11 +1,11 @@
-# Gameweek 2 Predictions
+# Gameweek 3 Predictions
 
 _Projected starting XI score = 50% season PPG so far + 50% current squad's summed `ep_next`. Win/draw/loss assumes actual scores land on a Normal curve around that projection with an assumed std-dev of 15 pts -- a rough guide, not a forecast, especially this early in the season._
 
 | Home | Proj | Win% | Draw% | Proj | Away | Win% |
 |---|---|---|---|---|---|---|
-| Jason Parmar | 47.0 | 42% | 2% | 51.0 | Sam Wright | 56% |
-| Ash Cross | 29.8 | 24% | 1% | 44.2 | Piers Black-Hawkins | 75% |
-| Greg Woodward | 20.0 | 33% | 2% | 28.9 | Alastair Michael | 65% |
-| Andrew Hutchinson | 33.0 | 57% | 2% | 28.8 | Ollie Felts | 41% |
-| chris Purnell | 47.5 | 77% | 1% | 31.0 | Elliott Bennett | 21% |
+| Ollie Felts | 36.8 | 20% | 1% | 54.0 | Jason Parmar | 79% |
+| Alastair Michael | 35.2 | 51% | 2% | 34.2 | Elliott Bennett | 47% |
+| Piers Black-Hawkins | 47.5 | 35% | 2% | 55.2 | chris Purnell | 63% |
+| Sam Wright | 45.0 | 58% | 2% | 40.0 | Andrew Hutchinson | 40% |
+| Ash Cross | 46.0 | 82% | 1% | 26.1 | Greg Woodward | 17% |
