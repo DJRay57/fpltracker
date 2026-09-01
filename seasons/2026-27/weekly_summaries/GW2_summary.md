@@ -1,5 +1,11 @@
 # Gameweek 2 Summary
 
+## Hero Stats
+
+**Top of the wire:** chris Purnell (Gary fishcake  fc) — 58 pts
+**Robbed blind:** Piers Black-Hawkins — 46 pts (5th-highest score of the week), lost anyway
+**Propping up the table:** Greg Woodward (Sxci_Scorpion_69) — 32 pts
+
 ## Standings
 
 | Rank | Manager | Team | Pts | For | Move |

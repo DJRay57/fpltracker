@@ -67,6 +67,14 @@ def read_csv_rows(filename):
         return list(csv.DictReader(f))
 
 
+def ordinal(n):
+    if 11 <= n % 100 <= 13:
+        suffix = "th"
+    else:
+        suffix = {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
+    return f"{n}{suffix}"
+
+
 def latest_and_baseline_dates(rows, days_back=7):
     """Most recent snapshot_date, and the closest available date >= (latest - days_back)."""
     dates = sorted(set(r["snapshot_date"] for r in rows))
@@ -142,6 +150,39 @@ def main():
     top_performers.sort(key=lambda x: x[0], reverse=True)
 
     # ------------------------------------------------------------------
+    # Hero stats -- computed here from actual target_gw match results,
+    # NOT from cumulative table position (a team can be bottom of the
+    # table from a bad earlier week and still have won this gameweek).
+    # ------------------------------------------------------------------
+    match_result = {}
+    for m in league_data["matches"]:
+        if m["event"] != target_gw:
+            continue
+        e1, e2 = m["league_entry_1"], m["league_entry_2"]
+        p1, p2 = m["league_entry_1_points"], m["league_entry_2_points"]
+        if p1 > p2:
+            match_result[e1], match_result[e2] = "win", "loss"
+        elif p2 > p1:
+            match_result[e2], match_result[e1] = "win", "loss"
+        else:
+            match_result[e1] = match_result[e2] = "draw"
+
+    score_rank = {lid: i + 1 for i, (_, _, _, lid) in enumerate(manager_scores)}
+
+    top_manager, top_team, top_score, _ = manager_scores[0]
+
+    losers = [(s, m, t, lid) for m, t, s, lid in manager_scores if match_result.get(lid) == "loss"]
+    if losers:
+        best_loss_score = max(s for s, m, t, lid in losers)
+        robbed = [(m, t, lid) for s, m, t, lid in losers if s == best_loss_score]
+    else:
+        robbed = []
+
+    last_lid = max(entry_ids, key=lambda lid: standings_now[lid])
+    last_info = entry_lookup[last_lid]
+    last_score = next(s for m, t, s, lid in manager_scores if lid == last_lid)
+
+    # ------------------------------------------------------------------
     # Waiver wire activity (free_agents_log.csv diff)
     # ------------------------------------------------------------------
     fa_rows = read_csv_rows(FREE_AGENTS_FILE)
@@ -182,6 +223,19 @@ def main():
     out_path = os.path.join(OUTPUT_DIR, f"GW{target_gw}_summary.md")
 
     lines = [f"# Gameweek {target_gw} Summary\n"]
+
+    lines.append("## Hero Stats\n")
+    lines.append(f"**Top of the wire:** {top_manager} ({top_team}) — {top_score} pts")
+    if robbed:
+        names = " & ".join(m for m, t, lid in robbed)
+        rank = score_rank[robbed[0][2]]
+        lines.append(
+            f"**Robbed blind:** {names} — {best_loss_score} pts "
+            f"({ordinal(rank)}-highest score of the week), lost anyway"
+        )
+    else:
+        lines.append("**Robbed blind:** no standout case this week — the losers all scored modestly too")
+    lines.append(f"**Propping up the table:** {last_info['manager']} ({last_info['team_name']}) — {last_score} pts\n")
 
     lines.append("## Standings\n")
     lines.append("| Rank | Manager | Team | Pts | For | Move |")
