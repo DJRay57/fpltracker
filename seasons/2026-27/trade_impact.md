@@ -54,3 +54,25 @@ _Every accepted waiver move, scored from the gameweek it took effect onward: poi
 | -5 | Ollie Felts | David (1) | Kostoulas (6) | GW1 |
 | -8 | Ash Cross | Bijol (1) | Mukiele (9) | GW2 |
 | -15 | Jason Parmar | Martinelli (0) | Xhaka (15) | GW1 |
+
+## Pending
+
+_Took effect from a gameweek that hasn't been played yet -- nothing to score until it has._
+
+| Manager | In | Out | Effective |
+|---|---|---|---|
+| chris Purnell | Davis | Hill | GW3 |
+| Sam Wright | Nketiah | Awoniyi | GW3 |
+| Alastair Michael | Gomez | Okafor | GW3 |
+| Alastair Michael | Hato | Shaw | GW3 |
+| Ash Cross | Dedić | Richards | GW3 |
+| Ash Cross | Suzuki | Sánchez | GW3 |
+| Jason Parmar | Goretzka | Madueke | GW3 |
+| Elliott Bennett | Mbaye | Buendía | GW3 |
+| Elliott Bennett | Ajer | Robertson | GW3 |
+| Greg Woodward | Barcola | Grealish | GW3 |
+| Greg Woodward | Ajayi | Alderete | GW3 |
+| Piers Black-Hawkins | Isidor | Welbeck | GW3 |
+| Piers Black-Hawkins | Mukiele | Justin | GW3 |
+| Piers Black-Hawkins | Tzolakis | Arrizabalaga | GW3 |
+| Piers Black-Hawkins | Kostoulas | Isidor | GW3 |
