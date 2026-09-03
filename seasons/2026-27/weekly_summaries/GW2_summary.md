@@ -48,68 +48,69 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Waiver Wire Activity (last 7 days)
 
-- **ADDED**: Xhaka → Jason Parmar
 - **ADDED**: Grealish → Greg Woodward
-- **ADDED**: McBurnie → Greg Woodward
-- **ADDED**: Justin → Piers Black-Hawkins
-- **ADDED**: Lewis-Potter → Andrew Hutchinson
-- **ADDED**: Bijol → Ash Cross
-- **ADDED**: Delap → Andrew Hutchinson
 - **ADDED**: Georginio → Alastair Michael
-- **ADDED**: De Cuyper → Jason Parmar
-- **ADDED**: Stach → Alastair Michael
-- **ADDED**: Silva → Sam Wright
-- **ADDED**: M.Sangaré → Elliott Bennett
-- **ADDED**: Hinshelwood → Ollie Felts
-- **ADDED**: Emersonn → Greg Woodward
-- **ADDED**: Kayode → Ollie Felts
-- **DROPPED**: Wood (was Andrew Hutchinson)
-- **DROPPED**: Maddison (was Andrew Hutchinson)
-- **DROPPED**: Watkins (was Greg Woodward)
-- **DROPPED**: Mukiele (was Ash Cross)
-- **DROPPED**: Kluivert (was Jason Parmar)
-- **DROPPED**: Struijk (was Jason Parmar)
-- **DROPPED**: Milenković (was Piers Black-Hawkins)
-- **DROPPED**: Hincapie (was Ollie Felts)
-- **DROPPED**: E.Le Fée (was Ollie Felts)
 - **DROPPED**: Beto (was Alastair Michael)
-- **DROPPED**: Tel (was Alastair Michael)
-- **DROPPED**: Yoro (was Sam Wright)
-- **DROPPED**: Tzimas (was Greg Woodward)
 - **DROPPED**: Ngumoha (was Greg Woodward)
-- **DROPPED**: Estêvão (was Elliott Bennett)
 
 ## Injury/Status Watch (last 7 days)
 
+- **Nwaneri**: a → u — Has joined Borussia Dortmund on loan for the rest of the season
+- **Fábio Vieira**: a → u — Has joined Hamburger SV permanently
 - **Nelson**: a → u — has departed the club as a free agent.
-- **Dennis**: a → u — Has joined MK Dons permanently
+- **G.Jesus**: a → u — Has joined FC Barcelona permanently
+- **Watkins**: a → u — Has joined Al Hilal permanently
 - **Jensen**: a → d — Unspecified injury - 75% chance of playing
+- **Igor**: a → u — Has joined Burnley permanently
 - **Hinshelwood**: a → d — Unspecified injury - 50% chance of playing
-- **Georginio**: a → d — Unspecified injury - 75% chance of playing
 - **Ayari**: a → d — Ankle injury - 75% chance of playing
+- **Sánchez**: a → u — Has joined Como on loan for the rest of the season
 - **M.Sarr**: a → u — Has joined Real Sociedad on loan for the rest of the season
-- **Kesler-Hayden**: a → i — Hamstring injury - Unknown return date
-- **Woolfenden**: a → i — Knee injury - Unknown return date
+- **D.Essugo**: a → u — Has joined RC Strasbourg on loan for the rest of the season
+- **Marc Guiu**: a → u — Has joined RB Leipzig permanently
+- **Dovin**: a → u — Has joined Leyton Orient on loan for the rest of the season
+- **Kitching**: a → u — Has joined Sheffield United on loan for the rest of the season
 - **Brau**: a → u — Has joined Academico de Viseu on loan for the rest of the season
+- **Borges Rodrigues**: a → u — Has joined Burton Albion on loan for the rest of the season
 - **Andrews**: a → u — Has joined Oxford United on loan for the rest of the season
-- **Chadi Riad**: d → i — Knee injury - Unknown return date
-- **Sarr**: d → i — Groin injury - Unknown return date
+- **Sosa**: a → u — Has joined FC Cologne on loan for the rest of the season
+- **Devenny**: a → u — Has joined Stoke City permanently
+- **Esse**: a → u — Has joined Millwall on loan for the rest of the season
 - **Mateta**: a → i — Hamstring injury - Expected back 11 Oct
+- **Patterson**: a → u — Has joined Torino permanently
+- **Aznou**: a → u — Has joined Malaga on loan for the rest of the season
+- **Beto**: a → u — Has joined Fiorentina permanently
+- **McNally**: a → u — Has joined York City on loan for the rest of the season
+- **Coyle**: a → d — Unspecified injury - 75% chance of playing
+- **Drameh**: a → u — Has joined Genoa permanently
+- **Jacob**: i → u — Has joined Newport County on loan until January
+- **Millar**: a → u — Has joined Birmingham on loan for the rest of the season
 - **Crooks**: a → d — Thigh injury - 75% chance of playing
+- **Ogbene**: a → u — Has joined Lincoln City on loan until January
 - **Emersonn**: a → d — Knee injury - 75% chance of playing
-- **Al-Hamadi**: a → u — Has joined Sheffield Wednesday on loan for the rest of the season
-- **Rodon**: a → d — Hamstring injury - 50% chance of playing
+- **Perri**: a → u — Has joined Torino on loan for the rest of the season
+- **Rodon**: a → i — Hamstring injury - Expected back 21 Nov
+- **Gnonto**: i → u — Has joined ACF Fiorentina on loan for the rest of the season
 - **Gruev**: i → d — Knee injury - 25% chance of playing
-- **Ramsay**: a → u — Has joined St Mirren on loan for the rest of the season
-- **Chiesa**: a → i — Back injury - Unknown return date
 - **C.Jones**: d → u — Has joined Internazionale permanently
-- **Matheus N.**: a → d — Unspecified injury - 75% chance of playing
+- **Bajcetic**: i → u — Has joined Celta Vigo permanently
+- **Elliott**: a → u — Has joined Valencia on loan for the rest of the season
 - **Sávio**: a → d — Muscular injury - 75% chance of playing
+- **Mukasa**: a → u — has joined West Ham on loan for the rest of the seaon.
+- **Monga**: a → u — Has joined Swansea City on loan for the rest of the season
 - **Amad**: d → i — Unspecified injury - Unknown return date
-- **Osula**: a → i — Foot injury - Unknown return date
-- **Bakwa**: a → u — Has joined Lille on loan for the rest of the season
+- **Collyer**: a → u — Has joined West Brom permanently
+- **Woltemade**: a → u — Has joined Juventus on loan for the rest of the season
+- **Osula**: d → i — Foot injury - Unknown return date
+- **Morato**: a → u — Has joined West Ham on loan for the rest of the season
+- **Abbott**: a → u — Has joined Southampton on loan for the rest of the season
+- **Bindon**: a → u — Has joined Charlton Athletic on loan for the rest of the season
+- **Hutchinson**: a → u — Has joined AC Milan on loan for the rest of the season
 - **I.Sangaré**: a → i — Calf injury - Unknown return date
-- **Maddison**: a → d — Shoulder injury - 75% chance of playing
+- **Souza**: a → u — Has joined FC Porto on loan for the rest of the season
+- **P.M.Sarr**: i → u — Has joined Juventus on loan for the rest of the season
+- **Scarlett**: a → u — Has joined Leyton Orient permanently
 - **Seelt**: a → u — Has joined Swansea City on loan for the rest of the season
 - **Diarra**: a → d — Unspecified injury - 75% chance of playing
+- **Humphreys**: a → u — Has joined Huddersfield Town on loan for the rest of the season
 - **De Fougerolles**: a → d — Unspecified injury - 75% chance of playing
