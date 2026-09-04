@@ -30,10 +30,16 @@ jobs:
       - run: python trade_impact.py
       - run: python predictions.py
       - run: python lineup_impact.py
+      - run: python dashboard_stats.py
+
+      # Rebuild the published dashboard from the refreshed data. Fonts come
+      # from the committed cache in site/.fonts, so this needs no network.
+      - run: python render_dashboard.py
 
       - id: stage
         run: |
-          git add seasons/2026-27/weekly_summaries/ seasons/2026-27/power_rankings/ seasons/2026-27/*.md
+          git add seasons/2026-27/weekly_summaries/ seasons/2026-27/power_rankings/ \
+                  seasons/2026-27/*.md seasons/2026-27/*.json site/index.html
           if git diff --staged --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
