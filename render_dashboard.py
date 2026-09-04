@@ -18,6 +18,8 @@ import os
 import re
 import urllib.request
 
+import burns
+
 SEASON = "2026-27"
 SEASON_DIR = os.path.join("seasons", SEASON)
 OUT_DIR = "site"
@@ -272,25 +274,39 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md):
     bench_label = (tied[0] if len(tied) == 1
                    else " &amp; ".join(esc(n.split()[-1]) for n in tied))
 
-    # Headline: the sharpest true story available -- someone who lost a match
-    # they'd have won with the points sat on their own bench.
-    headline = esc(robbed_line) if robbed_line else "Ten managers. One wire."
-    culprits = []
-    for r in stats["results"]:
-        loser = r["away"] if r["winner"] == "home" else (r["home"] if r["winner"] == "away" else None)
-        if not loser:
-            continue
-        m = by_name.get(loser)
-        if m and m["bench"] > r["margin"]:
-            culprits.append((m["bench"] - r["margin"], m, r["margin"]))
-    if culprits:
-        _, m, margin = max(culprits, key=lambda c: c[0])
-        worst = m["bench_detail"][0] if m["bench_detail"] else None
-        extra = f' &mdash; {esc(worst[0])} alone scored {worst[1]}' if worst and worst[1] else ""
-        headline = (
-            f'<b>{esc(m["manager"])}</b> left <b>{m["bench"]}</b> points on the bench '
-            f'and lost by {margin}{extra}.'
+    # The verdict carousel -- every line generated from the actual numbers.
+    verdicts = burns.generate(
+        stats,
+        find_table(trade_md, "Manager Leaderboard"),
+        find_table(trade_md, "Every Trade"),
+    )
+    slides, dots = [], []
+    for i, b in enumerate(verdicts):
+        on = " is-active" if i == 0 else ""
+        slides.append(
+            f'<p class="slide{on}" aria-hidden="{"false" if i == 0 else "true"}">'
+            f'<span class="slide-tag">{esc(b["tag"])}</span>{b["text"]}</p>'
         )
+        dots.append(
+            f'<button type="button" class="vdot{" on" if i == 0 else ""}" role="tab" '
+            f'aria-label="Verdict {i + 1} of {len(verdicts)}" '
+            f'aria-selected="{"true" if i == 0 else "false"}"></button>'
+        )
+
+    verdict = (
+        '<div class="verdict" data-carousel role="region" aria-roledescription="carousel" '
+        'aria-label="The verdict">'
+        '<div class="verdict-top"><span class="verdict-tag">The Verdict</span>'
+        '<span class="verdict-sub">No one is safe</span></div>'
+        f'<div class="slides">{"".join(slides)}</div>'
+        '<div class="verdict-ctl">'
+        '<button type="button" class="cbtn" data-prev aria-label="Previous verdict">'
+        '<span aria-hidden="true">&lsaquo;</span></button>'
+        f'<div class="dots" role="tablist">{"".join(dots)}</div>'
+        '<button type="button" class="cbtn" data-next aria-label="Next verdict">'
+        '<span aria-hidden="true">&rsaquo;</span></button>'
+        '<i class="tick" aria-hidden="true"></i></div></div>'
+    ) if verdicts else ""
 
     out.append(
         '<section class="hero" id="top"><div class="floodlight" aria-hidden="true"></div>'
@@ -299,7 +315,7 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md):
         f'<span class="sep"></span><span>Fantasy Draft &middot; {SEASON} Season</span></div>'
         f'<h1 class="hero-title"><span class="gw-word">Gameweek</span>'
         f'<span class="gw-num" data-count="{gw}">{gw:02d}</span></h1>'
-        f'<p class="hero-sub">{headline}</p>'
+        f'{verdict}'
         "</div></section>"
     )
 
@@ -733,6 +749,43 @@ a{color:inherit}
   text-shadow:0 0 60px rgba(212,255,46,.28)}
 .hero-sub{max-width:52ch;color:var(--fog);font-size:clamp(.95rem,1.6vw,1.1rem);margin:1.2rem 0 0}
 
+/* ---------- the verdict carousel ---------- */
+.verdict{margin-top:clamp(1.3rem,3vw,2rem);max-width:46rem}
+.verdict-top{display:flex;align-items:center;gap:.7rem;margin-bottom:.85rem}
+.verdict-tag{font-family:'Archivo Black',sans-serif;font-size:.66rem;letter-spacing:.16em;
+  text-transform:uppercase;background:var(--volt);color:#0a1207;padding:.2rem .5rem}
+.verdict-sub{font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--fog)}
+/* all slides share one grid cell: the box sizes to the tallest, so rotating
+   never shifts the layout underneath it */
+.slides{display:grid;align-items:start}
+.slide{grid-area:1/1;margin:0;font-size:clamp(1.02rem,2.1vw,1.45rem);line-height:1.4;
+  color:var(--chalk);opacity:0;visibility:hidden;transform:translateY(7px);
+  transition:opacity .42s ease,transform .42s cubic-bezier(.22,1,.36,1)}
+.slide.is-active{opacity:1;visibility:visible;transform:none}
+.slide b{color:var(--volt);font-weight:700}
+.slide em{font-style:italic;color:var(--chalk)}
+.slide-tag{display:inline-block;font-family:'Barlow',sans-serif;font-size:.6rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--fog);border:1px solid var(--line);
+  padding:.1rem .4rem;margin-right:.6rem;transform:translateY(-3px)}
+.verdict-ctl{display:flex;align-items:center;gap:.7rem;margin-top:1.1rem}
+.cbtn{width:30px;height:30px;flex:none;display:grid;place-items:center;background:transparent;
+  border:1px solid var(--line);color:var(--fog);font-size:1.1rem;line-height:1;cursor:pointer;
+  transition:color .18s,border-color .18s,background .18s}
+.cbtn:hover,.cbtn:focus-visible{color:var(--volt);border-color:var(--volt);background:var(--turf)}
+.dots{display:flex;gap:.4rem}
+.vdot{width:9px;height:9px;padding:0;border:0;background:var(--line);cursor:pointer;
+  transition:background .2s,transform .2s}
+.vdot:hover{background:var(--fog)}
+.vdot.on{background:var(--volt);transform:scale(1.25)}
+.tick{flex:1;max-width:200px;height:2px;background:var(--line);position:relative;
+  overflow:hidden;min-width:40px}
+.tick::after{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:var(--volt)}
+.verdict.running .tick::after{animation:tickfill 7.5s linear forwards}
+.verdict.paused .tick::after{animation-play-state:paused}
+@keyframes tickfill{to{width:100%}}
+@media(max-width:560px){.verdict-ctl{gap:.5rem}.tick{min-width:24px}}
+
 /* ---------- kpis ---------- */
 .kpis{padding-bottom:1rem}
 .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1px;
@@ -1004,6 +1057,54 @@ JS = r"""
   },{threshold:.18});
   document.querySelectorAll('.band,.kpis,.hero,.bars,.bench,.tornado').forEach(function(el){
     io.observe(el);
+  });
+
+  /* ---- the verdict carousel ---- */
+  document.querySelectorAll('[data-carousel]').forEach(function(car){
+    var slides = Array.prototype.slice.call(car.querySelectorAll('.slide'));
+    var dots   = Array.prototype.slice.call(car.querySelectorAll('.vdot'));
+    if(slides.length < 2) return;
+    var i = 0, timer = null, DWELL = 7500;
+
+    function show(n){
+      i = (n + slides.length) % slides.length;
+      slides.forEach(function(s,k){
+        s.classList.toggle('is-active', k === i);
+        s.setAttribute('aria-hidden', k === i ? 'false' : 'true');
+      });
+      dots.forEach(function(d,k){
+        d.classList.toggle('on', k === i);
+        d.setAttribute('aria-selected', k === i ? 'true' : 'false');
+      });
+      arm();
+    }
+    function arm(){
+      clearTimeout(timer);
+      if(reduce) return;                     /* no autoplay when motion is reduced */
+      car.classList.remove('running');
+      void car.offsetWidth;                  /* restart the progress bar animation */
+      car.classList.add('running');
+      timer = setTimeout(function(){ show(i+1); }, DWELL);
+    }
+    function pause(){ clearTimeout(timer); car.classList.add('paused'); }
+    function resume(){ car.classList.remove('paused'); if(!reduce) arm(); }
+
+    car.querySelector('[data-next]').addEventListener('click', function(){ show(i+1); });
+    car.querySelector('[data-prev]').addEventListener('click', function(){ show(i-1); });
+    dots.forEach(function(d,k){ d.addEventListener('click', function(){ show(k); }); });
+    car.addEventListener('mouseenter', pause);
+    car.addEventListener('mouseleave', resume);
+    car.addEventListener('focusin', pause);
+    car.addEventListener('focusout', function(e){
+      if(!car.contains(e.relatedTarget)) resume();
+    });
+    car.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight'){ show(i+1); } else if(e.key === 'ArrowLeft'){ show(i-1); }
+    });
+    document.addEventListener('visibilitychange', function(){
+      document.hidden ? pause() : resume();
+    });
+    arm();
   });
 
   if(!fine || reduce) return;
