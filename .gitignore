@@ -1,3 +1,4 @@
-snapshot_run.log
-__pycache__/
 *.pyc
+__pycache__/
+site/.fonts/
+snapshot_run.log
