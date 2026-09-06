@@ -248,7 +248,6 @@ def main():
                        for s in spare]
 
         to_play = 0
-        to_come = 0.0
         remaining_list = []
         yet = []
         for idx, p in enumerate(starters):
@@ -274,14 +273,24 @@ def main():
                     scoring_model.SUB_APPEARANCE * share,
                     entry["ep"] / 3.0 if entry["ep"] else 0.0,
                 )
-                to_come += entry["ep"] * entry["p_play"]
-                if entry["cover"]:
-                    to_come += (1 - entry["p_play"]) * entry["cover"][0][1]
-            else:
-                to_come += extra
+
             to_play += 1
             remaining_list.append(entry)
             yet.append(pinfo.get("name", "?"))
+
+        # The projection is the average of the simulated finishes, not a
+        # separate hand-rolled sum. Deriving both from one place means the
+        # headline number and the range around it can never disagree, and the
+        # range is the honest thing to publish beside a single figure.
+        if remaining_list:
+            spread = sorted(scoring_model.score_distribution(
+                pools, remaining_list, base=current_pts, sims=3000))
+            projection = statistics.mean(spread)
+            low, high = spread[len(spread) // 10], spread[len(spread) * 9 // 10]
+        else:
+            projection = float(current_pts)
+            low = high = current_pts
+        to_come = projection - current_pts
 
         managers[lid] = {
             "manager": info["manager"],
@@ -289,7 +298,9 @@ def main():
             "current": current_pts,
             "official": official.get(lid),
             "to_play": to_play,
-            "projection": round(current_pts + to_come, 1),
+            "projection": round(projection, 1),
+            "proj_low": low,
+            "proj_high": high,
             "remaining": remaining_list,
             "to_come": round(to_come, 1),
             "auto_subbed": subbed,
@@ -308,9 +319,11 @@ def main():
             "home": a["manager"], "home_team": a["team_name"],
             "home_current": a["current"], "home_to_play": a["to_play"],
             "home_projection": a["projection"], "home_to_come": a["to_come"],
+            "home_low": a["proj_low"], "home_high": a["proj_high"],
             "away": b["manager"], "away_team": b["team_name"],
             "away_current": b["current"], "away_to_play": b["to_play"],
             "away_projection": b["projection"], "away_to_come": b["to_come"],
+            "away_low": b["proj_low"], "away_high": b["proj_high"],
         })
 
     for m in managers.values():
