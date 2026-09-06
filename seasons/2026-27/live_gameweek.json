@@ -3,7 +3,7 @@
   "sigma": 2.54,
   "team_rho": 0.1,
   "gameweek": 3,
-  "updated_at": "2026-09-06T15:33:57+00:00",
+  "updated_at": "2026-09-06T15:42:35+00:00",
   "fixtures_total": 10,
   "fixtures_finished": 9,
   "fixtures_started": 10,
@@ -11,20 +11,20 @@
   "fixtures": [
     {
       "home_win": 2.0,
-      "draw": 5.0,
-      "away_win": 93.0,
+      "draw": 3.0,
+      "away_win": 95.0,
       "home": "Ollie Felts",
       "home_team": "FLASHMOB MRCAKEBREAD",
       "home_current": 33,
       "home_to_play": 2,
-      "home_projection": 35.6,
-      "home_to_come": 2.6,
+      "home_projection": 36.0,
+      "home_to_come": 3.0,
       "away": "Jason Parmar",
       "away_team": "Pain in Diaz",
       "away_current": 37,
       "away_to_play": 1,
-      "away_projection": 43.7,
-      "away_to_come": 6.7
+      "away_projection": 43.2,
+      "away_to_come": 6.2
     },
     {
       "home_win": 99.0,
@@ -34,48 +34,48 @@
       "home_team": "Shabbos Sly Boys",
       "home_current": 37,
       "home_to_play": 2,
-      "home_projection": 41.5,
-      "home_to_come": 4.5,
+      "home_projection": 41.4,
+      "home_to_come": 4.4,
       "away": "Elliott Bennett",
       "away_team": "You're Toast FC",
       "away_current": 23,
       "away_to_play": 1,
-      "away_projection": 29.7,
-      "away_to_come": 6.7
+      "away_projection": 29.2,
+      "away_to_come": 6.2
     },
     {
-      "home_win": 60.0,
-      "draw": 5.0,
-      "away_win": 35.0,
+      "home_win": 61.0,
+      "draw": 6.0,
+      "away_win": 33.0,
       "home": "Piers Black-Hawkins",
       "home_team": "Really Kick FC",
       "home_current": 28,
       "home_to_play": 2,
-      "home_projection": 38.7,
-      "home_to_come": 10.7,
+      "home_projection": 38.0,
+      "home_to_come": 10.0,
       "away": "chris Purnell",
       "away_team": "Gary fishcake  fc",
       "away_current": 21,
       "away_to_play": 3,
-      "away_projection": 36.4,
-      "away_to_come": 15.4
+      "away_projection": 35.5,
+      "away_to_come": 14.5
     },
     {
-      "home_win": 6.0,
-      "draw": 5.0,
-      "away_win": 89.0,
+      "home_win": 1.0,
+      "draw": 0.0,
+      "away_win": 99.0,
       "home": "Sam Wright",
       "home_team": "Middle court virgins",
       "home_current": 33,
       "home_to_play": 2,
-      "home_projection": 37.7,
-      "home_to_come": 4.7,
+      "home_projection": 37.4,
+      "home_to_come": 4.4,
       "away": "Andrew Hutchinson",
       "away_team": "Inter Da Pub",
-      "away_current": 39,
+      "away_current": 44,
       "away_to_play": 1,
-      "away_projection": 43.3,
-      "away_to_come": 4.3
+      "away_projection": 49.6,
+      "away_to_come": 5.6
     },
     {
       "home_win": 1.0,
@@ -85,25 +85,25 @@
       "home_team": "H\u00f8jbjerg\u2019s packet",
       "home_current": 27,
       "home_to_play": 2,
-      "home_projection": 30.4,
-      "home_to_come": 3.4,
+      "home_projection": 30.3,
+      "home_to_come": 3.3,
       "away": "Greg Woodward",
       "away_team": "Sxci_Scorpion_69",
       "away_current": 35,
       "away_to_play": 3,
-      "away_projection": 38.4,
-      "away_to_come": 3.4
+      "away_projection": 38.6,
+      "away_to_come": 3.6
     }
   ],
   "managers": [
     {
       "manager": "Andrew Hutchinson",
       "team_name": "Inter Da Pub",
-      "current": 39,
+      "current": 44,
       "official": 37,
       "to_play": 1,
-      "projection": 43.3,
-      "to_come": 4.3,
+      "projection": 49.6,
+      "to_come": 5.6,
       "auto_subbed": [
         "Frimpong"
       ],
@@ -117,8 +117,8 @@
       "current": 37,
       "official": 31,
       "to_play": 1,
-      "projection": 43.7,
-      "to_come": 6.7,
+      "projection": 43.2,
+      "to_come": 6.2,
       "auto_subbed": [],
       "yet_to_play": [
         "Jo\u00e3o Pedro"
@@ -130,8 +130,8 @@
       "current": 37,
       "official": 36,
       "to_play": 2,
-      "projection": 41.5,
-      "to_come": 4.5,
+      "projection": 41.4,
+      "to_come": 4.4,
       "auto_subbed": [
         "Georginio"
       ],
@@ -146,8 +146,8 @@
       "current": 35,
       "official": 26,
       "to_play": 3,
-      "projection": 38.4,
-      "to_come": 3.4,
+      "projection": 38.6,
+      "to_come": 3.6,
       "auto_subbed": [],
       "yet_to_play": [
         "Martinez",
@@ -161,8 +161,8 @@
       "current": 33,
       "official": 28,
       "to_play": 2,
-      "projection": 37.7,
-      "to_come": 4.7,
+      "projection": 37.4,
+      "to_come": 4.4,
       "auto_subbed": [
         "Matheus N."
       ],
@@ -177,8 +177,8 @@
       "current": 33,
       "official": 28,
       "to_play": 2,
-      "projection": 35.6,
-      "to_come": 2.6,
+      "projection": 36.0,
+      "to_come": 3.0,
       "auto_subbed": [
         "Hinshelwood"
       ],
@@ -193,8 +193,8 @@
       "current": 28,
       "official": 22,
       "to_play": 2,
-      "projection": 38.7,
-      "to_come": 10.7,
+      "projection": 38.0,
+      "to_come": 10.0,
       "auto_subbed": [],
       "yet_to_play": [
         "Calafiori",
@@ -207,8 +207,8 @@
       "current": 27,
       "official": 23,
       "to_play": 2,
-      "projection": 30.4,
-      "to_come": 3.4,
+      "projection": 30.3,
+      "to_come": 3.3,
       "auto_subbed": [
         "Wieffer"
       ],
@@ -223,8 +223,8 @@
       "current": 23,
       "official": 13,
       "to_play": 1,
-      "projection": 29.7,
-      "to_come": 6.7,
+      "projection": 29.2,
+      "to_come": 6.2,
       "auto_subbed": [
         "O'Reilly",
         "Mbaye"
@@ -239,8 +239,8 @@
       "current": 21,
       "official": 12,
       "to_play": 3,
-      "projection": 36.4,
-      "to_come": 15.4,
+      "projection": 35.5,
+      "to_come": 14.5,
       "auto_subbed": [],
       "yet_to_play": [
         "Havertz",

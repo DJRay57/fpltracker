@@ -4,9 +4,8 @@ Two predictive features, sharing the same per-manager projection:
 1. H2H WIN PROBABILITIES for the upcoming (not-yet-played) gameweek --
    projects each manager's starting XI score as the sum of `ep_next`
    (FPL's own fixture/form-adjusted "expected points next round") for
-   their most recently known starting XI, then converts the projected
-   score gap into a win/draw/loss probability assuming each team's
-   actual score is ~Normal(projected, SIGMA).
+   their most recently known starting XI, then simulates the gameweek
+   player by player -- see scoring_model.py -- to get win/draw/loss.
 
 2. SEASON FINISHING POSITION -- Monte Carlo simulation of the rest of
    the season (the full fixture list already exists for all 38 GWs in
@@ -24,9 +23,10 @@ Methodology caveats (stated on the page, not hidden):
   bench player, or the manager rearranges their XI beyond what the
   trade implies, that's not captured. A bench-only lineup shuffle with
   no trade behind it also isn't accounted for.
-- SIGMA (assumed per-manager, per-gameweek scoring std-dev) is a fixed
-  estimate, not fit to this league's own data -- there's only 1 GW of
-  real variance to fit to right now, which isn't enough to trust.
+- Scores are no longer assumed to be normal around a projection with a
+  hand-picked spread. Each starter is simulated from what comparable
+  players actually scored, so the spread comes out of the data instead
+  of being asserted, and the lumpy shape of real scoring survives.
 - The season simulation uses one static projected mean per manager for
   all remaining gameweeks (it does not re-project fixture-by-fixture
   for all 37 remaining weeks) -- treat it as a rough guide, not a
@@ -39,6 +39,9 @@ import requests
 import os
 import math
 import random
+import statistics
+
+import scoring_model
 
 DRAFT_BASE = "https://draft.premierleague.com/api"
 CLASSIC_BASE = "https://fantasy.premierleague.com/api"
@@ -46,8 +49,8 @@ LEAGUE_ID = 1139
 SEASON = "2026-27"
 SEASON_DIR = os.path.join("seasons", SEASON)
 
-SIGMA = 15.0          # assumed per-GW scoring std-dev, see caveats above
 N_TRIALS = 5000        # Monte Carlo trials for season projection
+SCORE_SIMS = 4000      # simulated gameweeks per manager, sampled from later
 
 
 def fetch(url):
@@ -120,20 +123,83 @@ def main():
         if t["result"] == "a" and t["event"] == next_gw:
             pending_swaps.setdefault(t["entry"], []).append((t["element_out"], t["element_in"]))
 
+    # Where a score might land, learned from every gameweek played so far
+    positions = {1: "GK", 2: "DEF", 3: "MID", 4: "FWD"}
+    player_info = {
+        el["id"]: {"type": positions[el["element_type"]], "team": el["team"]}
+        for el in draft_bootstrap["elements"]
+    }
+    pools = scoring_model.Pools(
+        scoring_model.gather_samples(fetch, DRAFT_BASE, ep_next, player_info, finished)
+    )
+    print(f"  comparable-player sample: {len(pools)} starter performances")
+
     xi_projection = {}
+    squads = {}
     for lid, info in entry_lookup.items():
         picks = fetch(f"{DRAFT_BASE}/entry/{info['entry_id']}/event/{target_gw}")["picks"]
-        starters = {p["element"] for p in picks if p["position"] <= 11}
+        starters = [p["element"] for p in picks if p["position"] <= 11]
+        bench = [p["element"] for p in sorted(
+            (x for x in picks if x["position"] > 11), key=lambda x: x["position"])]
         for element_out, element_in in pending_swaps.get(info["entry_id"], []):
             if element_out in starters:
-                starters.discard(element_out)
-                starters.add(element_in)
+                starters[starters.index(element_out)] = element_in
         xi_projection[lid] = sum(ep_next.get(e, 0) for e in starters)
+        squads[lid] = (
+            [(ep_next.get(e, 0), player_info.get(e, {}).get("type", "MID"), 1.0,
+              player_info.get(e, {}).get("team")) for e in starters],
+            # bench cover: each reserve's own expectation stands in for the
+            # points he'd bring if he were called upon
+            [round(ep_next.get(e, 0)) for e in bench[:3]],
+        )
 
     projected_mean = {
         lid: 0.5 * season_ppg[lid] + 0.5 * xi_projection[lid]
         for lid in entry_ids
     }
+
+    # How much a manager's weekly score actually moves about, measured as the
+    # spread around their own average. Simulating eleven players and adding
+    # them up gives a believable shape but too narrow a spread -- it can only
+    # see the correlations it was told about, and real gameweeks have more
+    # going on than clubs sharing clean sheets. So the simulation supplies the
+    # shape, and the league's own results supply the scale.
+    deviations = []
+    for lid in entry_ids:
+        own = [
+            m["league_entry_1_points"] if m["league_entry_1"] == lid else m["league_entry_2_points"]
+            for m in matches
+            if m["event"] <= target_gw and lid in (m["league_entry_1"], m["league_entry_2"])
+        ]
+        if len(own) >= 2:
+            mu = statistics.mean(own)
+            deviations += [x - mu for x in own]
+    observed = None
+    if len(deviations) >= 12:
+        # correct for the means having been estimated from the same few games
+        dof = max(1, len(deviations) - len(entry_ids))
+        observed = statistics.pstdev(deviations) * (len(deviations) / dof) ** 0.5
+
+    print("Simulating gameweek scores...")
+    distributions = {}
+    raw_spreads = []
+    for lid in entry_ids:
+        squad, cover = squads[lid]
+        raw = scoring_model.score_distribution(pools, squad, cover, sims=SCORE_SIMS)
+        mu = statistics.mean(raw)
+        sd = statistics.pstdev(raw) or 1.0
+        raw_spreads.append(sd)
+        # never narrow the simulation, only widen it towards what's been seen
+        scale = max(1.0, observed / sd) if observed else 1.0
+        distributions[lid] = [
+            max(0, round(projected_mean[lid] + (v - mu) * scale)) for v in raw
+        ]
+    sim_spread = statistics.mean(raw_spreads)
+    final_spread = statistics.mean(statistics.pstdev(d) for d in distributions.values())
+    print(f"  simulated spread {sim_spread:.1f} pts; observed in this league "
+          f"{observed:.1f} pts" if observed else f"  simulated spread {sim_spread:.1f} pts")
+    print(f"  using {final_spread:.1f} pts per manager per gameweek "
+          f"(the old code assumed a flat 15.0)")
 
     # ------------------------------------------------------------------
     # 1. H2H predictions for next_gw
@@ -145,17 +211,21 @@ def main():
         h2h_lines = [f"# Gameweek {next_gw} Predictions\n"]
         h2h_lines.append(
             f"_Projected starting XI score = 50% season PPG so far + 50% "
-            f"current squad's summed `ep_next`. Win/draw/loss assumes actual "
-            f"scores land on a Normal curve around that projection with an "
-            f"assumed std-dev of {SIGMA:.0f} pts -- a rough guide, not a forecast, "
-            f"especially this early in the season._\n"
+            f"current squad's summed `ep_next`. Win/draw/loss comes from "
+            f"simulating each side player by player, drawing on what "
+            f"comparable players actually scored across GW1-{target_gw} "
+            f"({len(pools)} performances), widened to match how much scores "
+            f"have actually moved about in this league ({final_spread:.0f} pts "
+            f"a week) -- a rough guide, not a forecast, especially this early "
+            f"in the season._\n"
         )
         h2h_lines.append("| Home | Proj | Win% | Draw% | Proj | Away | Win% |")
         h2h_lines.append("|---|---|---|---|---|---|---|")
         for m in next_matches:
             a, b = m["league_entry_1"], m["league_entry_2"]
             mean_a, mean_b = projected_mean[a], projected_mean[b]
-            p_a, p_draw, p_b = win_draw_loss(mean_a, mean_b, SIGMA)
+            p_a, p_draw, p_b = [x / 100 for x in
+                                scoring_model.odds_from(distributions[a], distributions[b])]
             h2h_lines.append(
                 f"| {entry_lookup[a]['manager']} | {mean_a:.1f} | {p_a*100:.0f}% | "
                 f"{p_draw*100:.0f}% | {mean_b:.1f} | {entry_lookup[b]['manager']} | {p_b*100:.0f}% |"
@@ -194,8 +264,8 @@ def main():
         pts_for = dict(base_pts_for)
         for m in remaining:
             e1, e2 = m["league_entry_1"], m["league_entry_2"]
-            s1 = max(0, round(random.gauss(projected_mean[e1], SIGMA)))
-            s2 = max(0, round(random.gauss(projected_mean[e2], SIGMA)))
+            s1 = random.choice(distributions[e1])
+            s2 = random.choice(distributions[e2])
             pts_for[e1] += s1
             pts_for[e2] += s2
             if s1 > s2:
@@ -213,9 +283,10 @@ def main():
     proj_lines = [f"# Season Projection (through GW{target_gw}, {N_TRIALS:,} simulations)\n"]
     proj_lines.append(
         "_Monte Carlo simulation: already-played gameweeks are exact, the rest of the "
-        "season is simulated from each manager's projected mean score (see methodology "
-        "note in the script). One static mean per manager for all remaining gameweeks -- "
-        "a rough guide, not a forecast._\n"
+        "season is simulated by drawing each manager's weekly score from a distribution "
+        "built out of their own squad, player by player, rather than a bell curve around "
+        "an average. One static squad per manager for all remaining gameweeks -- a rough "
+        "guide, not a forecast._\n"
     )
     proj_lines.append("| Manager | Most Likely Finish | Chance | Top 3 | Bottom 3 |")
     proj_lines.append("|---|---|---|---|---|")

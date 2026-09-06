@@ -26,6 +26,8 @@ from datetime import datetime, timezone
 
 import requests
 
+import scoring_model
+
 DRAFT = "https://draft.premierleague.com/api"
 CLASSIC = "https://fantasy.premierleague.com/api"
 LEAGUE_ID = 1139
@@ -73,84 +75,11 @@ def autosub(xi, bench, blanks):
                 spare.remove(slot)
                 break
     return sum(p[1] for p in xi), spare
+
+
 # Used only until enough of the gameweek has been played to measure the real
 # forecast error; close to what it typically settles at.
 FALLBACK_SIGMA = 2.6
-# Measured intra-club correlation of player residuals: teammates' returns
-# arrive together, so their scores are not independent.
-TEAM_RHO = 0.10
-
-
-def match_odds(side_a, side_b, sims=10000, rho=TEAM_RHO, seed=7):
-    """Win/draw/loss chance for A by simulating the players still to come.
-
-    Each remaining player is simulated in two stages, because a fantasy score
-    is really two questions: does he play, and how well?
-
-      - does he play: expected points are an unconditional average that
-        already discounts the chance of being left out, so a man on 0.3 is
-        mostly a prediction that he won't feature at all
-      - how well: if he does play, his score is drawn from what comparable
-        players -- similar expected points, same gameweek -- actually scored,
-        which keeps the lumpiness (nothing, nothing, nothing, a goal) that a
-        normal curve smooths away
-
-    If he doesn't play, the manager isn't left with a hole: the first bench
-    player who did play is substituted in, as the real game does at the end
-    of the gameweek. Ignoring that made the model harsher than the rules are.
-
-    Teammates share part of their draw, since clean sheets and team goals lift
-    a whole back line together.
-
-    `side_x` is (current, [(play_prob, pool, share, team), ...], bench_scores).
-    """
-    cur_a, rem_a, bench_a = side_a
-    cur_b, rem_b, bench_b = side_b
-    if not rem_a and not rem_b:          # nothing left to play: it's decided
-        if cur_a == cur_b:
-            return 0.0, 100.0, 0.0
-        return (100.0, 0.0, 0.0) if cur_a > cur_b else (0.0, 0.0, 100.0)
-
-    rng = random.Random(seed)            # fixed so identical data gives identical odds
-    wins = draws = 0
-
-    def total(cur, rem, bench, team_u):
-        out = float(cur)
-        subs = list(bench)
-        for play_prob, pool, share, team in rem:
-            if rng.random() >= play_prob:
-                # didn't feature: the autosub only applies to a player whose
-                # match never started, and only if there's cover who played
-                if share >= 0.99 and subs:
-                    out += subs.pop(0)
-                continue
-            if team not in team_u:
-                team_u[team] = rng.random()
-            u = rho * team_u[team] + (1.0 - rho) * rng.random()
-            out += pool[min(len(pool) - 1, int(u * len(pool)))] * share
-        return out
-
-    for _ in range(sims):
-        team_u = {}
-        sa = round(total(cur_a, rem_a, bench_a, team_u))
-        sb = round(total(cur_b, rem_b, bench_b, team_u))
-        if sa > sb:
-            wins += 1
-        elif sa == sb:
-            draws += 1
-
-    win = wins / sims * 100
-    draw = draws / sims * 100
-    loss = 100.0 - win - draw
-
-    # While anyone is still playing, don't claim certainty either way
-    win, loss = min(99.0, max(1.0, win)), min(99.0, max(1.0, loss))
-    draw = max(0.0, 100.0 - win - loss)
-
-    # round to whole percents that still add up to 100
-    vals = [round(win), round(draw), round(loss)]
-    vals[vals.index(max(vals))] += 100 - sum(vals)
-    return float(vals[0]), float(vals[1]), float(vals[2])
 
 
 def fetch(url):
@@ -238,49 +167,19 @@ def main():
         sigma = FALLBACK_SIGMA
     print(f"  per-player forecast error: {sigma:.2f} pts (n={len(residuals)})")
 
-    # What players on a similar expected score actually did this week. Spread
-    # grows with expectation -- a 6-point forward is far streakier than a
-    # 1-point defender -- so one shared error term for everyone won't do.
-    # Pools drawn from one gameweek are far too small and inherit that week's
-    # luck: twenty forwards, most of whom happened to return, and the model
-    # decides premium forwards score every week. Use every gameweek played so
-    # far, keyed on the player's current expectation as a quality proxy.
-    settled = [
+    # Comparable-player pools, shared with predictions.py so the live odds and
+    # the pre-gameweek ones are built the same way. Every gameweek played so
+    # far, not just this one: a single week's sample is far too small and
+    # inherits that week's luck.
+    played_before = [e["id"] for e in events["data"] if e["finished"] and e["id"] < gw]
+    samples = [
         (ep_this.get(pid, 0.0), points.get(pid, 0), players.get(pid, {}).get("type"))
         for pid, d in ((int(k), v) for k, v in live.items())
         if d["stats"].get("starts") and players.get(pid, {}).get("team") in settled_teams
     ]
-    for past in (e["id"] for e in events["data"] if e["finished"] and e["id"] < gw):
-        try:
-            hist = fetch(f"{DRAFT}/event/{past}/live")["elements"]
-        except requests.RequestException:
-            continue
-        settled += [
-            (ep_this.get(int(k), 0.0), d["stats"]["total_points"],
-             players.get(int(k), {}).get("type"))
-            for k, d in hist.items() if d["stats"].get("starts")
-        ]
-    print(f"  comparable-player sample: {len(settled)} starter performances")
-
-    def comparable(expected, pos, minimum=20):
-        """What players in the same position on a similar expectation scored.
-
-        Position matters as much as expectation: a defender's four points for
-        a clean sheet is a lump that no forward's distribution contains.
-        """
-        for pool in ([r for r in settled if r[2] == pos], settled):
-            width = 1.0
-            while width < 8:
-                got = sorted(p for e, p, _ in pool if abs(e - expected) <= width)
-                if len(got) >= minimum:
-                    return got
-                width += 0.5
-        return sorted(p for _, p, _ in settled) or [0]
-
-    def play_odds(expected, pool):
-        """P(features), set so the average matches the expected-points figure."""
-        avg = statistics.mean(pool) if pool else 0
-        return min(1.0, expected / avg) if avg > 0 else 0.0
+    samples += scoring_model.gather_samples(fetch, DRAFT, ep_this, players, played_before)
+    pools = scoring_model.Pools(samples)
+    print(f"  comparable-player sample: {len(pools)} starter performances")
 
     def remaining_for(pid):
         """(still_to_play, expected points to come, share of a match left)."""
@@ -358,11 +257,9 @@ def main():
             if pending:
                 to_play += 1
                 to_come += extra
-                exp_pts = ep_this.get(pid, 0.0)
-                pool = comparable(exp_pts, players.get(pid, {}).get("type"))
                 remaining_list.append(
-                    (play_odds(exp_pts, pool), pool, share,
-                     players.get(pid, {}).get("team")))
+                    (ep_this.get(pid, 0.0), players.get(pid, {}).get("type", "MID"),
+                     share, players.get(pid, {}).get("team")))
                 yet.append(players.get(pid, {}).get("name", "?"))
 
         managers[lid] = {
@@ -384,7 +281,8 @@ def main():
         if m["event"] != gw:
             continue
         a, b = managers[m["league_entry_1"]], managers[m["league_entry_2"]]
-        hw, dr, aw = match_odds(
+        hw, dr, aw = scoring_model.match_odds(
+            pools,
             (a["current"], a["remaining"], a["bench_cover"]),
             (b["current"], b["remaining"], b["bench_cover"]))
         fixtures_out.append({
@@ -404,7 +302,7 @@ def main():
     payload = {
         "state": state,
         "sigma": round(sigma, 2),
-        "team_rho": TEAM_RHO,
+        "team_rho": scoring_model.TEAM_RHO,
         "gameweek": gw,
         "updated_at": now.isoformat(),
         "fixtures_total": len(fixtures),

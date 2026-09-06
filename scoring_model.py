@@ -1,0 +1,180 @@
+"""How many points a player might score, and what that means for a tie.
+
+Both the live tracker and the pre-gameweek predictions need the same thing:
+turn a set of expected-points figures into a believable distribution of final
+scores. This is that shared machinery, so the two can't drift apart.
+
+The approach throughout is empirical rather than parametric. A fantasy score
+is not a normal curve around an average -- it is mostly small numbers with an
+occasional lump when someone returns, and the size of that lump depends on who
+you are. So instead of assuming a shape, a player is simulated in two stages:
+
+  does he feature   the expected-points figure is an unconditional average
+                    that already discounts the chance of being left out, so
+                    a man on 0.3 is largely a prediction that he won't play
+  how does he do    if he features, his score is drawn from what players in
+                    the same position on a similar expectation actually
+                    scored, across every gameweek played so far
+
+If he doesn't feature the manager isn't left with a hole -- the bench covers
+it, as the real rules do.
+
+Nothing here is fitted or tuned by hand; every number comes out of the season's
+own results.
+"""
+
+import random
+import statistics
+
+# Teammates' returns arrive together -- a clean sheet lifts a whole back line,
+# a goal flatters everyone involved. Measured across a completed gameweek by
+# grouping player residuals by club, this sits around 0.10.
+TEAM_RHO = 0.10
+MIN_POOL = 20
+
+
+class Pools:
+    """Actual scores of comparable players, keyed on position and expectation."""
+
+    def __init__(self, samples):
+        # samples: [(expected_points, points_scored, position)]
+        self.samples = [s for s in samples if s[2]]
+        self._cache = {}
+
+    def __len__(self):
+        return len(self.samples)
+
+    def comparable(self, expected, position, minimum=MIN_POOL):
+        """Scores of players in the same position on a similar expectation.
+
+        Position matters as much as expectation: four points for a clean sheet
+        is a lump that no forward's distribution contains, and a forward's
+        double-return tail is one no defender has.
+        """
+        key = (round(expected, 1), position)
+        if key in self._cache:
+            return self._cache[key]
+        for pool in ([s for s in self.samples if s[2] == position], self.samples):
+            width = 1.0
+            while width < 8:
+                got = sorted(p for e, p, _ in pool if abs(e - expected) <= width)
+                if len(got) >= minimum:
+                    self._cache[key] = got
+                    return got
+                width += 0.5
+        got = sorted(p for _, p, _ in self.samples) or [0]
+        self._cache[key] = got
+        return got
+
+    def play_prob(self, expected, pool):
+        """P(features), set so the average still matches the expected figure."""
+        avg = statistics.mean(pool) if pool else 0.0
+        return min(1.0, expected / avg) if avg > 0 else 0.0
+
+    def player(self, expected, position):
+        """(play_probability, score_pool) for one player."""
+        pool = self.comparable(expected, position)
+        return self.play_prob(expected, pool), pool
+
+
+def sample_total(rng, pools, base, squad, cover, team_u):
+    """One simulated final score for a side.
+
+    `squad` is [(expected, position, share_of_match_left, team)] for everyone
+    still to come; `cover` is the bench scores available to replace anyone who
+    doesn't feature, already in bench order.
+    """
+    total = float(base)
+    subs = list(cover)
+    for expected, position, share, team in squad:
+        play, pool = pools.player(expected, position)
+        if rng.random() >= play:
+            # only a player whose match never started can still be substituted
+            if share >= 0.99 and subs:
+                total += subs.pop(0)
+            continue
+        if team not in team_u:
+            team_u[team] = rng.random()
+        u = TEAM_RHO * team_u[team] + (1.0 - TEAM_RHO) * rng.random()
+        total += pool[min(len(pool) - 1, int(u * len(pool)))] * share
+    return total
+
+
+def score_distribution(pools, squad, cover=(), base=0, sims=4000, seed=11):
+    """A manager's plausible final scores, as a list to sample from later."""
+    rng = random.Random(seed)
+    return [round(sample_total(rng, pools, base, squad, cover, {})) for _ in range(sims)]
+
+
+def odds_from(dist_a, dist_b, rng=None, pairs=20000):
+    """Win / draw / loss for A, pairing draws from two score distributions."""
+    rng = rng or random.Random(5)
+    wins = draws = 0
+    for _ in range(pairs):
+        a, b = rng.choice(dist_a), rng.choice(dist_b)
+        if a > b:
+            wins += 1
+        elif a == b:
+            draws += 1
+    return _tidy(wins / pairs * 100, draws / pairs * 100,
+                 (pairs - wins - draws) / pairs * 100)
+
+
+def match_odds(pools, side_a, side_b, sims=10000, seed=7):
+    """Win / draw / loss for A, simulating both sides together.
+
+    Each side is (already_banked, squad_still_to_come, bench_cover). Both are
+    drawn in the same trial so that players sharing a club move together.
+    """
+    base_a, squad_a, cover_a = side_a
+    base_b, squad_b, cover_b = side_b
+    if not squad_a and not squad_b:            # nothing left: it's decided
+        if base_a == base_b:
+            return 0.0, 100.0, 0.0
+        return (100.0, 0.0, 0.0) if base_a > base_b else (0.0, 0.0, 100.0)
+
+    rng = random.Random(seed)                  # fixed: same data, same odds
+    wins = draws = 0
+    for _ in range(sims):
+        team_u = {}
+        a = round(sample_total(rng, pools, base_a, squad_a, cover_a, team_u))
+        b = round(sample_total(rng, pools, base_b, squad_b, cover_b, team_u))
+        if a > b:
+            wins += 1
+        elif a == b:
+            draws += 1
+
+    win, draw = wins / sims * 100, draws / sims * 100
+    loss = 100.0 - win - draw
+    # While anyone is still to play, don't claim certainty either way
+    win, loss = min(99.0, max(1.0, win)), min(99.0, max(1.0, loss))
+    return _tidy(win, max(0.0, 100.0 - win - loss), loss)
+
+
+def _tidy(win, draw, loss):
+    """Whole percents that still add up to 100."""
+    vals = [round(win), round(draw), round(loss)]
+    vals[vals.index(max(vals))] += 100 - sum(vals)
+    return float(vals[0]), float(vals[1]), float(vals[2])
+
+
+def gather_samples(fetch, draft_base, expectations, players, gameweeks):
+    """Every starter's score across the gameweeks given.
+
+    Keyed on the player's *current* expectation, which is a stable measure of
+    quality but not what was expected of him at the time -- a player whose form
+    has turned is bucketed by where he is now, not where he was.
+    """
+    out = []
+    for gw in gameweeks:
+        try:
+            elements = fetch(f"{draft_base}/event/{gw}/live")["elements"]
+        except Exception:  # noqa: BLE001 - a missing gameweek just means less data
+            continue
+        for key, data in elements.items():
+            if not data["stats"].get("starts"):
+                continue
+            pid = int(key)
+            out.append((expectations.get(pid, 0.0), data["stats"]["total_points"],
+                        players.get(pid, {}).get("type")))
+    return out
