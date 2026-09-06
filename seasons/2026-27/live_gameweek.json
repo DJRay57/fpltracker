@@ -1,0 +1,193 @@
+{
+  "state": "live",
+  "gameweek": 3,
+  "updated_at": "2026-09-06T14:43:04+00:00",
+  "fixtures_total": 10,
+  "fixtures_finished": 8,
+  "fixtures_started": 9,
+  "players_to_play": 30,
+  "fixtures": [
+    {
+      "home": "Ollie Felts",
+      "home_team": "FLASHMOB MRCAKEBREAD",
+      "home_current": 36,
+      "home_to_play": 3,
+      "home_projection": 39.1,
+      "away": "Jason Parmar",
+      "away_team": "Pain in Diaz",
+      "away_current": 36,
+      "away_to_play": 2,
+      "away_projection": 43.3
+    },
+    {
+      "home": "Alastair Michael",
+      "home_team": "Shabbos Sly Boys",
+      "home_current": 36,
+      "home_to_play": 3,
+      "home_projection": 41.0,
+      "away": "Elliott Bennett",
+      "away_team": "You're Toast FC",
+      "away_current": 24,
+      "away_to_play": 2,
+      "away_projection": 31.7
+    },
+    {
+      "home": "Piers Black-Hawkins",
+      "home_team": "Really Kick FC",
+      "home_current": 26,
+      "home_to_play": 4,
+      "home_projection": 37.8,
+      "away": "chris Purnell",
+      "away_team": "Gary fishcake  fc",
+      "away_current": 19,
+      "away_to_play": 5,
+      "away_projection": 35.5
+    },
+    {
+      "home": "Sam Wright",
+      "home_team": "Middle court virgins",
+      "home_current": 28,
+      "home_to_play": 2,
+      "home_projection": 32.7,
+      "away": "Andrew Hutchinson",
+      "away_team": "Inter Da Pub",
+      "away_current": 37,
+      "away_to_play": 1,
+      "away_projection": 41.3
+    },
+    {
+      "home": "Ash Cross",
+      "home_team": "H\u00f8jbjerg\u2019s packet",
+      "home_current": 26,
+      "home_to_play": 3,
+      "home_projection": 30.5,
+      "away": "Greg Woodward",
+      "away_team": "Sxci_Scorpion_69",
+      "away_current": 30,
+      "away_to_play": 5,
+      "away_projection": 33.9
+    }
+  ],
+  "managers": [
+    {
+      "manager": "Andrew Hutchinson",
+      "team_name": "Inter Da Pub",
+      "current": 37,
+      "to_play": 1,
+      "projection": 41.3,
+      "yet_to_play": [
+        "Rogers"
+      ]
+    },
+    {
+      "manager": "Jason Parmar",
+      "team_name": "Pain in Diaz",
+      "current": 36,
+      "to_play": 2,
+      "projection": 43.3,
+      "yet_to_play": [
+        "Cunha",
+        "Jo\u00e3o Pedro"
+      ]
+    },
+    {
+      "manager": "Ollie Felts",
+      "team_name": "FLASHMOB MRCAKEBREAD",
+      "current": 36,
+      "to_play": 3,
+      "projection": 39.1,
+      "yet_to_play": [
+        "Konsa",
+        "Lacroix",
+        "Lammens"
+      ]
+    },
+    {
+      "manager": "Alastair Michael",
+      "team_name": "Shabbos Sly Boys",
+      "current": 36,
+      "to_play": 3,
+      "projection": 41.0,
+      "yet_to_play": [
+        "Bruno G.",
+        "Gabriel",
+        "Pickford"
+      ]
+    },
+    {
+      "manager": "Greg Woodward",
+      "team_name": "Sxci_Scorpion_69",
+      "current": 30,
+      "to_play": 5,
+      "projection": 33.9,
+      "yet_to_play": [
+        "Martinez",
+        "Neto",
+        "Palestra",
+        "Tielemans",
+        "\u0160e\u0161ko"
+      ]
+    },
+    {
+      "manager": "Sam Wright",
+      "team_name": "Middle court virgins",
+      "current": 28,
+      "to_play": 2,
+      "projection": 32.7,
+      "yet_to_play": [
+        "Tzolis",
+        "\u00d8degaard"
+      ]
+    },
+    {
+      "manager": "Ash Cross",
+      "team_name": "H\u00f8jbjerg\u2019s packet",
+      "current": 26,
+      "to_play": 3,
+      "projection": 30.5,
+      "yet_to_play": [
+        "B.Fernandes",
+        "Eze",
+        "Rice"
+      ]
+    },
+    {
+      "manager": "Piers Black-Hawkins",
+      "team_name": "Really Kick FC",
+      "current": 26,
+      "to_play": 4,
+      "projection": 37.8,
+      "yet_to_play": [
+        "Barry",
+        "Calafiori",
+        "Dewsbury-Hall",
+        "Raya"
+      ]
+    },
+    {
+      "manager": "Elliott Bennett",
+      "team_name": "You're Toast FC",
+      "current": 24,
+      "to_play": 2,
+      "projection": 31.7,
+      "yet_to_play": [
+        "Mbeumo",
+        "Palmer"
+      ]
+    },
+    {
+      "manager": "chris Purnell",
+      "team_name": "Gary fishcake  fc",
+      "current": 19,
+      "to_play": 5,
+      "projection": 35.5,
+      "yet_to_play": [
+        "Havertz",
+        "Rashford",
+        "Saka",
+        "Tarkowski",
+        "White"
+      ]
+    }
+  ]
+}

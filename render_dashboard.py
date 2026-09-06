@@ -17,6 +17,13 @@ import json
 import os
 import re
 import urllib.request
+from datetime import datetime
+
+try:
+    from zoneinfo import ZoneInfo
+    LONDON = ZoneInfo("Europe/London")
+except Exception:  # noqa: BLE001 - fall back to UTC if tzdata is missing
+    LONDON = None
 
 import burns
 
@@ -242,8 +249,9 @@ def table_html(headers, rows, aligns=None, me_col=None):
     )
 
 
-def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md):
+def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md, live=None):
     gw = stats["gameweek"]
+    live_active = bool(live and live.get("state") in ("pre", "live", "done"))
     managers = stats["managers"]
     by_name = {m["manager"]: m for m in managers}
     heroes = hero_stats(summary_md)
@@ -257,7 +265,9 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md):
         '<nav class="jump">'
         '<a href="#results">Results</a><a href="#table">Table</a>'
         '<a href="#bench">Bench</a><a href="#truth">Truth</a>'
-        '<a href="#trades">Trades</a><a href="#ahead">Ahead</a></nav>'
+        f'<a href="#trades">Trades</a>'
+        f'<a href="#{"ahead" if live_active else "ahead"}">'
+        f'{"Live" if live_active else "Ahead"}</a></nav>'
         f'<span class="gw-chip">GW{gw:02d}</span>'
         "</div></header>"
     )
@@ -597,10 +607,65 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md):
         ["", "num", "num", ""], me_col="Manager",
     )
 
-    out.append(
-        f'<section class="band" id="ahead"><div class="wrap"><div class="head">'
-        f'<h2>Gameweek {gw + 1}</h2><span class="head-note">Projected</span></div>'
+    # While a gameweek is being played, the projections give way to the live
+    # scores; between gameweeks the pre-match predictions stand on their own.
+    if live_active:
+        lgw = live["gameweek"]
+        stamp = live.get("updated_at", "")
+        try:
+            when = datetime.fromisoformat(stamp).astimezone(LONDON)
+            when_txt = when.strftime("%H:%M") + " · " + when.strftime("%-d %b")
+        except (ValueError, TypeError):
+            when_txt = "just now"
+
+        label = {"pre": "Not started", "live": "In play", "done": "Awaiting final points"}[live["state"]]
+        dot = '<span class="live-dot"></span>' if live["state"] == "live" else ""
+
+        cards = []
+        for f in live["fixtures"]:
+            hc, ac = f["home_current"], f["away_current"]
+            hw = "win" if hc > ac else ("loss" if ac > hc else "draw")
+            aw = "win" if ac > hc else ("loss" if hc > ac else "draw")
+            cards.append(
+                f'<article class="fixture live-fix">'
+                f'<div class="side {hw}{" me" if ME in f["home"] else ""}">'
+                f'<span class="side-name">{esc(f["home"])}</span>'
+                f'<span class="side-team">proj {f["home_projection"]:.1f} &middot; '
+                f'{f["home_to_play"]} to play</span></div>'
+                f'<div class="score"><span class="s {hw}">{hc}</span>'
+                f'<span class="dash"></span><span class="s {aw}">{ac}</span>'
+                f'<span class="margin">{esc(label)}</span></div>'
+                f'<div class="side right {aw}{" me" if ME in f["away"] else ""}">'
+                f'<span class="side-name">{esc(f["away"])}</span>'
+                f'<span class="side-team">proj {f["away_projection"]:.1f} &middot; '
+                f'{f["away_to_play"]} to play</span></div>'
+                f"</article>"
+            )
+
+        out.append(
+            f'<section class="band" id="ahead"><div class="wrap"><div class="head">'
+            f'<h2>Gameweek {lgw} Live</h2>'
+            f'<span class="head-note stamp">{dot}Updated {esc(when_txt)}</span></div>'
+            f'<p class="lede">{live["fixtures_finished"]} of {live["fixtures_total"]} '
+            f'matches finished &middot; <b>{live["players_to_play"]}</b> players still to come. '
+            f'Projections add each remaining player\'s expected points, pro-rata for minutes '
+            f'left, so they converge on the real score as the day goes on. Live totals include '
+            f'provisional bonus and can run ahead of the official table.</p>'
+            f'<div class="fixtures">{"".join(cards)}</div></div></section>'
+        )
+
+    # If the live section already covers the next gameweek, its pre-match
+    # predictions are spent -- don't show the same fixtures twice.
+    live_covers_next = bool(live_active and live.get("gameweek") == gw + 1)
+    preds_block = (
+        f'<div class="head"><h2>Gameweek {gw + 1}</h2>'
+        f'<span class="head-note">Projected</span></div>'
         f'<div class="preds">{"".join(pred_cards)}</div>'
+    ) if not live_covers_next else ""
+
+    out.append(
+        f'<section class="band" id="{"season" if live_active else "ahead"}">'
+        f'<div class="wrap">{preds_block}'
         f'<h3 class="sub-head">Where it ends<span class="legend">'
         f'<i class="k top"></i>Top 3<i class="k mid"></i>Mid<i class="k bot"></i>Bottom 3</span></h3>'
         f'{proj_html}</div></section>'
@@ -815,6 +880,10 @@ a{color:inherit}
 .head h2{font-size:clamp(1.35rem,3.2vw,2rem)}
 .head-note,.legend{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
   color:var(--fog)}
+.stamp{display:inline-flex;align-items:center;gap:.45rem;color:var(--volt)}
+.stamp .live-dot{width:7px;height:7px}
+.live-fix .side-team{color:var(--fog);font-variant-numeric:tabular-nums}
+.live-fix .margin{color:var(--volt);opacity:.75}
 .lede{color:var(--fog);font-size:.92rem;max-width:70ch;margin:-.5rem 0 1.5rem}
 .lede b{color:var(--chalk)}
 .sub-head{font-size:.9rem;letter-spacing:.12em;color:var(--fog);margin:2.2rem 0 .9rem;
@@ -1198,10 +1267,19 @@ def main():
     proj_md = read("season_projection.md")
     lineup_md = read("lineup_impact.md")
 
+    live = None
+    live_path = os.path.join(SEASON_DIR, "live_gameweek.json")
+    if os.path.exists(live_path):
+        try:
+            with open(live_path) as f:
+                live = json.load(f)
+        except ValueError:
+            live = None
+
     print("Inlining fonts...")
     fonts = font_faces()
 
-    body = build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md)
+    body = build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md, live)
     html = (
         "<title>The Sharnbrook Wire</title>\n"
         f"<style>{fonts}\n{CSS}</style>\n"

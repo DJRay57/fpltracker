@@ -1,15 +1,20 @@
 name: Data refresh
 
-# One job, once a day. Projections move with team news and waivers settle
-# between gameweeks, so the whole pipeline -- including the dashboard and its
-# verdict lines -- is rebuilt on every pull, not just on match days.
+# Rebuilds the whole pipeline -- data, stats, verdict lines and the published
+# page -- on every run. Projections move with team news, waivers settle between
+# gameweeks, and during a gameweek the live scores move by the minute.
+#
+# Five times a day rather than once, spaced across the hours football is
+# actually played (10:00-22:00 BST). Overnight runs would only re-fetch a
+# frozen scoreboard, so there aren't any. Commits only happen when something
+# changed, so quiet days stay quiet.
 #
 # This replaces the old snapshot.yml + weekly_summary.yml pair, which both
 # fired at 09:00 and both pushed to main, racing each other three days a week.
 
 on:
   schedule:
-    - cron: "0 9 * * *"
+    - cron: "0 9,12,15,18,21 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -54,6 +59,10 @@ jobs:
       # with team news, and both feed the projections and the verdict lines.
       - run: python trade_impact.py
       - run: python predictions.py
+
+      # Whatever gameweek is being played right now: live scores, how many
+      # players each manager still has to come, and where it's heading
+      - run: python live_gameweek.py
 
       # Stats + the published page itself
       - run: python dashboard_stats.py
