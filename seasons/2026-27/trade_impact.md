@@ -76,3 +76,7 @@ _Took effect from a gameweek that hasn't been played yet -- nothing to score unt
 | Piers Black-Hawkins | Mukiele | Justin | GW3 |
 | Piers Black-Hawkins | Tzolakis | Arrizabalaga | GW3 |
 | Piers Black-Hawkins | Kostoulas | Isidor | GW3 |
+| Sam Wright | Maatsen | Mosquera | GW3 |
+| Sam Wright | Akpom | Nketiah | GW3 |
+| Sam Wright | Ndoye | Gravenberch | GW3 |
+| Ollie Felts | Abraham | Woltemade | GW3 |

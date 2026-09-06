@@ -63,11 +63,11 @@ _If everyone played everyone every week. Strips fixture luck out entirely; the S
 
 | GW2 pts | Player | Pos | Team |
 |---|---|---|---|
-| 11 | Dedić | DEF | NEW |
-| 10 | Tzolakis | GKP | HUL |
 | 9 | Egan | DEF | HUL |
-| 9 | Mukiele | DEF | SUN |
-| 9 | Ndoye | MID | NFO |
+| 8 | Isidor | FWD | SUN |
+| 8 | Thomas | DEF | COV |
+| 8 | Yalcouyé | MID | BHA |
+| 7 | Lavia | MID | CHE |
 
 ## Trophy Cabinet
 

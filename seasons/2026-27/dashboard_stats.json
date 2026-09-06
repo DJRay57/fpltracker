@@ -530,34 +530,34 @@
   ],
   "free_agents": [
     {
-      "name": "Dedi\u0107",
-      "position": "DEF",
-      "team": "NEW",
-      "gw_points": 11
-    },
-    {
-      "name": "Tzolakis",
-      "position": "GKP",
-      "team": "HUL",
-      "gw_points": 10
-    },
-    {
       "name": "Egan",
       "position": "DEF",
       "team": "HUL",
       "gw_points": 9
     },
     {
-      "name": "Mukiele",
-      "position": "DEF",
+      "name": "Isidor",
+      "position": "FWD",
       "team": "SUN",
-      "gw_points": 9
+      "gw_points": 8
     },
     {
-      "name": "Ndoye",
+      "name": "Thomas",
+      "position": "DEF",
+      "team": "COV",
+      "gw_points": 8
+    },
+    {
+      "name": "Yalcouy\u00e9",
       "position": "MID",
-      "team": "NFO",
-      "gw_points": 9
+      "team": "BHA",
+      "gw_points": 8
+    },
+    {
+      "name": "Lavia",
+      "position": "MID",
+      "team": "CHE",
+      "gw_points": 7
     }
   ]
 }
