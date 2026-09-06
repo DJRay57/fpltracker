@@ -901,6 +901,10 @@ a{color:inherit}
 .stamp .live-dot{width:7px;height:7px}
 .live-fix .side-team{color:var(--fog);font-variant-numeric:tabular-nums}
 .live-fix .side-team b{color:var(--chalk);font-weight:600}
+/* the "worth +x" tail pushes past a narrow screen, so let it wrap there */
+@media(max-width:560px){
+  .live-fix .side-team{white-space:normal;font-size:.68rem;line-height:1.3}
+}
 .live-fix .margin{color:var(--volt);opacity:.75}
 .live-band{border-top:0;padding-top:.5rem}
 .jump a.now{color:var(--volt);border-color:var(--volt)}

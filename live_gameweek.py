@@ -36,6 +36,43 @@ MD_OUT = os.path.join(SEASON_DIR, "live_gameweek.md")
 
 UA = {"User-Agent": "Mozilla/5.0"}
 FULL_MATCH = 90.0
+POSITION = {1: "GK", 2: "DEF", 3: "MID", 4: "FWD"}
+# A legal XI: one keeper, three at the back, two in midfield, one up top.
+MINIMUMS = {"GK": 1, "DEF": 3, "MID": 2, "FWD": 1}
+
+
+def legal(types):
+    counts = {k: 0 for k in MINIMUMS}
+    for t in types:
+        counts[t] += 1
+    return counts["GK"] == 1 and all(counts[k] >= v for k, v in MINIMUMS.items())
+
+
+def autosub(xi, bench, blanks):
+    """Apply the game's substitution rules to starters who didn't feature.
+
+    `xi` and `bench` are [(position_type, points, played)], bench in its stated
+    order. A blank is replaced by the first bench player who actually played
+    and whose introduction leaves a legal side; keepers only cover keepers.
+    Returns the resulting score and the bench slots still unused.
+    """
+    xi = list(xi)
+    spare = list(range(len(bench)))
+    for idx in blanks:
+        out_type = xi[idx][0]
+        for slot in list(spare):
+            cand = bench[slot]
+            if not cand[2]:                       # never came on: not eligible
+                continue
+            if (out_type == "GK") != (cand[0] == "GK"):
+                continue
+            trial = [p[0] for p in xi]
+            trial[idx] = cand[0]
+            if legal(trial):
+                xi[idx] = cand
+                spare.remove(slot)
+                break
+    return sum(p[1] for p in xi), spare
 # Used only until enough of the gameweek has been played to measure the real
 # forecast error; close to what it typically settles at.
 FALLBACK_SIGMA = 2.6
@@ -179,6 +216,7 @@ def main():
     for el in bootstrap["elements"]:
         players[el["id"]] = {
             "name": el["web_name"],
+            "type": POSITION[el["element_type"]],
             "team": classic_id.get(draft_team.get(el["team"], ""), el["team"]),
         }
 
@@ -203,21 +241,41 @@ def main():
     # What players on a similar expected score actually did this week. Spread
     # grows with expectation -- a 6-point forward is far streakier than a
     # 1-point defender -- so one shared error term for everyone won't do.
+    # Pools drawn from one gameweek are far too small and inherit that week's
+    # luck: twenty forwards, most of whom happened to return, and the model
+    # decides premium forwards score every week. Use every gameweek played so
+    # far, keyed on the player's current expectation as a quality proxy.
     settled = [
-        (ep_this.get(pid, 0.0), points.get(pid, 0))
+        (ep_this.get(pid, 0.0), points.get(pid, 0), players.get(pid, {}).get("type"))
         for pid, d in ((int(k), v) for k, v in live.items())
         if d["stats"].get("starts") and players.get(pid, {}).get("team") in settled_teams
     ]
+    for past in (e["id"] for e in events["data"] if e["finished"] and e["id"] < gw):
+        try:
+            hist = fetch(f"{DRAFT}/event/{past}/live")["elements"]
+        except requests.RequestException:
+            continue
+        settled += [
+            (ep_this.get(int(k), 0.0), d["stats"]["total_points"],
+             players.get(int(k), {}).get("type"))
+            for k, d in hist.items() if d["stats"].get("starts")
+        ]
+    print(f"  comparable-player sample: {len(settled)} starter performances")
 
-    def comparable(expected, minimum=25):
-        """Scores of starters with a similar expected-points figure."""
-        width = 1.0
-        while width < 8:
-            got = sorted(p for e, p in settled if abs(e - expected) <= width)
-            if len(got) >= minimum:
-                return got
-            width += 0.5
-        return sorted(p for _, p in settled) or [0]
+    def comparable(expected, pos, minimum=20):
+        """What players in the same position on a similar expectation scored.
+
+        Position matters as much as expectation: a defender's four points for
+        a clean sheet is a lump that no forward's distribution contains.
+        """
+        for pool in ([r for r in settled if r[2] == pos], settled):
+            width = 1.0
+            while width < 8:
+                got = sorted(p for e, p, _ in pool if abs(e - expected) <= width)
+                if len(got) >= minimum:
+                    return got
+                width += 0.5
+        return sorted(p for _, p, _ in settled) or [0]
 
     def play_odds(expected, pool):
         """P(features), set so the average matches the expected-points figure."""
@@ -260,36 +318,53 @@ def main():
         official[m["league_entry_2"]] = m["league_entry_2_points"]
 
     managers = {}
+    def minutes_of(pid):
+        return live.get(str(pid), {}).get("stats", {}).get("minutes", 0)
+
     for lid, info in entries.items():
         picks = fetch(f"{DRAFT}/entry/{info['entry_id']}/event/{gw}")["picks"]
-        bench_cover = [
-            points.get(p["element"], 0)
-            for p in sorted((x for x in picks if x["position"] > 11),
-                            key=lambda x: x["position"])
-            if live.get(str(p["element"]), {}).get("stats", {}).get("minutes", 0) > 0
-        ]
-        current_pts = 0
+        starters = sorted((p for p in picks if p["position"] <= 11),
+                          key=lambda x: x["position"])
+        bench = sorted((p for p in picks if p["position"] > 11),
+                       key=lambda x: x["position"])
+
+        xi = [(players.get(p["element"], {}).get("type", "MID"),
+               points.get(p["element"], 0) * p.get("multiplier", 1),
+               minutes_of(p["element"]) > 0) for p in starters]
+        bench_rows = [(players.get(p["element"], {}).get("type", "MID"),
+                       points.get(p["element"], 0),
+                       minutes_of(p["element"]) > 0) for p in bench]
+
+        # A starter on nought whose match is over is never going to play, so
+        # his replacement is already decided -- bank it now rather than leaving
+        # a hole in the score the manager will not actually finish with.
+        blanks = [i for i, p in enumerate(starters)
+                  if minutes_of(p["element"]) == 0
+                  and not remaining_for(p["element"])[0]]
+        current_pts, spare = autosub(xi, bench_rows, blanks)
+        subbed = [players.get(starters[i]["element"], {}).get("name", "?") for i in blanks]
+
+        # Cover left for anyone who still might not turn out, in bench order
+        cover = [bench_rows[s][1] for s in spare if bench_rows[s][2]
+                 and bench_rows[s][0] != "GK"]
+
         to_play = 0
         to_come = 0.0
-        share_left = 0.0
         remaining_list = []
         yet = []
-        for p in picks:
-            if p["position"] > 11:
-                continue
+        for p in starters:
             pid = p["element"]
-            current_pts += points.get(pid, 0) * p.get("multiplier", 1)
             pending, extra, share = remaining_for(pid)
             if pending:
                 to_play += 1
                 to_come += extra
-                share_left += share
                 exp_pts = ep_this.get(pid, 0.0)
-                pool = comparable(exp_pts)
+                pool = comparable(exp_pts, players.get(pid, {}).get("type"))
                 remaining_list.append(
                     (play_odds(exp_pts, pool), pool, share,
                      players.get(pid, {}).get("team")))
                 yet.append(players.get(pid, {}).get("name", "?"))
+
         managers[lid] = {
             "manager": info["manager"],
             "team_name": info["team_name"],
@@ -298,8 +373,9 @@ def main():
             "to_play": to_play,
             "projection": round(current_pts + to_come, 1),
             "remaining": remaining_list,
-            "bench_cover": bench_cover,
+            "bench_cover": cover,
             "to_come": round(to_come, 1),
+            "auto_subbed": subbed,
             "yet_to_play": sorted(yet),
         }
 
