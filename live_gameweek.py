@@ -44,45 +44,59 @@ FALLBACK_SIGMA = 2.6
 TEAM_RHO = 0.10
 
 
-def match_odds(side_a, side_b, resid, sims=10000, rho=TEAM_RHO, seed=7):
+def match_odds(side_a, side_b, sims=10000, rho=TEAM_RHO, seed=7):
     """Win/draw/loss chance for A by simulating the players still to come.
 
-    Rather than assume the remaining points are normally distributed, each
-    unplayed player is given their expected score plus a residual drawn from
-    what players actually did this gameweek -- so the lumpiness of real
-    scoring (nothing, nothing, nothing, a goal) survives into the tails.
+    Each remaining player is simulated in two stages, because a fantasy score
+    is really two questions: does he play, and how well?
 
-    Players from the same club share part of that draw, because their returns
-    genuinely arrive together: clean sheets and team goals lift a whole back
-    line at once. Treating them as independent understates how far a score
-    can swing.
+      - does he play: expected points are an unconditional average that
+        already discounts the chance of being left out, so a man on 0.3 is
+        mostly a prediction that he won't feature at all
+      - how well: if he does play, his score is drawn from what comparable
+        players -- similar expected points, same gameweek -- actually scored,
+        which keeps the lumpiness (nothing, nothing, nothing, a goal) that a
+        normal curve smooths away
 
-    `side_x` is (current_score, [(expected, share_of_match_left, team), ...]).
+    If he doesn't play, the manager isn't left with a hole: the first bench
+    player who did play is substituted in, as the real game does at the end
+    of the gameweek. Ignoring that made the model harsher than the rules are.
+
+    Teammates share part of their draw, since clean sheets and team goals lift
+    a whole back line together.
+
+    `side_x` is (current, [(play_prob, pool, share, team), ...], bench_scores).
     """
-    cur_a, rem_a = side_a
-    cur_b, rem_b = side_b
+    cur_a, rem_a, bench_a = side_a
+    cur_b, rem_b, bench_b = side_b
     if not rem_a and not rem_b:          # nothing left to play: it's decided
         if cur_a == cur_b:
             return 0.0, 100.0, 0.0
         return (100.0, 0.0, 0.0) if cur_a > cur_b else (0.0, 0.0, 100.0)
 
     rng = random.Random(seed)            # fixed so identical data gives identical odds
-    shared, solo = math.sqrt(rho), math.sqrt(1.0 - rho)
     wins = draws = 0
 
+    def total(cur, rem, bench, team_u):
+        out = float(cur)
+        subs = list(bench)
+        for play_prob, pool, share, team in rem:
+            if rng.random() >= play_prob:
+                # didn't feature: the autosub only applies to a player whose
+                # match never started, and only if there's cover who played
+                if share >= 0.99 and subs:
+                    out += subs.pop(0)
+                continue
+            if team not in team_u:
+                team_u[team] = rng.random()
+            u = rho * team_u[team] + (1.0 - rho) * rng.random()
+            out += pool[min(len(pool) - 1, int(u * len(pool)))] * share
+        return out
+
     for _ in range(sims):
-        team_draw = {}
-
-        def total(cur, rem):
-            out = float(cur)
-            for expected, share, team in rem:
-                if team not in team_draw:
-                    team_draw[team] = rng.choice(resid)
-                noise = shared * team_draw[team] + solo * rng.choice(resid)
-                out += (expected + noise) * share
-            return out
-
-        sa, sb = round(total(cur_a, rem_a)), round(total(cur_b, rem_b))
+        team_u = {}
+        sa = round(total(cur_a, rem_a, bench_a, team_u))
+        sb = round(total(cur_b, rem_b, bench_b, team_u))
         if sa > sb:
             wins += 1
         elif sa == sb:
@@ -184,8 +198,31 @@ def main():
         sigma = max(1.0, min(statistics.pstdev(residuals), 6.0))
     else:
         sigma = FALLBACK_SIGMA
-        residuals = [sigma * z for z in (-1.5, -0.9, -0.4, 0, 0.3, 0.7, 1.2, 2.0)]
     print(f"  per-player forecast error: {sigma:.2f} pts (n={len(residuals)})")
+
+    # What players on a similar expected score actually did this week. Spread
+    # grows with expectation -- a 6-point forward is far streakier than a
+    # 1-point defender -- so one shared error term for everyone won't do.
+    settled = [
+        (ep_this.get(pid, 0.0), points.get(pid, 0))
+        for pid, d in ((int(k), v) for k, v in live.items())
+        if d["stats"].get("starts") and players.get(pid, {}).get("team") in settled_teams
+    ]
+
+    def comparable(expected, minimum=25):
+        """Scores of starters with a similar expected-points figure."""
+        width = 1.0
+        while width < 8:
+            got = sorted(p for e, p in settled if abs(e - expected) <= width)
+            if len(got) >= minimum:
+                return got
+            width += 0.5
+        return sorted(p for _, p in settled) or [0]
+
+    def play_odds(expected, pool):
+        """P(features), set so the average matches the expected-points figure."""
+        avg = statistics.mean(pool) if pool else 0
+        return min(1.0, expected / avg) if avg > 0 else 0.0
 
     def remaining_for(pid):
         """(still_to_play, expected points to come, share of a match left)."""
@@ -225,6 +262,12 @@ def main():
     managers = {}
     for lid, info in entries.items():
         picks = fetch(f"{DRAFT}/entry/{info['entry_id']}/event/{gw}")["picks"]
+        bench_cover = [
+            points.get(p["element"], 0)
+            for p in sorted((x for x in picks if x["position"] > 11),
+                            key=lambda x: x["position"])
+            if live.get(str(p["element"]), {}).get("stats", {}).get("minutes", 0) > 0
+        ]
         current_pts = 0
         to_play = 0
         to_come = 0.0
@@ -241,8 +284,11 @@ def main():
                 to_play += 1
                 to_come += extra
                 share_left += share
+                exp_pts = ep_this.get(pid, 0.0)
+                pool = comparable(exp_pts)
                 remaining_list.append(
-                    (ep_this.get(pid, 0.0), share, players.get(pid, {}).get("team")))
+                    (play_odds(exp_pts, pool), pool, share,
+                     players.get(pid, {}).get("team")))
                 yet.append(players.get(pid, {}).get("name", "?"))
         managers[lid] = {
             "manager": info["manager"],
@@ -252,6 +298,8 @@ def main():
             "to_play": to_play,
             "projection": round(current_pts + to_come, 1),
             "remaining": remaining_list,
+            "bench_cover": bench_cover,
+            "to_come": round(to_come, 1),
             "yet_to_play": sorted(yet),
         }
 
@@ -260,20 +308,22 @@ def main():
         if m["event"] != gw:
             continue
         a, b = managers[m["league_entry_1"]], managers[m["league_entry_2"]]
-        hw, dr, aw = match_odds((a["current"], a["remaining"]),
-                                (b["current"], b["remaining"]), residuals)
+        hw, dr, aw = match_odds(
+            (a["current"], a["remaining"], a["bench_cover"]),
+            (b["current"], b["remaining"], b["bench_cover"]))
         fixtures_out.append({
             "home_win": hw, "draw": dr, "away_win": aw,
             "home": a["manager"], "home_team": a["team_name"],
             "home_current": a["current"], "home_to_play": a["to_play"],
-            "home_projection": a["projection"],
+            "home_projection": a["projection"], "home_to_come": a["to_come"],
             "away": b["manager"], "away_team": b["team_name"],
             "away_current": b["current"], "away_to_play": b["to_play"],
-            "away_projection": b["projection"],
+            "away_projection": b["projection"], "away_to_come": b["to_come"],
         })
 
     for m in managers.values():
         m.pop("remaining", None)
+        m.pop("bench_cover", None)
 
     payload = {
         "state": state,

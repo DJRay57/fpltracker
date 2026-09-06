@@ -389,14 +389,16 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md, li
                 f'<div class="side {hw}{" me" if ME in f["home"] else ""}">'
                 f'<span class="side-name">{esc(f["home"])}</span>'
                 f'<span class="side-team">proj {f["home_projection"]:.1f} &middot; '
-                f'{f["home_to_play"]} to play</span></div>'
+                f'{f["home_to_play"]} to play worth '
+                f'<b>+{f.get("home_to_come", 0):.1f}</b></span></div>'
                 f'<div class="score"><span class="s {hw}">{hc}</span>'
                 f'<span class="dash"></span><span class="s {aw}">{ac}</span>'
                 f'<span class="margin">{esc(label)}</span></div>'
                 f'<div class="side right {aw}{" me" if ME in f["away"] else ""}">'
                 f'<span class="side-name">{esc(f["away"])}</span>'
                 f'<span class="side-team">proj {f["away_projection"]:.1f} &middot; '
-                f'{f["away_to_play"]} to play</span></div></div>'
+                f'{f["away_to_play"]} to play worth '
+                f'<b>+{f.get("away_to_come", 0):.1f}</b></span></div></div>'
                 f'<div class="odds live-odds"><span class="odds-bar">'
                 f'<i style="--w:{hp:.0f}%"></i><u style="--w:{dp:.0f}%"></u>'
                 f'<em style="--w:{ap:.0f}%"></em></span>'
@@ -898,6 +900,7 @@ a{color:inherit}
 .stamp{display:inline-flex;align-items:center;gap:.45rem;color:var(--volt)}
 .stamp .live-dot{width:7px;height:7px}
 .live-fix .side-team{color:var(--fog);font-variant-numeric:tabular-nums}
+.live-fix .side-team b{color:var(--chalk);font-weight:600}
 .live-fix .margin{color:var(--volt);opacity:.75}
 .live-band{border-top:0;padding-top:.5rem}
 .jump a.now{color:var(--volt);border-color:var(--volt)}
