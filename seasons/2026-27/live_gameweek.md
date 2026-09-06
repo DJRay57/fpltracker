@@ -1,6 +1,6 @@
 # Live Gameweek — GW3
 
-_State: done. 10 of 10 matches finished. Updated 2026-09-06 18:35 UTC._
+_State: done. 10 of 10 matches finished. Updated 2026-09-06 19:47 UTC._
 
 _Scores are computed from the live player feed and include provisional bonus, so they can run ahead of the official league table, which settles later._
 
