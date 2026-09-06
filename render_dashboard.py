@@ -279,6 +279,9 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md):
         stats,
         find_table(trade_md, "Manager Leaderboard"),
         find_table(trade_md, "Every Trade"),
+        pending=find_table(trade_md, "Pending"),
+        projection=find_table(proj_md, ""),
+        predictions=find_rows(pred_md),
     )
     slides, dots = [], []
     for i, b in enumerate(verdicts):
