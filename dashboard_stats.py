@@ -26,12 +26,29 @@ POSITION_LABELS = {1: "GKP", 2: "DEF", 3: "MID", 4: "FWD"}
 FREE_AGENTS_FILE = os.path.join(SEASON_DIR, "free_agents_log.csv")
 JSON_OUT = os.path.join(SEASON_DIR, "dashboard_stats.json")
 MD_OUT = os.path.join(SEASON_DIR, "dashboard_stats.md")
+CACHE_OUT = os.path.join(SEASON_DIR, "gw_points_cache.json")
 
 
 def fetch(url):
     r = requests.get(url, timeout=15)
     r.raise_for_status()
     return r.json()
+
+
+def load_cache():
+    """Per-gameweek XI/bench totals from previous runs.
+
+    This script runs daily, and a finished gameweek needs 1 live fetch plus
+    10 squad fetches. Without a cache that's ~420 requests a day by May, all
+    of it re-deriving numbers that can no longer change.
+    """
+    if not os.path.exists(CACHE_OUT):
+        return {}
+    try:
+        with open(CACHE_OUT) as f:
+            return json.load(f).get("gameweeks", {})
+    except (ValueError, OSError):
+        return {}
 
 
 def main():
@@ -68,18 +85,27 @@ def main():
     # Per-gameweek starting XI + bench totals for every manager.
     # One live fetch per gameweek, one picks fetch per manager per gameweek.
     # ------------------------------------------------------------------
+    cache = load_cache()
     live_points = {}
-    for gw in finished:
-        live = fetch(f"{BASE}/event/{gw}/live")
-        live_points[gw] = {
-            int(eid): d["stats"]["total_points"] for eid, d in live["elements"].items()
-        }
-
     xi_score = defaultdict(dict)      # gw -> lid -> starting XI points
     bench_score = defaultdict(dict)   # gw -> lid -> bench points
     bench_detail = {}                 # lid -> [(player, pts)] for target_gw
 
     for gw in finished:
+        # The newest finished gameweek can still be adjusted (bonus points,
+        # corrections), so only older gameweeks are read from the cache.
+        cached = cache.get(str(gw)) if gw != target_gw else None
+        if cached:
+            xi_score[gw] = {int(k): v for k, v in cached["xi"].items()}
+            bench_score[gw] = {int(k): v for k, v in cached["bench"].items()}
+            print(f"  GW{gw}: from cache")
+            continue
+
+        print(f"  GW{gw}: fetching")
+        live = fetch(f"{BASE}/event/{gw}/live")
+        live_points[gw] = {
+            int(eid): d["stats"]["total_points"] for eid, d in live["elements"].items()
+        }
         for lid, info in entry_lookup.items():
             picks = fetch(f"{BASE}/entry/{info['entry_id']}/event/{gw}")["picks"]
             starters = bench = 0
@@ -95,6 +121,17 @@ def main():
             bench_score[gw][lid] = bench
             if gw == target_gw:
                 bench_detail[lid] = sorted(detail, key=lambda x: x[1], reverse=True)
+
+    # The waiver-wire burn needs this gameweek's player scores; only fetched
+    # above when target_gw wasn't cached, which it never is.
+    target_points = live_points.get(target_gw, {})
+
+    with open(CACHE_OUT, "w") as f:
+        json.dump({"gameweeks": {
+            str(gw): {"xi": {str(k): v for k, v in xi_score[gw].items()},
+                      "bench": {str(k): v for k, v in bench_score[gw].items()}}
+            for gw in finished
+        }}, f, indent=2)
 
     # ------------------------------------------------------------------
     # Head-to-head results, form guide, trophy counters
@@ -203,7 +240,7 @@ def main():
                 if r["snapshot_date"] != latest_date or r["owner_entry_id"]:
                     continue
                 pid = int(r["player_id"])
-                pts = live_points[target_gw].get(pid, 0)
+                pts = target_points.get(pid, 0)
                 info = player_lookup.get(pid, {})
                 free_agents.append({
                     "name": r["player_name"],

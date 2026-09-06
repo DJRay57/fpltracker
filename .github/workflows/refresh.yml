@@ -1,0 +1,109 @@
+name: Data refresh
+
+# One job, once a day. Projections move with team news and waivers settle
+# between gameweeks, so the whole pipeline -- including the dashboard and its
+# verdict lines -- is rebuilt on every pull, not just on match days.
+#
+# This replaces the old snapshot.yml + weekly_summary.yml pair, which both
+# fired at 09:00 and both pushed to main, racing each other three days a week.
+
+on:
+  schedule:
+    - cron: "0 9 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      # Remember which gameweek we had before the run, so the issue below
+      # only fires when a new one actually lands.
+      - id: before
+        run: |
+          f=$(ls -v seasons/2026-27/weekly_summaries/GW*_summary.md 2>/dev/null | tail -1)
+          gw=$([ -n "$f" ] && basename "$f" | grep -oE '[0-9]+' | head -1)
+          echo "gw=${gw:-0}" >> "$GITHUB_OUTPUT"
+
+      # Point-in-time logs the API doesn't retain (injuries, ownership)
+      - run: python weekly_snapshot.py
+
+      # Gameweek recaps -- idempotent between gameweeks
+      - run: python weekly_summary.py
+      - run: python power_rankings.py
+      - run: python lineup_impact.py
+
+      # These genuinely move day to day: waivers settle, ep_next shifts
+      # with team news, and both feed the projections and the verdict lines.
+      - run: python trade_impact.py
+      - run: python predictions.py
+
+      # Stats + the published page itself
+      - run: python dashboard_stats.py
+      - run: python render_dashboard.py
+
+      - id: stage
+        run: |
+          git add seasons/2026-27/ site/index.html
+          if git diff --staged --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - if: steps.stage.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "Data refresh $(date -u +%Y-%m-%d)"
+          git push
+
+      - id: after
+        run: |
+          f=$(ls -v seasons/2026-27/weekly_summaries/GW*_summary.md 2>/dev/null | tail -1)
+          gw=$([ -n "$f" ] && basename "$f" | grep -oE '[0-9]+' | head -1)
+          echo "gw=${gw:-0}" >> "$GITHUB_OUTPUT"
+
+      # Only when a new gameweek has finished -- otherwise a daily job would
+      # open an issue every morning.
+      - if: steps.after.outputs.gw != steps.before.outputs.gw
+        run: |
+          GW="${{ steps.after.outputs.gw }}"
+          {
+            echo "@DJRay57 — GW${GW} is in the books."
+            echo
+            cat "seasons/2026-27/weekly_summaries/GW${GW}_summary.md"
+            echo
+            [ -f "seasons/2026-27/power_rankings/GW${GW}_power_rankings.md" ] && \
+              cat "seasons/2026-27/power_rankings/GW${GW}_power_rankings.md"
+            echo
+            [ -f seasons/2026-27/dashboard_stats.md ] && cat seasons/2026-27/dashboard_stats.md
+            echo
+            [ -f seasons/2026-27/trade_impact.md ] && cat seasons/2026-27/trade_impact.md
+            echo
+            [ -f seasons/2026-27/h2h_predictions.md ] && cat seasons/2026-27/h2h_predictions.md
+            echo
+            [ -f seasons/2026-27/season_projection.md ] && cat seasons/2026-27/season_projection.md
+          } > issue_body.md
+
+          gh issue create \
+            --title "GW${GW} summary + power rankings" \
+            --body-file issue_body.md \
+            --assignee DJRay57
