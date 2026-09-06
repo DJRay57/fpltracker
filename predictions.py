@@ -145,13 +145,25 @@ def main():
             if element_out in starters:
                 starters[starters.index(element_out)] = element_in
         xi_projection[lid] = sum(ep_next.get(e, 0) for e in starters)
-        squads[lid] = (
-            [(ep_next.get(e, 0), player_info.get(e, {}).get("type", "MID"), 1.0,
-              player_info.get(e, {}).get("team")) for e in starters],
-            # bench cover: each reserve's own expectation stands in for the
-            # points he'd bring if he were called upon
-            [round(ep_next.get(e, 0)) for e in bench[:3]],
-        )
+
+        xi_types = [player_info.get(e, {}).get("type", "MID") for e in starters]
+        # Nobody has kicked a ball yet, so a reserve's own expectation stands in
+        # for what he'd bring if called upon, and all of them count as available.
+        bench_rows = [
+            (slot, player_info.get(e, {}).get("type", "MID"),
+             round(ep_next.get(e, 0)), True)
+            for slot, e in enumerate(bench)
+        ]
+        squads[lid] = [
+            {
+                "ep": ep_next.get(e, 0),
+                "pos": xi_types[i],
+                "share": 1.0,
+                "team": player_info.get(e, {}).get("team"),
+                "cover": scoring_model.eligible_cover(xi_types, i, bench_rows),
+            }
+            for i, e in enumerate(starters)
+        ]
 
     projected_mean = {
         lid: 0.5 * season_ppg[lid] + 0.5 * xi_projection[lid]
@@ -184,8 +196,7 @@ def main():
     distributions = {}
     raw_spreads = []
     for lid in entry_ids:
-        squad, cover = squads[lid]
-        raw = scoring_model.score_distribution(pools, squad, cover, sims=SCORE_SIMS)
+        raw = scoring_model.score_distribution(pools, squads[lid], sims=SCORE_SIMS)
         mu = statistics.mean(raw)
         sd = statistics.pstdev(raw) or 1.0
         raw_spreads.append(sd)

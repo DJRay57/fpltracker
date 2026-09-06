@@ -243,24 +243,45 @@ def main():
         current_pts, spare = autosub(xi, bench_rows, blanks)
         subbed = [players.get(starters[i]["element"], {}).get("name", "?") for i in blanks]
 
-        # Cover left for anyone who still might not turn out, in bench order
-        cover = [bench_rows[s][1] for s in spare if bench_rows[s][2]
-                 and bench_rows[s][0] != "GK"]
+        xi_types = [t for t, _, _ in xi]
+        bench_avail = [(s, bench_rows[s][0], bench_rows[s][1], bench_rows[s][2])
+                       for s in spare]
 
         to_play = 0
         to_come = 0.0
         remaining_list = []
         yet = []
-        for p in starters:
+        for idx, p in enumerate(starters):
             pid = p["element"]
             pending, extra, share = remaining_for(pid)
-            if pending:
-                to_play += 1
+            if not pending:
+                continue
+            pinfo = players.get(pid, {})
+            entry = {
+                "ep": ep_this.get(pid, 0.0),
+                "pos": pinfo.get("type", "MID"),
+                "share": share,
+                "team": pinfo.get("team"),
+                # who could legally come on for this particular man
+                "cover": scoring_model.eligible_cover(xi_types, idx, bench_avail),
+            }
+            # A man on nought in a match already under way has been left out of
+            # the side. He can still come off the bench, but that gets less
+            # likely as the match runs down -- and if he doesn't, his cover
+            # comes on at the end of the gameweek.
+            if share < 0.99 and minutes_of(pid) == 0:
+                entry["p_play"] = min(
+                    scoring_model.SUB_APPEARANCE * share,
+                    entry["ep"] / 3.0 if entry["ep"] else 0.0,
+                )
+                to_come += entry["ep"] * entry["p_play"]
+                if entry["cover"]:
+                    to_come += (1 - entry["p_play"]) * entry["cover"][0][1]
+            else:
                 to_come += extra
-                remaining_list.append(
-                    (ep_this.get(pid, 0.0), players.get(pid, {}).get("type", "MID"),
-                     share, players.get(pid, {}).get("team")))
-                yet.append(players.get(pid, {}).get("name", "?"))
+            to_play += 1
+            remaining_list.append(entry)
+            yet.append(pinfo.get("name", "?"))
 
         managers[lid] = {
             "manager": info["manager"],
@@ -270,7 +291,6 @@ def main():
             "to_play": to_play,
             "projection": round(current_pts + to_come, 1),
             "remaining": remaining_list,
-            "bench_cover": cover,
             "to_come": round(to_come, 1),
             "auto_subbed": subbed,
             "yet_to_play": sorted(yet),
@@ -282,9 +302,7 @@ def main():
             continue
         a, b = managers[m["league_entry_1"]], managers[m["league_entry_2"]]
         hw, dr, aw = scoring_model.match_odds(
-            pools,
-            (a["current"], a["remaining"], a["bench_cover"]),
-            (b["current"], b["remaining"], b["bench_cover"]))
+            pools, (a["current"], a["remaining"]), (b["current"], b["remaining"]))
         fixtures_out.append({
             "home_win": hw, "draw": dr, "away_win": aw,
             "home": a["manager"], "home_team": a["team_name"],
@@ -297,7 +315,6 @@ def main():
 
     for m in managers.values():
         m.pop("remaining", None)
-        m.pop("bench_cover", None)
 
     payload = {
         "state": state,

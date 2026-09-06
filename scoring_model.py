@@ -31,6 +31,38 @@ import statistics
 # grouping player residuals by club, this sits around 0.10.
 TEAM_RHO = 0.10
 MIN_POOL = 20
+# Roughly how often an outfield substitute gets on at all. Applied to whatever
+# is left of a match, it gives the chance a man who didn't start still appears.
+SUB_APPEARANCE = 0.5
+
+MINIMUMS = {"GK": 1, "DEF": 3, "MID": 2, "FWD": 1}
+
+
+def legal_xi(types):
+    counts = {k: 0 for k in MINIMUMS}
+    for t in types:
+        counts[t] += 1
+    return counts["GK"] == 1 and all(counts[k] >= v for k, v in MINIMUMS.items())
+
+
+def eligible_cover(xi_types, index, bench):
+    """Bench players who could legally replace the man at `index`.
+
+    `bench` is [(slot, position, points, played)] in bench order. A keeper only
+    covers a keeper, the replacement has to leave a legal XI, and anyone who
+    never came on isn't available at all.
+    """
+    out = []
+    for slot, pos, points, played in bench:
+        if not played:
+            continue
+        if (xi_types[index] == "GK") != (pos == "GK"):
+            continue
+        trial = list(xi_types)
+        trial[index] = pos
+        if legal_xi(trial):
+            out.append((slot, points))
+    return out
 
 
 class Pools:
@@ -77,33 +109,49 @@ class Pools:
         return self.play_prob(expected, pool), pool
 
 
-def sample_total(rng, pools, base, squad, cover, team_u):
+def sample_total(rng, pools, base, squad, team_u):
     """One simulated final score for a side.
 
-    `squad` is [(expected, position, share_of_match_left, team)] for everyone
-    still to come; `cover` is the bench scores available to replace anyone who
-    doesn't feature, already in bench order.
+    `squad` holds everyone still to come, each a dict of:
+        ep      expected points
+        pos     position
+        share   how much of a match is left for him
+        team    his club, so teammates can move together
+        p_play  optional override for his chance of featuring -- used when
+                he has already failed to start a match that's under way
+        cover   [(bench_slot, points)] that could legally replace him, in
+                bench order, already filtered for position and formation
+
+    A man who doesn't feature is replaced by his cover, exactly as the real
+    substitution rules do. Which bench player is eligible depends on who is
+    coming out: a keeper only covers a keeper, and a side can't drop below
+    three defenders, so it isn't simply the next name on the list.
     """
     total = float(base)
-    subs = list(cover)
-    for expected, position, share, team in squad:
-        play, pool = pools.player(expected, position)
+    used = set()
+    for man in squad:
+        play = man.get("p_play")
+        pool = pools.comparable(man["ep"], man["pos"])
+        if play is None:
+            play = pools.play_prob(man["ep"], pool)
         if rng.random() >= play:
-            # only a player whose match never started can still be substituted
-            if share >= 0.99 and subs:
-                total += subs.pop(0)
+            for slot, points in man.get("cover", ()):
+                if slot not in used:
+                    used.add(slot)
+                    total += points
+                    break
             continue
-        if team not in team_u:
-            team_u[team] = rng.random()
-        u = TEAM_RHO * team_u[team] + (1.0 - TEAM_RHO) * rng.random()
-        total += pool[min(len(pool) - 1, int(u * len(pool)))] * share
+        if man["team"] not in team_u:
+            team_u[man["team"]] = rng.random()
+        u = TEAM_RHO * team_u[man["team"]] + (1.0 - TEAM_RHO) * rng.random()
+        total += pool[min(len(pool) - 1, int(u * len(pool)))] * man["share"]
     return total
 
 
-def score_distribution(pools, squad, cover=(), base=0, sims=4000, seed=11):
+def score_distribution(pools, squad, base=0, sims=4000, seed=11):
     """A manager's plausible final scores, as a list to sample from later."""
     rng = random.Random(seed)
-    return [round(sample_total(rng, pools, base, squad, cover, {})) for _ in range(sims)]
+    return [round(sample_total(rng, pools, base, squad, {})) for _ in range(sims)]
 
 
 def odds_from(dist_a, dist_b, rng=None, pairs=20000):
@@ -123,11 +171,11 @@ def odds_from(dist_a, dist_b, rng=None, pairs=20000):
 def match_odds(pools, side_a, side_b, sims=10000, seed=7):
     """Win / draw / loss for A, simulating both sides together.
 
-    Each side is (already_banked, squad_still_to_come, bench_cover). Both are
-    drawn in the same trial so that players sharing a club move together.
+    Each side is (already_banked, squad_still_to_come). Both are drawn in the
+    same trial so that players sharing a club move together.
     """
-    base_a, squad_a, cover_a = side_a
-    base_b, squad_b, cover_b = side_b
+    base_a, squad_a = side_a
+    base_b, squad_b = side_b
     if not squad_a and not squad_b:            # nothing left: it's decided
         if base_a == base_b:
             return 0.0, 100.0, 0.0
@@ -137,8 +185,8 @@ def match_odds(pools, side_a, side_b, sims=10000, seed=7):
     wins = draws = 0
     for _ in range(sims):
         team_u = {}
-        a = round(sample_total(rng, pools, base_a, squad_a, cover_a, team_u))
-        b = round(sample_total(rng, pools, base_b, squad_b, cover_b, team_u))
+        a = round(sample_total(rng, pools, base_a, squad_a, team_u))
+        b = round(sample_total(rng, pools, base_b, squad_b, team_u))
         if a > b:
             wins += 1
         elif a == b:
