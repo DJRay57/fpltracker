@@ -1,7 +1,9 @@
 {
   "state": "live",
+  "sigma": 2.5,
+  "team_rho": 0.1,
   "gameweek": 3,
-  "updated_at": "2026-09-06T14:52:03+00:00",
+  "updated_at": "2026-09-06T14:59:10+00:00",
   "fixtures_total": 10,
   "fixtures_finished": 8,
   "fixtures_started": 9,
@@ -13,14 +15,14 @@
       "away_win": 98.0,
       "home": "Ollie Felts",
       "home_team": "FLASHMOB MRCAKEBREAD",
-      "home_current": 31,
+      "home_current": 30,
       "home_to_play": 3,
-      "home_projection": 33.6,
+      "home_projection": 32.6,
       "away": "Jason Parmar",
       "away_team": "Pain in Diaz",
       "away_current": 36,
       "away_to_play": 2,
-      "away_projection": 42.8
+      "away_projection": 42.7
     },
     {
       "home_win": 99.0,
@@ -33,29 +35,29 @@
       "home_projection": 39.5,
       "away": "Elliott Bennett",
       "away_team": "You're Toast FC",
-      "away_current": 20,
+      "away_current": 21,
       "away_to_play": 2,
-      "away_projection": 26.8
+      "away_projection": 27.7
     },
     {
-      "home_win": 69.0,
-      "draw": 6.0,
-      "away_win": 25.0,
+      "home_win": 65.0,
+      "draw": 7.0,
+      "away_win": 28.0,
       "home": "Piers Black-Hawkins",
       "home_team": "Really Kick FC",
       "home_current": 26,
       "home_to_play": 4,
-      "home_projection": 36.8,
+      "home_projection": 36.7,
       "away": "chris Purnell",
       "away_team": "Gary fishcake  fc",
       "away_current": 18,
       "away_to_play": 5,
-      "away_projection": 33.5
+      "away_projection": 33.4
     },
     {
-      "home_win": 2.0,
-      "draw": 1.0,
-      "away_win": 97.0,
+      "home_win": 4.0,
+      "draw": 2.0,
+      "away_win": 94.0,
       "home": "Sam Wright",
       "home_team": "Middle court virgins",
       "home_current": 28,
@@ -68,19 +70,19 @@
       "away_projection": 41.3
     },
     {
-      "home_win": 5.0,
+      "home_win": 6.0,
       "draw": 2.0,
-      "away_win": 93.0,
+      "away_win": 92.0,
       "home": "Ash Cross",
       "home_team": "H\u00f8jbjerg\u2019s packet",
       "home_current": 25,
       "home_to_play": 3,
-      "home_projection": 28.5,
+      "home_projection": 28.4,
       "away": "Greg Woodward",
       "away_team": "Sxci_Scorpion_69",
-      "away_current": 34,
+      "away_current": 33,
       "away_to_play": 5,
-      "away_projection": 37.5
+      "away_projection": 36.4
     }
   ],
   "managers": [
@@ -91,7 +93,6 @@
       "official": 37,
       "to_play": 1,
       "projection": 41.3,
-      "variance": 6.496456739108254,
       "yet_to_play": [
         "Rogers"
       ]
@@ -102,8 +103,7 @@
       "current": 36,
       "official": 31,
       "to_play": 2,
-      "projection": 42.8,
-      "variance": 6.568639591765012,
+      "projection": 42.7,
       "yet_to_play": [
         "Cunha",
         "Jo\u00e3o Pedro"
@@ -116,7 +116,6 @@
       "official": 36,
       "to_play": 3,
       "projection": 39.5,
-      "variance": 13.065096330873265,
       "yet_to_play": [
         "Bruno G.",
         "Gabriel",
@@ -126,11 +125,10 @@
     {
       "manager": "Greg Woodward",
       "team_name": "Sxci_Scorpion_69",
-      "current": 34,
+      "current": 33,
       "official": 26,
       "to_play": 5,
-      "projection": 37.5,
-      "variance": 19.633735922638277,
+      "projection": 36.4,
       "yet_to_play": [
         "Martinez",
         "Neto",
@@ -142,11 +140,10 @@
     {
       "manager": "Ollie Felts",
       "team_name": "FLASHMOB MRCAKEBREAD",
-      "current": 31,
+      "current": 30,
       "official": 28,
       "to_play": 3,
-      "projection": 33.6,
-      "variance": 13.065096330873265,
+      "projection": 32.6,
       "yet_to_play": [
         "Konsa",
         "Lacroix",
@@ -160,7 +157,6 @@
       "official": 28,
       "to_play": 2,
       "projection": 32.7,
-      "variance": 12.992913478216508,
       "yet_to_play": [
         "Tzolis",
         "\u00d8degaard"
@@ -172,8 +168,7 @@
       "current": 26,
       "official": 22,
       "to_play": 4,
-      "projection": 36.8,
-      "variance": 13.137279183530024,
+      "projection": 36.7,
       "yet_to_play": [
         "Barry",
         "Calafiori",
@@ -187,8 +182,7 @@
       "current": 25,
       "official": 23,
       "to_play": 3,
-      "projection": 28.5,
-      "variance": 13.065096330873265,
+      "projection": 28.4,
       "yet_to_play": [
         "B.Fernandes",
         "Eze",
@@ -198,11 +192,10 @@
     {
       "manager": "Elliott Bennett",
       "team_name": "You're Toast FC",
-      "current": 20,
+      "current": 21,
       "official": 13,
       "to_play": 2,
-      "projection": 26.8,
-      "variance": 6.568639591765012,
+      "projection": 27.7,
       "yet_to_play": [
         "Mbeumo",
         "Palmer"
@@ -214,8 +207,7 @@
       "current": 18,
       "official": 12,
       "to_play": 5,
-      "projection": 33.5,
-      "variance": 19.633735922638277,
+      "projection": 33.4,
       "yet_to_play": [
         "Havertz",
         "Rashford",

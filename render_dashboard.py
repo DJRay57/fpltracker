@@ -263,11 +263,12 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md, li
         '<a class="brand" href="#top"><span class="brand-mark"></span>'
         '<span class="brand-text">The Sharnbrook Wire</span></a>'
         '<nav class="jump">'
-        '<a href="#results">Results</a><a href="#table">Table</a>'
+        + ('<a href="#live" class="now">Live</a>' if live_active else "")
+        + '<a href="#results">Results</a><a href="#table">Table</a>'
         '<a href="#bench">Bench</a><a href="#truth">Truth</a>'
-        f'<a href="#trades">Trades</a>'
-        f'<a href="#{"ahead" if live_active else "ahead"}">'
-        f'{"Live" if live_active else "Ahead"}</a></nav>'
+        '<a href="#trades">Trades</a>'
+        + ("" if live_active else '<a href="#ahead">Ahead</a>')
+        + "</nav>"
         f'<span class="gw-chip">GW{gw:02d}</span>'
         "</div></header>"
     )
@@ -361,6 +362,67 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md, li
               f'<b>{esc(bottom_m["manager"])}</b><span>{esc(bottom_m["team_name"])}</span>', "dim")
         + "</div></section>"
     )
+
+    # While a gameweek is being played, the projections give way to the live
+    # scores; between gameweeks the pre-match predictions stand on their own.
+    if live_active:
+        lgw = live["gameweek"]
+        stamp = live.get("updated_at", "")
+        try:
+            when = datetime.fromisoformat(stamp).astimezone(LONDON)
+            when_txt = when.strftime("%H:%M") + " · " + when.strftime("%-d %b")
+        except (ValueError, TypeError):
+            when_txt = "just now"
+
+        label = {"pre": "Not started", "live": "In play", "done": "Awaiting final points"}[live["state"]]
+        dot = '<span class="live-dot"></span>' if live["state"] == "live" else ""
+
+        cards = []
+        for f in live["fixtures"]:
+            hc, ac = f["home_current"], f["away_current"]
+            hw = "win" if hc > ac else ("loss" if ac > hc else "draw")
+            aw = "win" if ac > hc else ("loss" if hc > ac else "draw")
+            hp, dp, ap = f.get("home_win", 0), f.get("draw", 0), f.get("away_win", 0)
+            cards.append(
+                f'<article class="live-card">'
+                f'<div class="fixture live-fix">'
+                f'<div class="side {hw}{" me" if ME in f["home"] else ""}">'
+                f'<span class="side-name">{esc(f["home"])}</span>'
+                f'<span class="side-team">proj {f["home_projection"]:.1f} &middot; '
+                f'{f["home_to_play"]} to play</span></div>'
+                f'<div class="score"><span class="s {hw}">{hc}</span>'
+                f'<span class="dash"></span><span class="s {aw}">{ac}</span>'
+                f'<span class="margin">{esc(label)}</span></div>'
+                f'<div class="side right {aw}{" me" if ME in f["away"] else ""}">'
+                f'<span class="side-name">{esc(f["away"])}</span>'
+                f'<span class="side-team">proj {f["away_projection"]:.1f} &middot; '
+                f'{f["away_to_play"]} to play</span></div></div>'
+                f'<div class="odds live-odds"><span class="odds-bar">'
+                f'<i style="--w:{hp:.0f}%"></i><u style="--w:{dp:.0f}%"></u>'
+                f'<em style="--w:{ap:.0f}%"></em></span>'
+                f'<span class="odds-nums"><b>{hp:.0f}% to win</b>'
+                f'<s>{dp:.0f}% draw</s><b>{ap:.0f}% to win</b></span></div>'
+                f"</article>"
+            )
+
+        pct_done = (live["fixtures_finished"] / live["fixtures_total"] * 100
+                    if live["fixtures_total"] else 0)
+        live_html = (
+            f'<section class="band live-band" id="live"><div class="wrap"><div class="head">'
+            f'<h2>Gameweek {lgw} Live</h2>'
+            f'<span class="head-note stamp">{dot}Updated {esc(when_txt)}</span></div>'
+            f'<div class="prog"><span class="prog-track">'
+            f'<i class="prog-fill" style="--w:{pct_done:.0f}%"></i></span>'
+            f'<span class="prog-txt">{live["fixtures_finished"]}/{live["fixtures_total"]} '
+            f'matches done &middot; <b>{live["players_to_play"]}</b> players still to come'
+            f'</span></div>'
+            f'<p class="lede">Win chances are simulated from the players still to come, so '
+            f'they stay wide while there is plenty of football left and harden quickly once '
+            f'there is not. Live totals include provisional bonus and can run ahead of the '
+            f'official table.</p>'
+            f'<div class="fixtures live-list">{"".join(cards)}</div></div></section>'
+        )
+        out.append(live_html)
 
     # ---------- results ----------
     cards = []
@@ -607,60 +669,6 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md, li
         ["", "num", "num", ""], me_col="Manager",
     )
 
-    # While a gameweek is being played, the projections give way to the live
-    # scores; between gameweeks the pre-match predictions stand on their own.
-    if live_active:
-        lgw = live["gameweek"]
-        stamp = live.get("updated_at", "")
-        try:
-            when = datetime.fromisoformat(stamp).astimezone(LONDON)
-            when_txt = when.strftime("%H:%M") + " · " + when.strftime("%-d %b")
-        except (ValueError, TypeError):
-            when_txt = "just now"
-
-        label = {"pre": "Not started", "live": "In play", "done": "Awaiting final points"}[live["state"]]
-        dot = '<span class="live-dot"></span>' if live["state"] == "live" else ""
-
-        cards = []
-        for f in live["fixtures"]:
-            hc, ac = f["home_current"], f["away_current"]
-            hw = "win" if hc > ac else ("loss" if ac > hc else "draw")
-            aw = "win" if ac > hc else ("loss" if hc > ac else "draw")
-            hp, dp, ap = f.get("home_win", 0), f.get("draw", 0), f.get("away_win", 0)
-            cards.append(
-                f'<article class="live-card">'
-                f'<div class="fixture live-fix">'
-                f'<div class="side {hw}{" me" if ME in f["home"] else ""}">'
-                f'<span class="side-name">{esc(f["home"])}</span>'
-                f'<span class="side-team">proj {f["home_projection"]:.1f} &middot; '
-                f'{f["home_to_play"]} to play</span></div>'
-                f'<div class="score"><span class="s {hw}">{hc}</span>'
-                f'<span class="dash"></span><span class="s {aw}">{ac}</span>'
-                f'<span class="margin">{esc(label)}</span></div>'
-                f'<div class="side right {aw}{" me" if ME in f["away"] else ""}">'
-                f'<span class="side-name">{esc(f["away"])}</span>'
-                f'<span class="side-team">proj {f["away_projection"]:.1f} &middot; '
-                f'{f["away_to_play"]} to play</span></div></div>'
-                f'<div class="odds live-odds"><span class="odds-bar">'
-                f'<i style="--w:{hp:.0f}%"></i><u style="--w:{dp:.0f}%"></u>'
-                f'<em style="--w:{ap:.0f}%"></em></span>'
-                f'<span class="odds-nums"><b>{hp:.0f}% to win</b>'
-                f'<s>{dp:.0f}% draw</s><b>{ap:.0f}% to win</b></span></div>'
-                f"</article>"
-            )
-
-        out.append(
-            f'<section class="band" id="ahead"><div class="wrap"><div class="head">'
-            f'<h2>Gameweek {lgw} Live</h2>'
-            f'<span class="head-note stamp">{dot}Updated {esc(when_txt)}</span></div>'
-            f'<p class="lede">{live["fixtures_finished"]} of {live["fixtures_total"]} '
-            f'matches finished &middot; <b>{live["players_to_play"]}</b> players still to come. '
-            f'Projections add each remaining player\'s expected points, pro-rata for minutes '
-            f'left, so they converge on the real score as the day goes on. Live totals include '
-            f'provisional bonus and can run ahead of the official table.</p>'
-            f'<div class="fixtures live-list">{"".join(cards)}</div></div></section>'
-        )
-
     # If the live section already covers the next gameweek, its pre-match
     # predictions are spent -- don't show the same fixtures twice.
     live_covers_next = bool(live_active and live.get("gameweek") == gw + 1)
@@ -891,6 +899,15 @@ a{color:inherit}
 .stamp .live-dot{width:7px;height:7px}
 .live-fix .side-team{color:var(--fog);font-variant-numeric:tabular-nums}
 .live-fix .margin{color:var(--volt);opacity:.75}
+.live-band{border-top:0;padding-top:.5rem}
+.jump a.now{color:var(--volt);border-color:var(--volt)}
+.prog{display:flex;align-items:center;gap:.8rem;margin:-.4rem 0 1rem;flex-wrap:wrap}
+.prog-track{flex:1;min-width:120px;max-width:260px;height:4px;background:var(--line);
+  overflow:hidden}
+.prog-fill{display:block;height:100%;width:var(--w);background:var(--volt)}
+.prog-txt{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--fog);font-variant-numeric:tabular-nums}
+.prog-txt b{color:var(--chalk)}
 .live-card{background:var(--turf);transition:background .2s}
 .live-card:hover{background:var(--turf-2)}
 .live-card .fixture{background:transparent;padding-bottom:.4rem}

@@ -20,6 +20,7 @@ back to showing the pre-gameweek predictions instead.
 import json
 import math
 import os
+import random
 import statistics
 from datetime import datetime, timezone
 
@@ -38,31 +39,58 @@ FULL_MATCH = 90.0
 # Used only until enough of the gameweek has been played to measure the real
 # forecast error; close to what it typically settles at.
 FALLBACK_SIGMA = 2.6
+# Measured intra-club correlation of player residuals: teammates' returns
+# arrive together, so their scores are not independent.
+TEAM_RHO = 0.10
 
 
-def phi(x):
-    """Standard normal CDF."""
-    return 0.5 * (1.0 + math.erf(x / math.sqrt(2.0)))
+def match_odds(side_a, side_b, resid, sims=10000, rho=TEAM_RHO, seed=7):
+    """Win/draw/loss chance for A by simulating the players still to come.
 
+    Rather than assume the remaining points are normally distributed, each
+    unplayed player is given their expected score plus a residual drawn from
+    what players actually did this gameweek -- so the lumpiness of real
+    scoring (nothing, nothing, nothing, a goal) survives into the tails.
 
-def match_odds(proj_a, var_a, proj_b, var_b, cur_a, cur_b):
-    """Win/draw/loss chance for A, from the projected margin and what's left.
+    Players from the same club share part of that draw, because their returns
+    genuinely arrive together: clean sheets and team goals lift a whole back
+    line at once. Treating them as independent understates how far a score
+    can swing.
 
-    Each side's finishing score is treated as normal around its projection,
-    with variance from the players still to come. Scores are whole numbers, so
-    a draw is the half-point band around zero rather than a single point.
+    `side_x` is (current_score, [(expected, share_of_match_left, team), ...]).
     """
-    sd = math.sqrt(var_a + var_b)
-    if sd < 1e-9:                       # nothing left to play: it's decided
+    cur_a, rem_a = side_a
+    cur_b, rem_b = side_b
+    if not rem_a and not rem_b:          # nothing left to play: it's decided
         if cur_a == cur_b:
             return 0.0, 100.0, 0.0
         return (100.0, 0.0, 0.0) if cur_a > cur_b else (0.0, 0.0, 100.0)
 
-    mu = proj_a - proj_b
-    hi, lo = (0.5 - mu) / sd, (-0.5 - mu) / sd
-    win = (1.0 - phi(hi)) * 100
-    draw = (phi(hi) - phi(lo)) * 100
-    loss = phi(lo) * 100
+    rng = random.Random(seed)            # fixed so identical data gives identical odds
+    shared, solo = math.sqrt(rho), math.sqrt(1.0 - rho)
+    wins = draws = 0
+
+    for _ in range(sims):
+        team_draw = {}
+
+        def total(cur, rem):
+            out = float(cur)
+            for expected, share, team in rem:
+                if team not in team_draw:
+                    team_draw[team] = rng.choice(resid)
+                noise = shared * team_draw[team] + solo * rng.choice(resid)
+                out += (expected + noise) * share
+            return out
+
+        sa, sb = round(total(cur_a, rem_a)), round(total(cur_b, rem_b))
+        if sa > sb:
+            wins += 1
+        elif sa == sb:
+            draws += 1
+
+    win = wins / sims * 100
+    draw = draws / sims * 100
+    loss = 100.0 - win - draw
 
     # While anyone is still playing, don't claim certainty either way
     win, loss = min(99.0, max(1.0, win)), min(99.0, max(1.0, loss))
@@ -143,13 +171,20 @@ def main():
     # How wrong the expected-points figure typically is, measured on the
     # players who have already started this gameweek. Falls back to a typical
     # value early on, before there's enough played to measure.
+    # Only players whose match is actually over: someone still on the pitch
+    # has a part-finished score, which would understate the real spread.
+    settled_teams = {t for f in fixtures if f["finished_provisional"]
+                     for t in (f["team_h"], f["team_a"])}
     residuals = [
         points.get(pid, 0) - ep_this.get(pid, 0.0)
         for pid, d in ((int(k), v) for k, v in live.items())
-        if d["stats"].get("starts")
+        if d["stats"].get("starts") and players.get(pid, {}).get("team") in settled_teams
     ]
-    sigma = statistics.pstdev(residuals) if len(residuals) >= 30 else FALLBACK_SIGMA
-    sigma = max(1.0, min(sigma, 6.0))    # keep it sane whatever the feed says
+    if len(residuals) >= 30:
+        sigma = max(1.0, min(statistics.pstdev(residuals), 6.0))
+    else:
+        sigma = FALLBACK_SIGMA
+        residuals = [sigma * z for z in (-1.5, -0.9, -0.4, 0, 0.3, 0.7, 1.2, 2.0)]
     print(f"  per-player forecast error: {sigma:.2f} pts (n={len(residuals)})")
 
     def remaining_for(pid):
@@ -194,6 +229,7 @@ def main():
         to_play = 0
         to_come = 0.0
         share_left = 0.0
+        remaining_list = []
         yet = []
         for p in picks:
             if p["position"] > 11:
@@ -205,6 +241,8 @@ def main():
                 to_play += 1
                 to_come += extra
                 share_left += share
+                remaining_list.append(
+                    (ep_this.get(pid, 0.0), share, players.get(pid, {}).get("team")))
                 yet.append(players.get(pid, {}).get("name", "?"))
         managers[lid] = {
             "manager": info["manager"],
@@ -213,7 +251,7 @@ def main():
             "official": official.get(lid),
             "to_play": to_play,
             "projection": round(current_pts + to_come, 1),
-            "variance": sigma ** 2 * share_left,
+            "remaining": remaining_list,
             "yet_to_play": sorted(yet),
         }
 
@@ -222,9 +260,8 @@ def main():
         if m["event"] != gw:
             continue
         a, b = managers[m["league_entry_1"]], managers[m["league_entry_2"]]
-        hw, dr, aw = match_odds(a["projection"], a["variance"],
-                                b["projection"], b["variance"],
-                                a["current"], b["current"])
+        hw, dr, aw = match_odds((a["current"], a["remaining"]),
+                                (b["current"], b["remaining"]), residuals)
         fixtures_out.append({
             "home_win": hw, "draw": dr, "away_win": aw,
             "home": a["manager"], "home_team": a["team_name"],
@@ -235,8 +272,13 @@ def main():
             "away_projection": b["projection"],
         })
 
+    for m in managers.values():
+        m.pop("remaining", None)
+
     payload = {
         "state": state,
+        "sigma": round(sigma, 2),
+        "team_rho": TEAM_RHO,
         "gameweek": gw,
         "updated_at": now.isoformat(),
         "fixtures_total": len(fixtures),
@@ -254,9 +296,11 @@ def main():
         "_Scores are computed from the live player feed and include provisional "
         "bonus, so they can run ahead of the official league table, which settles "
         "later._\n",
-        f"_Win chances treat each side's finishing score as normal around its "
-        f"projection, with the spread coming from the players still to play "
-        f"(measured forecast error this gameweek: {sigma:.1f} pts per starter)._\n",
+        f"_Win chances come from simulating the players still to play, drawing "
+        f"their scores from what players actually did this gameweek (forecast "
+        f"error {sigma:.1f} pts per starter) and letting teammates move together. "
+        f"They tighten as matches finish, so late in a gameweek they get "
+        f"lopsided quickly._\n",
         "## Head to Head\n",
         "| Home | Now | Proj | Win% | Draw% | Away | Now | Proj | Win% |",
         "|---|---|---|---|---|---|---|---|---|",
