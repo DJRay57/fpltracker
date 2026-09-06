@@ -17,6 +17,7 @@ gameweek is in progress the file records state "idle" and the dashboard falls
 back to showing the pre-gameweek predictions instead.
 """
 
+import csv
 import json
 import math
 import os
@@ -374,6 +375,23 @@ def main():
             f"| {m['manager']} | {m['current']} | {m['projection']} | {m['to_play']} |"
         )
     lines.append("")
+
+    # Keep every projection we publish, so the model can be scored against
+    # what actually happened rather than argued about. One row per manager per
+    # run; once a gameweek is over, the last row for it holds the final score.
+    log_path = os.path.join(SEASON_DIR, "projection_log.csv")
+    new_file = not os.path.exists(log_path)
+    with open(log_path, "a", newline="") as f:
+        writer = csv.writer(f)
+        if new_file:
+            writer.writerow(["logged_at", "gameweek", "state", "manager",
+                             "players_left", "current", "projection",
+                             "proj_low", "proj_high"])
+        for m in payload["managers"]:
+            writer.writerow([now.isoformat(), gw, state, m["manager"],
+                             m["to_play"], m["current"], m["projection"],
+                             m["proj_low"], m["proj_high"]])
+    print(f"Logged {len(payload['managers'])} projections to {log_path}")
 
     write(payload, lines)
     print(f"  state={state}, {done}/{len(fixtures)} matches done, "

@@ -23,6 +23,7 @@ Nothing here is fitted or tuned by hand; every number comes out of the season's
 own results.
 """
 
+import math
 import random
 import statistics
 
@@ -144,7 +145,20 @@ def sample_total(rng, pools, base, squad, team_u):
         if man["team"] not in team_u:
             team_u[man["team"]] = rng.random()
         u = TEAM_RHO * team_u[man["team"]] + (1.0 - TEAM_RHO) * rng.random()
-        total += pool[min(len(pool) - 1, int(u * len(pool)))] * man["share"]
+        draw = pool[min(len(pool) - 1, int(u * len(pool)))]
+
+        # Points arrive in lumps at moments, not smoothly across ninety
+        # minutes, so how much is *expected* falls off with the clock but how
+        # much it might *swing* does not fall off nearly as fast. Scaling both
+        # by the time left made late-game ranges far too tight -- a man with
+        # ten minutes to play can still score. Mean scales with the time
+        # remaining, spread with its square root, as an arrival process does.
+        share = man["share"]
+        if share >= 0.999:
+            total += draw
+        else:
+            middle = statistics.mean(pool) if pool else 0.0
+            total += middle * share + (draw - middle) * math.sqrt(share)
     return total
 
 
