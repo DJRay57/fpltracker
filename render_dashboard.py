@@ -32,6 +32,13 @@ SEASON_DIR = os.path.join("seasons", SEASON)
 OUT_DIR = "site"
 OUT_FILE = os.path.join(OUT_DIR, "index.html")
 FONT_CACHE = os.path.join(OUT_DIR, ".fonts")
+# The artifact host wraps the page in its own <html>/<head> at publish time,
+# so OUT_FILE is deliberately a fragment. Anything else serving this file --
+# Vercel, a plain web server -- gets no doctype, no charset and no viewport,
+# which means quirks mode and a desktop-width page on a phone. So the same
+# render is also written as a complete document for those.
+PUBLIC_DIR = "public"
+PUBLIC_FILE = os.path.join(PUBLIC_DIR, "index.html")
 ME = "Greg Woodward"
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -1291,6 +1298,32 @@ JS = r"""
 """
 
 
+# Mirrors what the artifact host injects, with two deliberate changes: the
+# colour scheme is dark, because the page is, and robots are turned away so a
+# public URL keeps the same "only people with the link" reach the artifact had.
+SKELETON = """<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{title}</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="{desc}">
+<meta property="og:title" content="The Sharnbrook Wire">
+<meta property="og:description" content="{desc}">
+<meta property="og:type" content="website">
+<style>:root{{color-scheme:dark}}body{{margin:0}}img{{max-width:100%}}[hidden]:not([hidden=until-found]){{display:none!important}}</style>
+</head>
+<body>
+{body}
+</body>
+</html>
+"""
+
+DESCRIPTION = ("Live scores, projections and punditry for The Sharnbrook "
+               "Virgins FPL Draft league.")
+
+
 def main():
     stats_path = os.path.join(SEASON_DIR, "dashboard_stats.json")
     if not os.path.exists(stats_path):
@@ -1327,9 +1360,20 @@ def main():
     )
 
     os.makedirs(OUT_DIR, exist_ok=True)
-    with open(OUT_FILE, "w") as f:
+    with open(OUT_FILE, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"Wrote {OUT_FILE} ({len(html)/1024:.0f} KB)")
+
+    # The fragment leads with its <title> because the artifact host reads one
+    # from the first 8KB. In a real document that tag belongs in the head, so
+    # for the standalone copy it is lifted out rather than left in the body.
+    title, _, rest = html.partition("\n")
+    title = title.removeprefix("<title>").removesuffix("</title>")
+    page = SKELETON.format(title=title, body=rest, desc=DESCRIPTION)
+    os.makedirs(PUBLIC_DIR, exist_ok=True)
+    with open(PUBLIC_FILE, "w", encoding="utf-8") as f:
+        f.write(page)
+    print(f"Wrote {PUBLIC_FILE} ({len(page)/1024:.0f} KB)")
 
 
 if __name__ == "__main__":

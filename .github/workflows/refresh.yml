@@ -64,13 +64,16 @@ jobs:
       # players each manager still has to come, and where it's heading
       - run: python live_gameweek.py
 
-      # Stats + the published page itself
+      # Stats + the published page itself. render_dashboard.py writes two
+      # copies of the same render: site/index.html is the fragment the
+      # artifact host wraps, public/index.html is the standalone document
+      # Vercel serves. Committing the latter is what triggers a deploy.
       - run: python dashboard_stats.py
       - run: python render_dashboard.py
 
       - id: stage
         run: |
-          git add seasons/2026-27/ site/index.html
+          git add seasons/2026-27/ site/index.html public/index.html
           if git diff --staged --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
