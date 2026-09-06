@@ -385,7 +385,7 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md, li
         f'<section class="band" id="results"><div class="wrap">'
         f'<div class="head"><h2>GW{gw} Results</h2>'
         f'<span class="head-note">Head to head</span></div>'
-        f'<div class="fixtures">{"".join(cards)}</div></div></section>'
+        f'<div class="fixtures live-list">{"".join(cards)}</div></div></section>'
     )
 
     # ---------- standings + scores ----------
@@ -626,8 +626,10 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md, li
             hc, ac = f["home_current"], f["away_current"]
             hw = "win" if hc > ac else ("loss" if ac > hc else "draw")
             aw = "win" if ac > hc else ("loss" if hc > ac else "draw")
+            hp, dp, ap = f.get("home_win", 0), f.get("draw", 0), f.get("away_win", 0)
             cards.append(
-                f'<article class="fixture live-fix">'
+                f'<article class="live-card">'
+                f'<div class="fixture live-fix">'
                 f'<div class="side {hw}{" me" if ME in f["home"] else ""}">'
                 f'<span class="side-name">{esc(f["home"])}</span>'
                 f'<span class="side-team">proj {f["home_projection"]:.1f} &middot; '
@@ -638,7 +640,12 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md, li
                 f'<div class="side right {aw}{" me" if ME in f["away"] else ""}">'
                 f'<span class="side-name">{esc(f["away"])}</span>'
                 f'<span class="side-team">proj {f["away_projection"]:.1f} &middot; '
-                f'{f["away_to_play"]} to play</span></div>'
+                f'{f["away_to_play"]} to play</span></div></div>'
+                f'<div class="odds live-odds"><span class="odds-bar">'
+                f'<i style="--w:{hp:.0f}%"></i><u style="--w:{dp:.0f}%"></u>'
+                f'<em style="--w:{ap:.0f}%"></em></span>'
+                f'<span class="odds-nums"><b>{hp:.0f}% to win</b>'
+                f'<s>{dp:.0f}% draw</s><b>{ap:.0f}% to win</b></span></div>'
                 f"</article>"
             )
 
@@ -651,7 +658,7 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md, li
             f'Projections add each remaining player\'s expected points, pro-rata for minutes '
             f'left, so they converge on the real score as the day goes on. Live totals include '
             f'provisional bonus and can run ahead of the official table.</p>'
-            f'<div class="fixtures">{"".join(cards)}</div></div></section>'
+            f'<div class="fixtures live-list">{"".join(cards)}</div></div></section>'
         )
 
     # If the live section already covers the next gameweek, its pre-match
@@ -884,6 +891,14 @@ a{color:inherit}
 .stamp .live-dot{width:7px;height:7px}
 .live-fix .side-team{color:var(--fog);font-variant-numeric:tabular-nums}
 .live-fix .margin{color:var(--volt);opacity:.75}
+.live-card{background:var(--turf);transition:background .2s}
+.live-card:hover{background:var(--turf-2)}
+.live-card .fixture{background:transparent;padding-bottom:.4rem}
+.live-card .fixture:hover{background:transparent}
+.live-odds{padding:0 1.3rem 1rem}
+.live-odds .odds-nums b{color:var(--chalk);font-weight:700}
+@media(max-width:560px){.live-odds{padding:0 .9rem .9rem}
+  .live-odds .odds-nums{font-size:.62rem}}
 .lede{color:var(--fog);font-size:.92rem;max-width:70ch;margin:-.5rem 0 1.5rem}
 .lede b{color:var(--chalk)}
 .sub-head{font-size:.9rem;letter-spacing:.12em;color:var(--fog);margin:2.2rem 0 .9rem;

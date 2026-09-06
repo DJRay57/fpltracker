@@ -18,7 +18,9 @@ back to showing the pre-gameweek predictions instead.
 """
 
 import json
+import math
 import os
+import statistics
 from datetime import datetime, timezone
 
 import requests
@@ -33,6 +35,43 @@ MD_OUT = os.path.join(SEASON_DIR, "live_gameweek.md")
 
 UA = {"User-Agent": "Mozilla/5.0"}
 FULL_MATCH = 90.0
+# Used only until enough of the gameweek has been played to measure the real
+# forecast error; close to what it typically settles at.
+FALLBACK_SIGMA = 2.6
+
+
+def phi(x):
+    """Standard normal CDF."""
+    return 0.5 * (1.0 + math.erf(x / math.sqrt(2.0)))
+
+
+def match_odds(proj_a, var_a, proj_b, var_b, cur_a, cur_b):
+    """Win/draw/loss chance for A, from the projected margin and what's left.
+
+    Each side's finishing score is treated as normal around its projection,
+    with variance from the players still to come. Scores are whole numbers, so
+    a draw is the half-point band around zero rather than a single point.
+    """
+    sd = math.sqrt(var_a + var_b)
+    if sd < 1e-9:                       # nothing left to play: it's decided
+        if cur_a == cur_b:
+            return 0.0, 100.0, 0.0
+        return (100.0, 0.0, 0.0) if cur_a > cur_b else (0.0, 0.0, 100.0)
+
+    mu = proj_a - proj_b
+    hi, lo = (0.5 - mu) / sd, (-0.5 - mu) / sd
+    win = (1.0 - phi(hi)) * 100
+    draw = (phi(hi) - phi(lo)) * 100
+    loss = phi(lo) * 100
+
+    # While anyone is still playing, don't claim certainty either way
+    win, loss = min(99.0, max(1.0, win)), min(99.0, max(1.0, loss))
+    draw = max(0.0, 100.0 - win - loss)
+
+    # round to whole percents that still add up to 100
+    vals = [round(win), round(draw), round(loss)]
+    vals[vals.index(max(vals))] += 100 - sum(vals)
+    return float(vals[0]), float(vals[1]), float(vals[2])
 
 
 def fetch(url):
@@ -101,21 +140,33 @@ def main():
             "team": classic_id.get(draft_team.get(el["team"], ""), el["team"]),
         }
 
+    # How wrong the expected-points figure typically is, measured on the
+    # players who have already started this gameweek. Falls back to a typical
+    # value early on, before there's enough played to measure.
+    residuals = [
+        points.get(pid, 0) - ep_this.get(pid, 0.0)
+        for pid, d in ((int(k), v) for k, v in live.items())
+        if d["stats"].get("starts")
+    ]
+    sigma = statistics.pstdev(residuals) if len(residuals) >= 30 else FALLBACK_SIGMA
+    sigma = max(1.0, min(sigma, 6.0))    # keep it sane whatever the feed says
+    print(f"  per-player forecast error: {sigma:.2f} pts (n={len(residuals)})")
+
     def remaining_for(pid):
-        """(still_to_play, expected points still to come) for one player."""
+        """(still_to_play, expected points to come, share of a match left)."""
         team = players.get(pid, {}).get("team")
         to_come = 0.0
+        share = 0.0
         pending = False
         for f in team_fixtures.get(team, []):
             if f["finished_provisional"]:
                 continue
             pending = True
-            if not f["started"]:
-                to_come += ep_this.get(pid, 0.0)
-            else:
-                left = max(0.0, 1.0 - (f.get("minutes") or 0) / FULL_MATCH)
-                to_come += ep_this.get(pid, 0.0) * left
-        return pending, to_come
+            left = 1.0 if not f["started"] else max(
+                0.0, 1.0 - (f.get("minutes") or 0) / FULL_MATCH)
+            to_come += ep_this.get(pid, 0.0) * left
+            share += left
+        return pending, to_come, share
 
     league = fetch(f"{DRAFT}/league/{LEAGUE_ID}/details")
     entries = {}
@@ -142,16 +193,18 @@ def main():
         current_pts = 0
         to_play = 0
         to_come = 0.0
+        share_left = 0.0
         yet = []
         for p in picks:
             if p["position"] > 11:
                 continue
             pid = p["element"]
             current_pts += points.get(pid, 0) * p.get("multiplier", 1)
-            pending, extra = remaining_for(pid)
+            pending, extra, share = remaining_for(pid)
             if pending:
                 to_play += 1
                 to_come += extra
+                share_left += share
                 yet.append(players.get(pid, {}).get("name", "?"))
         managers[lid] = {
             "manager": info["manager"],
@@ -160,6 +213,7 @@ def main():
             "official": official.get(lid),
             "to_play": to_play,
             "projection": round(current_pts + to_come, 1),
+            "variance": sigma ** 2 * share_left,
             "yet_to_play": sorted(yet),
         }
 
@@ -168,7 +222,11 @@ def main():
         if m["event"] != gw:
             continue
         a, b = managers[m["league_entry_1"]], managers[m["league_entry_2"]]
+        hw, dr, aw = match_odds(a["projection"], a["variance"],
+                                b["projection"], b["variance"],
+                                a["current"], b["current"])
         fixtures_out.append({
+            "home_win": hw, "draw": dr, "away_win": aw,
             "home": a["manager"], "home_team": a["team_name"],
             "home_current": a["current"], "home_to_play": a["to_play"],
             "home_projection": a["projection"],
@@ -196,14 +254,18 @@ def main():
         "_Scores are computed from the live player feed and include provisional "
         "bonus, so they can run ahead of the official league table, which settles "
         "later._\n",
+        f"_Win chances treat each side's finishing score as normal around its "
+        f"projection, with the spread coming from the players still to play "
+        f"(measured forecast error this gameweek: {sigma:.1f} pts per starter)._\n",
         "## Head to Head\n",
-        "| Home | Now | Proj | To play | | Away | Now | Proj | To play |",
+        "| Home | Now | Proj | Win% | Draw% | Away | Now | Proj | Win% |",
         "|---|---|---|---|---|---|---|---|---|",
     ]
     for f in fixtures_out:
         lines.append(
-            f"| {f['home']} | {f['home_current']} | {f['home_projection']} | {f['home_to_play']} "
-            f"| v | {f['away']} | {f['away_current']} | {f['away_projection']} | {f['away_to_play']} |"
+            f"| {f['home']} | {f['home_current']} | {f['home_projection']} | {f['home_win']:.0f}% "
+            f"| {f['draw']:.0f}% | {f['away']} | {f['away_current']} | {f['away_projection']} "
+            f"| {f['away_win']:.0f}% |"
         )
     lines.append("")
     lines.append("## Live Scores\n")
