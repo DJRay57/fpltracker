@@ -383,6 +383,12 @@ def main():
             "luck": real_rank[lid] - apa_rank[lid],  # + = table flatters them
             "trophies": trophies[lid],
             "waiver": waivers.get(lid),
+            # Points left on the bench across the whole season. This is
+            # decision quality rather than squad quality: a manager takes
+            # his selection habits through a re-draft, he does not take
+            # his players. It is the one skill signal measurable from a
+            # few gameweeks of this season alone.
+            "bench_season": sum(bench_score[g].get(lid, 0) for g in finished),
         })
     managers.sort(key=lambda m: m["real_rank"])
 

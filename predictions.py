@@ -42,6 +42,7 @@ import os
 import math
 import random
 import statistics
+import json
 
 import scoring_model
 
@@ -84,14 +85,24 @@ SEASON_SEED = 11
 REDRAFT_GW = 24          # end-of-January re-draft; GW23 is 30 Jan, GW24 6 Feb
 SQUAD_HALF_LIFE = 8.0    # gameweeks for a squad edge to halve through waivers
 # After the re-draft nobody keeps their assets, so a squad edge does not
-# survive it. What might survive is the manager -- someone who drafts and
-# picks well will do it again. We cannot measure that from three games, so it
-# is carried as uncertainty rather than as a number: each trial draws a skill
-# for each manager from a prior centred on zero. The width is a judgement
-# call, set to roughly half the spread in current squad strength, on the
-# reasoning that sustained skill should be smaller than the gap between a good
-# squad and a bad one on any given week.
-SKILL_PRIOR_FRACTION = 0.5
+# survive it. What does survive is the manager: he takes his selection habits
+# with him, not his players.
+#
+# That is measurable from this season alone, without reaching for a previous
+# one -- previous seasons are irrelevant here anyway, since the league
+# re-drafts and last year's table describes squads nobody still owns. The
+# measurable part is bench waste: points a manager left sitting on his bench.
+# It is a decision, repeated weekly, and it survives any re-draft.
+#
+# Its spread is shrunk the same way the table is, because three gameweeks of
+# bench waste is noisy too. Unlike overall scoring, a real difference does
+# come through -- roughly a third of the spread is signal -- which is why this
+# is a measurement rather than a guess.
+#
+# It is a FLOOR on manager skill, not all of it: waiver work, trades and
+# start/sit calls within the XI are skill too and are not counted here. Erring
+# low keeps the model from asserting differences it cannot see.
+SKILL_FALLBACK_SD = 2.0   # only if the bench cache is missing entirely
 
 
 def fetch(url):
@@ -115,6 +126,36 @@ def win_draw_loss(mean_a, mean_b, sigma):
     p_draw = p_not_a_wins - p_b_wins
     p_a_wins = 1 - p_not_a_wins
     return p_a_wins, p_draw, p_b_wins
+
+
+def measured_skill_sd(cache_path, played):
+    """Manager skill, in points per gameweek, measured from bench waste.
+
+    Returns the shrunk between-manager spread: how differently managers
+    actually select, once the part explainable by three weeks of luck is
+    taken back out. None if there is not enough to measure.
+    """
+    try:
+        with open(cache_path) as f:
+            weeks = json.load(f)["gameweeks"]
+    except (OSError, ValueError, KeyError):
+        return None
+    gws = sorted(weeks, key=int)
+    if len(gws) < 2:
+        return None
+    lids = sorted(weeks[gws[0]]["bench"])
+    series = {l: [weeks[g]["bench"].get(l, 0) for g in gws] for l in lids}
+
+    within = []
+    for v in series.values():
+        mu = statistics.mean(v)
+        within += [x - mu for x in v]
+    dof = max(1, len(within) - len(lids))
+    within_sd = statistics.pstdev(within) * (len(within) / dof) ** 0.5
+
+    means = [statistics.mean(v) for v in series.values()]
+    se = within_sd / len(gws) ** 0.5
+    return max(0.0, statistics.pvariance(means) - se ** 2) ** 0.5
 
 
 def main():
@@ -328,7 +369,16 @@ def main():
     # it is what this squad is expected to score next week.
     squad_mean = statistics.mean(xi_projection.values())
     squad_edge = {lid: xi_projection[lid] - squad_mean for lid in entry_ids}
-    skill_sd = statistics.pstdev(list(squad_edge.values())) * SKILL_PRIOR_FRACTION
+    skill_sd = measured_skill_sd(
+        os.path.join(SEASON_DIR, "gw_points_cache.json"), played)
+    if skill_sd is None:
+        skill_sd = SKILL_FALLBACK_SD
+        print(f"  no bench history yet -- manager skill assumed "
+              f"{skill_sd:.1f} pts/week")
+    else:
+        print(f"  manager skill measured from bench decisions: "
+              f"{skill_sd:.2f} pts/week spread (a floor -- waivers and "
+              f"start/sit are skill too and aren't counted)")
 
     print(f"  {played} gameweeks in: between-manager spread {between_var ** 0.5:.1f} "
           f"vs {se:.1f} from noise alone -> {shrink * 100:.0f}% of the table is signal")

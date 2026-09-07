@@ -111,7 +111,8 @@
         "best": 5,
         "latest": 10,
         "gw1": 5
-      }
+      },
+      "bench_season": 11
     },
     {
       "manager": "Alastair Michael",
@@ -166,7 +167,8 @@
         "best": 4,
         "latest": 9,
         "gw1": 4
-      }
+      },
+      "bench_season": 21
     },
     {
       "manager": "Sam Wright",
@@ -221,7 +223,8 @@
         "best": 3,
         "latest": 8,
         "gw1": 3
-      }
+      },
+      "bench_season": 15
     },
     {
       "manager": "chris Purnell",
@@ -276,7 +279,8 @@
         "best": 7,
         "latest": 7,
         "gw1": 8
-      }
+      },
+      "bench_season": 0
     },
     {
       "manager": "Piers Black-Hawkins",
@@ -331,7 +335,8 @@
         "best": 2,
         "latest": 6,
         "gw1": 2
-      }
+      },
+      "bench_season": 28
     },
     {
       "manager": "Andrew Hutchinson",
@@ -386,7 +391,8 @@
         "best": 5,
         "latest": 5,
         "gw1": 6
-      }
+      },
+      "bench_season": 27
     },
     {
       "manager": "Ash Cross",
@@ -441,7 +447,8 @@
         "best": 3,
         "latest": 4,
         "gw1": 9
-      }
+      },
+      "bench_season": 22
     },
     {
       "manager": "Greg Woodward",
@@ -496,7 +503,8 @@
         "best": 1,
         "latest": 3,
         "gw1": 7
-      }
+      },
+      "bench_season": 9
     },
     {
       "manager": "Ollie Felts",
@@ -551,7 +559,8 @@
         "best": 2,
         "latest": 2,
         "gw1": 10
-      }
+      },
+      "bench_season": 6
     },
     {
       "manager": "Elliott Bennett",
@@ -606,7 +615,8 @@
         "best": 1,
         "latest": 1,
         "gw1": 1
-      }
+      },
+      "bench_season": 20
     }
   ],
   "free_agents": [
