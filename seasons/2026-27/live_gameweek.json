@@ -3,7 +3,7 @@
   "sigma": 2.63,
   "team_rho": 0.1,
   "gameweek": 3,
-  "updated_at": "2026-09-06T22:34:31+00:00",
+  "updated_at": "2026-09-07T08:13:48+00:00",
   "fixtures_total": 10,
   "fixtures_finished": 10,
   "fixtures_started": 10,
@@ -120,68 +120,59 @@
       "manager": "Sam Wright",
       "team_name": "Middle court virgins",
       "current": 46,
-      "official": 28,
+      "official": 46,
       "to_play": 0,
       "projection": 46.0,
       "proj_low": 46,
       "proj_high": 46,
       "to_come": 0.0,
-      "auto_subbed": [
-        "Matheus N."
-      ],
+      "auto_subbed": [],
       "yet_to_play": []
     },
     {
       "manager": "Greg Woodward",
       "team_name": "Sxci_Scorpion_69",
       "current": 45,
-      "official": 26,
+      "official": 45,
       "to_play": 0,
       "projection": 45.0,
       "proj_low": 45,
       "proj_high": 45,
       "to_come": 0.0,
-      "auto_subbed": [
-        "Palestra"
-      ],
+      "auto_subbed": [],
       "yet_to_play": []
     },
     {
       "manager": "Andrew Hutchinson",
       "team_name": "Inter Da Pub",
       "current": 44,
-      "official": 37,
+      "official": 44,
       "to_play": 0,
       "projection": 44.0,
       "proj_low": 44,
       "proj_high": 44,
       "to_come": 0.0,
-      "auto_subbed": [
-        "Frimpong"
-      ],
+      "auto_subbed": [],
       "yet_to_play": []
     },
     {
       "manager": "Alastair Michael",
       "team_name": "Shabbos Sly Boys",
       "current": 41,
-      "official": 36,
+      "official": 41,
       "to_play": 0,
       "projection": 41.0,
       "proj_low": 41,
       "proj_high": 41,
       "to_come": 0.0,
-      "auto_subbed": [
-        "Bruno G.",
-        "Georginio"
-      ],
+      "auto_subbed": [],
       "yet_to_play": []
     },
     {
       "manager": "Jason Parmar",
       "team_name": "Pain in Diaz",
       "current": 37,
-      "official": 31,
+      "official": 37,
       "to_play": 0,
       "projection": 37.0,
       "proj_low": 37,
@@ -194,29 +185,26 @@
       "manager": "Ollie Felts",
       "team_name": "FLASHMOB MRCAKEBREAD",
       "current": 37,
-      "official": 28,
+      "official": 37,
       "to_play": 0,
       "projection": 37.0,
       "proj_low": 37,
       "proj_high": 37,
       "to_come": 0.0,
-      "auto_subbed": [
-        "Hinshelwood"
-      ],
+      "auto_subbed": [],
       "yet_to_play": []
     },
     {
       "manager": "Ash Cross",
       "team_name": "H\u00f8jbjerg\u2019s packet",
       "current": 31,
-      "official": 23,
+      "official": 31,
       "to_play": 0,
       "projection": 31.0,
       "proj_low": 31,
       "proj_high": 31,
       "to_come": 0.0,
       "auto_subbed": [
-        "Wieffer",
         "Eze"
       ],
       "yet_to_play": []
@@ -225,7 +213,7 @@
       "manager": "Piers Black-Hawkins",
       "team_name": "Really Kick FC",
       "current": 31,
-      "official": 22,
+      "official": 31,
       "to_play": 0,
       "projection": 31.0,
       "proj_low": 31,
@@ -238,7 +226,7 @@
       "manager": "chris Purnell",
       "team_name": "Gary fishcake  fc",
       "current": 30,
-      "official": 12,
+      "official": 30,
       "to_play": 0,
       "projection": 30.0,
       "proj_low": 30,
@@ -251,14 +239,13 @@
       "manager": "Elliott Bennett",
       "team_name": "You're Toast FC",
       "current": 23,
-      "official": 13,
+      "official": 23,
       "to_play": 0,
       "projection": 23.0,
       "proj_low": 23,
       "proj_high": 23,
       "to_come": 0.0,
       "auto_subbed": [
-        "O'Reilly",
         "Mbaye"
       ],
       "yet_to_play": []

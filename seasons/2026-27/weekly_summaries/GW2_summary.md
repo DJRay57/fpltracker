@@ -97,7 +97,6 @@ _(This league doesn't use captaincy multipliers.)_
 - **Igor**: a → u — Has joined Burnley permanently
 - **Wieffer**: a → i — Knee injury - Unknown return date
 - **Sánchez**: a → u — Has joined Como on loan for the rest of the season
-- **Caicedo**: a → d — Unspecified injury - 75% chance of playing
 - **D.Essugo**: a → u — Has joined RC Strasbourg on loan for the rest of the season
 - **Marc Guiu**: a → u — Has joined RB Leipzig permanently
 - **Dovin**: a → u — Has joined Leyton Orient on loan for the rest of the season
@@ -108,6 +107,7 @@ _(This league doesn't use captaincy multipliers.)_
 - **Esse**: a → u — Has joined Millwall on loan for the rest of the season
 - **Patterson**: a → u — Has joined Torino permanently
 - **Aznou**: a → u — Has joined Malaga on loan for the rest of the season
+- **Garner**: a → d — Unspecified injury - 75% chance of playing
 - **Beto**: a → u — Has joined Fiorentina permanently
 - **McNally**: a → u — Has joined York City on loan for the rest of the season
 - **Drameh**: a → u — Has joined Genoa permanently
@@ -116,7 +116,7 @@ _(This league doesn't use captaincy multipliers.)_
 - **Johnson**: a → u — Has joined Stoke City on loan for the rest of the season
 - **Ogbene**: a → u — Has joined Lincoln City on loan until January
 - **Perri**: a → u — Has joined Torino on loan for the rest of the season
-- **Rodon**: a → i — Hamstring injury - Expected back 21 Nov
+- **Rodon**: d → i — Hamstring injury - Expected back 21 Nov
 - **Gnonto**: a → u — Has joined ACF Fiorentina on loan for the rest of the season
 - **Bajcetic**: i → u — Has joined Celta Vigo permanently
 - **Elliott**: a → u — Has joined Valencia on loan for the rest of the season
@@ -136,7 +136,8 @@ _(This league doesn't use captaincy multipliers.)_
 - **Moore**: a → u — Has joined FC Köln on loan for the rest of the season
 - **Richarlison**: a → u — not included in squad.
 - **Scarlett**: a → u — Has joined Leyton Orient permanently
-- **Diarra**: a → i — Hamstring injury - Unknown return date
+- **Diarra**: d → i — Hamstring injury - Unknown return date
 - **Adingra**: i → u — Has joined Ajax on loan for the rest of the season
 - **Humphreys**: a → u — Has joined Huddersfield Town on loan for the rest of the season
 - **Lynch**: a → u — Has joined Oxford United on loan until January
+- **Cozier-Duberry**: a → u — Has joined Middlesbrough on loan for the rest of the season
