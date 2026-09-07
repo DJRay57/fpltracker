@@ -106,9 +106,10 @@
         "drew": 1
       },
       "waiver": {
-        "avg": 7.0,
+        "avg": 9.0,
         "windows": 3,
-        "best": 5
+        "best": 8,
+        "latest": 10
       }
     },
     {
@@ -159,9 +160,10 @@
         "drew": 1
       },
       "waiver": {
-        "avg": 5.3,
+        "avg": 7.3,
         "windows": 3,
-        "best": 4
+        "best": 6,
+        "latest": 9
       }
     },
     {
@@ -212,9 +214,10 @@
         "drew": 0
       },
       "waiver": {
-        "avg": 5.7,
+        "avg": 8.0,
         "windows": 3,
-        "best": 3
+        "best": 6,
+        "latest": 8
       }
     },
     {
@@ -265,9 +268,10 @@
         "drew": 0
       },
       "waiver": {
-        "avg": 9.0,
-        "windows": 1,
-        "best": 9
+        "avg": 8.7,
+        "windows": 3,
+        "best": 7,
+        "latest": 7
       }
     },
     {
@@ -318,9 +322,10 @@
         "drew": 0
       },
       "waiver": {
-        "avg": 4.3,
+        "avg": 6.0,
         "windows": 3,
-        "best": 2
+        "best": 5,
+        "latest": 6
       }
     },
     {
@@ -372,8 +377,9 @@
       },
       "waiver": {
         "avg": 6.0,
-        "windows": 2,
-        "best": 5
+        "windows": 3,
+        "best": 5,
+        "latest": 5
       }
     },
     {
@@ -424,9 +430,10 @@
         "drew": 0
       },
       "waiver": {
-        "avg": 4.3,
+        "avg": 3.7,
         "windows": 3,
-        "best": 3
+        "best": 3,
+        "latest": 4
       }
     },
     {
@@ -477,9 +484,10 @@
         "drew": 0
       },
       "waiver": {
-        "avg": 2.7,
+        "avg": 1.7,
         "windows": 3,
-        "best": 1
+        "best": 1,
+        "latest": 3
       }
     },
     {
@@ -530,9 +538,10 @@
         "drew": 1
       },
       "waiver": {
-        "avg": 5.0,
-        "windows": 2,
-        "best": 2
+        "avg": 2.0,
+        "windows": 3,
+        "best": 2,
+        "latest": 2
       }
     },
     {
@@ -583,9 +592,10 @@
         "drew": 0
       },
       "waiver": {
-        "avg": 2.3,
+        "avg": 2.7,
         "windows": 3,
-        "best": 1
+        "best": 1,
+        "latest": 1
       }
     }
   ],

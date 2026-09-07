@@ -293,10 +293,11 @@ def badges(m):
         win = "window" if wv["windows"] == 1 else "windows"
         bits.append(
             f'<span class="bdg wv" title="Average waiver slot {wv["avg"]} across '
-            f'{wv["windows"]} {win} entered, best {ordinal_n(wv["best"])}. '
-            f'Earlier is better. Managers who entered no claims that week are not '
-            f'in the queue, so this is the observed order, not the league\'s '
-            f'internal one.">{ICON_WV}{wv["avg"]}</span>'
+            f'{wv["windows"]} {win}. The waiver queue is the table upside down -- '
+            f'bottom picks first, the leader picks last, recomputed every gameweek. '
+            f'So this is really his average league position over the season, and it '
+            f'is worth reading against where he sits now: a low number beside a high '
+            f'finish means he has climbed.">{ICON_WV}{wv["avg"]}</span>'
         )
     return f'<span class="bdgs">{"".join(bits)}</span>' if bits else ""
 

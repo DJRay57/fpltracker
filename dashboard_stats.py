@@ -51,41 +51,58 @@ def load_cache():
         return {}
 
 
-def waiver_positions(base, league_id, entry_lookup):
-    """Each manager's average slot in the waiver queue.
+def waiver_positions(league_data, entry_lookup, finished):
+    """Each manager's average waiver slot.
 
-    Waiver claims are processed in rounds: the league is walked in queue
-    order, and each manager burns through his own priority list until one
-    claim sticks. So the queue for a gameweek is simply the order in which
-    managers first appear, and a manager's slot is his place in it.
+    The order is not something to be inferred from the transactions feed: it
+    is the league table upside down. Bottom of the table picks first, the
+    leader picks last, recomputed every gameweek. So a manager's slot going
+    into GW n is his position in the standings after GW n-1, counted from the
+    bottom -- and it applies whether or not he actually enters a claim.
 
-    Two honest limits. A manager who submits nothing that week is invisible,
-    which shifts everyone below him up a slot -- so this is the observed
-    queue among those who actually entered, not the league's true internal
-    order. And a manager who has entered one window has an "average" of one
-    number, which is why the window count is carried alongside it.
+    An earlier version read the order off the transactions instead, which
+    skipped anyone who submitted nothing that week and quietly promoted
+    everyone below him. Those numbers were wrong.
+
+    GW1 is excluded: there are no standings before a ball is kicked, so the
+    opening order comes from the draft rather than the table, and averaging
+    it in would mix two different things.
     """
-    try:
-        tx = fetch(f"{base}/draft/league/{league_id}/transactions")["transactions"]
-    except Exception:  # noqa: BLE001 - the badge is a nicety, not worth failing over
+    ranked_weeks = [gw for gw in finished if gw >= 1]
+    if not ranked_weeks:
         return {}
 
-    by_entry = {info["entry_id"]: lid for lid, info in entry_lookup.items()
-                if info.get("entry_id")}
+    lids = list(entry_lookup.keys())
     slots = defaultdict(list)
-    for gw in sorted({t["event"] for t in tx if t["kind"] == "w"}):
-        order = []
-        for t in sorted((x for x in tx if x["event"] == gw and x["kind"] == "w"),
-                        key=lambda x: x["index"]):
-            lid = by_entry.get(t["entry"])
-            if lid is not None and lid not in order:
-                order.append(lid)
+
+    for gw in ranked_weeks:
+        # standings as they stood after this gameweek decide the NEXT window
+        pts = defaultdict(int)
+        pf = defaultdict(int)
+        for m in league_data["matches"]:
+            if not m["finished"] or m["event"] > gw:
+                continue
+            a, b = m["league_entry_1"], m["league_entry_2"]
+            pa, pb = m["league_entry_1_points"], m["league_entry_2_points"]
+            pf[a] += pa
+            pf[b] += pb
+            if pa > pb:
+                pts[a] += 3
+            elif pb > pa:
+                pts[b] += 3
+            else:
+                pts[a] += 1
+                pts[b] += 1
+
+        # worst first: fewest points, then fewest scored
+        order = sorted(lids, key=lambda l: (pts[l], pf[l]))
         for slot, lid in enumerate(order, 1):
             slots[lid].append(slot)
 
     return {lid: {"avg": round(sum(v) / len(v), 1),
                   "windows": len(v),
-                  "best": min(v)}
+                  "best": min(v),
+                  "latest": v[-1]}
             for lid, v in slots.items()}
 
 
@@ -119,8 +136,9 @@ def main():
         }
     entry_ids = list(entry_lookup.keys())
 
+    waivers = waiver_positions(league_data, entry_lookup, finished)
+
     print("Reading waiver queue order...")
-    waivers = waiver_positions(BASE, LEAGUE_ID, entry_lookup)
 
     # ------------------------------------------------------------------
     # Per-gameweek starting XI + bench totals for every manager.
