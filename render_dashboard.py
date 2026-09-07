@@ -256,6 +256,57 @@ def table_html(headers, rows, aligns=None, me_col=None):
     )
 
 
+# Small counters that sit beside a manager's name in the table.
+ICON_TOP = ('<svg viewBox="0 0 24 24" aria-hidden="true">'
+            '<path d="M12 2.6l2.9 5.9 6.5.95-4.7 4.6 1.1 6.5L12 17.5 '
+            '6.2 20.55l1.1-6.5-4.7-4.6 6.5-.95z"/></svg>')
+ICON_BOT = ('<svg viewBox="0 0 24 24" aria-hidden="true">'
+            '<path d="M12 21.4L3.6 11h4.9V2.6h7V11h4.9z"/></svg>')
+ICON_WV = ('<svg viewBox="0 0 24 24" aria-hidden="true">'
+           '<path d="M3 6h18v2.4H3zm0 4.8h18v2.4H3zm0 4.8h11v2.4H3z"/></svg>')
+
+
+def badges(m):
+    """Weeks topped, weeks bottomed, and average waiver slot, as one strip.
+
+    Nothing is shown for a zero -- a manager who has never topped a week
+    doesn't need a green 0 telling him so.
+    """
+    if not m:
+        return ""
+    t = m["trophies"]
+    bits = []
+    if t["topped"]:
+        wk = "gameweek" if t["topped"] == 1 else "gameweeks"
+        bits.append(
+            f'<span class="bdg top" title="Highest score of the week in '
+            f'{t["topped"]} {wk}">{ICON_TOP}{t["topped"]}</span>'
+        )
+    if t["bottomed"]:
+        wk = "gameweek" if t["bottomed"] == 1 else "gameweeks"
+        bits.append(
+            f'<span class="bdg bot" title="Lowest score of the week in '
+            f'{t["bottomed"]} {wk}">{ICON_BOT}{t["bottomed"]}</span>'
+        )
+    wv = m.get("waiver")
+    if wv:
+        win = "window" if wv["windows"] == 1 else "windows"
+        bits.append(
+            f'<span class="bdg wv" title="Average waiver slot {wv["avg"]} across '
+            f'{wv["windows"]} {win} entered, best {ordinal_n(wv["best"])}. '
+            f'Earlier is better. Managers who entered no claims that week are not '
+            f'in the queue, so this is the observed order, not the league\'s '
+            f'internal one.">{ICON_WV}{wv["avg"]}</span>'
+        )
+    return f'<span class="bdgs">{"".join(bits)}</span>' if bits else ""
+
+
+def ordinal_n(n):
+    n = int(n)
+    suffix = "th" if 11 <= n % 100 <= 13 else {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
+    return f"{n}{suffix}"
+
+
 def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md, live=None):
     gw = stats["gameweek"]
     live_active = bool(live and live.get("state") in ("pre", "live", "done"))
@@ -469,7 +520,7 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md, li
         tone = "good" if "UP" in move else ("bad" if "DOWN" in move else "flat")
         rows.append({"cells": [
             f'<span class="pos">{esc(r.get("Rank",""))}</span>',
-            f'<b>{esc(name)}</b><span class="sub">{esc(r.get("Team",""))}</span>',
+            f'<b>{esc(name)}</b>{badges(m)}<span class="sub">{esc(r.get("Team",""))}</span>',
             f'<span class="movement {tone}">{esc(move)}</span>',
             f'<span class="formline">{form_pills(m["form"]) if m else ""}</span>',
             f'<b>{esc(r.get("Pts",""))}</b>',
@@ -932,6 +983,21 @@ a{color:inherit}
   .live-odds .odds-nums{font-size:.62rem}}
 .lede{color:var(--fog);font-size:.92rem;max-width:70ch;margin:-.5rem 0 1.5rem}
 .lede b{color:var(--chalk)}
+/* name badges: weeks topped / bottomed / average waiver slot */
+.bdgs{display:inline-flex;gap:.28rem;margin-left:.42rem;vertical-align:.05em}
+.bdg{display:inline-flex;align-items:center;gap:.18rem;
+  font-family:'Bebas Neue',Impact,sans-serif;font-size:.76rem;line-height:1;
+  letter-spacing:.04em;padding:.17rem .34rem .13rem;border-radius:4px;
+  border:1px solid transparent;cursor:default;white-space:nowrap}
+.bdg svg{width:.68em;height:.68em;fill:currentColor;flex:none}
+.bdg.top{color:#0a1a0c;background:var(--volt);border-color:var(--volt)}
+.bdg.bot{color:#fff;background:var(--flare);border-color:var(--flare)}
+.bdg.wv{color:var(--fog);background:rgba(255,255,255,.055);
+  border-color:rgba(255,255,255,.14)}
+@media (max-width:560px){
+  .bdg{font-size:.7rem;padding:.14rem .28rem .1rem}
+  .bdg.wv{display:none}   /* the table is tight on a phone; keep the medals */
+}
 .sub-head{font-size:.9rem;letter-spacing:.12em;color:var(--fog);margin:2.2rem 0 .9rem;
   display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .grid-2{display:grid;grid-template-columns:1.15fr .85fr;gap:2.5rem;align-items:start}

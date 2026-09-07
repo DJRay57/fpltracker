@@ -51,6 +51,44 @@ def load_cache():
         return {}
 
 
+def waiver_positions(base, league_id, entry_lookup):
+    """Each manager's average slot in the waiver queue.
+
+    Waiver claims are processed in rounds: the league is walked in queue
+    order, and each manager burns through his own priority list until one
+    claim sticks. So the queue for a gameweek is simply the order in which
+    managers first appear, and a manager's slot is his place in it.
+
+    Two honest limits. A manager who submits nothing that week is invisible,
+    which shifts everyone below him up a slot -- so this is the observed
+    queue among those who actually entered, not the league's true internal
+    order. And a manager who has entered one window has an "average" of one
+    number, which is why the window count is carried alongside it.
+    """
+    try:
+        tx = fetch(f"{base}/draft/league/{league_id}/transactions")["transactions"]
+    except Exception:  # noqa: BLE001 - the badge is a nicety, not worth failing over
+        return {}
+
+    by_entry = {info["entry_id"]: lid for lid, info in entry_lookup.items()
+                if info.get("entry_id")}
+    slots = defaultdict(list)
+    for gw in sorted({t["event"] for t in tx if t["kind"] == "w"}):
+        order = []
+        for t in sorted((x for x in tx if x["event"] == gw and x["kind"] == "w"),
+                        key=lambda x: x["index"]):
+            lid = by_entry.get(t["entry"])
+            if lid is not None and lid not in order:
+                order.append(lid)
+        for slot, lid in enumerate(order, 1):
+            slots[lid].append(slot)
+
+    return {lid: {"avg": round(sum(v) / len(v), 1),
+                  "windows": len(v),
+                  "best": min(v)}
+            for lid, v in slots.items()}
+
+
 def main():
     print("Fetching static data...")
     bootstrap = fetch(f"{BASE}/bootstrap-static")
@@ -80,6 +118,9 @@ def main():
             "entry_id": e["entry_id"],
         }
     entry_ids = list(entry_lookup.keys())
+
+    print("Reading waiver queue order...")
+    waivers = waiver_positions(BASE, LEAGUE_ID, entry_lookup)
 
     # ------------------------------------------------------------------
     # Per-gameweek starting XI + bench totals for every manager.
@@ -270,6 +311,7 @@ def main():
             "apa_record": [apa[lid]["w"], apa[lid]["d"], apa[lid]["l"]],
             "luck": real_rank[lid] - apa_rank[lid],  # + = table flatters them
             "trophies": trophies[lid],
+            "waiver": waivers.get(lid),
         })
     managers.sort(key=lambda m: m["real_rank"])
 
