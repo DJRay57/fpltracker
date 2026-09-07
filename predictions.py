@@ -51,6 +51,12 @@ SEASON_DIR = os.path.join("seasons", SEASON)
 
 N_TRIALS = 5000        # Monte Carlo trials for season projection
 SCORE_SIMS = 4000      # simulated gameweeks per manager, sampled from later
+# Fixed, so the same data gives the same table. Unseeded, 5000 trials left
+# enough sampling noise to move a manager two points between back-to-back
+# runs on identical data -- which reads as movement, commits on every cron
+# run and redeploys the site for nothing. Genuine change still shows: the
+# squads and their distributions feed in from upstream.
+SEASON_SEED = 11
 
 
 def fetch(url):
@@ -270,13 +276,14 @@ def main():
 
     position_counts = {lid: [0] * len(entry_ids) for lid in entry_ids}
 
+    rng = random.Random(SEASON_SEED)
     for _ in range(N_TRIALS):
         league_pts = dict(base_league_pts)
         pts_for = dict(base_pts_for)
         for m in remaining:
             e1, e2 = m["league_entry_1"], m["league_entry_2"]
-            s1 = random.choice(distributions[e1])
-            s2 = random.choice(distributions[e2])
+            s1 = rng.choice(distributions[e1])
+            s2 = rng.choice(distributions[e2])
             pts_for[e1] += s1
             pts_for[e2] += s2
             if s1 > s2:
