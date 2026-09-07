@@ -262,28 +262,29 @@ ICON_TOP = ('<svg viewBox="0 0 24 24" aria-hidden="true">'
             '6.2 20.55l1.1-6.5-4.7-4.6 6.5-.95z"/></svg>')
 ICON_BOT = ('<svg viewBox="0 0 24 24" aria-hidden="true">'
             '<path d="M12 21.4L3.6 11h4.9V2.6h7V11h4.9z"/></svg>')
-ICON_DR = ('<svg viewBox="0 0 24 24" aria-hidden="true">'
-           '<path d="M12 2.2a9.8 9.8 0 100 19.6 9.8 9.8 0 000-19.6zm0 2.6a7.2 '
-           '7.2 0 110 14.4 7.2 7.2 0 010-14.4zm0 3a4.2 4.2 0 100 8.4 4.2 4.2 '
-           '0 000-8.4z"/></svg>')
 ICON_WV = ('<svg viewBox="0 0 24 24" aria-hidden="true">'
            '<path d="M3 6h18v2.4H3zm0 4.8h18v2.4H3zm0 4.8h11v2.4H3z"/></svg>')
 
 
 # The chips beside each name are bare numbers without this. Tooltips carry the
 # detail but do not exist on a touch screen, so the key has to be on the page.
-BADGE_KEY = (
+MEDAL_KEY = (
     '<div class="bdg-key">'
     f'<span><i class="bdg top">{ICON_TOP}</i>weeks top-scored</span>'
     f'<span><i class="bdg bot">{ICON_BOT}</i>weeks bottom</span>'
-    f'<span><i class="bdg dr">{ICON_DR}</i>opening waiver slot</span>'
-    f'<span><i class="bdg wv">{ICON_WV}</i>average waiver slot</span>'
+    '</div>'
+)
+WAIVER_KEY = (
+    '<div class="bdg-key">'
+    f'<span><i class="bdg wv">{ICON_WV}</i>average waiver slot -- the table '
+    'upside down, bottom picks first, so a low number beside a good finish '
+    'means he has climbed</span>'
     '</div>'
 )
 
 
-def badges(m):
-    """Weeks topped, weeks bottomed, and average waiver slot, as one strip.
+def medals(m):
+    """Weeks topped and weeks bottomed, for the standings table.
 
     Nothing is shown for a zero -- a manager who has never topped a week
     doesn't need a green 0 telling him so.
@@ -304,26 +305,30 @@ def badges(m):
             f'<span class="bdg bot" title="Lowest score of the week in '
             f'{t["bottomed"]} {wk}">{ICON_BOT}{t["bottomed"]}</span>'
         )
-    wv = m.get("waiver")
-    if wv and wv.get("gw1"):
-        bits.append(
-            f'<span class="bdg dr" title="Opening waiver slot {wv["gw1"]} of 10, '
-            f'set by the draft run backwards -- last pick waives first. The only '
-            f'window whose order is not the league table reversed, and the one '
-            f'chance at a Premier League signing before a ball is kicked.">'
-            f'{ICON_DR}{wv["gw1"]}</span>'
-        )
-    if wv:
-        win = "window" if wv["windows"] == 1 else "windows"
-        bits.append(
-            f'<span class="bdg wv" title="Average waiver slot {wv["avg"]} across '
-            f'{wv["windows"]} {win}. The waiver queue is the table upside down -- '
-            f'bottom picks first, the leader picks last, recomputed every gameweek. '
-            f'So this is really his average league position over the season, and it '
-            f'is worth reading against where he sits now: a low number beside a high '
-            f'finish means he has climbed.">{ICON_WV}{wv["avg"]}</span>'
-        )
     return f'<span class="bdgs">{"".join(bits)}</span>' if bits else ""
+
+
+def waiver_badge(m):
+    """Average waiver slot, for trade and waiver sections only.
+
+    It doesn't belong on the league table: the queue is just the table
+    upside down, recomputed every gameweek, so displaying it there would be
+    the standings restated as a second column. It earns its place next to
+    trades and pending moves instead, where "his average draw in the queue"
+    is actually the relevant fact.
+    """
+    if not m:
+        return ""
+    wv = m.get("waiver")
+    if not wv:
+        return ""
+    win = "window" if wv["windows"] == 1 else "windows"
+    # Full explanation lives once in WAIVER_KEY beside the table this sits in;
+    # this repeats per row, so the tooltip stays short.
+    return (
+        f'<span class="bdgs"><span class="bdg wv" title="Average waiver slot '
+        f'{wv["avg"]} across {wv["windows"]} {win}">{ICON_WV}{wv["avg"]}</span></span>'
+    )
 
 
 def ordinal_n(n):
@@ -545,7 +550,7 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md, li
         tone = "good" if "UP" in move else ("bad" if "DOWN" in move else "flat")
         rows.append({"cells": [
             f'<span class="pos">{esc(r.get("Rank",""))}</span>',
-            f'<b>{esc(name)}</b>{badges(m)}<span class="sub">{esc(r.get("Team",""))}</span>',
+            f'<b>{esc(name)}</b>{medals(m)}<span class="sub">{esc(r.get("Team",""))}</span>',
             f'<span class="movement {tone}">{esc(move)}</span>',
             f'<span class="formline">{form_pills(m["form"]) if m else ""}</span>',
             f'<b>{esc(r.get("Pts",""))}</b>',
@@ -572,7 +577,7 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md, li
     out.append(
         f'<section class="band" id="table"><div class="wrap grid-2">'
         f'<div class="panel"><div class="head"><h2>Table</h2>'
-        f'<span class="head-note">After GW{gw}</span></div>{standings}'f'{BADGE_KEY}</div>'
+        f'<span class="head-note">After GW{gw}</span></div>{standings}'f'{MEDAL_KEY}</div>'
         f'<div class="panel"><div class="head"><h2>GW{gw} Scores</h2>'
         f'<span class="head-note">Starting XI</span></div>'
         f'<div class="bars">{"".join(bars)}</div></div>'
@@ -661,7 +666,7 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md, li
         return [{"cells": [
             f'<span class="chip {"good" if num(r.get("Net",0))>0 else "bad" if num(r.get("Net",0))<0 else "flat"}">'
             f'{esc(r.get("Net",""))}</span>',
-            esc(r.get("Manager", "")),
+            f'{esc(r.get("Manager", ""))}{waiver_badge(by_name.get(r.get("Manager", "")))}',
             esc(r.get("In (pts since)", "")),
             esc(r.get("Out (pts since)", "")),
             esc(r.get("Since", "")),
@@ -678,7 +683,8 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md, li
     pending = find_table(trade_md, "Pending")
     pending_html = table_html(
         ["Manager", "In", "Out", "Effective"],
-        [{"cells": [esc(r.get("Manager", "")), esc(r.get("In", "")),
+        [{"cells": [f'{esc(r.get("Manager", ""))}{waiver_badge(by_name.get(r.get("Manager", "")))}',
+                    esc(r.get("In", "")),
                     esc(r.get("Out", "")), esc(r.get("Effective", ""))],
           "Manager": r.get("Manager", "")} for r in pending], me_col="Manager",
     ) if pending else ""
@@ -698,7 +704,7 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md, li
         f'<section class="band" id="trades"><div class="wrap"><div class="head">'
         f'<h2>Trade Impact</h2><span class="head-note">Net points since each deal</span></div>'
         f'{badge}<div class="tornado">{"".join(tor)}</div>'
-        f'<h3 class="sub-head">Best &amp; worst deals</h3>{headline_trades}'
+        f'<h3 class="sub-head">Best &amp; worst deals</h3>{headline_trades}{WAIVER_KEY}'
         f'{drawer("See all " + str(len(all_trades)) + " trades", "full ledger", full_trades)}'
         f'{churn_line}'
         f'{drawer("See pending moves", f"effective GW{gw + 1}", pending_html) if pending_html else ""}'
@@ -1008,7 +1014,8 @@ a{color:inherit}
   .live-odds .odds-nums{font-size:.62rem}}
 .lede{color:var(--fog);font-size:.92rem;max-width:70ch;margin:-.5rem 0 1.5rem}
 .lede b{color:var(--chalk)}
-/* name badges: weeks topped / bottomed / average waiver slot */
+/* name badges: weeks topped/bottomed sit in the standings table (medals);
+   average waiver slot sits only in the trade/waiver sections (waiver_badge) */
 .bdgs{display:inline-flex;gap:.28rem;margin-left:.42rem;vertical-align:.05em}
 .bdg{display:inline-flex;align-items:center;gap:.18rem;
   font-family:'Bebas Neue',Impact,sans-serif;font-size:.76rem;line-height:1;
@@ -1019,7 +1026,6 @@ a{color:inherit}
 .bdg.bot{color:#fff;background:var(--flare);border-color:var(--flare)}
 .bdg.wv{color:var(--fog);background:rgba(255,255,255,.055);
   border-color:rgba(255,255,255,.14)}
-.bdg.dr{color:var(--pitch);background:#8ab4ff;border-color:#8ab4ff}
 @media (max-width:560px){
   /* Keeping these off a phone hid the very numbers they exist to show. The
      icon is what costs width, not the digit, so the icon goes and the number
