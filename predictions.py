@@ -83,7 +83,7 @@ SEASON_SEED = 11
 #                            erodes as squads churn and it is wiped by the
 #                            re-draft
 REDRAFT_GW = 24          # end-of-January re-draft; GW23 is 30 Jan, GW24 6 Feb
-SQUAD_HALF_LIFE = 8.0    # gameweeks for a squad edge to halve through waivers
+SQUAD_HALF_LIFE_FALLBACK = 8.0   # only until there are transactions to measure
 # After the re-draft nobody keeps their assets, so a squad edge does not
 # survive it. What does survive is the manager: he takes his selection habits
 # with him, not his players.
@@ -126,6 +126,30 @@ def win_draw_loss(mean_a, mean_b, sigma):
     p_draw = p_not_a_wins - p_b_wins
     p_a_wins = 1 - p_not_a_wins
     return p_a_wins, p_draw, p_b_wins
+
+
+def squad_half_life(transactions, n_managers, squad_size=15):
+    """How many gameweeks it takes a squad edge to halve, measured.
+
+    Taken from how fast squads actually turn over: accepted transactions
+    per manager per gameweek, as a fraction of the squad. If a squad
+    changes 11% of itself a week, what made it good three months ago has
+    largely gone.
+
+    It is a rate of change, not strictly a rate of decay -- a good manager
+    churns to keep an edge, not to lose one -- so read it as a bound on how
+    long an advantage can persist rather than an exact decay. It is still a
+    measurement, which the flat 8.0 it replaces was not.
+    """
+    accepted = [t for t in transactions if t.get("result") == "a"]
+    weeks = {t["event"] for t in accepted}
+    if not accepted or not weeks or not n_managers:
+        return None
+    per_week = len(accepted) / n_managers / len(weeks)
+    frac = per_week / squad_size
+    if not 0 < frac < 1:
+        return None
+    return math.log(0.5) / math.log(1 - frac)
 
 
 def measured_skill_sd(cache_path, played):
@@ -380,22 +404,31 @@ def main():
               f"{skill_sd:.2f} pts/week spread (a floor -- waivers and "
               f"start/sit are skill too and aren't counted)")
 
+    # Squad edge decays week by week and stops entirely at the re-draft.
+    half_life = squad_half_life(transactions, len(entry_ids))
+    if half_life is None:
+        half_life = SQUAD_HALF_LIFE_FALLBACK
+        print(f"  no transactions yet -- squad edge half-life assumed "
+              f"{half_life:.1f} gameweeks")
+    else:
+        print(f"  squad turnover measured: edge half-life "
+              f"{half_life:.1f} gameweeks")
+
     print(f"  {played} gameweeks in: between-manager spread {between_var ** 0.5:.1f} "
           f"vs {se:.1f} from noise alone -> {shrink * 100:.0f}% of the table is signal")
     print(f"  squad edges span {min(squad_edge.values()):+.1f} to "
           f"{max(squad_edge.values()):+.1f} pts/week, halving every "
-          f"{SQUAD_HALF_LIFE:.0f} gameweeks, gone at the GW{REDRAFT_GW} re-draft")
+          f"{half_life:.1f} gameweeks, gone at the GW{REDRAFT_GW} re-draft")
 
     # Keep each manager's score SHAPE but let its centre move: the empirical
     # distribution carries the skew and the lumpiness, the rate carries the level.
     shapes = {lid: [v - statistics.mean(distributions[lid]) for v in distributions[lid]]
               for lid in entry_ids}
 
-    # Squad edge decays week by week and stops entirely at the re-draft.
     weight = {}
     for gw in sorted(set(m["event"] for m in remaining)):
         weight[gw] = (0.0 if gw >= REDRAFT_GW
-                      else 0.5 ** ((gw - target_gw) / SQUAD_HALF_LIFE))
+                      else 0.5 ** ((gw - target_gw) / half_life))
 
     rng = random.Random(SEASON_SEED)
     for _ in range(N_TRIALS):
