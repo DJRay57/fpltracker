@@ -1,4 +1,4 @@
-# Lineup Impact — GW1 → GW2
+# Lineup Impact — GW2 → GW3
 
 _Starting XI changes between the two most recent gameweeks (trades and plain bench/start swaps both count). Net only counts players who actually played that gameweek -- others are listed but tagged DNP and excluded._
 
@@ -6,13 +6,13 @@ _Starting XI changes between the two most recent gameweeks (trades and plain ben
 
 | Net | Manager | Changes |
 |---|---|---|
-| +9 | Ash Cross | +Ballard (8pt), +Bijol (1pt), -Mateta (DNP), -Richarlison (DNP) |
-| +5 | Elliott Bennett | +M.Sangaré (4pt), +Kerkez (1pt), -Aina (0pt), -Estêvão (DNP) |
-| +4 | Jason Parmar | +Xhaka (6pt), +Marmoush (2pt), +De Cuyper (0pt), +Van de Ven (0pt), -Madueke (DNP), -Muñoz (DNP), -Kluivert (3pt), -Murillo (1pt) |
-| +4 | Andrew Hutchinson | +Lewis-Potter (6pt), +Elanga (8pt), +Delap (1pt), -Hall (11pt), -Wood (DNP), -Maddison (DNP) |
-| +3 | Greg Woodward | +Kudus (1pt), +Emersonn (1pt), +Martinez (2pt), +McBurnie (1pt), -Ngumoha (1pt), -Sels (1pt), -Alderete (DNP), -Watkins (DNP) |
-| +2 | Alastair Michael | +Okafor (2pt), +Pedro Porro (1pt), +Bruno G. (1pt), +Stach (4pt), -Van Hecke (1pt), -Beto (1pt), -Tel (2pt), -Strand Larsen (2pt) |
-| +1 | Sam Wright | +Silva (4pt), +Awoniyi (2pt), +Verbruggen (0pt), -Matheus N. (DNP), -Henderson (1pt), -Branthwaite (4pt) |
-| +1 | chris Purnell | +Rodríguez (1pt), -Enzo (DNP) |
-| 0 | Ollie Felts | +Kayode (2pt), +David (1pt), -Hincapie (DNP), -E.Le Fée (3pt) |
-| -1 | Piers Black-Hawkins | +Rayan (2pt), -Milenković (3pt) |
+| +8 | Sam Wright | +Ndoye (1pt), +Maatsen (7pt), +Branthwaite (3pt), -Gravenberch (1pt), -Mosquera (DNP), -Awoniyi (2pt) |
+| +4 | Greg Woodward | +Barcola (1pt), +Ajayi (5pt), -Anderson (3pt), -Thiaw (-1pt) |
+| +4 | Andrew Hutchinson | +Hall (4pt), -Frimpong (DNP) |
+| +4 | Ollie Felts | +Abraham (1pt), +Sávio (3pt), -David (0pt), -Woltemade (DNP) |
+| +4 | Piers Black-Hawkins | +Kostoulas (2pt), +Groß (1pt), +Mukiele (4pt), -Maguire (2pt), -Colwill (DNP), -Dorgu (1pt) |
+| +3 | Ash Cross | +Munoz (3pt), +Dedić (1pt), -Richards (1pt), -Wieffer (DNP) |
+| +3 | chris Purnell | +Davis (1pt), +Enzo (3pt), -Rodríguez (DNP), -Hill (1pt) |
+| 0 | Jason Parmar | No lineup changes |
+| -1 | Alastair Michael | +Hato (3pt), +Strand Larsen (1pt), +Gomez (2pt), -Okafor (3pt), -Bruno G. (DNP), -Shaw (4pt) |
+| -7 | Elliott Bennett | +Aina (1pt), +Ajer (2pt), +Horníček (2pt), +Mbaye (DNP), -Buendía (3pt), -O'Reilly (DNP), -Robertson (1pt), -A.Becker (8pt) |
