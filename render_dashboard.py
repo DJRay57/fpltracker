@@ -270,6 +270,18 @@ ICON_WV = ('<svg viewBox="0 0 24 24" aria-hidden="true">'
            '<path d="M3 6h18v2.4H3zm0 4.8h18v2.4H3zm0 4.8h11v2.4H3z"/></svg>')
 
 
+# The chips beside each name are bare numbers without this. Tooltips carry the
+# detail but do not exist on a touch screen, so the key has to be on the page.
+BADGE_KEY = (
+    '<div class="bdg-key">'
+    f'<span><i class="bdg top">{ICON_TOP}</i>weeks top-scored</span>'
+    f'<span><i class="bdg bot">{ICON_BOT}</i>weeks bottom</span>'
+    f'<span><i class="bdg dr">{ICON_DR}</i>opening waiver slot</span>'
+    f'<span><i class="bdg wv">{ICON_WV}</i>average waiver slot</span>'
+    '</div>'
+)
+
+
 def badges(m):
     """Weeks topped, weeks bottomed, and average waiver slot, as one strip.
 
@@ -560,7 +572,7 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md, li
     out.append(
         f'<section class="band" id="table"><div class="wrap grid-2">'
         f'<div class="panel"><div class="head"><h2>Table</h2>'
-        f'<span class="head-note">After GW{gw}</span></div>{standings}</div>'
+        f'<span class="head-note">After GW{gw}</span></div>{standings}'f'{BADGE_KEY}</div>'
         f'<div class="panel"><div class="head"><h2>GW{gw} Scores</h2>'
         f'<span class="head-note">Starting XI</span></div>'
         f'<div class="bars">{"".join(bars)}</div></div>'
@@ -1009,9 +1021,18 @@ a{color:inherit}
   border-color:rgba(255,255,255,.14)}
 .bdg.dr{color:var(--pitch);background:#8ab4ff;border-color:#8ab4ff}
 @media (max-width:560px){
-  .bdg{font-size:.7rem;padding:.14rem .28rem .1rem}
-  .bdg.wv,.bdg.dr{display:none}  /* the table is tight on a phone; keep the medals */
+  /* Keeping these off a phone hid the very numbers they exist to show. The
+     icon is what costs width, not the digit, so the icon goes and the number
+     stays -- the key below the table carries the meaning. */
+  .bdg{font-size:.68rem;padding:.13rem .26rem .09rem;gap:0}
+  .bdgs{gap:.2rem;margin-left:.3rem}
+  .bdg svg{display:none}
 }
+.bdg-key{display:flex;flex-wrap:wrap;gap:.5rem .9rem;margin:.7rem .1rem 0;
+  font-size:.72rem;color:var(--fog);letter-spacing:.02em}
+.bdg-key span{display:inline-flex;align-items:center;gap:.3rem;min-width:0}
+.bdg-key i.bdg{padding:.16rem .2rem;border-radius:4px}
+.bdg-key i.bdg svg{display:block;width:.72em;height:.72em}
 .sub-head{font-size:.9rem;letter-spacing:.12em;color:var(--fog);margin:2.2rem 0 .9rem;
   display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .grid-2{display:grid;grid-template-columns:1.15fr .85fr;gap:2.5rem;align-items:start}
