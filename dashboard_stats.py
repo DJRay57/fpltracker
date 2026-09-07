@@ -53,22 +53,36 @@ def load_cache():
 
 # The GW1 waiver queue is the draft run backwards: whoever picked last in the
 # draft waives first. That window matters more than its share -- it is the one
-# chance to land a real Premier League signing before anyone has played, and in
-# 2026-27 the transfer window was still open across the first three windows.
+# chance at a real Premier League signing before a ball is kicked, and in
+# 2026-27 the transfer window stayed open across the opening three windows.
 #
-# The API does not keep the draft order once the draft closes (draft/{id}/choices
-# comes back empty), and it cannot be recovered from the transactions feed:
-# managers who entered no GW1 claim never appear, so their slots are invisible.
-# In 2026-27 that is Andrew Hutchinson and chris Purnell.
+# The API will not give up the draft order (draft/{id}/choices empties once the
+# draft closes), and the transactions feed only shows managers who actually
+# claimed -- in GW1 that is eight of the ten. The order below is those eight in
+# their observed sequence, with Hutchinson and Purnell placed by reconstructing
+# the draft: roll every accepted transaction back to recover the ten drafted
+# squads, then read them against the API's own pre-season draft_rank. Greg
+# supplied three certainties -- Felts drafted 1st, Bennett last, Woodward 4th --
+# which pin the rest: exactly one unknown falls in slots 2-6 and one in 8-9, and
+# Purnell holding Saka (consensus 3) and Hutchinson holding Isak (consensus 5)
+# settle which is which.
 #
-# Fill this in with the GW1 waiver queue, first waiver to last -- equivalently
-# the draft order reversed -- and GW1 joins the average. Leave it None and GW1
-# is left out rather than guessed at.
-#
-# Known from the GW1 transactions, in this relative order, with Hutchinson and
-# Purnell to be slotted in somewhere among them:
-#   Bennett, Black-Hawkins, Wright, Michael, Parmar, Woodward, Cross, Felts
-GW1_WAIVER_ORDER = None
+# The draft it implies is a sane one. Picks 1, 2, 3 and 5 are exact chalk
+# (Haaland, B.Fernandes, Saka, Isak), pick 9 is chalk, and the deviations are
+# managers reaching for their own men -- with Palmer, consensus 4, sliding all
+# the way to Bennett at pick 10, which is precisely why he waived first.
+GW1_WAIVER_ORDER = [
+    "Elliott Bennett",      # drafted 10th -- last pick, first waiver
+    "Piers Black-Hawkins",  # 9th
+    "Sam Wright",           # 8th
+    "Alastair Michael",     # 7th
+    "Jason Parmar",         # 6th
+    "Andrew Hutchinson",    # 5th -- inferred: took Isak, consensus 5
+    "Greg Woodward",        # 4th -- confirmed
+    "chris Purnell",        # 3rd -- inferred: took Saka, consensus 3
+    "Ash Cross",            # 2nd
+    "Ollie Felts",          # 1st -- confirmed, took Haaland
+]
 
 
 def waiver_positions(league_data, entry_lookup, finished):

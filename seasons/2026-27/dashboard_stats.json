@@ -106,9 +106,9 @@
         "drew": 1
       },
       "waiver": {
-        "avg": 9.0,
-        "windows": 3,
-        "best": 8,
+        "avg": 8.0,
+        "windows": 4,
+        "best": 5,
         "latest": 10
       }
     },
@@ -160,9 +160,9 @@
         "drew": 1
       },
       "waiver": {
-        "avg": 7.3,
-        "windows": 3,
-        "best": 6,
+        "avg": 6.5,
+        "windows": 4,
+        "best": 4,
         "latest": 9
       }
     },
@@ -214,9 +214,9 @@
         "drew": 0
       },
       "waiver": {
-        "avg": 8.0,
-        "windows": 3,
-        "best": 6,
+        "avg": 6.8,
+        "windows": 4,
+        "best": 3,
         "latest": 8
       }
     },
@@ -268,8 +268,8 @@
         "drew": 0
       },
       "waiver": {
-        "avg": 8.7,
-        "windows": 3,
+        "avg": 8.5,
+        "windows": 4,
         "best": 7,
         "latest": 7
       }
@@ -322,9 +322,9 @@
         "drew": 0
       },
       "waiver": {
-        "avg": 6.0,
-        "windows": 3,
-        "best": 5,
+        "avg": 5.0,
+        "windows": 4,
+        "best": 2,
         "latest": 6
       }
     },
@@ -377,7 +377,7 @@
       },
       "waiver": {
         "avg": 6.0,
-        "windows": 3,
+        "windows": 4,
         "best": 5,
         "latest": 5
       }
@@ -430,8 +430,8 @@
         "drew": 0
       },
       "waiver": {
-        "avg": 3.7,
-        "windows": 3,
+        "avg": 5.0,
+        "windows": 4,
         "best": 3,
         "latest": 4
       }
@@ -484,8 +484,8 @@
         "drew": 0
       },
       "waiver": {
-        "avg": 1.7,
-        "windows": 3,
+        "avg": 3.0,
+        "windows": 4,
         "best": 1,
         "latest": 3
       }
@@ -538,8 +538,8 @@
         "drew": 1
       },
       "waiver": {
-        "avg": 2.0,
-        "windows": 3,
+        "avg": 4.0,
+        "windows": 4,
         "best": 2,
         "latest": 2
       }
@@ -592,8 +592,8 @@
         "drew": 0
       },
       "waiver": {
-        "avg": 2.7,
-        "windows": 3,
+        "avg": 2.2,
+        "windows": 4,
         "best": 1,
         "latest": 1
       }
