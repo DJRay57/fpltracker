@@ -109,7 +109,8 @@
         "avg": 8.0,
         "windows": 4,
         "best": 5,
-        "latest": 10
+        "latest": 10,
+        "gw1": 5
       }
     },
     {
@@ -163,7 +164,8 @@
         "avg": 6.5,
         "windows": 4,
         "best": 4,
-        "latest": 9
+        "latest": 9,
+        "gw1": 4
       }
     },
     {
@@ -217,7 +219,8 @@
         "avg": 6.8,
         "windows": 4,
         "best": 3,
-        "latest": 8
+        "latest": 8,
+        "gw1": 3
       }
     },
     {
@@ -271,7 +274,8 @@
         "avg": 8.5,
         "windows": 4,
         "best": 7,
-        "latest": 7
+        "latest": 7,
+        "gw1": 8
       }
     },
     {
@@ -325,7 +329,8 @@
         "avg": 5.0,
         "windows": 4,
         "best": 2,
-        "latest": 6
+        "latest": 6,
+        "gw1": 2
       }
     },
     {
@@ -379,7 +384,8 @@
         "avg": 6.0,
         "windows": 4,
         "best": 5,
-        "latest": 5
+        "latest": 5,
+        "gw1": 6
       }
     },
     {
@@ -433,7 +439,8 @@
         "avg": 5.0,
         "windows": 4,
         "best": 3,
-        "latest": 4
+        "latest": 4,
+        "gw1": 9
       }
     },
     {
@@ -487,7 +494,8 @@
         "avg": 3.0,
         "windows": 4,
         "best": 1,
-        "latest": 3
+        "latest": 3,
+        "gw1": 7
       }
     },
     {
@@ -541,7 +549,8 @@
         "avg": 4.0,
         "windows": 4,
         "best": 2,
-        "latest": 2
+        "latest": 2,
+        "gw1": 10
       }
     },
     {
@@ -595,7 +604,8 @@
         "avg": 2.2,
         "windows": 4,
         "best": 1,
-        "latest": 1
+        "latest": 1,
+        "gw1": 1
       }
     }
   ],

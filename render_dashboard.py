@@ -262,6 +262,10 @@ ICON_TOP = ('<svg viewBox="0 0 24 24" aria-hidden="true">'
             '6.2 20.55l1.1-6.5-4.7-4.6 6.5-.95z"/></svg>')
 ICON_BOT = ('<svg viewBox="0 0 24 24" aria-hidden="true">'
             '<path d="M12 21.4L3.6 11h4.9V2.6h7V11h4.9z"/></svg>')
+ICON_DR = ('<svg viewBox="0 0 24 24" aria-hidden="true">'
+           '<path d="M12 2.2a9.8 9.8 0 100 19.6 9.8 9.8 0 000-19.6zm0 2.6a7.2 '
+           '7.2 0 110 14.4 7.2 7.2 0 010-14.4zm0 3a4.2 4.2 0 100 8.4 4.2 4.2 '
+           '0 000-8.4z"/></svg>')
 ICON_WV = ('<svg viewBox="0 0 24 24" aria-hidden="true">'
            '<path d="M3 6h18v2.4H3zm0 4.8h18v2.4H3zm0 4.8h11v2.4H3z"/></svg>')
 
@@ -289,6 +293,14 @@ def badges(m):
             f'{t["bottomed"]} {wk}">{ICON_BOT}{t["bottomed"]}</span>'
         )
     wv = m.get("waiver")
+    if wv and wv.get("gw1"):
+        bits.append(
+            f'<span class="bdg dr" title="Opening waiver slot {wv["gw1"]} of 10, '
+            f'set by the draft run backwards -- last pick waives first. The only '
+            f'window whose order is not the league table reversed, and the one '
+            f'chance at a Premier League signing before a ball is kicked.">'
+            f'{ICON_DR}{wv["gw1"]}</span>'
+        )
     if wv:
         win = "window" if wv["windows"] == 1 else "windows"
         bits.append(
@@ -995,9 +1007,10 @@ a{color:inherit}
 .bdg.bot{color:#fff;background:var(--flare);border-color:var(--flare)}
 .bdg.wv{color:var(--fog);background:rgba(255,255,255,.055);
   border-color:rgba(255,255,255,.14)}
+.bdg.dr{color:var(--pitch);background:#8ab4ff;border-color:#8ab4ff}
 @media (max-width:560px){
   .bdg{font-size:.7rem;padding:.14rem .28rem .1rem}
-  .bdg.wv{display:none}   /* the table is tight on a phone; keep the medals */
+  .bdg.wv,.bdg.dr{display:none}  /* the table is tight on a phone; keep the medals */
 }
 .sub-head{font-size:.9rem;letter-spacing:.12em;color:var(--fog);margin:2.2rem 0 .9rem;
   display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}

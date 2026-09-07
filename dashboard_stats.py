@@ -147,10 +147,15 @@ def waiver_positions(league_data, entry_lookup, finished):
         for slot, lid in enumerate(order, 1):
             slots[lid].append(slot)
 
+    # GW1 is prepended above, so v[0] is the opening window when it is known.
+    # It is carried separately because it is the only window whose order is not
+    # the league table reversed -- it comes from the draft, so it is the one
+    # part of this that is independent of how the manager has been playing.
     return {lid: {"avg": round(sum(v) / len(v), 1),
                   "windows": len(v),
                   "best": min(v),
-                  "latest": v[-1]}
+                  "latest": v[-1],
+                  "gw1": v[0] if GW1_WAIVER_ORDER else None}
             for lid, v in slots.items()}
 
 
