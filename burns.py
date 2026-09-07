@@ -518,6 +518,201 @@ def projection_burns(stats, managers, projection, predictions, out):
             )))
 
 
+def standings_burns(stats, managers, out):
+    """Where a man sits versus what he has actually produced."""
+    played = len(stats["finished_gameweeks"])
+    ranked = sorted(managers, key=lambda m: m["real_rank"])
+    fewest = min(managers, key=lambda m: m["pts_for"])
+    most = max(managers, key=lambda m: m["pts_for"])
+    n = len(managers)
+
+    # scored less than anybody and somehow still not last
+    if fewest["real_rank"] < n:
+        below = n - fewest["real_rank"]
+        out.append(burn(88, "Table", (
+            f"<b>{fewest['manager']}</b> has scored fewer points than anyone else in this "
+            f"league and there are still {below} of you below him. Congratulations to "
+            f"everybody involved."
+        )))
+
+    # most points in the league, not top of it
+    if most["real_rank"] != 1:
+        leader = ranked[0]
+        out.append(burn(75, "Table", (
+            f"<b>{most['manager']}</b> has outscored the entire league and is "
+            f"{ordinal(most['real_rank'])}. {first_name(leader['manager'])} is top on "
+            f"{most['pts_for'] - leader['pts_for']} fewer. Beautiful game."
+        )))
+
+    # averaging embarrassingly little per week
+    if played >= 2:
+        worst_avg = min(managers, key=lambda m: m["pts_for"] / played)
+        avg = worst_avg["pts_for"] / played
+        if avg <= 35:
+            out.append(burn(80, "Table", (
+                f"<b>{worst_avg['manager']}</b> is averaging {avg:.0f} points a gameweek. "
+                f"Eleven professional footballers, {avg:.0f} points, every single week, "
+                f"on purpose."
+            )))
+
+    # dead level on league points -- separated by nothing anyone can explain
+    for i in range(len(ranked) - 1):
+        a, b = ranked[i], ranked[i + 1]
+        if a["real_pts"] == b["real_pts"]:
+            out.append(burn(46, "Table", (
+                f"<b>{a['manager']}</b> and {b['manager']} are level on {a['real_pts']} points. "
+                f"One of them is above the other for reasons the league has never explained "
+                f"to anybody."
+            )))
+            break
+
+    # the leader is barely leading
+    if len(ranked) >= 2:
+        gap = ranked[0]["real_pts"] - ranked[1]["real_pts"]
+        if gap == 0:
+            out.append(burn(45, "Top", (
+                f"<b>{ranked[0]['manager']}</b> is top on points scored, not points won. "
+                f"He is level with {first_name(ranked[1]['manager'])} and ahead on a tiebreak. "
+                f"A championship built on sand."
+            )))
+        elif gap == 1:
+            out.append(burn(45, "Top", (
+                f"<b>{ranked[0]['manager']}</b> leads this league by a single point after "
+                f"{played} gameweeks. Try not to get the banners printed."
+            )))
+
+
+def streak_burns(stats, managers, out):
+    """Sequences, head-to-head merit, and the men going nowhere slowly."""
+    played = len(stats["finished_gameweeks"])
+
+    for m in managers:
+        form = m["form"]
+        wins, draws, losses = m["apa_record"]
+
+        # every fixture lost, in a row
+        if len(form) >= 3 and all(f == "L" for f in form[-3:]):
+            out.append(burn(90, "Form", (
+                f"<b>{m['manager']}</b> has lost three on the bounce. Not a blip, not a wobble. "
+                f"A pattern."
+            )))
+
+        # nothing at all from the fixtures
+        if m["real_pts"] == 0 and played >= 2:
+            out.append(burn(94, "Form", (
+                f"<b>{m['manager']}</b> has taken zero points from {played} fixtures. Not a win, "
+                f"not a draw, not an accident. Nothing."
+            )))
+
+        # strictly win-lose-win-lose, and only worth saying if he's mid-table with it
+        alternating = (len(form) >= 3
+                       and all(f in ("W", "L") for f in form)
+                       and all(form[i] != form[i + 1] for i in range(len(form) - 1)))
+        if alternating and m["real_rank"] >= 3:
+            out.append(burn(51, "Form", (
+                f"<b>{m['manager']}</b> has gone {'-'.join(form)}, and is "
+                f"{ordinal(m['real_rank'])} for it. Every step forward, a step back, "
+                f"week after week."
+            )))
+
+        # hammered by the field in the all-play-all
+        if losses >= 2 * max(wins, 1) and losses >= 12:
+            out.append(burn(84, "Merit", (
+                f"<b>{m['manager']}</b> has lost {losses} of his {wins + draws + losses} "
+                f"head-to-heads against the field and won {wins}. He isn't unlucky. He's just "
+                f"worse than you."
+            )))
+
+    # the best squad in the league, going unrewarded
+    apa_top = min(managers, key=lambda m: m["apa_rank"])
+    if apa_top["real_rank"] >= 3:
+        out.append(burn(65, "Merit", (
+            f"<b>{apa_top['manager']}</b> has the best squad in the league by some distance "
+            f"and is {ordinal(apa_top['real_rank'])}. Somewhere a fixture list is laughing."
+        )))
+
+    # riding the fixtures hardest
+    fraud = min(managers, key=lambda m: m["real_rank"] - m["apa_rank"])
+    if fraud["apa_rank"] - fraud["real_rank"] >= 4:
+        out.append(burn(87, "Merit", (
+            f"<b>{fraud['manager']}</b> is {ordinal(fraud['real_rank'])} in the table and "
+            f"{ordinal(fraud['apa_rank'])} on merit. He has not beaten a good team all season; "
+            f"he has simply not been asked to."
+        )))
+
+    # winning the week means nothing if you're down there
+    best_wk = max(managers, key=lambda m: m["xi"])
+    if best_wk["real_rank"] > len(managers) / 2:
+        out.append(burn(70, "Scores", (
+            f"The best team of the week belongs to <b>{best_wk['manager']}</b>, "
+            f"{ordinal(best_wk['real_rank'])} in the table. He has finally peaked, and it has "
+            f"bought him {w('fuckall')}."
+        )))
+
+
+def wastage_burns(stats, managers, out):
+    """Points bought, paid for, and then watched from the side."""
+    gw = stats["gameweek"]
+    fa_list = stats.get("free_agents", [])
+
+    for m in managers:
+        blanks = [b for b in m["bench_detail"] if b[1] == 0]
+        # nothing on the bench AND nothing on the pitch: no one left to blame
+        if len(blanks) >= 3 and m["xi"] <= 30:
+            out.append(burn(57, "Bench", (
+                f"<b>{m['manager']}</b> scored {m['xi']} and had {len(blanks)} substitutes "
+                f"blank as well. There is nobody on the bench to blame for this one."
+            )))
+        # benched more than a third of what he scored
+        if m["xi"] and m["bench"] >= m["xi"] * 0.33:
+            share = round(m["bench"] / (m["xi"] + m["bench"]) * 100)
+            out.append(burn(82, "Bench", (
+                f"<b>{m['manager']}</b> scored {m['xi']} and benched {m['bench']}. "
+                f"{share}% of his return came from men he decided weren't good enough."
+            )))
+
+    # the league's collective eye for a player
+    if fa_list:
+        f = fa_list[0]
+        beaten = [m for m in managers if m["bench"] and m["bench"] < f["gw_points"]]
+        if f["gw_points"] >= 10 and len(beaten) >= 4:
+            out.append(burn(64, "Waivers", (
+                f"{f['name']} was available to all ten of you and scored {f['gw_points']}. "
+                f"That is more than {len(beaten)} of you got off your entire bench."
+            )))
+
+        big = [f2 for f2 in fa_list if f2["gw_points"] >= 8]
+        if len(big) >= 3:
+            names = ", ".join(f2["name"] for f2 in big[:-1])
+            out.append(burn(59, "Waivers", (
+                f"{names} and {big[-1]['name']} all scored {min(f2['gw_points'] for f2 in big)}+ "
+                f"and not one of them is owned. Ten managers, {len(big)} free hits, nobody home."
+            )))
+
+    # below average, en masse
+    avg = sum(m["xi"] for m in managers) / len(managers)
+    below = [m for m in managers if m["xi"] < avg]
+    if len(below) >= 6:
+        out.append(burn(43, "Scores", (
+            f"{len(below)} of the ten scored below the league average in GW{gw}. "
+            f"The average is doing a lot of heavy lifting for a few of you."
+        )))
+
+    # perfect bench management, wasted on a defeat
+    for r in stats["results"]:
+        loser = (r["away"] if r["winner"] == "home"
+                 else r["home"] if r["winner"] == "away" else None)
+        if not loser:
+            continue
+        m = next((x for x in managers if x["manager"] == loser), None)
+        if m and m["bench"] == 0:
+            out.append(burn(49, "Bench", (
+                f"<b>{m['manager']}</b> got every selection right, wasted nothing on the bench, "
+                f"and lost anyway. Sometimes the squad is just {w('shite')}."
+            )))
+            break
+
+
 def top_burns(stats, managers, out):
     top = min(managers, key=lambda m: m["real_rank"])
     if top["bench"] == 0:
@@ -550,6 +745,9 @@ def generate(stats, trade_leaderboard, all_trades, pending=None,
     merit_burns(stats, managers, pool)
     projection_burns(stats, managers, projection, predictions, pool)
     top_burns(stats, managers, pool)
+    standings_burns(stats, managers, pool)
+    streak_burns(stats, managers, pool)
+    wastage_burns(stats, managers, pool)
 
     # drop accidental duplicates before anything else
     seen_text, unique = set(), []
