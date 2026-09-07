@@ -27,10 +27,12 @@ Methodology caveats (stated on the page, not hidden):
   hand-picked spread. Each starter is simulated from what comparable
   players actually scored, so the spread comes out of the data instead
   of being asserted, and the lumpy shape of real scoring survives.
-- The season simulation uses one static projected mean per manager for
-  all remaining gameweeks (it does not re-project fixture-by-fixture
-  for all 37 remaining weeks) -- treat it as a rough guide, not a
-  forecast, especially this early in the season.
+- The season simulation does not assume today's table is the truth. Each
+  trial draws how good every manager actually is, because with only a few
+  gameweeks played the observed spread is mostly sampling noise -- early
+  on it is smaller than chance alone would produce. A squad's measurable
+  edge decays as squads churn and stops counting at the January re-draft.
+  As real gameweeks accumulate the evidence takes over on its own.
 
 Writes seasons/2026-27/h2h_predictions.md and seasons/2026-27/season_projection.md.
 """
@@ -57,6 +59,39 @@ SCORE_SIMS = 4000      # simulated gameweeks per manager, sampled from later
 # run and redeploys the site for nothing. Genuine change still shows: the
 # squads and their distributions feed in from upstream.
 SEASON_SEED = 11
+
+# ---------------------------------------------------------------- projection
+# The old projection fixed each manager's scoring rate at what he had averaged
+# so far and replayed it for every remaining gameweek. Over 35 weeks the noise
+# averages out, so the table it produced was close to deterministic: a manager
+# three points off the pace after three games came out with no realistic path
+# to the top three. That is not what three games tells you.
+#
+# What three games actually tells you: the spread between managers' points per
+# game is SMALLER than chance alone would produce (5.8 observed against 6.6
+# expected from week-to-week variance / sqrt(3)). There is no detectable
+# difference between anyone in this league yet, so projecting today's table
+# forward is projecting noise.
+#
+# Three things now go into a manager's rate for a given gameweek:
+#   the league average       everyone starts from the same place
+#   persistent skill         drawn per trial, because we do not know it -- and
+#                            after three games the data cannot distinguish it
+#                            from zero, so its posterior is essentially prior
+#   a current squad edge     real and measurable from expected points, but it
+#                            erodes as squads churn and it is wiped by the
+#                            re-draft
+REDRAFT_GW = 24          # end-of-January re-draft; GW23 is 30 Jan, GW24 6 Feb
+SQUAD_HALF_LIFE = 8.0    # gameweeks for a squad edge to halve through waivers
+# After the re-draft nobody keeps their assets, so a squad edge does not
+# survive it. What might survive is the manager -- someone who drafts and
+# picks well will do it again. We cannot measure that from three games, so it
+# is carried as uncertainty rather than as a number: each trial draws a skill
+# for each manager from a prior centred on zero. The width is a judgement
+# call, set to roughly half the spread in current squad strength, on the
+# reasoning that sustained skill should be smaller than the gap between a good
+# squad and a bad one on any given week.
+SKILL_PRIOR_FRACTION = 0.5
 
 
 def fetch(url):
@@ -276,14 +311,58 @@ def main():
 
     position_counts = {lid: [0] * len(entry_ids) for lid in entry_ids}
 
+    # --- how much of the table so far is signal? -------------------------
+    # A manager's mean over n games carries a standard error of sigma/sqrt(n).
+    # If the spread between managers is no bigger than that, the table is
+    # noise and the right estimate of everyone's rate is the league average.
+    played = len(set(m["event"] for m in matches if m["event"] <= target_gw))
+    week_sd = observed or final_spread or 12.0
+    se = week_sd / max(1, played) ** 0.5
+    obs_means = {lid: base_pts_for[lid] / max(1, played) for lid in entry_ids}
+    league_mean = statistics.mean(obs_means.values())
+    between_var = statistics.pvariance(list(obs_means.values()))
+    true_var = max(0.0, between_var - se ** 2)
+    shrink = true_var / (true_var + se ** 2) if (true_var + se ** 2) else 0.0
+
+    # The squad edge is a real measurement, not an average of past results:
+    # it is what this squad is expected to score next week.
+    squad_mean = statistics.mean(xi_projection.values())
+    squad_edge = {lid: xi_projection[lid] - squad_mean for lid in entry_ids}
+    skill_sd = statistics.pstdev(list(squad_edge.values())) * SKILL_PRIOR_FRACTION
+
+    print(f"  {played} gameweeks in: between-manager spread {between_var ** 0.5:.1f} "
+          f"vs {se:.1f} from noise alone -> {shrink * 100:.0f}% of the table is signal")
+    print(f"  squad edges span {min(squad_edge.values()):+.1f} to "
+          f"{max(squad_edge.values()):+.1f} pts/week, halving every "
+          f"{SQUAD_HALF_LIFE:.0f} gameweeks, gone at the GW{REDRAFT_GW} re-draft")
+
+    # Keep each manager's score SHAPE but let its centre move: the empirical
+    # distribution carries the skew and the lumpiness, the rate carries the level.
+    shapes = {lid: [v - statistics.mean(distributions[lid]) for v in distributions[lid]]
+              for lid in entry_ids}
+
+    # Squad edge decays week by week and stops entirely at the re-draft.
+    weight = {}
+    for gw in sorted(set(m["event"] for m in remaining)):
+        weight[gw] = (0.0 if gw >= REDRAFT_GW
+                      else 0.5 ** ((gw - target_gw) / SQUAD_HALF_LIFE))
+
     rng = random.Random(SEASON_SEED)
     for _ in range(N_TRIALS):
+        # One draw of the season's truth: who is actually any good. Redrawn
+        # every trial, because after three games we genuinely do not know.
+        rate = {}
+        for lid in entry_ids:
+            shrunk = league_mean + shrink * (obs_means[lid] - league_mean)
+            rate[lid] = shrunk + rng.gauss(0.0, skill_sd)
+
         league_pts = dict(base_league_pts)
         pts_for = dict(base_pts_for)
         for m in remaining:
             e1, e2 = m["league_entry_1"], m["league_entry_2"]
-            s1 = rng.choice(distributions[e1])
-            s2 = rng.choice(distributions[e2])
+            w = weight[m["event"]]
+            s1 = max(0, round(rate[e1] + squad_edge[e1] * w + rng.choice(shapes[e1])))
+            s2 = max(0, round(rate[e2] + squad_edge[e2] * w + rng.choice(shapes[e2])))
             pts_for[e1] += s1
             pts_for[e2] += s2
             if s1 > s2:
@@ -300,28 +379,31 @@ def main():
 
     proj_lines = [f"# Season Projection (through GW{target_gw}, {N_TRIALS:,} simulations)\n"]
     proj_lines.append(
-        "_Monte Carlo simulation: already-played gameweeks are exact, the rest of the "
-        "season is simulated by drawing each manager's weekly score from a distribution "
-        "built out of their own squad, player by player, rather than a bell curve around "
-        "an average. One static squad per manager for all remaining gameweeks -- a rough "
-        "guide, not a forecast._\n"
+        f"_Monte Carlo simulation. Gameweeks already played are exact. For the rest, "
+        f"each trial first draws how good every manager actually is -- after "
+        f"{played} gameweeks the table is {shrink * 100:.0f}% signal, so that is "
+        f"mostly guesswork and the simulation treats it that way. A squad's current "
+        f"edge decays as squads churn and stops counting at the GW{REDRAFT_GW} "
+        f"re-draft, when everyone starts again._\n"
     )
-    proj_lines.append("| Manager | Most Likely Finish | Chance | Top 3 | Bottom 3 |")
+    proj_lines.append("| Manager | Expected Finish | Top 3 | Mid | Bottom 3 |")
     proj_lines.append("|---|---|---|---|---|")
 
-    ranked_by_likely = sorted(
-        entry_ids,
-        key=lambda lid: max(range(len(entry_ids)), key=lambda r: position_counts[lid][r]),
-    )
-    for lid in ranked_by_likely:
+    def expected(lid):
         counts = position_counts[lid]
-        best_rank = max(range(len(counts)), key=lambda r: counts[r])
-        chance = counts[best_rank] / N_TRIALS * 100
+        return sum((r + 1) * c for r, c in enumerate(counts)) / N_TRIALS
+
+    # Sorted on expected finish, which is stable. The single most likely
+    # position is not: once the spread is this wide several managers share a
+    # modal rank of 1st and the ordering jumps about between runs.
+    for lid in sorted(entry_ids, key=expected):
+        counts = position_counts[lid]
         top3 = sum(counts[:3]) / N_TRIALS * 100
         bottom3 = sum(counts[-3:]) / N_TRIALS * 100
+        mid = 100.0 - top3 - bottom3
         proj_lines.append(
-            f"| {entry_lookup[lid]['manager']} | {best_rank+1} | {chance:.0f}% | "
-            f"{top3:.0f}% | {bottom3:.0f}% |"
+            f"| {entry_lookup[lid]['manager']} | {expected(lid):.1f} | "
+            f"{top3:.0f}% | {mid:.0f}% | {bottom3:.0f}% |"
         )
 
     with open(os.path.join(SEASON_DIR, "season_projection.md"), "w") as f:

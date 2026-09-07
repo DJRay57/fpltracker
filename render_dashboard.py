@@ -751,12 +751,12 @@ def build(stats, summary_md, power_md, trade_md, pred_md, proj_md, lineup_md, li
             segs += f'<i class="seg bot" style="--w:{b3}%"></i>'
         proj_rows.append({"cells": [
             f'<b>{esc(r.get("Manager",""))}</b>',
-            f'<span class="finish">{esc(ordinal(int(num(r.get("Most Likely Finish", 0)))))}</span>',
-            esc(r.get("Chance", "")),
+            f'<span class="finish">{esc(r.get("Expected Finish", ""))}</span>',
+            f'<span class="chip {"good" if t3 >= 33 else "flat"}">{t3:.0f}%</span>',
             f'<span class="stack">{segs}</span>',
         ], "Manager": r.get("Manager", "")})
     proj_html = table_html(
-        ["Manager", "Likely", "Chance", "Range"], proj_rows,
+        ["Manager", "Expected", "Top 3", "Range"], proj_rows,
         ["", "num", "num", ""], me_col="Manager",
     )
 

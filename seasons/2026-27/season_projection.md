@@ -1,16 +1,16 @@
 # Season Projection (through GW3, 5,000 simulations)
 
-_Monte Carlo simulation: already-played gameweeks are exact, the rest of the season is simulated by drawing each manager's weekly score from a distribution built out of their own squad, player by player, rather than a bell curve around an average. One static squad per manager for all remaining gameweeks -- a rough guide, not a forecast._
+_Monte Carlo simulation. Gameweeks already played are exact. For the rest, each trial first draws how good every manager actually is -- after 3 gameweeks the table is 0% signal, so that is mostly guesswork and the simulation treats it that way. A squad's current edge decays as squads churn and stops counting at the GW24 re-draft, when everyone starts again._
 
-| Manager | Most Likely Finish | Chance | Top 3 | Bottom 3 |
+| Manager | Expected Finish | Top 3 | Mid | Bottom 3 |
 |---|---|---|---|---|
-| Jason Parmar | 1 | 44% | 87% | 0% |
-| chris Purnell | 2 | 30% | 79% | 0% |
-| Piers Black-Hawkins | 3 | 25% | 62% | 0% |
-| Sam Wright | 4 | 26% | 44% | 1% |
-| Andrew Hutchinson | 5 | 30% | 22% | 1% |
-| Alastair Michael | 6 | 33% | 4% | 11% |
-| Ash Cross | 7 | 36% | 2% | 17% |
-| Greg Woodward | 8 | 36% | 0% | 84% |
-| Ollie Felts | 9 | 35% | 0% | 89% |
-| Elliott Bennett | 10 | 57% | 0% | 97% |
+| Jason Parmar | 3.6 | 56% | 35% | 9% |
+| Piers Black-Hawkins | 4.0 | 48% | 40% | 12% |
+| chris Purnell | 4.3 | 44% | 41% | 15% |
+| Andrew Hutchinson | 4.8 | 37% | 44% | 19% |
+| Alastair Michael | 5.1 | 33% | 45% | 22% |
+| Sam Wright | 5.1 | 33% | 44% | 24% |
+| Ash Cross | 6.4 | 17% | 44% | 39% |
+| Greg Woodward | 6.7 | 14% | 40% | 46% |
+| Ollie Felts | 7.2 | 10% | 36% | 54% |
+| Elliott Bennett | 7.7 | 7% | 32% | 62% |

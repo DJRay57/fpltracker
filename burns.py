@@ -476,8 +476,7 @@ def projection_burns(stats, managers, projection, predictions, out):
         name = row.get("Manager", "")
         bottom3 = num(row.get("Bottom 3", 0))
         top3 = num(row.get("Top 3", 0))
-        chance = num(row.get("Chance", 0))
-        finish = num(row.get("Most Likely Finish", 0))
+        expected = num(row.get("Expected Finish", 0))
         m = by_name.get(name)
 
         if bottom3 >= 95:
@@ -485,20 +484,21 @@ def projection_burns(stats, managers, projection, predictions, out):
                 f"The simulation ran 5,000 seasons. <b>{name}</b> finished bottom three in "
                 f"{bottom3:.0f}% of them. Not most. Nearly all."
             )))
-        elif bottom3 >= 70:
+        elif bottom3 >= 55:
             out.append(burn(65, "Sim", (
-                f"<b>{name}</b> has a {bottom3:.0f}% chance of finishing bottom three. "
-                f"The computer has seen enough."
+                f"<b>{name}</b> finishes bottom three in {bottom3:.0f}% of simulated "
+                f"seasons, and that is with the re-draft handing him a clean slate."
             )))
-        if top3 == 0 and m and m["real_rank"] >= 7:
+        if top3 <= 10 and m and m["real_rank"] >= 7:
             out.append(burn(76, "Sim", (
-                f"<b>{name}</b>'s chance of a top-three finish is {top3:.0f}%. Not slim. Zero. "
-                f"In five thousand attempts it never once happened."
+                f"Even after a full re-draft and {38 - gw} gameweeks, <b>{name}</b> makes "
+                f"the top three in {top3:.0f}% of simulated seasons. The model gave him "
+                f"every chance."
             )))
-        if chance >= 80 and finish >= 9:
-            out.append(burn(81, "Sim", (
-                f"The model is {chance:.0f}% sure <b>{name}</b> finishes {ordinal(finish)}. "
-                f"It is rarely that confident about anything."
+        if expected and m and expected - m["real_rank"] >= 2.0:
+            out.append(burn(58, "Sim", (
+                f"<b>{name}</b> sits {ordinal(m['real_rank'])} and the model expects him "
+                f"to finish {expected:.1f}. It thinks the table is flattering him."
             )))
 
     for c in predictions or []:
