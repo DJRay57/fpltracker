@@ -51,6 +51,26 @@ def load_cache():
         return {}
 
 
+# The GW1 waiver queue is the draft run backwards: whoever picked last in the
+# draft waives first. That window matters more than its share -- it is the one
+# chance to land a real Premier League signing before anyone has played, and in
+# 2026-27 the transfer window was still open across the first three windows.
+#
+# The API does not keep the draft order once the draft closes (draft/{id}/choices
+# comes back empty), and it cannot be recovered from the transactions feed:
+# managers who entered no GW1 claim never appear, so their slots are invisible.
+# In 2026-27 that is Andrew Hutchinson and chris Purnell.
+#
+# Fill this in with the GW1 waiver queue, first waiver to last -- equivalently
+# the draft order reversed -- and GW1 joins the average. Leave it None and GW1
+# is left out rather than guessed at.
+#
+# Known from the GW1 transactions, in this relative order, with Hutchinson and
+# Purnell to be slotted in somewhere among them:
+#   Bennett, Black-Hawkins, Wright, Michael, Parmar, Woodward, Cross, Felts
+GW1_WAIVER_ORDER = None
+
+
 def waiver_positions(league_data, entry_lookup, finished):
     """Each manager's average waiver slot.
 
@@ -74,6 +94,20 @@ def waiver_positions(league_data, entry_lookup, finished):
 
     lids = list(entry_lookup.keys())
     slots = defaultdict(list)
+
+    # GW1: reverse draft order, if it has been supplied
+    if GW1_WAIVER_ORDER:
+        by_manager = {info["manager"]: lid for lid, info in entry_lookup.items()}
+        unknown = [n for n in GW1_WAIVER_ORDER if n not in by_manager]
+        if unknown:
+            raise SystemExit(f"GW1_WAIVER_ORDER names nobody in this league: {unknown}")
+        if len(GW1_WAIVER_ORDER) != len(lids):
+            raise SystemExit(
+                f"GW1_WAIVER_ORDER has {len(GW1_WAIVER_ORDER)} names, "
+                f"league has {len(lids)}"
+            )
+        for slot, who in enumerate(GW1_WAIVER_ORDER, 1):
+            slots[by_manager[who]].append(slot)
 
     for gw in ranked_weeks:
         # standings as they stood after this gameweek decide the NEXT window
