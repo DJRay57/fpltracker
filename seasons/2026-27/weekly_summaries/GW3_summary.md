@@ -84,7 +84,7 @@ _(This league doesn't use captaincy multipliers.)_
 ## Injury/Status Watch (last 7 days)
 
 - **J.Timber**: i → d — Groin injury - 25% chance of playing
-- **Mosquera**: a → d — Unspecified injury - 75% chance of playing
+- **Mosquera**: a → d — Muscular injury - 75% chance of playing
 - **Martinelli**: a → u — Has joined Al Hilal permanently
 - **Nwaneri**: a → u — Has joined Borussia Dortmund on loan for the rest of the season
 - **Fábio Vieira**: a → u — Has joined Hamburger SV permanently
