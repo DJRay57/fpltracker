@@ -64,6 +64,7 @@ _(This league doesn't use captaincy multipliers.)_
 - **ADDED**: Suzuki → Ash Cross
 - **ADDED**: Goretzka → Jason Parmar
 - **ADDED**: Barcola → Greg Woodward
+- **ADDED**: Mbaye → Elliott Bennett
 - **DROPPED**: Welbeck (was Piers Black-Hawkins)
 - **DROPPED**: Shaw (was Alastair Michael)
 - **DROPPED**: Arrizabalaga (was Piers Black-Hawkins)
@@ -87,49 +88,28 @@ _(This league doesn't use captaincy multipliers.)_
 - **J.Timber**: i → d — Groin injury - 25% chance of playing
 - **Mosquera**: a → d — Muscular injury - 75% chance of playing
 - **Martinelli**: a → u — Has joined Al Hilal permanently
-- **Nwaneri**: a → u — Has joined Borussia Dortmund on loan for the rest of the season
-- **Fábio Vieira**: a → u — Has joined Hamburger SV permanently
-- **G.Jesus**: a → u — Has joined FC Barcelona permanently
+- **Cash**: a → d — Muscular injury - 75% chance of playing
 - **Bailey**: a → u — Has joined Olympiakos permanently
 - **Collins**: a → d — Calf injury - 25% chance of playing
 - **Jensen**: d → i — Unspecified injury - Expected back 18 Sep
 - **Dasilva**: a → i — Hamstring injury - Expected back 10 Oct
-- **Igor**: a → u — Has joined Burnley permanently
 - **Wieffer**: a → i — Knee injury - Unknown return date
-- **Sánchez**: a → u — Has joined Como on loan for the rest of the season
-- **D.Essugo**: a → u — Has joined RC Strasbourg on loan for the rest of the season
-- **Dovin**: a → u — Has joined Leyton Orient on loan for the rest of the season
-- **Kitching**: a → u — Has joined Sheffield United on loan for the rest of the season
-- **Borges Rodrigues**: a → u — Has joined Burton Albion on loan for the rest of the season
-- **Sosa**: a → u — Has joined FC Cologne on loan for the rest of the season
-- **Devenny**: a → u — Has joined Stoke City permanently
-- **Esse**: a → u — Has joined Millwall on loan for the rest of the season
-- **Patterson**: a → u — Has joined Torino permanently
+- **Yohanna**: a → i — Unspecified injury - Expected back 10 Oct
+- **Emegha**: a → d — Hamstring injury - 75% chance of playing
+- **J.Rak-Sakyi**: a → u — has joined  Kasimpasa on loan for the rest of the seaon.
 - **Garner**: a → d — Unspecified injury - 75% chance of playing
-- **Beto**: a → u — Has joined Fiorentina permanently
-- **Drameh**: a → u — Has joined Genoa permanently
-- **Jacob**: i → u — Has joined Newport County on loan until January
-- **Millar**: a → u — Has joined Birmingham on loan for the rest of the season
 - **Johnson**: a → u — Has joined Stoke City on loan for the rest of the season
-- **Ogbene**: a → u — Has joined Lincoln City on loan until January
-- **Rodon**: d → i — Hamstring injury - Expected back 21 Nov
-- **Gnonto**: a → u — Has joined ACF Fiorentina on loan for the rest of the season
-- **Elliott**: a → u — Has joined Valencia on loan for the rest of the season
+- **Gakpo**: a → d — Thigh injury - 75% chance of playing
 - **O'Reilly**: a → d — Back injury - 75% chance of playing
 - **Echeverri**: a → u — Has joined Benfica on loan for the rest of the season
-- **Mukasa**: a → u — has joined West Ham on loan for the rest of the seaon.
-- **Monga**: a → u — Has joined Swansea City on loan for the rest of the season
-- **Woltemade**: a → u — Has joined Juventus on loan for the rest of the season
 - **Neave**: a → u — Has joined Wolves on loan for the rest of the season
-- **Morato**: a → u — Has joined West Ham on loan for the rest of the season
-- **Abbott**: a → u — Has joined Southampton on loan for the rest of the season
-- **P.M.Sarr**: a → u — Has joined Juventus on loan for the rest of the season
 - **Moore**: a → u — Has joined FC Köln on loan for the rest of the season
 - **Richarlison**: a → u — not included in squad.
-- **Scarlett**: a → u — Has joined Leyton Orient permanently
 - **Diarra**: d → i — Hamstring injury - Unknown return date
 - **Adingra**: i → u — Has joined Ajax on loan for the rest of the season
-- **Humphreys**: a → u — Has joined Huddersfield Town on loan for the rest of the season
+- **Mundle**: a → i — Knee injury - Unknown return date
+- **Morita**: a → i — Calf injury - Expected back 11 Oct
+- **Dedić**: a → d — Hamstring injury - 75% chance of playing
 - **Lynch**: a → u — Has joined Oxford United on loan until January
 - **Goretzka**: a → i — Knee injury - Expected back 10 Oct
-- **Cozier-Duberry**: a → u — Has joined Middlesbrough on loan for the rest of the season
+- **Ansah**: a → i — Back injury - Unknown return date
