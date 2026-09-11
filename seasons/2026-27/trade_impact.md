@@ -73,3 +73,26 @@ _Every accepted waiver move, scored from the gameweek it took effect onward: poi
 | -11 | Ollie Felts | Hinshelwood (0) | E.Le Fée (11) | GW2 |
 | -11 | Ash Cross | Bijol (2) | Mukiele (13) | GW2 |
 | -18 | Jason Parmar | Martinelli (0) | Xhaka (18) | GW1 |
+
+## Pending
+
+_Took effect from a gameweek that hasn't been played yet -- nothing to score until it has._
+
+| Manager | In | Out | Effective |
+|---|---|---|---|
+| Sam Wright | King | Ndoye | GW4 |
+| Greg Woodward | Flemming | Emersonn | GW4 |
+| Andrew Hutchinson | Araujo | Aït-Nouri | GW4 |
+| Alastair Michael | Nketiah | Solanke | GW4 |
+| Alastair Michael | Belloumi | Gomez | GW4 |
+| Ollie Felts | Yalcouyé | Hinshelwood | GW4 |
+| Ollie Felts | Isidor | David | GW4 |
+| chris Purnell | Mendy | Chalobah | GW4 |
+| chris Purnell | Willock | O.Dango | GW4 |
+| chris Purnell | George | Rashford | GW4 |
+| Piers Black-Hawkins | Janelt | Dorgu | GW4 |
+| Piers Black-Hawkins | Egan | Maguire | GW4 |
+| Piers Black-Hawkins | Muharemović | Colwill | GW4 |
+| Jason Parmar | Grealish | Goretzka | GW4 |
+| Elliott Bennett | Fernandez-Pardo | Osula | GW4 |
+| Elliott Bennett | Vuskovic | Dalot | GW4 |

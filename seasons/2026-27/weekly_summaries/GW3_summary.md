@@ -48,68 +48,37 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Waiver Wire Activity (last 7 days)
 
-- **ADDED**: Ajayi → Greg Woodward
-- **ADDED**: Akpom → Sam Wright
-- **ADDED**: Abraham → Ollie Felts
-- **ADDED**: Ajer → Elliott Bennett
-- **ADDED**: Mukiele → Piers Black-Hawkins
-- **ADDED**: Maatsen → Sam Wright
-- **ADDED**: Davis → chris Purnell
-- **ADDED**: Ndoye → Sam Wright
-- **ADDED**: Gomez → Alastair Michael
-- **ADDED**: Hato → Alastair Michael
-- **ADDED**: Kostoulas → Piers Black-Hawkins
-- **ADDED**: Tzolakis → Piers Black-Hawkins
-- **ADDED**: Dedić → Ash Cross
-- **ADDED**: Suzuki → Ash Cross
-- **ADDED**: Goretzka → Jason Parmar
-- **ADDED**: Barcola → Greg Woodward
-- **ADDED**: Mbaye → Elliott Bennett
-- **DROPPED**: Welbeck (was Piers Black-Hawkins)
-- **DROPPED**: Shaw (was Alastair Michael)
-- **DROPPED**: Arrizabalaga (was Piers Black-Hawkins)
-- **DROPPED**: Grealish (was Greg Woodward)
-- **DROPPED**: Robertson (was Elliott Bennett)
-- **DROPPED**: Buendía (was Elliott Bennett)
-- **DROPPED**: Alderete (was Greg Woodward)
-- **DROPPED**: Awoniyi (was Sam Wright)
-- **DROPPED**: Sánchez (was Ash Cross)
-- **DROPPED**: Justin (was Piers Black-Hawkins)
-- **DROPPED**: Madueke (was Jason Parmar)
-- **DROPPED**: Richards (was Ash Cross)
-- **DROPPED**: Okafor (was Alastair Michael)
-- **DROPPED**: Gravenberch (was Sam Wright)
-- **DROPPED**: Hill (was chris Purnell)
-- **DROPPED**: Woltemade (was Ollie Felts)
-- **DROPPED**: Mosquera (was Sam Wright)
+- **ADDED**: Egan → Piers Black-Hawkins
+- **ADDED**: Willock → chris Purnell
+- **ADDED**: Janelt → Piers Black-Hawkins
+- **ADDED**: Muharemović → Piers Black-Hawkins
+- **ADDED**: Belloumi → Alastair Michael
+- **ADDED**: George → chris Purnell
+- **ADDED**: King → Sam Wright
+- **ADDED**: Vuskovic → Elliott Bennett
+- **ADDED**: Araujo → Andrew Hutchinson
+- **ADDED**: Mendy → chris Purnell
+- **ADDED**: Yalcouyé → Ollie Felts
 
 ## Injury/Status Watch (last 7 days)
 
 - **J.Timber**: i → d — Groin injury - 25% chance of playing
-- **Mosquera**: a → d — Muscular injury - 75% chance of playing
-- **Martinelli**: a → u — Has joined Al Hilal permanently
+- **Mosquera**: a → d — Muscular injury - 50% chance of playing
 - **Cash**: a → d — Muscular injury - 75% chance of playing
-- **Bailey**: a → u — Has joined Olympiakos permanently
 - **Collins**: a → d — Calf injury - 25% chance of playing
 - **Jensen**: d → i — Unspecified injury - Expected back 18 Sep
 - **Dasilva**: a → i — Hamstring injury - Expected back 10 Oct
-- **Wieffer**: a → i — Knee injury - Unknown return date
 - **Yohanna**: a → i — Unspecified injury - Expected back 10 Oct
 - **Emegha**: a → d — Hamstring injury - 75% chance of playing
+- **Eccles**: a → i — Unspecified injury - Expected back 12 Oct
 - **J.Rak-Sakyi**: a → u — has joined  Kasimpasa on loan for the rest of the seaon.
 - **Garner**: a → d — Unspecified injury - 75% chance of playing
-- **Johnson**: a → u — Has joined Stoke City on loan for the rest of the season
 - **Gakpo**: a → d — Thigh injury - 75% chance of playing
-- **O'Reilly**: a → d — Back injury - 75% chance of playing
-- **Echeverri**: a → u — Has joined Benfica on loan for the rest of the season
-- **Neave**: a → u — Has joined Wolves on loan for the rest of the season
-- **Moore**: a → u — Has joined FC Köln on loan for the rest of the season
-- **Richarlison**: a → u — not included in squad.
-- **Diarra**: d → i — Hamstring injury - Unknown return date
-- **Adingra**: i → u — Has joined Ajax on loan for the rest of the season
+- **Shaw**: a → d — Unspecified injury - 75% chance of playing
+- **Jaouen**: a → d — Ankle injury - 50% chance of playing
 - **Mundle**: a → i — Knee injury - Unknown return date
 - **Morita**: a → i — Calf injury - Expected back 11 Oct
 - **Dedić**: a → d — Hamstring injury - 75% chance of playing
-- **Lynch**: a → u — Has joined Oxford United on loan until January
 - **Goretzka**: a → i — Knee injury - Expected back 10 Oct
 - **Ansah**: a → i — Back injury - Unknown return date
+- **Azeez**: i → d — Hamstring injury - 50% chance of playing

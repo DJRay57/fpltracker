@@ -65,9 +65,9 @@ _If everyone played everyone every week. Strips fixture luck out entirely; the S
 |---|---|---|---|
 | 14 | Bogle | DEF | LEE |
 | 12 | Barnes | MID | NEW |
-| 12 | Vuskovic | DEF | BHA |
-| 11 | Janelt | MID | BRE |
-| 10 | George | MID | EVE |
+| 9 | Mainoo | MID | MUN |
+| 8 | Giles | DEF | HUL |
+| 8 | Damsgaard | MID | BRE |
 
 ## Trophy Cabinet
 

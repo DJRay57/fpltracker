@@ -633,22 +633,22 @@
       "gw_points": 12
     },
     {
-      "name": "Vuskovic",
-      "position": "DEF",
-      "team": "BHA",
-      "gw_points": 12
+      "name": "Mainoo",
+      "position": "MID",
+      "team": "MUN",
+      "gw_points": 9
     },
     {
-      "name": "Janelt",
+      "name": "Giles",
+      "position": "DEF",
+      "team": "HUL",
+      "gw_points": 8
+    },
+    {
+      "name": "Damsgaard",
       "position": "MID",
       "team": "BRE",
-      "gw_points": 11
-    },
-    {
-      "name": "George",
-      "position": "MID",
-      "team": "EVE",
-      "gw_points": 10
+      "gw_points": 8
     }
   ]
 }
