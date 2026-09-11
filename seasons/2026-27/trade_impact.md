@@ -96,3 +96,7 @@ _Took effect from a gameweek that hasn't been played yet -- nothing to score unt
 | Jason Parmar | Grealish | Goretzka | GW4 |
 | Elliott Bennett | Fernandez-Pardo | Osula | GW4 |
 | Elliott Bennett | Vuskovic | Dalot | GW4 |
+| Jason Parmar | Barnes | Xhaka | GW4 |
+| Ash Cross | Giles | Bijol | GW4 |
+| Ash Cross | Bogle | Collins | GW4 |
+| Sam Wright | Awoniyi | Akpom | GW4 |
