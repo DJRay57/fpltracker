@@ -621,33 +621,33 @@
   ],
   "free_agents": [
     {
-      "name": "Bogle",
-      "position": "DEF",
-      "team": "LEE",
-      "gw_points": 14
-    },
-    {
-      "name": "Barnes",
-      "position": "MID",
-      "team": "NEW",
-      "gw_points": 12
-    },
-    {
       "name": "Mainoo",
       "position": "MID",
       "team": "MUN",
       "gw_points": 9
     },
     {
-      "name": "Giles",
-      "position": "DEF",
-      "team": "HUL",
-      "gw_points": 8
-    },
-    {
       "name": "Damsgaard",
       "position": "MID",
       "team": "BRE",
+      "gw_points": 8
+    },
+    {
+      "name": "E.Le F\u00e9e",
+      "position": "MID",
+      "team": "SUN",
+      "gw_points": 8
+    },
+    {
+      "name": "Jair Cunha",
+      "position": "DEF",
+      "team": "NFO",
+      "gw_points": 8
+    },
+    {
+      "name": "Palacios",
+      "position": "MID",
+      "team": "FUL",
       "gw_points": 8
     }
   ]

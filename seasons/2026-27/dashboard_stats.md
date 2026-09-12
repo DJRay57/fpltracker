@@ -63,11 +63,11 @@ _If everyone played everyone every week. Strips fixture luck out entirely; the S
 
 | GW3 pts | Player | Pos | Team |
 |---|---|---|---|
-| 14 | Bogle | DEF | LEE |
-| 12 | Barnes | MID | NEW |
 | 9 | Mainoo | MID | MUN |
-| 8 | Giles | DEF | HUL |
 | 8 | Damsgaard | MID | BRE |
+| 8 | E.Le Fée | MID | SUN |
+| 8 | Jair Cunha | DEF | NFO |
+| 8 | Palacios | MID | FUL |
 
 ## Trophy Cabinet
 

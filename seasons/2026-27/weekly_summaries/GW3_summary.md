@@ -49,8 +49,16 @@ _(This league doesn't use captaincy multipliers.)_
 ## Waiver Wire Activity (last 7 days)
 
 - **ADDED**: Egan → Piers Black-Hawkins
+- **ADDED**: Grealish → Jason Parmar
 - **ADDED**: Willock → chris Purnell
+- **ADDED**: Barnes → Jason Parmar
 - **ADDED**: Janelt → Piers Black-Hawkins
+- **ADDED**: Nketiah → Alastair Michael
+- **ADDED**: Awoniyi → Sam Wright
+- **ADDED**: Bogle → Ash Cross
+- **ADDED**: Giles → Ash Cross
+- **ADDED**: Isidor → Ollie Felts
+- **ADDED**: Fofana → Sam Wright
 - **ADDED**: Muharemović → Piers Black-Hawkins
 - **ADDED**: Belloumi → Alastair Michael
 - **ADDED**: George → chris Purnell
@@ -59,26 +67,35 @@ _(This league doesn't use captaincy multipliers.)_
 - **ADDED**: Araujo → Andrew Hutchinson
 - **ADDED**: Mendy → chris Purnell
 - **ADDED**: Yalcouyé → Ollie Felts
+- **ADDED**: Flemming → Greg Woodward
+- **ADDED**: Fernandez-Pardo → Elliott Bennett
 
 ## Injury/Status Watch (last 7 days)
 
-- **J.Timber**: i → d — Groin injury - 25% chance of playing
-- **Mosquera**: a → d — Muscular injury - 50% chance of playing
 - **Cash**: a → d — Muscular injury - 75% chance of playing
-- **Collins**: a → d — Calf injury - 25% chance of playing
-- **Jensen**: d → i — Unspecified injury - Expected back 18 Sep
-- **Dasilva**: a → i — Hamstring injury - Expected back 10 Oct
+- **Manzambi**: i → d — Knee injury - 50% chance of playing
+- **Collins**: a → i — Calf injury - Unknown return date
+- **Henderson**: d → i — Wrist injury - Unknown return date
+- **Hinshelwood**: d → i — Ankle injury - Expected back 10 Oct
 - **Yohanna**: a → i — Unspecified injury - Expected back 10 Oct
-- **Emegha**: a → d — Hamstring injury - 75% chance of playing
+- **Palestra**: d → i — Thigh injury - Expected back 18 Sep
+- **Caicedo**: d → i — Calf injury - Expected back 18 Sep
+- **Emegha**: a → i — Hamstring injury - Expected back 18 Sep
 - **Eccles**: a → i — Unspecified injury - Expected back 12 Oct
+- **M.França**: a → u — Has joined Alverca on loan for the rest of the season
 - **J.Rak-Sakyi**: a → u — has joined  Kasimpasa on loan for the rest of the seaon.
-- **Garner**: a → d — Unspecified injury - 75% chance of playing
+- **Akintola**: a → u — Has joined Omonoia FC permanently
 - **Gakpo**: a → d — Thigh injury - 75% chance of playing
 - **Shaw**: a → d — Unspecified injury - 75% chance of playing
 - **Jaouen**: a → d — Ankle injury - 50% chance of playing
+- **Pedro Porro**: a → d — Unspecified injury - 75% chance of playing
+- **Udogie**: a → d — Unspecified injury - 75% chance of playing
 - **Mundle**: a → i — Knee injury - Unknown return date
 - **Morita**: a → i — Calf injury - Expected back 11 Oct
+- **Mudryk**: a → i — Ankle injury - Unknown return date
 - **Dedić**: a → d — Hamstring injury - 75% chance of playing
+- **Shahar**: a → u — has joined Arouca on loan for the rest of the seaon.
+- **De Fougerolles**: d → u — has joined  Real Salt Lake on loan for the rest of the seaon.
 - **Goretzka**: a → i — Knee injury - Expected back 10 Oct
 - **Ansah**: a → i — Back injury - Unknown return date
-- **Azeez**: i → d — Hamstring injury - 50% chance of playing
+- **Azeez**: i → d — Hamstring injury - 75% chance of playing

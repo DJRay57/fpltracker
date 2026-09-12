@@ -100,3 +100,4 @@ _Took effect from a gameweek that hasn't been played yet -- nothing to score unt
 | Ash Cross | Giles | Bijol | GW4 |
 | Ash Cross | Bogle | Collins | GW4 |
 | Sam Wright | Awoniyi | Akpom | GW4 |
+| Sam Wright | Fofana | Branthwaite | GW4 |
