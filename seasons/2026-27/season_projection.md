@@ -10,7 +10,7 @@ _Monte Carlo simulation. Gameweeks already played are exact. For the rest, each 
 | Alastair Michael | 4.6 | 39% | 44% | 17% |
 | Andrew Hutchinson | 5.7 | 24% | 46% | 30% |
 | Ash Cross | 5.8 | 23% | 47% | 30% |
-| Sam Wright | 5.8 | 24% | 45% | 32% |
+| Sam Wright | 5.8 | 24% | 44% | 32% |
 | Ollie Felts | 6.7 | 14% | 41% | 45% |
-| Elliott Bennett | 7.4 | 9% | 35% | 56% |
+| Elliott Bennett | 7.4 | 8% | 35% | 57% |
 | Greg Woodward | 7.6 | 7% | 33% | 60% |
