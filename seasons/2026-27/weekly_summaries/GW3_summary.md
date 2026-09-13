@@ -69,30 +69,58 @@ _(This league doesn't use captaincy multipliers.)_
 - **ADDED**: Yalcouyé → Ollie Felts
 - **ADDED**: Flemming → Greg Woodward
 - **ADDED**: Fernandez-Pardo → Elliott Bennett
+- **DROPPED**: Xhaka (was Jason Parmar)
+- **DROPPED**: Maguire (was Piers Black-Hawkins)
+- **DROPPED**: Akpom (was Sam Wright)
+- **DROPPED**: Solanke (was Alastair Michael)
+- **DROPPED**: Rashford (was chris Purnell)
+- **DROPPED**: Chalobah (was chris Purnell)
+- **DROPPED**: Dalot (was Elliott Bennett)
+- **DROPPED**: Collins (was Ash Cross)
+- **DROPPED**: Bijol (was Ash Cross)
+- **DROPPED**: Aït-Nouri (was Andrew Hutchinson)
+- **DROPPED**: Ndoye (was Sam Wright)
+- **DROPPED**: Colwill (was Piers Black-Hawkins)
+- **DROPPED**: Branthwaite (was Sam Wright)
+- **DROPPED**: Gomez (was Alastair Michael)
+- **DROPPED**: Hinshelwood (was Ollie Felts)
+- **DROPPED**: O.Dango (was chris Purnell)
+- **DROPPED**: Osula (was Elliott Bennett)
+- **DROPPED**: Emersonn (was Greg Woodward)
+- **DROPPED**: Dorgu (was Piers Black-Hawkins)
+- **DROPPED**: David (was Ollie Felts)
+- **DROPPED**: Goretzka (was Jason Parmar)
 
 ## Injury/Status Watch (last 7 days)
 
 - **Cash**: a → d — Muscular injury - 75% chance of playing
-- **Manzambi**: i → d — Knee injury - 50% chance of playing
-- **Collins**: a → i — Calf injury - Unknown return date
+- **Pau**: a → d — Hamstring injury - 75% chance of playing
+- **Maatsen**: a → d — Ankle injury - 25% chance of playing
+- **Collins**: d → i — Calf injury - Unknown return date
 - **Henderson**: d → i — Wrist injury - Unknown return date
 - **Hinshelwood**: d → i — Ankle injury - Expected back 10 Oct
 - **Yohanna**: a → i — Unspecified injury - Expected back 10 Oct
 - **Palestra**: d → i — Thigh injury - Expected back 18 Sep
+- **Disasi**: a → s — Suspended until 25 Oct
 - **Caicedo**: d → i — Calf injury - Expected back 18 Sep
 - **Emegha**: a → i — Hamstring injury - Expected back 18 Sep
 - **Eccles**: a → i — Unspecified injury - Expected back 12 Oct
+- **Henderson**: a → i — Foot injury - Expected back 11 Oct
 - **M.França**: a → u — Has joined Alverca on loan for the rest of the season
 - **J.Rak-Sakyi**: a → u — has joined  Kasimpasa on loan for the rest of the seaon.
+- **Nketiah**: a → d — Unspecified injury - 75% chance of playing
 - **Akintola**: a → u — Has joined Omonoia FC permanently
-- **Gakpo**: a → d — Thigh injury - 75% chance of playing
 - **Shaw**: a → d — Unspecified injury - 75% chance of playing
 - **Jaouen**: a → d — Ankle injury - 50% chance of playing
+- **Milenković**: a → d — Hamstring injury - 75% chance of playing
+- **Jair Cunha**: a → d — Hamstring injury - 75% chance of playing
 - **Pedro Porro**: a → d — Unspecified injury - 75% chance of playing
 - **Udogie**: a → d — Unspecified injury - 75% chance of playing
+- **Reinildo**: a → s — Suspended until 10 Oct
 - **Mundle**: a → i — Knee injury - Unknown return date
 - **Morita**: a → i — Calf injury - Expected back 11 Oct
 - **Mudryk**: a → i — Ankle injury - Unknown return date
+- **Mendy**: a → d — Concussion - 50% chance of playing
 - **Dedić**: a → d — Hamstring injury - 75% chance of playing
 - **Shahar**: a → u — has joined Arouca on loan for the rest of the seaon.
 - **De Fougerolles**: d → u — has joined  Real Salt Lake on loan for the rest of the seaon.
