@@ -1,47 +1,47 @@
 {
-  "state": "live",
-  "sigma": 2.74,
+  "state": "done",
+  "sigma": 2.78,
   "team_rho": 0.1,
   "gameweek": 4,
-  "updated_at": "2026-09-14T15:28:46+00:00",
+  "updated_at": "2026-09-14T21:12:42+00:00",
   "fixtures_total": 10,
-  "fixtures_finished": 9,
-  "fixtures_started": 9,
-  "players_to_play": 13,
+  "fixtures_finished": 10,
+  "fixtures_started": 10,
+  "players_to_play": 0,
   "fixtures": [
     {
-      "home_win": 99.0,
+      "home_win": 100.0,
       "draw": 0.0,
-      "away_win": 1.0,
+      "away_win": 0.0,
       "home": "Jason Parmar",
       "home_team": "Pain in Diaz",
-      "home_current": 44,
-      "home_to_play": 4,
-      "home_projection": 56.5,
-      "home_to_come": 12.5,
-      "home_low": 52,
-      "home_high": 62,
+      "home_current": 60,
+      "home_to_play": 0,
+      "home_projection": 60.0,
+      "home_to_come": 0.0,
+      "home_low": 60,
+      "home_high": 60,
       "away": "Ash Cross",
       "away_team": "H\u00f8jbjerg\u2019s packet",
-      "away_current": 25,
-      "away_to_play": 2,
-      "away_projection": 30.8,
-      "away_to_come": 5.8,
-      "away_low": 26,
-      "away_high": 36
+      "away_current": 40,
+      "away_to_play": 0,
+      "away_projection": 40.0,
+      "away_to_come": 0.0,
+      "away_low": 40,
+      "away_high": 40
     },
     {
-      "home_win": 1.0,
+      "home_win": 0.0,
       "draw": 0.0,
-      "away_win": 99.0,
+      "away_win": 100.0,
       "home": "Greg Woodward",
       "home_team": "Sxci_Scorpion_69",
-      "home_current": 21,
-      "home_to_play": 1,
-      "home_projection": 24.0,
-      "home_to_come": 3.0,
-      "home_low": 22,
-      "home_high": 27,
+      "home_current": 23,
+      "home_to_play": 0,
+      "home_projection": 23.0,
+      "home_to_come": 0.0,
+      "home_low": 23,
+      "home_high": 23,
       "away": "Sam Wright",
       "away_team": "Middle court virgins",
       "away_current": 40,
@@ -52,46 +52,46 @@
       "away_high": 40
     },
     {
-      "home_win": 1.0,
+      "home_win": 0.0,
       "draw": 0.0,
-      "away_win": 99.0,
+      "away_win": 100.0,
       "home": "Andrew Hutchinson",
       "home_team": "Inter Da Pub",
-      "home_current": 31,
-      "home_to_play": 3,
-      "home_projection": 43.6,
-      "home_to_come": 12.6,
+      "home_current": 38,
+      "home_to_play": 0,
+      "home_projection": 38.0,
+      "home_to_come": 0.0,
       "home_low": 38,
-      "home_high": 50,
+      "home_high": 38,
       "away": "Piers Black-Hawkins",
       "away_team": "Really Kick FC",
-      "away_current": 70,
-      "away_to_play": 1,
-      "away_projection": 73.6,
-      "away_to_come": 3.6,
-      "away_low": 71,
-      "away_high": 78
+      "away_current": 77,
+      "away_to_play": 0,
+      "away_projection": 77.0,
+      "away_to_come": 0.0,
+      "away_low": 77,
+      "away_high": 77
     },
     {
-      "home_win": 1.0,
+      "home_win": 0.0,
       "draw": 0.0,
-      "away_win": 99.0,
+      "away_win": 100.0,
       "home": "chris Purnell",
       "home_team": "Gary fishcake  fc",
-      "home_current": 41,
-      "home_to_play": 1,
-      "home_projection": 43.6,
-      "home_to_come": 2.6,
+      "home_current": 42,
+      "home_to_play": 0,
+      "home_projection": 42.0,
+      "home_to_come": 0.0,
       "home_low": 42,
-      "home_high": 45,
+      "home_high": 42,
       "away": "Alastair Michael",
       "away_team": "Shabbos Sly Boys",
-      "away_current": 64,
-      "away_to_play": 1,
-      "away_projection": 68.6,
-      "away_to_come": 4.6,
-      "away_low": 66,
-      "away_high": 73
+      "away_current": 67,
+      "away_to_play": 0,
+      "away_projection": 67.0,
+      "away_to_come": 0.0,
+      "away_low": 67,
+      "away_high": 67
     },
     {
       "home_win": 0.0,
@@ -119,35 +119,44 @@
     {
       "manager": "Piers Black-Hawkins",
       "team_name": "Really Kick FC",
-      "current": 70,
+      "current": 77,
       "official": 70,
-      "to_play": 1,
-      "projection": 73.6,
-      "proj_low": 71,
-      "proj_high": 78,
-      "to_come": 3.6,
+      "to_play": 0,
+      "projection": 77.0,
+      "proj_low": 77,
+      "proj_high": 77,
+      "to_come": 0.0,
       "auto_subbed": [],
-      "yet_to_play": [
-        "Muharemovi\u0107"
-      ]
+      "yet_to_play": []
     },
     {
       "manager": "Alastair Michael",
       "team_name": "Shabbos Sly Boys",
-      "current": 64,
+      "current": 67,
       "official": 48,
-      "to_play": 1,
-      "projection": 68.6,
-      "proj_low": 66,
-      "proj_high": 73,
-      "to_come": 4.6,
+      "to_play": 0,
+      "projection": 67.0,
+      "proj_low": 67,
+      "proj_high": 67,
+      "to_come": 0.0,
       "auto_subbed": [
         "Pedro Porro",
         "Nketiah"
       ],
-      "yet_to_play": [
-        "Stach"
-      ]
+      "yet_to_play": []
+    },
+    {
+      "manager": "Jason Parmar",
+      "team_name": "Pain in Diaz",
+      "current": 60,
+      "official": 44,
+      "to_play": 0,
+      "projection": 60.0,
+      "proj_low": 60,
+      "proj_high": 60,
+      "to_come": 0.0,
+      "auto_subbed": [],
+      "yet_to_play": []
     },
     {
       "manager": "Ollie Felts",
@@ -165,37 +174,17 @@
       "yet_to_play": []
     },
     {
-      "manager": "Jason Parmar",
-      "team_name": "Pain in Diaz",
-      "current": 44,
-      "official": 44,
-      "to_play": 4,
-      "projection": 56.5,
-      "proj_low": 52,
-      "proj_high": 62,
-      "to_come": 12.5,
-      "auto_subbed": [],
-      "yet_to_play": [
-        "Barnes",
-        "Calvert-Lewin",
-        "Trafford",
-        "Wilson"
-      ]
-    },
-    {
       "manager": "chris Purnell",
       "team_name": "Gary fishcake  fc",
-      "current": 41,
+      "current": 42,
       "official": 41,
-      "to_play": 1,
-      "projection": 43.6,
+      "to_play": 0,
+      "projection": 42.0,
       "proj_low": 42,
-      "proj_high": 45,
-      "to_come": 2.6,
+      "proj_high": 42,
+      "to_come": 0.0,
       "auto_subbed": [],
-      "yet_to_play": [
-        "Willock"
-      ]
+      "yet_to_play": []
     },
     {
       "manager": "Sam Wright",
@@ -213,6 +202,34 @@
       "yet_to_play": []
     },
     {
+      "manager": "Ash Cross",
+      "team_name": "H\u00f8jbjerg\u2019s packet",
+      "current": 40,
+      "official": 25,
+      "to_play": 0,
+      "projection": 40.0,
+      "proj_low": 40,
+      "proj_high": 40,
+      "to_come": 0.0,
+      "auto_subbed": [],
+      "yet_to_play": []
+    },
+    {
+      "manager": "Andrew Hutchinson",
+      "team_name": "Inter Da Pub",
+      "current": 38,
+      "official": 31,
+      "to_play": 0,
+      "projection": 38.0,
+      "proj_low": 38,
+      "proj_high": 38,
+      "to_come": 0.0,
+      "auto_subbed": [
+        "Elanga"
+      ],
+      "yet_to_play": []
+    },
+    {
       "manager": "Elliott Bennett",
       "team_name": "You're Toast FC",
       "current": 34,
@@ -226,52 +243,17 @@
       "yet_to_play": []
     },
     {
-      "manager": "Andrew Hutchinson",
-      "team_name": "Inter Da Pub",
-      "current": 31,
-      "official": 31,
-      "to_play": 3,
-      "projection": 43.6,
-      "proj_low": 38,
-      "proj_high": 50,
-      "to_come": 12.6,
-      "auto_subbed": [],
-      "yet_to_play": [
-        "Elanga",
-        "Hall",
-        "Wissa"
-      ]
-    },
-    {
-      "manager": "Ash Cross",
-      "team_name": "H\u00f8jbjerg\u2019s packet",
-      "current": 25,
-      "official": 25,
-      "to_play": 2,
-      "projection": 30.8,
-      "proj_low": 26,
-      "proj_high": 36,
-      "to_come": 5.8,
-      "auto_subbed": [],
-      "yet_to_play": [
-        "Bogle",
-        "Dedi\u0107"
-      ]
-    },
-    {
       "manager": "Greg Woodward",
       "team_name": "Sxci_Scorpion_69",
-      "current": 21,
+      "current": 23,
       "official": 21,
-      "to_play": 1,
-      "projection": 24.0,
-      "proj_low": 22,
-      "proj_high": 27,
-      "to_come": 3.0,
+      "to_play": 0,
+      "projection": 23.0,
+      "proj_low": 23,
+      "proj_high": 23,
+      "to_come": 0.0,
       "auto_subbed": [],
-      "yet_to_play": [
-        "Thiaw"
-      ]
+      "yet_to_play": []
     }
   ]
 }
