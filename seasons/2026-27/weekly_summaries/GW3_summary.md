@@ -98,6 +98,7 @@ _(This league doesn't use captaincy multipliers.)_
 - **Maatsen**: a → d — Ankle injury - 25% chance of playing
 - **Collins**: d → i — Calf injury - Unknown return date
 - **Henderson**: d → i — Wrist injury - Unknown return date
+- **Furo**: a → i — Unspecified injury - Unknown return date
 - **Hinshelwood**: d → i — Ankle injury - Expected back 10 Oct
 - **Yohanna**: a → i — Unspecified injury - Expected back 10 Oct
 - **Palestra**: d → i — Thigh injury - Expected back 18 Sep
@@ -109,11 +110,16 @@ _(This league doesn't use captaincy multipliers.)_
 - **M.França**: a → u — Has joined Alverca on loan for the rest of the season
 - **J.Rak-Sakyi**: a → u — has joined  Kasimpasa on loan for the rest of the seaon.
 - **Nketiah**: a → d — Unspecified injury - 75% chance of playing
+- **Sessegnon**: a → d — Groin injury - 75% chance of playing
 - **Akintola**: a → u — Has joined Omonoia FC permanently
+- **Gomez**: i → d — Muscular injury - 75% chance of playing
+- **Foden**: a → s — Suspended until 17 Oct
 - **Shaw**: a → d — Unspecified injury - 75% chance of playing
 - **Jaouen**: a → d — Ankle injury - 50% chance of playing
+- **Tonali**: a → d — Knock - 75% chance of playing
 - **Milenković**: a → d — Hamstring injury - 75% chance of playing
 - **Jair Cunha**: a → d — Hamstring injury - 75% chance of playing
+- **Awoniyi**: a → s — Suspended until 19 Oct
 - **Pedro Porro**: a → d — Unspecified injury - 75% chance of playing
 - **Udogie**: a → d — Unspecified injury - 75% chance of playing
 - **Reinildo**: a → s — Suspended until 10 Oct
