@@ -1,4 +1,4 @@
-# Lineup Impact — GW2 → GW3
+# Lineup Impact — GW3 → GW4
 
 _Starting XI changes between the two most recent gameweeks (trades and plain bench/start swaps both count). Net only counts players who actually played that gameweek -- others are listed but tagged DNP and excluded._
 
@@ -6,13 +6,13 @@ _Starting XI changes between the two most recent gameweeks (trades and plain ben
 
 | Net | Manager | Changes |
 |---|---|---|
-| +8 | Sam Wright | +Ndoye (1pt), +Maatsen (7pt), +Branthwaite (3pt), -Gravenberch (1pt), -Mosquera (DNP), -Awoniyi (2pt) |
-| +4 | Greg Woodward | +Barcola (1pt), +Ajayi (5pt), -Anderson (3pt), -Thiaw (-1pt) |
-| +4 | Andrew Hutchinson | +Hall (4pt), -Frimpong (DNP) |
-| +4 | Ollie Felts | +Abraham (1pt), +Sávio (3pt), -David (0pt), -Woltemade (DNP) |
-| +4 | Piers Black-Hawkins | +Kostoulas (2pt), +Groß (1pt), +Mukiele (4pt), -Maguire (2pt), -Colwill (DNP), -Dorgu (1pt) |
-| +3 | Ash Cross | +Munoz (3pt), +Dedić (1pt), -Richards (1pt), -Wieffer (DNP) |
-| +3 | chris Purnell | +Davis (1pt), +Enzo (3pt), -Rodríguez (DNP), -Hill (1pt) |
-| 0 | Jason Parmar | No lineup changes |
-| -1 | Alastair Michael | +Hato (3pt), +Strand Larsen (1pt), +Gomez (2pt), -Okafor (3pt), -Bruno G. (DNP), -Shaw (4pt) |
-| -7 | Elliott Bennett | +Aina (1pt), +Ajer (2pt), +Horníček (2pt), +Mbaye (DNP), -Buendía (3pt), -O'Reilly (DNP), -Robertson (1pt), -A.Becker (8pt) |
+| +23 | Alastair Michael | +Van Hecke (8pt), +Bruno G. (7pt), +Belloumi (13pt), -Pedro Porro (DNP), -Solanke (2pt), -Gomez (3pt) |
+| +19 | Ash Cross | +Bogle (15pt), +Giles (4pt), +Suzuki (2pt), -Roefs (2pt), -Collins (DNP), -Bijol (DNP) |
+| +9 | Piers Black-Hawkins | +Janelt (4pt), +Muharemović (7pt), -Rayan (2pt), -Mukiele (0pt) |
+| +8 | Ollie Felts | +Yalcouyé (8pt), +Isidor (1pt), -Abraham (1pt), -Khusanov (DNP) |
+| +6 | Andrew Hutchinson | +Araujo (6pt), -Elanga (DNP) |
+| +6 | Elliott Bennett | +Vuskovic (6pt), +O'Reilly (1pt), +A.Becker (9pt), -Dalot (2pt), -Igor Jesus (7pt), -Horníček (1pt) |
+| +3 | Sam Wright | +Fofana (1pt), +King (3pt), +Matheus N. (9pt), -Silva (3pt), -Ndoye (1pt), -Branthwaite (6pt) |
+| +1 | chris Purnell | +George (3pt), +Willock (1pt), -Rashford (2pt), -O.Dango (1pt) |
+| 0 | Jason Parmar | +Barnes (2pt), +Grealish (1pt), -Xhaka (1pt), -Cunha (2pt) |
+| -8 | Greg Woodward | +Anderson (5pt), +Sels (3pt), +Thiaw (2pt), -Martinez (2pt), -Emersonn (12pt), -McBurnie (4pt) |
