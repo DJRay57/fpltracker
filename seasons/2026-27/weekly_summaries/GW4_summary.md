@@ -93,6 +93,7 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Injury/Status Watch (last 7 days)
 
+- **White**: a → d — Muscular injury - 75% chance of playing
 - **Cash**: a → d — Muscular injury - 75% chance of playing
 - **Pau**: a → d — Hamstring injury - 75% chance of playing
 - **Maatsen**: a → d — Ankle injury - 25% chance of playing
@@ -133,6 +134,4 @@ _(This league doesn't use captaincy multipliers.)_
 - **Mendy**: a → d — Concussion - 50% chance of playing
 - **Shahar**: a → u — has joined Arouca on loan for the rest of the seaon.
 - **De Fougerolles**: d → u — has joined  Real Salt Lake on loan for the rest of the seaon.
-- **Goretzka**: a → i — Knee injury - Expected back 10 Oct
-- **Ansah**: a → i — Back injury - Unknown return date
 - **Azeez**: i → d — Hamstring injury - 75% chance of playing
