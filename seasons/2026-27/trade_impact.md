@@ -111,3 +111,4 @@ _Took effect from a gameweek that hasn't been played yet -- nothing to score unt
 | Ollie Felts | Mainoo | Sávio | GW5 |
 | Elliott Bennett | Livramento | Ajer | GW5 |
 | Greg Woodward | Mykolenko | Thiaw | GW5 |
+| Greg Woodward | Welbeck | Flemming | GW5 |
