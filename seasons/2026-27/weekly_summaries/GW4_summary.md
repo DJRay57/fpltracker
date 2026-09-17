@@ -94,27 +94,26 @@ _(This league doesn't use captaincy multipliers.)_
 ## Injury/Status Watch (last 7 days)
 
 - **White**: a → d — Muscular injury - 75% chance of playing
-- **Cash**: a → d — Muscular injury - 75% chance of playing
+- **M.Bizot**: a → d — Back injury - 75% chance of playing
 - **Pau**: a → d — Hamstring injury - 75% chance of playing
 - **Maatsen**: a → d — Ankle injury - 25% chance of playing
+- **Gomes**: s → d — Calf injury - 75% chance of playing
 - **Collins**: d → i — Calf injury - Unknown return date
-- **Henderson**: d → i — Wrist injury - Unknown return date
-- **Onyeka**: a → d — Hand injury - 50% chance of playing
 - **Furo**: a → i — Unspecified injury - Unknown return date
 - **Hinshelwood**: d → i — Ankle injury - Expected back 10 Oct
-- **Yohanna**: a → i — Unspecified injury - Expected back 10 Oct
-- **Palestra**: d → i — Thigh injury - Expected back 18 Sep
 - **Disasi**: a → s — Suspended until 25 Oct
-- **Caicedo**: d → i — Calf injury - Expected back 18 Sep
-- **Emegha**: a → i — Hamstring injury - Expected back 18 Sep
+- **João Pedro**: a → d — Unspecified injury - 75% chance of playing
+- **Emegha**: d → i — Hamstring injury - Expected back 18 Sep
+- **Amenda**: a → d — Calf injury - 25% chance of playing
 - **Eccles**: a → i — Unspecified injury - Expected back 12 Oct
 - **Henderson**: a → i — Foot injury - Expected back 11 Oct
+- **Sarr**: i → d — Groin injury - 50% chance of playing
 - **M.França**: a → u — Has joined Alverca on loan for the rest of the season
-- **J.Rak-Sakyi**: a → u — has joined  Kasimpasa on loan for the rest of the seaon.
 - **Nketiah**: a → d — Unspecified injury - 75% chance of playing
+- **Armstrong**: a → d — Unspecified injury - 75% chance of playing
+- **Röhl**: a → d — Unspecified injury - 75% chance of playing
 - **Sessegnon**: a → d — Groin injury - 75% chance of playing
 - **Akintola**: a → u — Has joined Omonoia FC permanently
-- **Gomez**: i → d — Muscular injury - 75% chance of playing
 - **Foden**: a → s — Suspended until 17 Oct
 - **N.Gonzalez**: a → d — Concussion - 50% chance of playing
 - **Shaw**: a → d — Unspecified injury - 75% chance of playing
@@ -124,14 +123,11 @@ _(This league doesn't use captaincy multipliers.)_
 - **Tonali**: a → d — Knock - 75% chance of playing
 - **J.Ramsey**: a → d — Thigh injury - 25% chance of playing
 - **Milenković**: a → i — Hamstring injury - Expected back 11 Oct
-- **Jair Cunha**: a → d — Hamstring injury - 50% chance of playing
+- **Jair Cunha**: a → d — Hamstring injury - 75% chance of playing
 - **Awoniyi**: a → s — Suspended until 19 Oct
 - **Pedro Porro**: a → d — Unspecified injury - 75% chance of playing
 - **Reinildo**: a → s — Suspended until 10 Oct
-- **Mundle**: a → i — Knee injury - Unknown return date
-- **Morita**: a → i — Calf injury - Expected back 11 Oct
 - **Mudryk**: a → i — Ankle injury - Unknown return date
 - **Mendy**: a → d — Concussion - 50% chance of playing
 - **Shahar**: a → u — has joined Arouca on loan for the rest of the seaon.
 - **De Fougerolles**: d → u — has joined  Real Salt Lake on loan for the rest of the seaon.
-- **Azeez**: i → d — Hamstring injury - 75% chance of playing
