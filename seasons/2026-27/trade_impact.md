@@ -94,3 +94,20 @@ _Every accepted waiver move, scored from the gameweek it took effect onward: poi
 | -11 | Ash Cross | Bijol (2) | Mukiele (13) | GW2 |
 | -17 | Ollie Felts | David (1) | Kostoulas (18) | GW1 |
 | -19 | Jason Parmar | Martinelli (0) | Xhaka (19) | GW1 |
+
+## Pending
+
+_Took effect from a gameweek that hasn't been played yet -- nothing to score until it has._
+
+| Manager | In | Out | Effective |
+|---|---|---|---|
+| Alastair Michael | Emersonn | Nketiah | GW5 |
+| Jason Parmar | Rashford | Wilson | GW5 |
+| Jason Parmar | Scherpen | M.Bizot | GW5 |
+| Greg Woodward | Xhaka | Tielemans | GW5 |
+| Sam Wright | Branthwaite | Maatsen | GW5 |
+| Sam Wright | Solanke | Awoniyi | GW5 |
+| Sam Wright | Khalaili | Fofana | GW5 |
+| Ollie Felts | Mainoo | Sávio | GW5 |
+| Elliott Bennett | Livramento | Ajer | GW5 |
+| Greg Woodward | Mykolenko | Thiaw | GW5 |
