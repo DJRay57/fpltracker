@@ -112,3 +112,5 @@ _Took effect from a gameweek that hasn't been played yet -- nothing to score unt
 | Elliott Bennett | Livramento | Ajer | GW5 |
 | Greg Woodward | Mykolenko | Thiaw | GW5 |
 | Greg Woodward | Welbeck | Flemming | GW5 |
+| Ash Cross | Maitland-Niles | Dedić | GW5 |
+| Ash Cross | Dunk | Wieffer | GW5 |

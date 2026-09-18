@@ -48,52 +48,23 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Waiver Wire Activity (last 7 days)
 
-- **ADDED**: Egan → Piers Black-Hawkins
-- **ADDED**: Grealish → Jason Parmar
-- **ADDED**: Willock → chris Purnell
+- **ADDED**: Welbeck → Greg Woodward
+- **ADDED**: Dunk → Ash Cross
 - **ADDED**: Barnes → Jason Parmar
-- **ADDED**: Janelt → Piers Black-Hawkins
-- **ADDED**: Nketiah → Alastair Michael
-- **ADDED**: Awoniyi → Sam Wright
+- **ADDED**: Mykolenko → Greg Woodward
 - **ADDED**: Bogle → Ash Cross
 - **ADDED**: Giles → Ash Cross
-- **ADDED**: Isidor → Ollie Felts
-- **ADDED**: Fofana → Sam Wright
-- **ADDED**: Muharemović → Piers Black-Hawkins
-- **ADDED**: Belloumi → Alastair Michael
-- **ADDED**: George → chris Purnell
-- **ADDED**: King → Sam Wright
-- **ADDED**: Vuskovic → Elliott Bennett
-- **ADDED**: Araujo → Andrew Hutchinson
-- **ADDED**: Mendy → chris Purnell
-- **ADDED**: Yalcouyé → Ollie Felts
-- **ADDED**: Flemming → Greg Woodward
-- **ADDED**: Fernandez-Pardo → Elliott Bennett
-- **DROPPED**: Xhaka (was Jason Parmar)
-- **DROPPED**: Maguire (was Piers Black-Hawkins)
+- **ADDED**: Scherpen → Jason Parmar
+- **ADDED**: Livramento → Elliott Bennett
+- **ADDED**: Mainoo → Ollie Felts
+- **ADDED**: Khalaili → Sam Wright
+- **ADDED**: Maitland-Niles → Ash Cross
 - **DROPPED**: Akpom (was Sam Wright)
-- **DROPPED**: Solanke (was Alastair Michael)
-- **DROPPED**: Rashford (was chris Purnell)
-- **DROPPED**: Chalobah (was chris Purnell)
-- **DROPPED**: Dalot (was Elliott Bennett)
 - **DROPPED**: Collins (was Ash Cross)
 - **DROPPED**: Bijol (was Ash Cross)
-- **DROPPED**: Aït-Nouri (was Andrew Hutchinson)
-- **DROPPED**: Ndoye (was Sam Wright)
-- **DROPPED**: Colwill (was Piers Black-Hawkins)
-- **DROPPED**: Branthwaite (was Sam Wright)
-- **DROPPED**: Gomez (was Alastair Michael)
-- **DROPPED**: Hinshelwood (was Ollie Felts)
-- **DROPPED**: O.Dango (was chris Purnell)
-- **DROPPED**: Osula (was Elliott Bennett)
-- **DROPPED**: Emersonn (was Greg Woodward)
-- **DROPPED**: Dorgu (was Piers Black-Hawkins)
-- **DROPPED**: David (was Ollie Felts)
-- **DROPPED**: Goretzka (was Jason Parmar)
 
 ## Injury/Status Watch (last 7 days)
 
-- **White**: a → d — Muscular injury - 75% chance of playing
 - **M.Bizot**: a → d — Back injury - 75% chance of playing
 - **Pau**: a → d — Hamstring injury - 75% chance of playing
 - **Maatsen**: a → d — Ankle injury - 25% chance of playing
@@ -101,33 +72,31 @@ _(This league doesn't use captaincy multipliers.)_
 - **Collins**: d → i — Calf injury - Unknown return date
 - **Furo**: a → i — Unspecified injury - Unknown return date
 - **Hinshelwood**: d → i — Ankle injury - Expected back 10 Oct
+- **James**: a → d — Unspecified injury - 75% chance of playing
 - **Disasi**: a → s — Suspended until 25 Oct
 - **João Pedro**: a → d — Unspecified injury - 75% chance of playing
 - **Emegha**: d → i — Hamstring injury - Expected back 18 Sep
 - **Amenda**: a → d — Calf injury - 25% chance of playing
-- **Eccles**: a → i — Unspecified injury - Expected back 12 Oct
 - **Henderson**: a → i — Foot injury - Expected back 11 Oct
-- **Sarr**: i → d — Groin injury - 50% chance of playing
 - **M.França**: a → u — Has joined Alverca on loan for the rest of the season
-- **Nketiah**: a → d — Unspecified injury - 75% chance of playing
 - **Armstrong**: a → d — Unspecified injury - 75% chance of playing
-- **Röhl**: a → d — Unspecified injury - 75% chance of playing
+- **Röhl**: a → i — Unspecified injury - Expected back 11 Oct
+- **Tete**: a → i — Concussion - Expected back 10 Oct
 - **Sessegnon**: a → d — Groin injury - 75% chance of playing
 - **Akintola**: a → u — Has joined Omonoia FC permanently
 - **Foden**: a → s — Suspended until 17 Oct
-- **N.Gonzalez**: a → d — Concussion - 50% chance of playing
-- **Shaw**: a → d — Unspecified injury - 75% chance of playing
+- **N.Gonzalez**: a → i — Concussion - Expected back 12 Oct
 - **Obi**: a → u — Has joined Willem II on loan for the rest of the season
-- **Jaouen**: a → d — Ankle injury - 50% chance of playing
 - **Elanga**: a → i — Unspecified injury - Unknown return date
-- **Tonali**: a → d — Knock - 75% chance of playing
-- **J.Ramsey**: a → d — Thigh injury - 25% chance of playing
+- **J.Ramsey**: a → i — Thigh injury - Unknown return date
 - **Milenković**: a → i — Hamstring injury - Expected back 11 Oct
 - **Jair Cunha**: a → d — Hamstring injury - 75% chance of playing
 - **Awoniyi**: a → s — Suspended until 19 Oct
-- **Pedro Porro**: a → d — Unspecified injury - 75% chance of playing
 - **Reinildo**: a → s — Suspended until 10 Oct
+- **Targett**: a → d — Ankle injury - 75% chance of playing
 - **Mudryk**: a → i — Ankle injury - Unknown return date
-- **Mendy**: a → d — Concussion - 50% chance of playing
+- **Mendy**: a → i — Concussion - Expected back 11 Oct
+- **Dedić**: d → i — Unspecified injury - Unknown return date
 - **Shahar**: a → u — has joined Arouca on loan for the rest of the seaon.
 - **De Fougerolles**: d → u — has joined  Real Salt Lake on loan for the rest of the seaon.
+- **Azeez**: d → i — Hamstring injury - Expected back 10 Oct

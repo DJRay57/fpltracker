@@ -632,24 +632,6 @@
   ],
   "free_agents": [
     {
-      "name": "Dunk",
-      "position": "DEF",
-      "team": "BHA",
-      "gw_points": 12
-    },
-    {
-      "name": "Emersonn",
-      "position": "FWD",
-      "team": "IPS",
-      "gw_points": 12
-    },
-    {
-      "name": "Mykolenko",
-      "position": "DEF",
-      "team": "EVE",
-      "gw_points": 11
-    },
-    {
       "name": "Okafor",
       "position": "MID",
       "team": "LEE",
@@ -659,6 +641,24 @@
       "name": "Kamada",
       "position": "MID",
       "team": "CRY",
+      "gw_points": 8
+    },
+    {
+      "name": "Kluivert",
+      "position": "MID",
+      "team": "BOU",
+      "gw_points": 8
+    },
+    {
+      "name": "Ayari",
+      "position": "MID",
+      "team": "BHA",
+      "gw_points": 8
+    },
+    {
+      "name": "Affengruber",
+      "position": "DEF",
+      "team": "FUL",
       "gw_points": 8
     }
   ]

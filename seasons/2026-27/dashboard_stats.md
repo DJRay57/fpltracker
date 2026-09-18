@@ -63,11 +63,11 @@ _If everyone played everyone every week. Strips fixture luck out entirely; the S
 
 | GW4 pts | Player | Pos | Team |
 |---|---|---|---|
-| 12 | Dunk | DEF | BHA |
-| 12 | Emersonn | FWD | IPS |
-| 11 | Mykolenko | DEF | EVE |
 | 9 | Okafor | MID | LEE |
 | 8 | Kamada | MID | CRY |
+| 8 | Kluivert | MID | BOU |
+| 8 | Ayari | MID | BHA |
+| 8 | Affengruber | DEF | FUL |
 
 ## Trophy Cabinet
 
