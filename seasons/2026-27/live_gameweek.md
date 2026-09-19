@@ -1,6 +1,6 @@
 # Live Gameweek — GW5
 
-_State: live. 1 of 10 matches finished. Updated 2026-09-18 22:56 UTC._
+_State: live. 1 of 10 matches finished. Updated 2026-09-19 12:47 UTC._
 
 _Scores are computed from the live player feed and include provisional bonus, so they can run ahead of the official league table, which settles later._
 
@@ -10,23 +10,23 @@ _Win chances come from simulating the players still to play, drawing their score
 
 | Home | Now | Proj | Win% | Draw% | Away | Now | Proj | Win% |
 |---|---|---|---|---|---|---|---|---|
-| Alastair Michael | 0 | 40.6 | 79% | 2% | Jason Parmar | 0 | 29.1 | 19% |
-| Piers Black-Hawkins | 8 | 49.2 | 77% | 2% | Ollie Felts | 15 | 39.5 | 21% |
-| Sam Wright | 0 | 32.8 | 84% | 2% | Elliott Bennett | 2 | 20.4 | 14% |
-| Ash Cross | 0 | 36.4 | 34% | 3% | chris Purnell | 6 | 41.9 | 63% |
-| Greg Woodward | 4 | 28.4 | 65% | 3% | Andrew Hutchinson | 5 | 24.6 | 32% |
+| Alastair Michael | 1 | 38.8 | 77% | 2% | Jason Parmar | 2 | 28.7 | 21% |
+| Piers Black-Hawkins | 8 | 49.2 | 79% | 2% | Ollie Felts | 15 | 39.1 | 19% |
+| Sam Wright | 1 | 33.4 | 86% | 2% | Elliott Bennett | 2 | 20.3 | 12% |
+| Ash Cross | 3 | 38.0 | 40% | 3% | chris Purnell | 6 | 41.4 | 57% |
+| Greg Woodward | 5 | 29.4 | 67% | 3% | Andrew Hutchinson | 5 | 24.6 | 30% |
 
 ## Live Scores
 
 | Manager | Now | Projection | Players left |
 |---|---|---|---|
-| Ollie Felts | 15 | 39.5 | 9 |
+| Ollie Felts | 15 | 39.1 | 9 |
 | Piers Black-Hawkins | 8 | 49.2 | 9 |
-| chris Purnell | 6 | 41.9 | 10 |
+| chris Purnell | 6 | 41.4 | 10 |
+| Greg Woodward | 5 | 29.4 | 8 |
 | Andrew Hutchinson | 5 | 24.6 | 8 |
-| Greg Woodward | 4 | 28.4 | 8 |
-| Elliott Bennett | 2 | 20.4 | 9 |
-| Jason Parmar | 0 | 29.1 | 10 |
-| Sam Wright | 0 | 32.8 | 11 |
-| Ash Cross | 0 | 36.4 | 11 |
-| Alastair Michael | 0 | 40.6 | 11 |
+| Ash Cross | 3 | 38.0 | 11 |
+| Jason Parmar | 2 | 28.7 | 10 |
+| Elliott Bennett | 2 | 20.3 | 9 |
+| Sam Wright | 1 | 33.4 | 11 |
+| Alastair Michael | 1 | 38.8 | 11 |

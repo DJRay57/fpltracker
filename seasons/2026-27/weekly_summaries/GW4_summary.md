@@ -50,41 +50,48 @@ _(This league doesn't use captaincy multipliers.)_
 
 - **ADDED**: Welbeck → Greg Woodward
 - **ADDED**: Dunk → Ash Cross
-- **ADDED**: Barnes → Jason Parmar
 - **ADDED**: Mykolenko → Greg Woodward
-- **ADDED**: Bogle → Ash Cross
-- **ADDED**: Giles → Ash Cross
 - **ADDED**: Scherpen → Jason Parmar
 - **ADDED**: Livramento → Elliott Bennett
 - **ADDED**: Mainoo → Ollie Felts
 - **ADDED**: Khalaili → Sam Wright
 - **ADDED**: Maitland-Niles → Ash Cross
-- **DROPPED**: Akpom (was Sam Wright)
-- **DROPPED**: Collins (was Ash Cross)
-- **DROPPED**: Bijol (was Ash Cross)
+- **DROPPED**: M.Bizot (was Jason Parmar)
+- **DROPPED**: Wilson (was Jason Parmar)
+- **DROPPED**: Tielemans (was Greg Woodward)
+- **DROPPED**: Ajer (was Elliott Bennett)
+- **DROPPED**: Nketiah (was Alastair Michael)
+- **DROPPED**: Awoniyi (was Sam Wright)
+- **DROPPED**: Maatsen (was Sam Wright)
+- **DROPPED**: Fofana (was Sam Wright)
+- **DROPPED**: Thiaw (was Greg Woodward)
+- **DROPPED**: Wieffer (was Ash Cross)
+- **DROPPED**: Sávio (was Ollie Felts)
+- **DROPPED**: Dedić (was Ash Cross)
+- **DROPPED**: Flemming (was Greg Woodward)
 
 ## Injury/Status Watch (last 7 days)
 
-- **M.Bizot**: a → d — Back injury - 75% chance of playing
-- **Pau**: a → d — Hamstring injury - 75% chance of playing
-- **Maatsen**: a → d — Ankle injury - 25% chance of playing
-- **Gomes**: s → d — Calf injury - 75% chance of playing
-- **Collins**: d → i — Calf injury - Unknown return date
+- **M.Bizot**: a → i — Back injury - Expected back 10 Oct
+- **Pau**: a → i — Hamstring injury - Expected back 10 Oct
+- **Maatsen**: a → i — Ankle injury - Unknown return date
+- **Alysson**: a → d — Unspecified injury - 75% chance of playing
 - **Furo**: a → i — Unspecified injury - Unknown return date
-- **Hinshelwood**: d → i — Ankle injury - Expected back 10 Oct
-- **James**: a → d — Unspecified injury - 75% chance of playing
+- **Baleba**: i → d — Ankle injury - 50% chance of playing
+- **James**: a → d — Hamstring injury - 75% chance of playing
+- **Palestra**: i → d — Thigh injury - 50% chance of playing
 - **Disasi**: a → s — Suspended until 25 Oct
-- **João Pedro**: a → d — Unspecified injury - 75% chance of playing
-- **Emegha**: d → i — Hamstring injury - Expected back 18 Sep
+- **Caicedo**: i → d — Calf injury - 50% chance of playing
+- **João Pedro**: a → d — Knee injury - 75% chance of playing
 - **Amenda**: a → d — Calf injury - 25% chance of playing
 - **Henderson**: a → i — Foot injury - Expected back 11 Oct
-- **M.França**: a → u — Has joined Alverca on loan for the rest of the season
 - **Armstrong**: a → d — Unspecified injury - 75% chance of playing
 - **Röhl**: a → i — Unspecified injury - Expected back 11 Oct
 - **Tete**: a → i — Concussion - Expected back 10 Oct
+- **Wilson**: a → i — Thigh injury - Unknown return date
 - **Sessegnon**: a → d — Groin injury - 75% chance of playing
-- **Akintola**: a → u — Has joined Omonoia FC permanently
 - **Foden**: a → s — Suspended until 17 Oct
+- **Doku**: i → d — Calf injury - 75% chance of playing
 - **N.Gonzalez**: a → i — Concussion - Expected back 12 Oct
 - **Obi**: a → u — Has joined Willem II on loan for the rest of the season
 - **Elanga**: a → i — Unspecified injury - Unknown return date
@@ -94,9 +101,6 @@ _(This league doesn't use captaincy multipliers.)_
 - **Awoniyi**: a → s — Suspended until 19 Oct
 - **Reinildo**: a → s — Suspended until 10 Oct
 - **Targett**: a → d — Ankle injury - 75% chance of playing
-- **Mudryk**: a → i — Ankle injury - Unknown return date
 - **Mendy**: a → i — Concussion - Expected back 11 Oct
 - **Dedić**: d → i — Unspecified injury - Unknown return date
-- **Shahar**: a → u — has joined Arouca on loan for the rest of the seaon.
-- **De Fougerolles**: d → u — has joined  Real Salt Lake on loan for the rest of the seaon.
 - **Azeez**: d → i — Hamstring injury - Expected back 10 Oct
