@@ -1,6 +1,6 @@
 # Live Gameweek — GW5
 
-_State: done. 10 of 10 matches finished. Updated 2026-09-20 20:00 UTC._
+_State: done. 10 of 10 matches finished. Updated 2026-09-20 22:48 UTC._
 
 _Scores are computed from the live player feed and include provisional bonus, so they can run ahead of the official league table, which settles later._
 
