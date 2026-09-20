@@ -1,6 +1,6 @@
 # Live Gameweek — GW5
 
-_State: done. 10 of 10 matches finished. Updated 2026-09-20 17:49 UTC._
+_State: done. 10 of 10 matches finished. Updated 2026-09-20 20:00 UTC._
 
 _Scores are computed from the live player feed and include provisional bonus, so they can run ahead of the official league table, which settles later._
 
@@ -12,7 +12,7 @@ _Win chances come from simulating the players still to play, drawing their score
 |---|---|---|---|---|---|---|---|---|
 | Alastair Michael | 43 | 43.0 | 0% | 0% | Jason Parmar | 50 | 50.0 | 100% |
 | Piers Black-Hawkins | 46 | 46.0 | 0% | 0% | Ollie Felts | 47 | 47.0 | 100% |
-| Sam Wright | 34 | 34.0 | 100% | 0% | Elliott Bennett | 28 | 28.0 | 0% |
+| Sam Wright | 32 | 32.0 | 100% | 0% | Elliott Bennett | 28 | 28.0 | 0% |
 | Ash Cross | 41 | 41.0 | 0% | 0% | chris Purnell | 58 | 58.0 | 100% |
 | Greg Woodward | 29 | 29.0 | 0% | 0% | Andrew Hutchinson | 44 | 44.0 | 100% |
 
@@ -27,6 +27,6 @@ _Win chances come from simulating the players still to play, drawing their score
 | Andrew Hutchinson | 44 | 44.0 | 0 |
 | Alastair Michael | 43 | 43.0 | 0 |
 | Ash Cross | 41 | 41.0 | 0 |
-| Sam Wright | 34 | 34.0 | 0 |
+| Sam Wright | 32 | 32.0 | 0 |
 | Greg Woodward | 29 | 29.0 | 0 |
 | Elliott Bennett | 28 | 28.0 | 0 |
