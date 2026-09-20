@@ -50,10 +50,15 @@ _(This league doesn't use captaincy multipliers.)_
 
 - **ADDED**: Welbeck → Greg Woodward
 - **ADDED**: Dunk → Ash Cross
+- **ADDED**: Xhaka → Greg Woodward
+- **ADDED**: Solanke → Sam Wright
+- **ADDED**: Rashford → Jason Parmar
 - **ADDED**: Mykolenko → Greg Woodward
 - **ADDED**: Scherpen → Jason Parmar
 - **ADDED**: Livramento → Elliott Bennett
+- **ADDED**: Branthwaite → Sam Wright
 - **ADDED**: Mainoo → Ollie Felts
+- **ADDED**: Emersonn → Alastair Michael
 - **ADDED**: Khalaili → Sam Wright
 - **ADDED**: Maitland-Niles → Ash Cross
 - **DROPPED**: M.Bizot (was Jason Parmar)
@@ -73,34 +78,30 @@ _(This league doesn't use captaincy multipliers.)_
 ## Injury/Status Watch (last 7 days)
 
 - **M.Bizot**: a → i — Back injury - Expected back 10 Oct
-- **Pau**: a → i — Hamstring injury - Expected back 10 Oct
-- **Maatsen**: a → i — Ankle injury - Unknown return date
+- **Pau**: d → i — Hamstring injury - Expected back 10 Oct
+- **Maatsen**: d → i — Ankle injury - Unknown return date
 - **Alysson**: a → d — Unspecified injury - 75% chance of playing
 - **Furo**: a → i — Unspecified injury - Unknown return date
 - **Baleba**: i → d — Ankle injury - 50% chance of playing
 - **James**: a → d — Hamstring injury - 75% chance of playing
 - **Palestra**: i → d — Thigh injury - 50% chance of playing
-- **Disasi**: a → s — Suspended until 25 Oct
 - **Caicedo**: i → d — Calf injury - 50% chance of playing
 - **João Pedro**: a → d — Knee injury - 75% chance of playing
-- **Amenda**: a → d — Calf injury - 25% chance of playing
-- **Henderson**: a → i — Foot injury - Expected back 11 Oct
-- **Armstrong**: a → d — Unspecified injury - 75% chance of playing
+- **van Ewijk**: a → d — Hamstring injury - 75% chance of playing
+- **Amenda**: a → i — Calf injury - Unknown return date
 - **Röhl**: a → i — Unspecified injury - Expected back 11 Oct
 - **Tete**: a → i — Concussion - Expected back 10 Oct
 - **Wilson**: a → i — Thigh injury - Unknown return date
 - **Sessegnon**: a → d — Groin injury - 75% chance of playing
+- **Fatawu**: a → s — Suspended until 17 Oct
 - **Foden**: a → s — Suspended until 17 Oct
 - **Doku**: i → d — Calf injury - 75% chance of playing
-- **N.Gonzalez**: a → i — Concussion - Expected back 12 Oct
 - **Obi**: a → u — Has joined Willem II on loan for the rest of the season
+- **Livramento**: a → d — Unspecified injury - 75% chance of playing
 - **Elanga**: a → i — Unspecified injury - Unknown return date
 - **J.Ramsey**: a → i — Thigh injury - Unknown return date
-- **Milenković**: a → i — Hamstring injury - Expected back 11 Oct
-- **Jair Cunha**: a → d — Hamstring injury - 75% chance of playing
+- **Milenković**: d → i — Hamstring injury - Expected back 11 Oct
 - **Awoniyi**: a → s — Suspended until 19 Oct
-- **Reinildo**: a → s — Suspended until 10 Oct
 - **Targett**: a → d — Ankle injury - 75% chance of playing
-- **Mendy**: a → i — Concussion - Expected back 11 Oct
 - **Dedić**: d → i — Unspecified injury - Unknown return date
 - **Azeez**: d → i — Hamstring injury - Expected back 10 Oct
