@@ -1,11 +1,11 @@
-# Gameweek 5 Predictions
+# Gameweek 6 Predictions
 
-_Projected starting XI score = 50% season PPG so far + 50% current squad's summed `ep_next`. Win/draw/loss comes from simulating each side player by player, drawing on what comparable players actually scored across GW1-4 (880 performances), widened to match how much scores have actually moved about in this league (13 pts a week) -- a rough guide, not a forecast, especially this early in the season._
+_Projected starting XI score = 50% season PPG so far + 50% current squad's summed `ep_next`. Win/draw/loss comes from simulating each side player by player, drawing on what comparable players actually scored across GW1-5 (1100 performances), widened to match how much scores have actually moved about in this league (12 pts a week) -- a rough guide, not a forecast, especially this early in the season._
 
 | Home | Proj | Win% | Draw% | Proj | Away | Win% |
 |---|---|---|---|---|---|---|
-| Alastair Michael | 46.2 | 44% | 2% | 48.5 | Jason Parmar | 54% |
-| Piers Black-Hawkins | 54.7 | 74% | 2% | 42.0 | Ollie Felts | 24% |
-| Sam Wright | 43.4 | 72% | 2% | 32.3 | Elliott Bennett | 26% |
-| Ash Cross | 42.5 | 39% | 2% | 46.9 | chris Purnell | 59% |
-| Greg Woodward | 32.0 | 34% | 2% | 39.2 | Andrew Hutchinson | 64% |
+| Jason Parmar | 45.2 | 80% | 2% | 31.1 | Greg Woodward | 18% |
+| Andrew Hutchinson | 39.5 | 40% | 3% | 43.5 | Ash Cross | 57% |
+| chris Purnell | 48.1 | 66% | 2% | 40.8 | Sam Wright | 32% |
+| Elliott Bennett | 33.7 | 12% | 1% | 52.6 | Piers Black-Hawkins | 87% |
+| Ollie Felts | 41.5 | 36% | 3% | 46.5 | Alastair Michael | 61% |

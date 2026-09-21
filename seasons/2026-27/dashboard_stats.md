@@ -1,14 +1,14 @@
-# Dashboard Stats — GW4
+# Dashboard Stats — GW5
 
-## GW4 Results
+## GW5 Results
 
 | Home | | Score | | Away |
 |---|---|---|---|---|
-| Jason Parmar | 60 | vs | 40 | Ash Cross |
-| Greg Woodward | 23 | vs | 40 | Sam Wright |
-| Andrew Hutchinson | 38 | vs | 77 | Piers Black-Hawkins |
-| chris Purnell | 42 | vs | 67 | Alastair Michael |
-| Elliott Bennett | 34 | vs | 58 | Ollie Felts |
+| Alastair Michael | 43 | vs | 50 | Jason Parmar |
+| Piers Black-Hawkins | 46 | vs | 47 | Ollie Felts |
+| Sam Wright | 32 | vs | 28 | Elliott Bennett |
+| Ash Cross | 41 | vs | 58 | chris Purnell |
+| Greg Woodward | 29 | vs | 44 | Andrew Hutchinson |
 
 ## Left On The Bench
 
@@ -16,31 +16,31 @@ _Points scored by players the manager didn't start._
 
 | Bench pts | Manager | Worst call |
 |---|---|---|
-| 11 | Greg Woodward | Flemming (5 pts) |
-| 10 | Jason Parmar | Murillo (6 pts) |
-| 10 | Ollie Felts | Leno (9 pts) |
-| 9 | Elliott Bennett | Igor Jesus (7 pts) |
-| 7 | Alastair Michael | Kinsky (7 pts) |
-| 6 | Piers Black-Hawkins | Tzolakis (2 pts) |
-| 3 | chris Purnell | Rodríguez (1 pts) |
-| 2 | Andrew Hutchinson | Petrović (1 pts) |
-| 2 | Ash Cross | Roefs (2 pts) |
-| 1 | Sam Wright | Silva (3 pts) |
+| 18 | Piers Black-Hawkins | Kostoulas (10 pts) |
+| 10 | Jason Parmar | De Cuyper (6 pts) |
+| 10 | Sam Wright | Khalaili (6 pts) |
+| 10 | Alastair Michael | Pickford (8 pts) |
+| 9 | Elliott Bennett | A.Becker (8 pts) |
+| 6 | Greg Woodward | Kudus (4 pts) |
+| 5 | Ollie Felts | Leno (3 pts) |
+| 2 | Andrew Hutchinson | Petrović (2 pts) |
+| 0 | chris Purnell | Pope (0 pts) |
+| 0 | Ash Cross | Roefs (0 pts) |
 
 ## Form Guide
 
 | Manager | Form (oldest → newest) |
 |---|---|
-| Jason Parmar | W W D W |
-| Alastair Michael | D W W W |
-| Piers Black-Hawkins | W L W W |
-| Sam Wright | W L W W |
-| chris Purnell | W W L L |
-| Ollie Felts | L L D W |
-| Andrew Hutchinson | D W L L |
-| Ash Cross | L W L L |
-| Greg Woodward | L L W L |
-| Elliott Bennett | L L L L |
+| Jason Parmar | W W D W W |
+| Sam Wright | W L W W W |
+| Alastair Michael | D W W W L |
+| Piers Black-Hawkins | W L W W L |
+| chris Purnell | W W L L W |
+| Ollie Felts | L L D W W |
+| Andrew Hutchinson | D W L L W |
+| Ash Cross | L W L L L |
+| Greg Woodward | L L W L L |
+| Elliott Bennett | L L L L L |
 
 ## All-Play-All Table
 
@@ -48,26 +48,26 @@ _If everyone played everyone every week. Strips fixture luck out entirely; the S
 
 | APA Rank | Manager | APA Pts | W-D-L | Real Rank | Swing |
 |---|---|---|---|---|---|
-| 1 | Jason Parmar | 73 | 24-1-11 | 1 | 0 |
-| 2 | chris Purnell | 69 | 23-0-13 | 5 | +3 |
-| 3 | Sam Wright | 68 | 22-2-12 | 4 | +1 |
-| 4 | Piers Black-Hawkins | 67 | 22-1-13 | 3 | -1 |
-| 5 | Alastair Michael | 58 | 19-1-16 | 2 | -3 |
-| 6 | Andrew Hutchinson | 55 | 18-1-17 | 7 | +1 |
-| 7 | Ash Cross | 54 | 17-3-16 | 8 | +1 |
-| 8 | Ollie Felts | 46 | 15-1-20 | 6 | -2 |
-| 9 | Greg Woodward | 24 | 8-0-28 | 9 | 0 |
-| 10 | Elliott Bennett | 20 | 6-2-28 | 10 | 0 |
+| 1 | Jason Parmar | 97 | 32-1-12 | 1 | 0 |
+| 2 | chris Purnell | 96 | 32-0-13 | 5 | +3 |
+| 3 | Piers Black-Hawkins | 85 | 28-1-16 | 4 | +1 |
+| 4 | Sam Wright | 74 | 24-2-19 | 2 | -2 |
+| 5 | Alastair Michael | 70 | 23-1-21 | 3 | -2 |
+| 6 | Andrew Hutchinson | 70 | 23-1-21 | 7 | +1 |
+| 7 | Ollie Felts | 67 | 22-1-22 | 6 | -1 |
+| 8 | Ash Cross | 63 | 20-3-22 | 8 | 0 |
+| 9 | Greg Woodward | 27 | 9-0-36 | 9 | 0 |
+| 10 | Elliott Bennett | 20 | 6-2-37 | 10 | 0 |
 
 ## Best Players Nobody Owns
 
-| GW4 pts | Player | Pos | Team |
+| GW5 pts | Player | Pos | Team |
 |---|---|---|---|
-| 9 | Okafor | MID | LEE |
-| 8 | Kamada | MID | CRY |
-| 8 | Kluivert | MID | BOU |
-| 8 | Ayari | MID | BHA |
-| 8 | Affengruber | DEF | FUL |
+| 15 | Dasilva | DEF | COV |
+| 14 | Schuster | DEF | BRE |
+| 13 | Manzambi | MID | AVL |
+| 12 | Buendía | MID | AVL |
+| 11 | Rushworth | GKP | COV |
 
 ## Trophy Cabinet
 
@@ -75,13 +75,13 @@ _Running totals across every finished gameweek._
 
 | Manager | Weeks topped | Weeks bottomed | Robbed blind | W-D-L |
 |---|---|---|---|---|
-| Jason Parmar | 0 | 0 | 0 | 3-1-0 |
-| Alastair Michael | 0 | 0 | 0 | 3-1-0 |
-| Piers Black-Hawkins | 1 | 0 | 1 | 3-0-1 |
-| Sam Wright | 2 | 0 | 0 | 3-0-1 |
-| chris Purnell | 1 | 0 | 1 | 2-0-2 |
-| Ollie Felts | 0 | 0 | 0 | 1-1-2 |
-| Andrew Hutchinson | 0 | 0 | 1 | 1-1-2 |
-| Ash Cross | 0 | 0 | 1 | 1-0-3 |
-| Greg Woodward | 0 | 3 | 0 | 1-0-3 |
-| Elliott Bennett | 0 | 1 | 0 | 0-0-4 |
+| Jason Parmar | 0 | 0 | 0 | 4-1-0 |
+| Sam Wright | 2 | 0 | 0 | 4-0-1 |
+| Alastair Michael | 0 | 0 | 0 | 3-1-1 |
+| Piers Black-Hawkins | 1 | 0 | 2 | 3-0-2 |
+| chris Purnell | 2 | 0 | 1 | 3-0-2 |
+| Ollie Felts | 0 | 0 | 0 | 2-1-2 |
+| Andrew Hutchinson | 0 | 0 | 1 | 2-1-2 |
+| Ash Cross | 0 | 0 | 1 | 1-0-4 |
+| Greg Woodward | 0 | 3 | 0 | 1-0-4 |
+| Elliott Bennett | 0 | 2 | 0 | 0-0-5 |

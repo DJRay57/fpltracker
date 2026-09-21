@@ -1,4 +1,4 @@
-# Lineup Impact — GW3 → GW4
+# Lineup Impact — GW4 → GW5
 
 _Starting XI changes between the two most recent gameweeks (trades and plain bench/start swaps both count). Net only counts players who actually played that gameweek -- others are listed but tagged DNP and excluded._
 
@@ -6,13 +6,13 @@ _Starting XI changes between the two most recent gameweeks (trades and plain ben
 
 | Net | Manager | Changes |
 |---|---|---|
-| +23 | Alastair Michael | +Van Hecke (8pt), +Bruno G. (7pt), +Belloumi (13pt), -Pedro Porro (DNP), -Solanke (2pt), -Gomez (3pt) |
-| +19 | Ash Cross | +Bogle (15pt), +Giles (4pt), +Suzuki (2pt), -Roefs (2pt), -Collins (DNP), -Bijol (DNP) |
-| +9 | Piers Black-Hawkins | +Janelt (4pt), +Muharemović (7pt), -Rayan (2pt), -Mukiele (0pt) |
-| +8 | Ollie Felts | +Yalcouyé (8pt), +Isidor (1pt), -Abraham (1pt), -Khusanov (DNP) |
-| +6 | Andrew Hutchinson | +Araujo (6pt), -Elanga (DNP) |
-| +6 | Elliott Bennett | +Vuskovic (6pt), +O'Reilly (1pt), +A.Becker (9pt), -Dalot (2pt), -Igor Jesus (7pt), -Horníček (1pt) |
-| +3 | Sam Wright | +Fofana (1pt), +King (3pt), +Matheus N. (9pt), -Silva (3pt), -Ndoye (1pt), -Branthwaite (6pt) |
-| +1 | chris Purnell | +George (3pt), +Willock (1pt), -Rashford (2pt), -O.Dango (1pt) |
-| 0 | Jason Parmar | +Barnes (2pt), +Grealish (1pt), -Xhaka (1pt), -Cunha (2pt) |
-| -8 | Greg Woodward | +Anderson (5pt), +Sels (3pt), +Thiaw (2pt), -Martinez (2pt), -Emersonn (12pt), -McBurnie (4pt) |
+| +8 | Jason Parmar | +Muñoz (2pt), +Cunha (10pt), +Rashford (2pt), -De Cuyper (6pt), -Wilson (DNP), -João Pedro (DNP) |
+| +8 | Ash Cross | +Maitland-Niles (8pt), -Dedić (DNP) |
+| +6 | Sam Wright | +Branthwaite (8pt), +Solanke (2pt), -Fofana (4pt), -Maatsen (DNP) |
+| +2 | Ollie Felts | +Mainoo (4pt), +Abraham (1pt), -Isidor (1pt), -Sávio (2pt) |
+| 0 | Andrew Hutchinson | +Elanga (DNP), -James (DNP) |
+| 0 | chris Purnell | +J.Timber (0pt), -White (DNP) |
+| -2 | Greg Woodward | +Xhaka (2pt), +Mykolenko (5pt), +Welbeck (2pt), +McBurnie (1pt), -Kudus (4pt), -Tielemans (4pt), -Thiaw (4pt), -Šeško (DNP) |
+| -4 | Alastair Michael | +Kinsky (2pt), +Emersonn (2pt), -Pickford (8pt), -Hato (DNP) |
+| -9 | Elliott Bennett | +Fernandez-Pardo (2pt), +Igor Jesus (1pt), +Horníček (3pt), -Aina (DNP), -A.Becker (8pt), -Ajer (7pt) |
+| -9 | Piers Black-Hawkins | +Egan (1pt), -Kostoulas (10pt) |
