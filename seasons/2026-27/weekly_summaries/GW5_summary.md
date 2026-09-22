@@ -84,6 +84,7 @@ _(This league doesn't use captaincy multipliers.)_
 - **Maatsen**: d → i — Ankle injury - Unknown return date
 - **Alysson**: a → d — Unspecified injury - 75% chance of playing
 - **Kluivert**: a → i — Unspecified injury - Unknown return date
+- **Dunk**: a → d — Neck injury - 75% chance of playing
 - **James**: a → d — Hamstring injury - 75% chance of playing
 - **Palestra**: i → d — Thigh injury - 50% chance of playing
 - **Palmer**: a → d — Muscular injury - 75% chance of playing
@@ -95,16 +96,14 @@ _(This league doesn't use captaincy multipliers.)_
 - **Wilson**: a → i — Thigh injury - Unknown return date
 - **Fatawu**: a → s — Suspended until 17 Oct
 - **Darlow**: a → d — Unspecified injury - 75% chance of playing
+- **Struijk**: a → d — Hamstring injury - 75% chance of playing
 - **Rashford**: a → d — Unspecified injury - 75% chance of playing
 - **Mainoo**: a → d — Unspecified injury - 75% chance of playing
 - **Šeško**: a → d — Shin injury - 75% chance of playing
-- **Obi**: a → u — Has joined Willem II on loan for the rest of the season
 - **Livramento**: a → d — Unspecified injury - 75% chance of playing
-- **Elanga**: a → i — Unspecified injury - Unknown return date
-- **J.Ramsey**: a → i — Thigh injury - Unknown return date
-- **Milenković**: d → i — Hamstring injury - Expected back 11 Oct
+- **J.Ramsey**: d → i — Thigh injury - Unknown return date
 - **Targett**: a → d — Ankle injury - 75% chance of playing
 - **Tomiyasu**: a → d — Calf injury - 75% chance of playing
-- **Dedić**: d → i — Unspecified injury - Unknown return date
+- **Dedić**: a → i — Unspecified injury - Unknown return date
 - **Norton-Cuffy**: a → d — Hamstring injury - 75% chance of playing
 - **Azeez**: d → i — Hamstring injury - Expected back 10 Oct
