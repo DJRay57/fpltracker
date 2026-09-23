@@ -18727,3 +18727,670 @@ snapshot_date,gameweek,player_id,player_name,position,ownership_status,owner_ent
 2026-09-22,5,631,Mbaye,MID,o,41339,Elliott Bennett,False
 2026-09-22,5,637,Maitland-Niles,DEF,o,3321,Ash Cross,False
 2026-09-22,5,649,Fernandez-Pardo,FWD,o,41339,Elliott Bennett,False
+2026-09-23,5,414,Heaton,GKP,a,,,False
+2026-09-23,5,58,Forster,GKP,a,,,False
+2026-09-23,5,111,Steele,GKP,a,,,False
+2026-09-23,5,302,Button,GKP,a,,,False
+2026-09-23,5,64,Smith,DEF,a,,,False
+2026-09-23,5,101,Henderson,MID,a,,,False
+2026-09-23,5,325,Darlow,GKP,a,,,False
+2026-09-23,5,490,Wood,FWD,a,,,False
+2026-09-23,5,497,Dubravka,GKP,a,,,False
+2026-09-23,5,29,M.Bizot,GKP,a,,,False
+2026-09-23,5,108,Wilson,FWD,a,,,False
+2026-09-23,5,266,Cairney,MID,a,,,False
+2026-09-23,5,448,Burn,DEF,a,,,False
+2026-09-23,5,178,Bidwell,DEF,a,,,False
+2026-09-23,5,443,Gillespie,GKP,a,,,False
+2026-09-23,5,251,Lecomte,GKP,a,,,False
+2026-09-23,5,46,Barkley,MID,a,,,False
+2026-09-23,5,406,Kovačić,MID,a,,,False
+2026-09-23,5,541,Meunier,DEF,a,,,False
+2026-09-23,5,418,Maguire,DEF,a,,,False
+2026-09-23,5,30,Digne,DEF,a,,,False
+2026-09-23,5,289,Crooks,MID,a,,,False
+2026-09-23,5,274,Butland,GKP,a,,,False
+2026-09-23,5,540,Masuaku,DEF,a,,,False
+2026-09-23,5,231,Keane,DEF,a,,,False
+2026-09-23,5,423,Shaw,DEF,a,,,False
+2026-09-23,5,212,Hughes,MID,a,,,False
+2026-09-23,5,300,Walton,GKP,a,,,False
+2026-09-23,5,147,Tosin,DEF,a,,,False
+2026-09-23,5,2,Arrizabalaga,GKP,a,,,False
+2026-09-23,5,172,Wilson,GKP,a,,,False
+2026-09-23,5,74,Brooks,MID,a,,,False
+2026-09-23,5,301,Palmer,GKP,a,,,False
+2026-09-23,5,457,J.Murphy,MID,a,,,False
+2026-09-23,5,508,Davies,DEF,a,,,False
+2026-09-23,5,446,Schär,DEF,a,,,False
+2026-09-23,5,199,Benitez,GKP,a,,,False
+2026-09-23,5,386,Bettinelli,GKP,a,,,False
+2026-09-23,5,502,Robertson,DEF,a,,,False
+2026-09-23,5,45,McGinn,MID,a,,,False
+2026-09-23,5,21,Nørgaard,MID,a,,,False
+2026-09-23,5,501,Danso,DEF,a,,,False
+2026-09-23,5,228,King,GKP,a,,,False
+2026-09-23,5,320,Akpom,FWD,a,,,False
+2026-09-23,5,33,Mings,DEF,a,,,False
+2026-09-23,5,311,Burns,MID,a,,,False
+2026-09-23,5,213,Lerma,MID,a,,,False
+2026-09-23,5,261,Iwobi,MID,a,,,False
+2026-09-23,5,270,Reed,MID,a,,,False
+2026-09-23,5,260,Wilson,MID,a,,,False
+2026-09-23,5,408,Phillips,MID,a,,,False
+2026-09-23,5,71,Cook,MID,a,,,False
+2026-09-23,5,352,Woodman,GKP,a,,,False
+2026-09-23,5,75,Christie,MID,a,,,False
+2026-09-23,5,374,Endo,MID,a,,,False
+2026-09-23,5,285,McNair,DEF,a,,,False
+2026-09-23,5,258,Castagne,DEF,a,,,False
+2026-09-23,5,43,Tielemans,MID,a,,,False
+2026-09-23,5,256,Tete,DEF,a,,,False
+2026-09-23,5,539,O'Nien,DEF,a,,,False
+2026-09-23,5,273,Phillips,GKP,a,,,False
+2026-09-23,5,184,Grimes,MID,a,,,False
+2026-09-23,5,80,Enes Ünal,FWD,a,,,False
+2026-09-23,5,560,Targett,DEF,a,,,False
+2026-09-23,5,254,Robinson,DEF,a,,,False
+2026-09-23,5,559,Matthews,GKP,a,,,False
+2026-09-23,5,288,Dowell,MID,a,,,False
+2026-09-23,5,359,Gomez,DEF,a,,,False
+2026-09-23,5,319,Szmodics,MID,a,,,False
+2026-09-23,5,515,Maddison,MID,a,,,False
+2026-09-23,5,176,Dasilva,DEF,a,,,False
+2026-09-23,5,347,Nmecha,FWD,a,,,False
+2026-09-23,5,253,Andersen,DEF,a,,,False
+2026-09-23,5,193,Wright,FWD,a,,,False
+2026-09-23,5,308,Furlong,DEF,a,,,False
+2026-09-23,5,55,Watkins,FWD,a,,,False
+2026-09-23,5,339,Longstaff,MID,a,,,False
+2026-09-23,5,143,Chalobah,DEF,a,,,False
+2026-09-23,5,458,Joelinton,MID,a,,,False
+2026-09-23,5,303,Kipré,DEF,a,,,False
+2026-09-23,5,103,Dasilva,MID,a,,,False
+2026-09-23,5,494,Vicario,GKP,a,,,False
+2026-09-23,5,430,Mount,MID,a,,,False
+2026-09-23,5,269,Sessegnon,DEF,a,,,False
+2026-09-23,5,37,Lindelöf,DEF,a,,,False
+2026-09-23,5,87,Ajer,DEF,a,,,False
+2026-09-23,5,280,Coyle,DEF,a,,,False
+2026-09-23,5,89,Henry,DEF,a,,,False
+2026-09-23,5,17,Merino,MID,a,,,False
+2026-09-23,5,41,Buendía,MID,a,,,False
+2026-09-23,5,338,Ampadu,MID,a,,,False
+2026-09-23,5,32,Cash,DEF,a,,,False
+2026-09-23,5,343,James,MID,a,,,False
+2026-09-23,5,24,Nelson,MID,a,,,False
+2026-09-23,5,73,Adams,MID,a,,,False
+2026-09-23,5,326,Perri,GKP,a,,,False
+2026-09-23,5,535,Alderete,DEF,a,,,False
+2026-09-23,5,516,Bentancur,MID,a,,,False
+2026-09-23,5,114,Boscagli,DEF,a,,,False
+2026-09-23,5,567,Schlager,MID,a,,,False
+2026-09-23,5,179,Latibeaudiere,DEF,a,,,False
+2026-09-23,5,476,O.Richards,DEF,a,,,False
+2026-09-23,5,489,Yates,MID,a,,,False
+2026-09-23,5,224,Nketiah,FWD,a,,,False
+2026-09-23,5,27,G.Jesus,FWD,a,,,False
+2026-09-23,5,373,C.Jones,MID,a,,,False
+2026-09-23,5,265,Berge,MID,a,,,False
+2026-09-23,5,97,Jensen,MID,a,,,False
+2026-09-23,5,292,Ömür,MID,a,,,False
+2026-09-23,5,482,Hudson-Odoi,MID,a,,,False
+2026-09-23,5,262,Smith Rowe,MID,a,,,False
+2026-09-23,5,416,De Ligt,DEF,a,,,False
+2026-09-23,5,214,Kamada,MID,a,,,False
+2026-09-23,5,492,Awoniyi,FWD,a,,,False
+2026-09-23,5,488,I.Sangaré,MID,a,,,False
+2026-09-23,5,267,Lukić,MID,a,,,False
+2026-09-23,5,296,Akintola,MID,a,,,False
+2026-09-23,5,329,Rodon,DEF,a,,,False
+2026-09-23,5,364,Tsimikas,DEF,a,,,False
+2026-09-23,5,495,Austin,GKP,a,,,False
+2026-09-23,5,140,Sánchez,GKP,a,,,False
+2026-09-23,5,44,Bailey,MID,a,,,False
+2026-09-23,5,417,Dalot,DEF,a,,,False
+2026-09-23,5,304,O'Shea,DEF,a,,,False
+2026-09-23,5,205,Sosa,DEF,a,,,False
+2026-09-23,5,195,Simms,FWD,a,,,False
+2026-09-23,5,126,O'Riley,MID,a,,,False
+2026-09-23,5,259,Diop,DEF,a,,,False
+2026-09-23,5,447,Botman,DEF,a,,,False
+2026-09-23,5,153,Disasi,DEF,a,,,False
+2026-09-23,5,402,Rodrigo,MID,a,,,False
+2026-09-23,5,180,Woolfenden,DEF,a,,,False
+2026-09-23,5,332,Justin,DEF,a,,,False
+2026-09-23,5,468,John,GKP,a,,,False
+2026-09-23,5,342,Harrison,MID,a,,,False
+2026-09-23,5,498,Senesi,DEF,a,,,False
+2026-09-23,5,500,Romero,DEF,a,,,False
+2026-09-23,5,419,Martinez,DEF,a,,,False
+2026-09-23,5,307,Johnson,DEF,a,,,False
+2026-09-23,5,317,Hirst,FWD,a,,,False
+2026-09-23,5,70,Kluivert,MID,a,,,False
+2026-09-23,5,328,Struijk,DEF,a,,,False
+2026-09-23,5,118,Igor,DEF,a,,,False
+2026-09-23,5,370,Chiesa,MID,a,,,False
+2026-09-23,5,47,Kamara,MID,a,,,False
+2026-09-23,5,188,Torp,MID,a,,,False
+2026-09-23,5,471,Milenković,DEF,a,,,False
+2026-09-23,5,314,Ogbene,MID,a,,,False
+2026-09-23,5,227,Travers,GKP,a,,,False
+2026-09-23,5,422,Mazraoui,DEF,a,,,False
+2026-09-23,5,194,Thomas-Asante,FWD,a,,,False
+2026-09-23,5,91,Pinnock,DEF,a,,,False
+2026-09-23,5,113,F.Kadıoğlu,DEF,a,,,False
+2026-09-23,5,312,Taylor,MID,a,,,False
+2026-09-23,5,433,Ugarte,MID,a,,,False
+2026-09-23,5,324,Mehmeti,MID,a,,,False
+2026-09-23,5,530,Patterson,GKP,a,,,False
+2026-09-23,5,456,J.Ramsey,MID,a,,,False
+2026-09-23,5,519,Gallagher,MID,a,,,False
+2026-09-23,5,505,Spence,DEF,a,,,False
+2026-09-23,5,257,Bassey,DEF,a,,,False
+2026-09-23,5,287,Millar,MID,a,,,False
+2026-09-23,5,239,Garner,MID,a,,,False
+2026-09-23,5,348,Piroe,FWD,a,,,False
+2026-09-23,5,310,Matusiwa,MID,a,,,False
+2026-09-23,5,186,Mason-Clark,MID,a,,,False
+2026-09-23,5,207,Mingueza,DEF,a,,,False
+2026-09-23,5,146,B.Badiashile,DEF,a,,,False
+2026-09-23,5,62,Diakité,DEF,a,,,False
+2026-09-23,5,209,Johnson,MID,a,,,False
+2026-09-23,5,372,Mac Allister,MID,a,,,False
+2026-09-23,5,290,Slater,MID,a,,,False
+2026-09-23,5,331,Gudmundsson,DEF,a,,,False
+2026-09-23,5,234,Patterson,DEF,a,,,False
+2026-09-23,5,271,Muniz,FWD,a,,,False
+2026-09-23,5,100,Carvalho,MID,a,,,False
+2026-09-23,5,247,Hackney,MID,a,,,False
+2026-09-23,5,34,Pau,DEF,a,,,False
+2026-09-23,5,255,J.Cuenca,DEF,a,,,False
+2026-09-23,5,345,Tanaka,MID,a,,,False
+2026-09-23,5,16,Madueke,MID,a,,,False
+2026-09-23,5,487,Dominguez,MID,a,,,False
+2026-09-23,5,202,Richards,DEF,a,,,False
+2026-09-23,5,337,Aaronson,MID,a,,,False
+2026-09-23,5,104,Onyeka,MID,a,,,False
+2026-09-23,5,455,Tonali,MID,a,,,False
+2026-09-23,5,486,McAtee,MID,a,,,False
+2026-09-23,5,84,Collins,DEF,a,,,False
+2026-09-23,5,354,Jaros,GKP,a,,,False
+2026-09-23,5,404,Reijnders,MID,a,,,False
+2026-09-23,5,241,McNeil,MID,a,,,False
+2026-09-23,5,281,Drameh,DEF,a,,,False
+2026-09-23,5,536,Reinildo,DEF,a,,,False
+2026-09-23,5,327,Bijol,DEF,a,,,False
+2026-09-23,5,336,Okafor,MID,a,,,False
+2026-09-23,5,174,Kitching,DEF,a,,,False
+2026-09-23,5,65,J.Araujo,DEF,a,,,False
+2026-09-23,5,3,Meslier,GKP,a,,,False
+2026-09-23,5,333,Bornauw,DEF,a,,,False
+2026-09-23,5,23,Fábio Vieira,MID,a,,,False
+2026-09-23,5,218,Doucouré,MID,a,,,False
+2026-09-23,5,187,Eccles,MID,a,,,False
+2026-09-23,5,96,Damsgaard,MID,a,,,False
+2026-09-23,5,371,Gravenberch,MID,a,,,False
+2026-09-23,5,36,Maatsen,DEF,a,,,False
+2026-09-23,5,563,Maeda,MID,a,,,False
+2026-09-23,5,313,Clarke,MID,a,,,False
+2026-09-23,5,18,Martinelli,MID,a,,,False
+2026-09-23,5,59,Dennis,GKP,a,,,False
+2026-09-23,5,105,Anthony,MID,a,,,False
+2026-09-23,5,276,Lo-Tutala,GKP,a,,,False
+2026-09-23,5,145,Fofana,DEF,a,,,False
+2026-09-23,5,85,Van den Berg,DEF,a,,,False
+2026-09-23,5,383,Elliott,MID,a,,,False
+2026-09-23,5,561,Morita,MID,a,,,False
+2026-09-23,5,521,Kulusevski,MID,a,,,False
+2026-09-23,5,54,Gomes,MID,a,,,False
+2026-09-23,5,9,Hincapie,DEF,a,,,False
+2026-09-23,5,392,Aït-Nouri,DEF,a,,,False
+2026-09-23,5,351,Mamardashvili,GKP,a,,,False
+2026-09-23,5,283,Jacob,DEF,a,,,False
+2026-09-23,5,306,Greaves,DEF,a,,,False
+2026-09-23,5,48,Onana,MID,a,,,False
+2026-09-23,5,219,J.Rak-Sakyi,MID,a,,,False
+2026-09-23,5,175,van Ewijk,DEF,a,,,False
+2026-09-23,5,413,Bayindir,GKP,a,,,False
+2026-09-23,5,121,Mitoma,MID,a,,,False
+2026-09-23,5,119,Costinha,DEF,a,,,False
+2026-09-23,5,120,Svoboda,DEF,a,,,False
+2026-09-23,5,483,Ndoye,MID,a,,,False
+2026-09-23,5,440,Zirkzee,FWD,a,,,False
+2026-09-23,5,149,Colwill,DEF,a,,,False
+2026-09-23,5,173,Thomas,DEF,a,,,False
+2026-09-23,5,547,Mundle,MID,a,,,False
+2026-09-23,5,323,McAteer,MID,a,,,False
+2026-09-23,5,322,Al-Hamadi,FWD,a,,,False
+2026-09-23,5,6,Saliba,DEF,a,,,False
+2026-09-23,5,340,Gelhardt,MID,a,,,False
+2026-09-23,5,158,Gittens,MID,a,,,False
+2026-09-23,5,60,Hill,DEF,a,,,False
+2026-09-23,5,355,Davies,GKP,a,,,False
+2026-09-23,5,177,Kesler-Hayden,DEF,a,,,False
+2026-09-23,5,291,Matazo,MID,a,,,False
+2026-09-23,5,445,Thiaw,DEF,a,,,False
+2026-09-23,5,493,Kalimuendo,FWD,a,,,False
+2026-09-23,5,405,N.Gonzalez,MID,a,,,False
+2026-09-23,5,130,Wieffer,DEF,a,,,False
+2026-09-23,5,49,Iling Jr,MID,a,,,False
+2026-09-23,5,190,Tchaouna,MID,a,,,False
+2026-09-23,5,297,Gyabi,MID,a,,,False
+2026-09-23,5,463,Woltemade,FWD,a,,,False
+2026-09-23,5,478,Netz,DEF,a,,,False
+2026-09-23,5,90,Hickey,DEF,a,,,False
+2026-09-23,5,110,Rushworth,GKP,a,,,False
+2026-09-23,5,485,Bakwa,MID,a,,,False
+2026-09-23,5,395,Lewis,DEF,a,,,False
+2026-09-23,5,538,Hjelde,DEF,a,,,False
+2026-09-23,5,264,Bobb,MID,a,,,False
+2026-09-23,5,183,Rudoni,MID,a,,,False
+2026-09-23,5,318,Philogene,MID,a,,,False
+2026-09-23,5,19,Zubimendi,MID,a,,,False
+2026-09-23,5,518,P.M.Sarr,MID,a,,,False
+2026-09-23,5,144,Gusto,DEF,a,,,False
+2026-09-23,5,171,Dovin,GKP,a,,,False
+2026-09-23,5,542,E.Le Fée,MID,a,,,False
+2026-09-23,5,470,Morato,DEF,a,,,False
+2026-09-23,5,42,Guessand,MID,a,,,False
+2026-09-23,5,248,Beto,FWD,a,,,False
+2026-09-23,5,344,Gruev,MID,a,,,False
+2026-09-23,5,506,Udogie,DEF,a,,,False
+2026-09-23,5,139,Ferguson,FWD,a,,,False
+2026-09-23,5,534,Hume,DEF,a,,,False
+2026-09-23,5,211,Yeremy,MID,a,,,False
+2026-09-23,5,365,Ramsay,DEF,a,,,False
+2026-09-23,5,215,Devenny,MID,a,,,False
+2026-09-23,5,77,Adli,MID,a,,,False
+2026-09-23,5,240,Iroegbunam,MID,a,,,False
+2026-09-23,5,528,Scarlett,FWD,a,,,False
+2026-09-23,5,293,Kamara,MID,a,,,False
+2026-09-23,5,436,Collyer,MID,a,,,False
+2026-09-23,5,163,D.Essugo,MID,a,,,False
+2026-09-23,5,378,McConnell,MID,a,,,False
+2026-09-23,5,191,Borges Rodrigues,MID,a,,,False
+2026-09-23,5,360,Bradley,DEF,a,,,False
+2026-09-23,5,341,Gnonto,MID,a,,,False
+2026-09-23,5,160,Garnacho,MID,a,,,False
+2026-09-23,5,431,Amad,MID,a,,,False
+2026-09-23,5,513,Xavi,MID,a,,,False
+2026-09-23,5,394,Alleyne,DEF,a,,,False
+2026-09-23,5,275,Cartwright,GKP,a,,,False
+2026-09-23,5,72,Gannon-Doak,MID,a,,,False
+2026-09-23,5,210,Wharton,MID,a,,,False
+2026-09-23,5,245,Dibling,MID,a,,,False
+2026-09-23,5,7,Lewis-Skelly,MID,a,,,False
+2026-09-23,5,22,Nwaneri,MID,a,,,False
+2026-09-23,5,235,Aznou,DEF,a,,,False
+2026-09-23,5,168,Marc Guiu,FWD,a,,,False
+2026-09-23,5,510,Rowswell,DEF,a,,,False
+2026-09-23,5,523,Moore,MID,a,,,False
+2026-09-23,5,524,Olusesi,MID,a,,,False
+2026-09-23,5,11,Mosquera,DEF,a,,,False
+2026-09-23,5,382,Danns,FWD,a,,,False
+2026-09-23,5,475,Savona,DEF,a,,,False
+2026-09-23,5,298,Destan,FWD,a,,,False
+2026-09-23,5,309,Núñez,MID,a,,,False
+2026-09-23,5,185,Sakamoto,MID,a,,,False
+2026-09-23,5,278,Hughes,DEF,a,,,False
+2026-09-23,5,243,Alcaraz,MID,a,,,False
+2026-09-23,5,170,Emegha,FWD,a,,,False
+2026-09-23,5,484,Hutchinson,MID,a,,,False
+2026-09-23,5,252,McNally,GKP,a,,,False
+2026-09-23,5,83,Valdimarsson,GKP,a,,,False
+2026-09-23,5,102,Yarmoliuk,MID,a,,,False
+2026-09-23,5,141,Jörgensen,GKP,a,,,False
+2026-09-23,5,129,Ayari,MID,a,,,False
+2026-09-23,5,403,Sávio,MID,a,,,False
+2026-09-23,5,380,Ekitiké,FWD,a,,,False
+2026-09-23,5,514,Tel,MID,a,,,False
+2026-09-23,5,232,O'Brien,DEF,a,,,False
+2026-09-23,5,93,Schuster,DEF,a,,,False
+2026-09-23,5,246,Röhl,MID,a,,,False
+2026-09-23,5,127,Gomez,MID,a,,,False
+2026-09-23,5,161,Lavia,MID,a,,,False
+2026-09-23,5,381,Koumas,MID,a,,,False
+2026-09-23,5,531,Ellborg,GKP,a,,,False
+2026-09-23,5,35,Bogarde,MID,a,,,False
+2026-09-23,5,206,Chadi Riad,DEF,a,,,False
+2026-09-23,5,361,Lucky,DEF,a,,,False
+2026-09-23,5,537,Seelt,DEF,a,,,False
+2026-09-23,5,438,Fletcher,MID,a,,,False
+2026-09-23,5,315,Fatawu,MID,a,,,False
+2026-09-23,5,123,Hinshelwood,MID,a,,,False
+2026-09-23,5,162,Andrey Santos,MID,a,,,False
+2026-09-23,5,95,O.Dango,MID,a,,,False
+2026-09-23,5,299,Burstow,FWD,a,,,False
+2026-09-23,5,131,Baleba,MID,a,,,False
+2026-09-23,5,546,Adingra,MID,a,,,False
+2026-09-23,5,376,Bajcetic,MID,a,,,False
+2026-09-23,5,551,N.Angulo,MID,a,,,False
+2026-09-23,5,217,M.França,MID,a,,,False
+2026-09-23,5,128,Buonanotte,MID,a,,,False
+2026-09-23,5,465,Osula,FWD,a,,,False
+2026-09-23,5,479,Bindon,DEF,a,,,False
+2026-09-23,5,182,Amenda,DEF,a,,,False
+2026-09-23,5,99,Milambo,MID,a,,,False
+2026-09-23,5,451,A.Murphy,DEF,a,,,False
+2026-09-23,5,562,Van Oevelen,GKP,a,,,False
+2026-09-23,5,543,Diarra,MID,a,,,False
+2026-09-23,5,434,J.Fletcher,MID,a,,,False
+2026-09-23,5,425,Fredricson,DEF,a,,,False
+2026-09-23,5,522,Gray,MID,a,,,False
+2026-09-23,5,459,L.Miley,MID,a,,,False
+2026-09-23,5,507,Phillips,DEF,a,,,False
+2026-09-23,5,477,Abbott,DEF,a,,,False
+2026-09-23,5,133,Watson,MID,a,,,False
+2026-09-23,5,197,Bassette,FWD,a,,,False
+2026-09-23,5,549,Talbi,MID,a,,,False
+2026-09-23,5,557,Penders,GKP,a,,,False
+2026-09-23,5,117,Coppola,DEF,a,,,False
+2026-09-23,5,517,Odobert,MID,a,,,False
+2026-09-23,5,420,Yoro,DEF,a,,,False
+2026-09-23,5,525,Fernandes,MID,a,,,False
+2026-09-23,5,196,Markelo,FWD,a,,,False
+2026-09-23,5,294,Zambrano,MID,a,,,False
+2026-09-23,5,548,Rigg,MID,a,,,False
+2026-09-23,5,444,Jaouen,GKP,a,,,False
+2026-09-23,5,134,Oriola,MID,a,,,False
+2026-09-23,5,321,Walle Egeli,FWD,a,,,False
+2026-09-23,5,78,Kroupi.Jr,MID,a,,,False
+2026-09-23,5,263,Kevin,MID,a,,,False
+2026-09-23,5,349,Mateo Joseph,FWD,a,,,False
+2026-09-23,5,169,Mheuka,FWD,a,,,False
+2026-09-23,5,92,Ji-soo,DEF,a,,,False
+2026-09-23,5,520,Bergvall,MID,a,,,False
+2026-09-23,5,150,M.Sarr,DEF,a,,,False
+2026-09-23,5,407,Echeverri,MID,a,,,False
+2026-09-23,5,474,Jair Cunha,DEF,a,,,False
+2026-09-23,5,66,Soler,DEF,a,,,False
+2026-09-23,5,437,Bendito Mantato,MID,a,,,False
+2026-09-23,5,435,Lacey,MID,a,,,False
+2026-09-23,5,151,Acheampong,DEF,a,,,False
+2026-09-23,5,51,George Hemmings,MID,a,,,False
+2026-09-23,5,181,Brau,DEF,a,,,False
+2026-09-23,5,545,Sadiki,MID,a,,,False
+2026-09-23,5,424,Amass,DEF,a,,,False
+2026-09-23,5,39,Nedeljkovic,DEF,a,,,False
+2026-09-23,5,353,Pecsi,GKP,a,,,False
+2026-09-23,5,220,Cardines,DEF,a,,,False
+2026-09-23,5,409,Mukasa,MID,a,,,False
+2026-09-23,5,375,Nyoni,MID,a,,,False
+2026-09-23,5,122,Minteh,MID,a,,,False
+2026-09-23,5,164,Quenda,MID,a,,,False
+2026-09-23,5,107,Furo,FWD,a,,,False
+2026-09-23,5,441,Obi,FWD,a,,,False
+2026-09-23,5,415,Dorgu,MID,a,,,False
+2026-09-23,5,132,Howell,MID,a,,,False
+2026-09-23,5,466,Neave,FWD,a,,,False
+2026-09-23,5,421,Heaven,DEF,a,,,False
+2026-09-23,5,38,A.García,DEF,a,,,False
+2026-09-23,5,216,Esse,MID,a,,,False
+2026-09-23,5,137,Tzimas,FWD,a,,,False
+2026-09-23,5,244,Armstrong,MID,a,,,False
+2026-09-23,5,461,Touré,MID,a,,,False
+2026-09-23,5,369,Ngumoha,MID,a,,,False
+2026-09-23,5,53,Manzambi,MID,a,,,False
+2026-09-23,5,76,Tóth.A,MID,a,,,False
+2026-09-23,5,20,Dowman,MID,a,,,False
+2026-09-23,5,511,Souza,DEF,a,,,False
+2026-09-23,5,396,Vitor Reis,DEF,a,,,False
+2026-09-23,5,63,Milosavljević,DEF,a,,,False
+2026-09-23,5,558,Anselmino,DEF,a,,,False
+2026-09-23,5,157,Estêvão,MID,a,,,False
+2026-09-23,5,192,Andrews,MID,a,,,False
+2026-09-23,5,272,Kusi-Asare,FWD,a,,,False
+2026-09-23,5,565,Bamba,MID,a,,,False
+2026-09-23,5,462,Steur,MID,a,,,False
+2026-09-23,5,509,Byfield,DEF,a,,,False
+2026-09-23,5,50,Burrowes,MID,a,,,False
+2026-09-23,5,363,Leoni,DEF,a,,,False
+2026-09-23,5,410,Monga,MID,a,,,False
+2026-09-23,5,203,Canvot,DEF,a,,,False
+2026-09-23,5,52,Alysson,MID,a,,,False
+2026-09-23,5,225,Uche,FWD,a,,,False
+2026-09-23,5,284,McCarthy,DEF,a,,,False
+2026-09-23,5,221,Drakes-Thomas,MID,a,,,False
+2026-09-23,5,189,Shepherd,MID,a,,,False
+2026-09-23,5,550,Jocelin.T,MID,a,,,False
+2026-09-23,5,135,Yohanna,MID,a,,,False
+2026-09-23,5,568,Barco,MID,a,,,False
+2026-09-23,5,570,Palacios,MID,a,,,False
+2026-09-23,5,572,Florentino,MID,a,,,False
+2026-09-23,5,573,Sanchez,DEF,a,,,False
+2026-09-23,5,574,Yirenkyi,MID,a,,,False
+2026-09-23,5,575,Tomiyasu,DEF,a,,,False
+2026-09-23,5,576,Hjertø-Dahl,MID,a,,,False
+2026-09-23,5,577,Stroud,MID,a,,,False
+2026-09-23,5,578,Mudryk,MID,a,,,False
+2026-09-23,5,579,Charles,MID,a,,,False
+2026-09-23,5,581,Diomande,DEF,a,,,False
+2026-09-23,5,582,Madjo,FWD,a,,,False
+2026-09-23,5,583,Chavarria,DEF,a,,,False
+2026-09-23,5,584,Hamer,MID,a,,,False
+2026-09-23,5,585,Herrington,DEF,a,,,False
+2026-09-23,5,587,Rulli,GKP,a,,,False
+2026-09-23,5,589,Gourna-Douath,MID,a,,,False
+2026-09-23,5,590,Benda,GKP,a,,,False
+2026-09-23,5,591,Enciso,MID,a,,,False
+2026-09-23,5,592,Ouattara,DEF,a,,,False
+2026-09-23,5,593,David,FWD,a,,,False
+2026-09-23,5,594,Gozo,MID,a,,,False
+2026-09-23,5,595,Dedić,DEF,a,,,False
+2026-09-23,5,596,Ruggeri,DEF,a,,,False
+2026-09-23,5,598,Cherif,FWD,a,,,False
+2026-09-23,5,599,Elvedi,DEF,a,,,False
+2026-09-23,5,600,Osman,MID,a,,,False
+2026-09-23,5,601,Humphreys,MID,a,,,False
+2026-09-23,5,602,Lienou,DEF,a,,,False
+2026-09-23,5,603,Cresswell,MID,a,,,False
+2026-09-23,5,604,Williams-Barnett,MID,a,,,False
+2026-09-23,5,605,Rowe,DEF,a,,,False
+2026-09-23,5,606,Lynch,MID,a,,,False
+2026-09-23,5,607,Jebbison,FWD,a,,,False
+2026-09-23,5,609,Shahar,DEF,a,,,False
+2026-09-23,5,610,De Fougerolles,DEF,a,,,False
+2026-09-23,5,611,Wan-Bissaka,DEF,a,,,False
+2026-09-23,5,612,Methalie,DEF,a,,,False
+2026-09-23,5,613,Hadjam,DEF,a,,,False
+2026-09-23,5,614,Ahoka,MID,a,,,False
+2026-09-23,5,615,Di Gregorio,GKP,a,,,False
+2026-09-23,5,616,Bouaddi,MID,a,,,False
+2026-09-23,5,617,Goretzka,MID,a,,,False
+2026-09-23,5,618,Cho,MID,a,,,False
+2026-09-23,5,619,Palacios,MID,a,,,False
+2026-09-23,5,620,Diouf,DEF,a,,,False
+2026-09-23,5,621,McAidoo,MID,a,,,False
+2026-09-23,5,622,Braithwaite,DEF,a,,,False
+2026-09-23,5,623,Bentley,GKP,a,,,False
+2026-09-23,5,624,Cozier-Duberry,MID,a,,,False
+2026-09-23,5,625,Zepa,MID,a,,,False
+2026-09-23,5,626,Cairns,GKP,a,,,False
+2026-09-23,5,627,Zetterer,GKP,a,,,False
+2026-09-23,5,629,Allan,MID,a,,,False
+2026-09-23,5,630,Harwood-Bellis,DEF,a,,,False
+2026-09-23,5,632,Andrés,MID,a,,,False
+2026-09-23,5,633,Ahanor,DEF,a,,,False
+2026-09-23,5,634,Chilwell,DEF,a,,,False
+2026-09-23,5,635,Timber,MID,a,,,False
+2026-09-23,5,636,Osorio,MID,a,,,False
+2026-09-23,5,638,Larsson,MID,a,,,False
+2026-09-23,5,639,Ángel,MID,a,,,False
+2026-09-23,5,640,Affengruber,DEF,a,,,False
+2026-09-23,5,641,Ansah,FWD,a,,,False
+2026-09-23,5,642,Vaz,FWD,a,,,False
+2026-09-23,5,643,Norton-Cuffy,DEF,a,,,False
+2026-09-23,5,644,Thomas,MID,a,,,False
+2026-09-23,5,645,Mouzakitis,MID,a,,,False
+2026-09-23,5,646,Flemming,FWD,a,,,False
+2026-09-23,5,647,Bard,DEF,a,,,False
+2026-09-23,5,648,Bahoya,MID,a,,,False
+2026-09-23,5,650,Fofana,MID,a,,,False
+2026-09-23,5,651,J.Angulo,FWD,a,,,False
+2026-09-23,5,652,Azeez,MID,a,,,False
+2026-09-23,5,653,Samba,MID,a,,,False
+2026-09-23,5,654,Graham,MID,a,,,False
+2026-09-23,5,655,Gboho,MID,a,,,False
+2026-09-23,5,656,Mfuni,DEF,a,,,False
+2026-09-23,5,657,Nunes,MID,a,,,False
+2026-09-23,5,658,Ibrahim,MID,a,,,False
+2026-09-23,5,659,Miley,MID,a,,,False
+2026-09-23,5,660,Fredrick,DEF,a,,,False
+2026-09-23,5,661,Balcombe,GKP,a,,,False
+2026-09-23,5,662,Nicoll-Jazuli,MID,a,,,False
+2026-09-23,5,663,Wright,GKP,a,,,False
+2026-09-23,5,664,Pivas,DEF,a,,,False
+2026-09-23,5,665,Salia,FWD,a,,,False
+2026-09-23,5,666,Mills,MID,a,,,False
+2026-09-23,5,667,Thompson,MID,a,,,False
+2026-09-23,5,229,Tarkowski,DEF,o,35452,chris Purnell,False
+2026-09-23,5,136,Welbeck,FWD,o,12371,Greg Woodward,False
+2026-09-23,5,124,Groß,MID,o,49984,Piers Black-Hawkins,False
+2026-09-23,5,250,Leno,GKP,o,46122,Ollie Felts,False
+2026-09-23,5,116,Dunk,DEF,o,3321,Ash Cross,False
+2026-09-23,5,544,Xhaka,MID,o,12371,Greg Woodward,False
+2026-09-23,5,467,Sels,GKP,o,12371,Greg Woodward,False
+2026-09-23,5,356,Virgil,DEF,o,21679,Andrew Hutchinson,False
+2026-09-23,5,442,Pope,GKP,o,35452,chris Purnell,False
+2026-09-23,5,28,Martinez,GKP,o,12371,Greg Woodward,False
+2026-09-23,5,277,Egan,DEF,o,49984,Piers Black-Hawkins,False
+2026-09-23,5,226,Pickford,GKP,o,49704,Alastair Michael,False
+2026-09-23,5,238,Grealish,MID,o,2920,Jason Parmar,False
+2026-09-23,5,350,A.Becker,GKP,o,41339,Elliott Bennett,False
+2026-09-23,5,426,B.Fernandes,MID,o,3321,Ash Cross,False
+2026-09-23,5,279,Ajayi,DEF,o,12371,Greg Woodward,False
+2026-09-23,5,1,Raya,GKP,o,49984,Piers Black-Hawkins,False
+2026-09-23,5,526,Solanke,FWD,o,3058,Sam Wright,False
+2026-09-23,5,473,Aina,DEF,o,41339,Elliott Bennett,False
+2026-09-23,5,295,McBurnie,FWD,o,12371,Greg Woodward,False
+2026-09-23,5,390,Rúben,DEF,o,49704,Alastair Michael,False
+2026-09-23,5,198,Henderson,GKP,o,3058,Sam Wright,False
+2026-09-23,5,56,Abraham,FWD,o,46122,Ollie Felts,False
+2026-09-23,5,429,Rashford,MID,o,2920,Jason Parmar,False
+2026-09-23,5,346,Calvert-Lewin,FWD,o,2920,Jason Parmar,False
+2026-09-23,5,15,Ødegaard,MID,o,3058,Sam Wright,False
+2026-09-23,5,10,White,DEF,o,35452,chris Purnell,False
+2026-09-23,5,31,Konsa,DEF,o,46122,Ollie Felts,False
+2026-09-23,5,460,Willock,MID,o,35452,chris Purnell,False
+2026-09-23,5,82,Kelleher,GKP,o,35452,chris Purnell,False
+2026-09-23,5,533,Mukiele,DEF,o,49984,Piers Black-Hawkins,False
+2026-09-23,5,68,Tavernier,MID,o,3321,Ash Cross,False
+2026-09-23,5,453,Barnes,MID,o,2920,Jason Parmar,False
+2026-09-23,5,13,Rice,MID,o,3321,Ash Cross,False
+2026-09-23,5,98,Janelt,MID,o,49984,Piers Black-Hawkins,False
+2026-09-23,5,384,Donnarumma,GKP,o,21679,Andrew Hutchinson,False
+2026-09-23,5,452,Bruno G.,MID,o,49704,Alastair Michael,False
+2026-09-23,5,388,Guéhi,DEF,o,49984,Piers Black-Hawkins,False
+2026-09-23,5,398,Foden,MID,o,21679,Andrew Hutchinson,False
+2026-09-23,5,527,Richarlison,FWD,o,3321,Ash Cross,False
+2026-09-23,5,469,N.Williams,DEF,o,12371,Greg Woodward,False
+2026-09-23,5,481,Anderson,MID,o,12371,Greg Woodward,False
+2026-09-23,5,236,Dewsbury-Hall,MID,o,49984,Piers Black-Hawkins,False
+2026-09-23,5,357,Frimpong,DEF,o,21679,Andrew Hutchinson,False
+2026-09-23,5,464,Wissa,FWD,o,21679,Andrew Hutchinson,False
+2026-09-23,5,379,Isak,FWD,o,21679,Andrew Hutchinson,False
+2026-09-23,5,26,Havertz,FWD,o,35452,chris Purnell,False
+2026-09-23,5,480,Gibbs-White,MID,o,49984,Piers Black-Hawkins,False
+2026-09-23,5,411,Haaland,FWD,o,46122,Ollie Felts,False
+2026-09-23,5,12,Saka,MID,o,35452,chris Purnell,False
+2026-09-23,5,532,Ballard,DEF,o,3321,Ash Cross,False
+2026-09-23,5,25,Gyökeres,FWD,o,3058,Sam Wright,False
+2026-09-23,5,233,Mykolenko,DEF,o,12371,Greg Woodward,False
+2026-09-23,5,142,James,DEF,o,21679,Andrew Hutchinson,False
+2026-09-23,5,330,Bogle,DEF,o,3321,Ash Cross,False
+2026-09-23,5,4,Gabriel,DEF,o,49704,Alastair Michael,False
+2026-09-23,5,223,Mateta,FWD,o,3321,Ash Cross,False
+2026-09-23,5,208,Sarr,MID,o,41339,Elliott Bennett,False
+2026-09-23,5,282,Giles,DEF,o,3321,Ash Cross,False
+2026-09-23,5,14,Eze,MID,o,3321,Ash Cross,False
+2026-09-23,5,564,Scherpen,GKP,o,2920,Jason Parmar,False
+2026-09-23,5,367,Gakpo,MID,o,3058,Sam Wright,False
+2026-09-23,5,204,Mitchell,DEF,o,12371,Greg Woodward,False
+2026-09-23,5,40,Rogers,MID,o,21679,Andrew Hutchinson,False
+2026-09-23,5,154,Palmer,MID,o,41339,Elliott Bennett,False
+2026-09-23,5,201,Muñoz,DEF,o,2920,Jason Parmar,False
+2026-09-23,5,222,Strand Larsen,FWD,o,49704,Alastair Michael,False
+2026-09-23,5,156,Neto,MID,o,12371,Greg Woodward,False
+2026-09-23,5,400,Doku,MID,o,46122,Ollie Felts,False
+2026-09-23,5,86,Lewis-Potter,MID,o,21679,Andrew Hutchinson,False
+2026-09-23,5,368,Szoboszlai,MID,o,3058,Sam Wright,False
+2026-09-23,5,428,Cunha,MID,o,2920,Jason Parmar,False
+2026-09-23,5,385,Trafford,GKP,o,2920,Jason Parmar,False
+2026-09-23,5,200,Lacroix,DEF,o,46122,Ollie Felts,False
+2026-09-23,5,553,Isidor,FWD,o,46122,Ollie Felts,False
+2026-09-23,5,397,Semenyo,MID,o,49704,Alastair Michael,False
+2026-09-23,5,401,Marmoush,FWD,o,2920,Jason Parmar,False
+2026-09-23,5,554,Tzolis,MID,o,3058,Sam Wright,False
+2026-09-23,5,237,Ndiaye,MID,o,2920,Jason Parmar,False
+2026-09-23,5,499,Pedro Porro,DEF,o,49704,Alastair Michael,False
+2026-09-23,5,450,Livramento,DEF,o,41339,Elliott Bennett,False
+2026-09-23,5,552,Brobbey,FWD,o,3321,Ash Cross,False
+2026-09-23,5,79,Evanilson,FWD,o,3058,Sam Wright,False
+2026-09-23,5,5,J.Timber,DEF,o,35452,chris Purnell,False
+2026-09-23,5,427,Mbeumo,MID,o,41339,Elliott Bennett,False
+2026-09-23,5,155,Enzo,MID,o,35452,chris Purnell,False
+2026-09-23,5,454,Elanga,MID,o,21679,Andrew Hutchinson,False
+2026-09-23,5,305,Davis,DEF,o,35452,chris Purnell,False
+2026-09-23,5,57,Petrović,GKP,o,21679,Andrew Hutchinson,False
+2026-09-23,5,512,Kudus,MID,o,12371,Greg Woodward,False
+2026-09-23,5,167,Delap,FWD,o,21679,Andrew Hutchinson,False
+2026-09-23,5,125,Georginio,FWD,o,49704,Alastair Michael,False
+2026-09-23,5,412,Lammens,GKP,o,46122,Ollie Felts,False
+2026-09-23,5,389,Matheus N.,DEF,o,3058,Sam Wright,False
+2026-09-23,5,115,De Cuyper,DEF,o,2920,Jason Parmar,False
+2026-09-23,5,399,Cherki,MID,o,35452,chris Purnell,False
+2026-09-23,5,8,Calafiori,DEF,o,49984,Piers Black-Hawkins,False
+2026-09-23,5,335,Stach,MID,o,49704,Alastair Michael,False
+2026-09-23,5,112,Van Hecke,DEF,o,49704,Alastair Michael,False
+2026-09-23,5,566,Horníček,GKP,o,41339,Elliott Bennett,False
+2026-09-23,5,387,O'Reilly,DEF,o,41339,Elliott Bennett,False
+2026-09-23,5,165,João Pedro,FWD,o,2920,Jason Parmar,False
+2026-09-23,5,391,Gvardiol,DEF,o,2920,Jason Parmar,False
+2026-09-23,5,230,Branthwaite,DEF,o,3058,Sam Wright,False
+2026-09-23,5,491,Igor Jesus,FWD,o,41339,Elliott Bennett,False
+2026-09-23,5,555,Silva,DEF,o,3058,Sam Wright,False
+2026-09-23,5,496,Kinsky,GKP,o,49704,Alastair Michael,False
+2026-09-23,5,439,Šeško,FWD,o,12371,Greg Woodward,False
+2026-09-23,5,159,Caicedo,MID,o,21679,Andrew Hutchinson,False
+2026-09-23,5,449,Hall,DEF,o,21679,Andrew Hutchinson,False
+2026-09-23,5,109,Verbruggen,GKP,o,3058,Sam Wright,False
+2026-09-23,5,503,Van de Ven,DEF,o,2920,Jason Parmar,False
+2026-09-23,5,61,Truffert,DEF,o,3058,Sam Wright,False
+2026-09-23,5,366,Wirtz,MID,o,46122,Ollie Felts,False
+2026-09-23,5,529,Roefs,GKP,o,3321,Ash Cross,False
+2026-09-23,5,67,Rayan,MID,o,49984,Piers Black-Hawkins,False
+2026-09-23,5,106,Thiago,FWD,o,49984,Piers Black-Hawkins,False
+2026-09-23,5,69,Scott,MID,o,49704,Alastair Michael,False
+2026-09-23,5,94,Schade,MID,o,46122,Ollie Felts,False
+2026-09-23,5,556,M.Sangaré,MID,o,41339,Elliott Bennett,False
+2026-09-23,5,432,Mainoo,MID,o,46122,Ollie Felts,False
+2026-09-23,5,166,N.Jackson,FWD,o,35452,chris Purnell,False
+2026-09-23,5,334,Muharemović,DEF,o,49984,Piers Black-Hawkins,False
+2026-09-23,5,286,Belloumi,MID,o,49704,Alastair Michael,False
+2026-09-23,5,316,Emersonn,FWD,o,49704,Alastair Michael,False
+2026-09-23,5,358,Kerkez,DEF,o,41339,Elliott Bennett,False
+2026-09-23,5,242,George,MID,o,35452,chris Purnell,False
+2026-09-23,5,148,Hato,DEF,o,49704,Alastair Michael,False
+2026-09-23,5,377,Munoz,MID,o,3321,Ash Cross,False
+2026-09-23,5,81,Rodríguez,FWD,o,35452,chris Purnell,False
+2026-09-23,5,472,Murillo,DEF,o,2920,Jason Parmar,False
+2026-09-23,5,268,King,MID,o,3058,Sam Wright,False
+2026-09-23,5,393,Khusanov,DEF,o,46122,Ollie Felts,False
+2026-09-23,5,249,Barry,FWD,o,49984,Piers Black-Hawkins,False
+2026-09-23,5,362,Jacquet,DEF,o,46122,Ollie Felts,False
+2026-09-23,5,88,Kayode,DEF,o,46122,Ollie Felts,False
+2026-09-23,5,504,Vuskovic,DEF,o,41339,Elliott Bennett,False
+2026-09-23,5,152,Palestra,DEF,o,12371,Greg Woodward,False
+2026-09-23,5,138,Kostoulas,FWD,o,49984,Piers Black-Hawkins,False
+2026-09-23,5,569,Gonzalo,FWD,o,41339,Elliott Bennett,False
+2026-09-23,5,571,Tzolakis,GKP,o,49984,Piers Black-Hawkins,False
+2026-09-23,5,580,Araujo,DEF,o,21679,Andrew Hutchinson,False
+2026-09-23,5,586,Mendy,DEF,o,35452,chris Purnell,False
+2026-09-23,5,588,Khalaili,DEF,o,3058,Sam Wright,False
+2026-09-23,5,597,Suzuki,GKP,o,3321,Ash Cross,False
+2026-09-23,5,608,Yalcouyé,MID,o,46122,Ollie Felts,False
+2026-09-23,5,628,Barcola,MID,o,12371,Greg Woodward,False
+2026-09-23,5,631,Mbaye,MID,o,41339,Elliott Bennett,False
+2026-09-23,5,637,Maitland-Niles,DEF,o,3321,Ash Cross,False
+2026-09-23,5,649,Fernandez-Pardo,FWD,o,41339,Elliott Bennett,False

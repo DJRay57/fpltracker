@@ -77,7 +77,6 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Injury/Status Watch (last 7 days)
 
-- **White**: a → d — Groin injury - 75% chance of playing
 - **Rice**: a → d — Unspecified injury - 75% chance of playing
 - **M.Bizot**: a → i — Back injury - Expected back 10 Oct
 - **Pau**: d → i — Hamstring injury - Expected back 10 Oct
