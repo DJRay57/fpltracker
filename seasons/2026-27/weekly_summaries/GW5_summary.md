@@ -78,24 +78,22 @@ _(This league doesn't use captaincy multipliers.)_
 ## Injury/Status Watch (last 7 days)
 
 - **Rice**: a → d — Unspecified injury - 75% chance of playing
-- **M.Bizot**: a → i — Back injury - Expected back 10 Oct
+- **M.Bizot**: d → i — Back injury - Expected back 10 Oct
 - **Pau**: d → i — Hamstring injury - Expected back 10 Oct
 - **Maatsen**: d → i — Ankle injury - Unknown return date
 - **Alysson**: a → d — Unspecified injury - 75% chance of playing
 - **Kluivert**: a → i — Unspecified injury - Unknown return date
 - **Dunk**: a → d — Neck injury - 75% chance of playing
 - **James**: a → d — Hamstring injury - 75% chance of playing
-- **Palestra**: i → d — Thigh injury - 50% chance of playing
 - **Palmer**: a → d — Muscular injury - 75% chance of playing
-- **Caicedo**: i → d — Calf injury - 50% chance of playing
-- **João Pedro**: a → d — Knee injury - 75% chance of playing
 - **van Ewijk**: a → d — Hamstring injury - 75% chance of playing
-- **Amenda**: a → i — Calf injury - Unknown return date
-- **Röhl**: a → i — Unspecified injury - Expected back 11 Oct
+- **Amenda**: d → i — Calf injury - Unknown return date
+- **Röhl**: d → i — Unspecified injury - Expected back 11 Oct
 - **Wilson**: a → i — Thigh injury - Unknown return date
 - **Fatawu**: a → s — Suspended until 17 Oct
 - **Darlow**: a → d — Unspecified injury - 75% chance of playing
 - **Struijk**: a → d — Hamstring injury - 75% chance of playing
+- **Semenyo**: a → d — Ankle injury - 75% chance of playing
 - **Rashford**: a → d — Unspecified injury - 75% chance of playing
 - **Mainoo**: a → d — Unspecified injury - 75% chance of playing
 - **Šeško**: a → d — Shin injury - 75% chance of playing
