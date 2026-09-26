@@ -55,16 +55,12 @@ _No pickups or drops detected._
 - **White**: a → d — Groin injury - 75% chance of playing
 - **Rice**: a → d — Unspecified injury - 75% chance of playing
 - **Havertz**: a → d — Hamstring injury - 75% chance of playing
-- **M.Bizot**: d → i — Back injury - Expected back 10 Oct
-- **Pau**: d → i — Hamstring injury - Expected back 10 Oct
-- **Maatsen**: d → i — Ankle injury - Unknown return date
-- **Alysson**: a → d — Unspecified injury - 75% chance of playing
 - **Kluivert**: a → i — Unspecified injury - Unknown return date
 - **Dunk**: a → d — Neck injury - 75% chance of playing
 - **Palmer**: a → d — Muscular injury - 75% chance of playing
+- **Gittens**: a → d — Ankle injury - 75% chance of playing
 - **van Ewijk**: a → d — Hamstring injury - 75% chance of playing
 - **Amenda**: d → i — Calf injury - Unknown return date
-- **Wilson**: a → i — Thigh injury - Unknown return date
 - **Fatawu**: a → s — Suspended until 17 Oct
 - **Darlow**: a → d — Unspecified injury - 75% chance of playing
 - **Struijk**: a → d — Hamstring injury - 75% chance of playing
@@ -73,7 +69,7 @@ _No pickups or drops detected._
 - **Mainoo**: a → d — Unspecified injury - 75% chance of playing
 - **Šeško**: a → d — Shin injury - 75% chance of playing
 - **Livramento**: a → d — Unspecified injury - 75% chance of playing
-- **Pedro Porro**: a → d — Hamstring injury - 75% chance of playing
+- **Ballard**: a → d — Hamstring injury - 75% chance of playing
 - **Brobbey**: a → d — Hamstring injury - 75% chance of playing
 - **Tomiyasu**: a → d — Calf injury - 75% chance of playing
 - **Norton-Cuffy**: a → d — Hamstring injury - 75% chance of playing
