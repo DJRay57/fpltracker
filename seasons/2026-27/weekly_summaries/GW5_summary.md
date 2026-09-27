@@ -59,16 +59,13 @@ _No pickups or drops detected._
 - **Dunk**: a → d — Neck injury - 75% chance of playing
 - **Palmer**: a → d — Muscular injury - 75% chance of playing
 - **Gittens**: a → d — Ankle injury - 75% chance of playing
-- **van Ewijk**: a → d — Hamstring injury - 75% chance of playing
-- **Amenda**: d → i — Calf injury - Unknown return date
-- **Fatawu**: a → s — Suspended until 17 Oct
 - **Darlow**: a → d — Unspecified injury - 75% chance of playing
 - **Struijk**: a → d — Hamstring injury - 75% chance of playing
+- **Isak**: a → d — Foot injury - 75% chance of playing
 - **Semenyo**: a → d — Ankle injury - 75% chance of playing
 - **Rashford**: a → d — Unspecified injury - 75% chance of playing
 - **Mainoo**: a → d — Unspecified injury - 75% chance of playing
 - **Šeško**: a → d — Shin injury - 75% chance of playing
-- **Livramento**: a → d — Unspecified injury - 75% chance of playing
 - **Ballard**: a → d — Hamstring injury - 75% chance of playing
 - **Brobbey**: a → d — Hamstring injury - 75% chance of playing
 - **Tomiyasu**: a → d — Calf injury - 75% chance of playing
