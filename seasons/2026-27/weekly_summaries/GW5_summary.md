@@ -52,21 +52,13 @@ _No pickups or drops detected._
 
 ## Injury/Status Watch (last 7 days)
 
-- **White**: a → d — Groin injury - 75% chance of playing
-- **Rice**: a → d — Unspecified injury - 75% chance of playing
 - **Havertz**: a → d — Hamstring injury - 75% chance of playing
-- **Kluivert**: a → i — Unspecified injury - Unknown return date
 - **Dunk**: a → d — Neck injury - 75% chance of playing
-- **Palmer**: a → d — Muscular injury - 75% chance of playing
 - **Gittens**: a → d — Ankle injury - 75% chance of playing
-- **Darlow**: a → d — Unspecified injury - 75% chance of playing
 - **Struijk**: a → d — Hamstring injury - 75% chance of playing
-- **Isak**: a → d — Foot injury - 75% chance of playing
+- **Gakpo**: a → d — Ankle injury - 75% chance of playing
+- **Isak**: a → d — Thigh injury - 75% chance of playing
 - **Semenyo**: a → d — Ankle injury - 75% chance of playing
-- **Rashford**: a → d — Unspecified injury - 75% chance of playing
-- **Mainoo**: a → d — Unspecified injury - 75% chance of playing
-- **Šeško**: a → d — Shin injury - 75% chance of playing
+- **Dorgu**: a → d — Hamstring injury - 75% chance of playing
 - **Ballard**: a → d — Hamstring injury - 75% chance of playing
 - **Brobbey**: a → d — Hamstring injury - 75% chance of playing
-- **Tomiyasu**: a → d — Calf injury - 75% chance of playing
-- **Norton-Cuffy**: a → d — Hamstring injury - 75% chance of playing
