@@ -53,10 +53,12 @@ _No pickups or drops detected._
 ## Injury/Status Watch (last 7 days)
 
 - **Havertz**: a → d — Hamstring injury - 75% chance of playing
+- **Van Hecke**: a → d — Foot injury - 75% chance of playing
 - **Gittens**: a → d — Ankle injury - 75% chance of playing
 - **Gakpo**: a → d — Ankle injury - 75% chance of playing
 - **Isak**: a → d — Thigh injury - 75% chance of playing
-- **Semenyo**: a → d — Ankle injury - 75% chance of playing
+- **O'Reilly**: a → d — Unspecified injury - 75% chance of playing
 - **Dorgu**: a → d — Hamstring injury - 75% chance of playing
+- **L.Miley**: a → d — Unspecified injury - 75% chance of playing
 - **Ballard**: a → d — Hamstring injury - 75% chance of playing
 - **Brobbey**: a → d — Hamstring injury - 75% chance of playing
