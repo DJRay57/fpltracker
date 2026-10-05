@@ -52,11 +52,13 @@ _No pickups or drops detected._
 
 ## Injury/Status Watch (last 7 days)
 
+- **Konsa**: a → d — Unspecified injury - 75% chance of playing
+- **Scott**: a → d — Thigh injury - 50% chance of playing
 - **Damsgaard**: a → d — Unspecified injury - 75% chance of playing
 - **Van Hecke**: a → d — Foot injury - 75% chance of playing
 - **Mykolenko**: a → d — Leg injury - 75% chance of playing
-- **Gakpo**: a → d — Ankle injury - 75% chance of playing
 - **O'Reilly**: a → d — Unspecified injury - 75% chance of playing
-- **Dorgu**: a → d — Hamstring injury - 75% chance of playing
+- **Mazraoui**: a → d — Back injury - 75% chance of playing
 - **L.Miley**: a → d — Unspecified injury - 75% chance of playing
 - **Tzolis**: a → d — Hamstring injury - 75% chance of playing
+- **Khalaili**: a → d — Hamstring injury - 75% chance of playing
