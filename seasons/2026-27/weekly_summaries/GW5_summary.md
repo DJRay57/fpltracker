@@ -61,6 +61,7 @@ _No pickups or drops detected._
 - **Jacquet**: a → d — Hamstring injury - 75% chance of playing
 - **O'Reilly**: a → d — Unspecified injury - 75% chance of playing
 - **Mazraoui**: a → d — Back injury - 75% chance of playing
+- **Jaouen**: d → i — Hamstring injury - Unknown return date
 - **L.Miley**: a → d — Unspecified injury - 75% chance of playing
 - **Tzolis**: a → d — Hamstring injury - 75% chance of playing
 - **Khalaili**: a → d — Hamstring injury - 75% chance of playing
