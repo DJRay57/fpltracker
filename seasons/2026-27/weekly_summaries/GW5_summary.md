@@ -48,24 +48,40 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Waiver Wire Activity (last 7 days)
 
-_No pickups or drops detected._
+- **ADDED**: Botman → Ollie Felts
+- **ADDED**: Gomez → Jason Parmar
+- **ADDED**: Manzambi → Elliott Bennett
 
 ## Injury/Status Watch (last 7 days)
 
-- **Dowman**: a → d — Unspecified injury - 75% chance of playing
+- **Nørgaard**: i → d — Groin injury - 50% chance of playing
 - **Konsa**: a → d — Unspecified injury - 75% chance of playing
+- **Pau**: i → d — Hamstring injury - 75% chance of playing
 - **Scott**: a → i — Thigh injury - Unknown return date
 - **Damsgaard**: a → d — Unspecified injury - 75% chance of playing
+- **Hinshelwood**: i → d — Ankle injury - 50% chance of playing
+- **Gittens**: d → i — Ankle injury - Unknown return date
 - **Kesler-Hayden**: i → d — Hamstring injury - 50% chance of playing
-- **Mykolenko**: a → d — Leg injury - 75% chance of playing
+- **Röhl**: i → d — Unspecified injury - 50% chance of playing
+- **Robinson**: a → d — Ankle injury - 75% chance of playing
 - **Wilson**: i → d — Thigh injury - 75% chance of playing
 - **James**: a → i — Back injury - Expected back 18 Oct
-- **Jacquet**: a → d — Hamstring injury - 75% chance of playing
+- **Gakpo**: d → i — Ankle injury - Unknown return date
+- **Chiesa**: i → d — Back injury - 25% chance of playing
+- **Isak**: d → i — Thigh injury - Unknown return date
+- **Dorgu**: d → i — Hamstring injury - Expected back 25 Oct
 - **Mazraoui**: a → d — Back injury - 75% chance of playing
+- **Šeško**: d → i — Shin injury - Expected back 18 Oct
 - **Jaouen**: d → i — Hamstring injury - Unknown return date
 - **Joelinton**: i → d — Unspecified injury - 75% chance of playing
+- **Osula**: i → d — Foot injury - 50% chance of playing
+- **N.Williams**: a → d — Illness - 50% chance of playing
+- **Igor Jesus**: a → i — Calf injury - Unknown return date
+- **Pedro Porro**: d → i — Hamstring injury - Unknown return date
 - **Ballard**: d → i — Hamstring injury - Unknown return date
 - **Brobbey**: d → i — Hamstring injury - Expected back 25 Oct
-- **Tzolis**: a → d — Hamstring injury - 75% chance of playing
-- **Khalaili**: a → d — Hamstring injury - 75% chance of playing
+- **Tzolis**: d → i — Hamstring injury - Expected back 24 Oct
+- **Targett**: d → i — Ankle injury - Unknown return date
+- **Tomiyasu**: d → i — Calf injury - Expected back 18 Oct
+- **Dedić**: i → d — Unspecified injury - 50% chance of playing
 - **Bahoya**: a → d — Ankle injury - 75% chance of playing

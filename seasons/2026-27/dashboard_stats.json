@@ -655,12 +655,6 @@
       "gw_points": 14
     },
     {
-      "name": "Manzambi",
-      "position": "MID",
-      "team": "AVL",
-      "gw_points": 13
-    },
-    {
       "name": "Buend\u00eda",
       "position": "MID",
       "team": "AVL",
@@ -671,6 +665,12 @@
       "position": "GKP",
       "team": "COV",
       "gw_points": 11
+    },
+    {
+      "name": "Anthony",
+      "position": "MID",
+      "team": "BRE",
+      "gw_points": 10
     }
   ]
 }

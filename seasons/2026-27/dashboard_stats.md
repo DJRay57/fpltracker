@@ -65,9 +65,9 @@ _If everyone played everyone every week. Strips fixture luck out entirely; the S
 |---|---|---|---|
 | 15 | Dasilva | DEF | COV |
 | 14 | Schuster | DEF | BRE |
-| 13 | Manzambi | MID | AVL |
 | 12 | Buendía | MID | AVL |
 | 11 | Rushworth | GKP | COV |
+| 10 | Anthony | MID | BRE |
 
 ## Trophy Cabinet
 
