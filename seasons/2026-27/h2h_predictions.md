@@ -8,4 +8,4 @@ _Projected starting XI score = 50% season PPG so far + 50% current squad's summe
 | Andrew Hutchinson | 37.1 | 58% | 2% | 33.4 | Ash Cross | 40% |
 | chris Purnell | 48.9 | 72% | 2% | 38.6 | Sam Wright | 26% |
 | Elliott Bennett | 33.7 | 11% | 1% | 53.6 | Piers Black-Hawkins | 88% |
-| Ollie Felts | 44.0 | 35% | 2% | 49.7 | Alastair Michael | 63% |
+| Ollie Felts | 43.8 | 34% | 3% | 49.7 | Alastair Michael | 63% |
