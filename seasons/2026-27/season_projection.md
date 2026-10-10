@@ -4,13 +4,13 @@ _Monte Carlo simulation. Gameweeks already played are exact. For the rest, each 
 
 | Manager | Expected Finish | Top 3 | Mid | Bottom 3 |
 |---|---|---|---|---|
-| Piers Black-Hawkins | 2.3 | 80% | 20% | 0% |
-| Jason Parmar | 2.6 | 74% | 26% | 0% |
-| chris Purnell | 3.2 | 59% | 40% | 1% |
-| Alastair Michael | 3.3 | 57% | 43% | 1% |
-| Ollie Felts | 5.2 | 14% | 78% | 8% |
-| Sam Wright | 5.6 | 12% | 77% | 11% |
-| Andrew Hutchinson | 6.7 | 3% | 69% | 28% |
-| Ash Cross | 7.9 | 0% | 31% | 69% |
-| Elliott Bennett | 8.7 | 0% | 13% | 87% |
+| Piers Black-Hawkins | 2.5 | 77% | 23% | 0% |
+| Jason Parmar | 2.7 | 71% | 28% | 1% |
+| chris Purnell | 3.1 | 62% | 37% | 1% |
+| Alastair Michael | 3.5 | 52% | 46% | 2% |
+| Ollie Felts | 5.3 | 17% | 72% | 10% |
+| Sam Wright | 5.6 | 13% | 73% | 14% |
+| Andrew Hutchinson | 6.5 | 5% | 65% | 30% |
+| Ash Cross | 7.6 | 1% | 40% | 59% |
+| Elliott Bennett | 8.8 | 0% | 11% | 89% |
 | Greg Woodward | 9.4 | 0% | 5% | 95% |

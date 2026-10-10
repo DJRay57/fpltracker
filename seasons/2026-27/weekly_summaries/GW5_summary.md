@@ -48,15 +48,22 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Waiver Wire Activity (last 7 days)
 
+- **ADDED**: Walton → Jason Parmar
 - **ADDED**: Botman → Ollie Felts
+- **ADDED**: F.Kadıoğlu → Alastair Michael
+- **ADDED**: Sávio → Ollie Felts
 - **ADDED**: Gomez → Jason Parmar
 - **ADDED**: Manzambi → Elliott Bennett
+- **DROPPED**: Scherpen (was Jason Parmar)
+- **DROPPED**: Ndiaye (was Jason Parmar)
+- **DROPPED**: Mainoo (was Ollie Felts)
+- **DROPPED**: Hato (was Alastair Michael)
+- **DROPPED**: Khusanov (was Ollie Felts)
+- **DROPPED**: Mbaye (was Elliott Bennett)
 
 ## Injury/Status Watch (last 7 days)
 
 - **Nørgaard**: i → d — Groin injury - 50% chance of playing
-- **Konsa**: a → d — Unspecified injury - 75% chance of playing
-- **Pau**: i → d — Hamstring injury - 75% chance of playing
 - **Scott**: a → i — Thigh injury - Unknown return date
 - **Damsgaard**: a → d — Unspecified injury - 75% chance of playing
 - **Hinshelwood**: i → d — Ankle injury - 50% chance of playing
@@ -64,7 +71,6 @@ _(This league doesn't use captaincy multipliers.)_
 - **Kesler-Hayden**: i → d — Hamstring injury - 50% chance of playing
 - **Röhl**: i → d — Unspecified injury - 50% chance of playing
 - **Robinson**: a → d — Ankle injury - 75% chance of playing
-- **Wilson**: i → d — Thigh injury - 75% chance of playing
 - **James**: a → i — Back injury - Expected back 18 Oct
 - **Gakpo**: d → i — Ankle injury - Unknown return date
 - **Chiesa**: i → d — Back injury - 25% chance of playing
@@ -83,5 +89,5 @@ _(This league doesn't use captaincy multipliers.)_
 - **Tzolis**: d → i — Hamstring injury - Expected back 24 Oct
 - **Targett**: d → i — Ankle injury - Unknown return date
 - **Tomiyasu**: d → i — Calf injury - Expected back 18 Oct
+- **Madjo**: i → d — Unspecified injury - 75% chance of playing
 - **Dedić**: i → d — Unspecified injury - 50% chance of playing
-- **Bahoya**: a → d — Ankle injury - 75% chance of playing

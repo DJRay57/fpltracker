@@ -119,3 +119,4 @@ _Took effect from a gameweek that hasn't been played yet -- nothing to score unt
 | Elliott Bennett | Manzambi | Mbaye | GW6 |
 | Ollie Felts | Sávio | Mainoo | GW6 |
 | Alastair Michael | F.Kadıoğlu | Hato | GW6 |
+| Jason Parmar | Walton | Scherpen | GW6 |
