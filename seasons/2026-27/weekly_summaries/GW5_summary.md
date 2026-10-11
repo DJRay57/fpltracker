@@ -63,17 +63,18 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Injury/Status Watch (last 7 days)
 
-- **Nørgaard**: i → d — Groin injury - 50% chance of playing
+- **George Hemmings**: a → d — Knee injury - 75% chance of playing
 - **Scott**: a → i — Thigh injury - Unknown return date
-- **Damsgaard**: a → d — Unspecified injury - 75% chance of playing
+- **Schuster**: a → d — Ankle injury - 75% chance of playing
+- **Schade**: a → d — Shoulder injury - 75% chance of playing
 - **Hinshelwood**: i → d — Ankle injury - 50% chance of playing
 - **Gittens**: d → i — Ankle injury - Unknown return date
 - **Kesler-Hayden**: i → d — Hamstring injury - 50% chance of playing
-- **Röhl**: i → d — Unspecified injury - 50% chance of playing
 - **Robinson**: a → d — Ankle injury - 75% chance of playing
+- **Struijk**: d → s — Suspended until 25 Oct
 - **James**: a → i — Back injury - Expected back 18 Oct
 - **Gakpo**: d → i — Ankle injury - Unknown return date
-- **Chiesa**: i → d — Back injury - 25% chance of playing
+- **Szoboszlai**: a → d — Hamstring injury - 75% chance of playing
 - **Isak**: d → i — Thigh injury - Unknown return date
 - **Dorgu**: d → i — Hamstring injury - Expected back 25 Oct
 - **Mazraoui**: a → d — Back injury - 75% chance of playing
@@ -81,13 +82,15 @@ _(This league doesn't use captaincy multipliers.)_
 - **Jaouen**: d → i — Hamstring injury - Unknown return date
 - **Joelinton**: i → d — Unspecified injury - 75% chance of playing
 - **Osula**: i → d — Foot injury - 50% chance of playing
-- **N.Williams**: a → d — Illness - 50% chance of playing
 - **Igor Jesus**: a → i — Calf injury - Unknown return date
 - **Pedro Porro**: d → i — Hamstring injury - Unknown return date
+- **Bentancur**: a → s — Suspended until 7 Nov
 - **Ballard**: d → i — Hamstring injury - Unknown return date
+- **Meunier**: a → d — Groin injury - 75% chance of playing
 - **Brobbey**: d → i — Hamstring injury - Expected back 25 Oct
 - **Tzolis**: d → i — Hamstring injury - Expected back 24 Oct
 - **Targett**: d → i — Ankle injury - Unknown return date
 - **Tomiyasu**: d → i — Calf injury - Expected back 18 Oct
 - **Madjo**: i → d — Unspecified injury - 75% chance of playing
 - **Dedić**: i → d — Unspecified injury - 50% chance of playing
+- **Ruggeri**: a → d — Hamstring injury - 75% chance of playing
