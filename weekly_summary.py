@@ -13,6 +13,7 @@ Writes weekly_summaries/GW{n}_summary.md.
 """
 
 import requests
+import http_retry
 import csv
 import os
 from collections import defaultdict
@@ -29,7 +30,7 @@ PLAYER_STATUS_FILE = os.path.join(SEASON_DIR, "player_status_log.csv")
 
 
 def fetch(url):
-    r = requests.get(url, timeout=10)
+    r = http_retry.get(url, timeout=10)
     r.raise_for_status()
     return r.json()
 

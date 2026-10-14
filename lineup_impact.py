@@ -15,6 +15,7 @@ Requires at least 2 finished gameweeks. Writes seasons/2026-27/lineup_impact.md.
 """
 
 import requests
+import http_retry
 import os
 
 BASE = "https://draft.premierleague.com/api"
@@ -24,7 +25,7 @@ SEASON_DIR = os.path.join("seasons", SEASON)
 
 
 def fetch(url):
-    r = requests.get(url, timeout=10)
+    r = http_retry.get(url, timeout=10)
     r.raise_for_status()
     return r.json()
 

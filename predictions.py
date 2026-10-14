@@ -38,6 +38,7 @@ Writes seasons/2026-27/h2h_predictions.md and seasons/2026-27/season_projection.
 """
 
 import requests
+import http_retry
 import os
 import math
 import random
@@ -106,7 +107,7 @@ SKILL_FALLBACK_SD = 2.0   # only if the bench cache is missing entirely
 
 
 def fetch(url):
-    r = requests.get(url, timeout=10)
+    r = http_retry.get(url, timeout=10)
     r.raise_for_status()
     return r.json()
 

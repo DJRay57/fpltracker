@@ -26,6 +26,7 @@ import statistics
 from datetime import datetime, timezone
 
 import requests
+import http_retry
 
 import scoring_model
 
@@ -84,7 +85,7 @@ FALLBACK_SIGMA = 2.6
 
 
 def fetch(url):
-    r = requests.get(url, headers=UA, timeout=20)
+    r = http_retry.get(url, headers=UA, timeout=20)
     r.raise_for_status()
     return r.json()
 

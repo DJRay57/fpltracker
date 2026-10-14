@@ -13,6 +13,7 @@ file, that file is skipped so re-running doesn't create duplicate rows.
 """
 
 import requests
+import http_retry
 import csv
 import os
 from datetime import date, datetime, timezone
@@ -42,7 +43,7 @@ FREE_AGENTS_FIELDS = [
 
 
 def fetch(url):
-    r = requests.get(url, timeout=10)
+    r = http_retry.get(url, timeout=10)
     r.raise_for_status()
     return r.json()
 

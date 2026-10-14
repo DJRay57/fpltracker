@@ -13,6 +13,7 @@ Writes both dashboard_stats.json (for renderers) and dashboard_stats.md
 """
 
 import requests
+import http_retry
 import csv
 import json
 import os
@@ -30,7 +31,7 @@ CACHE_OUT = os.path.join(SEASON_DIR, "gw_points_cache.json")
 
 
 def fetch(url):
-    r = requests.get(url, timeout=15)
+    r = http_retry.get(url, timeout=15)
     r.raise_for_status()
     return r.json()
 
