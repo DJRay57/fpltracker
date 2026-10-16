@@ -113,3 +113,17 @@ _Every accepted waiver move, scored from the gameweek it took effect onward: poi
 | -18 | Elliott Bennett | Mbaye (3) | Buendía (21) | GW3 |
 | -23 | Jason Parmar | Martinelli (0) | Xhaka (23) | GW1 |
 | -28 | Ollie Felts | David (1) | Kostoulas (29) | GW1 |
+
+## Pending
+
+_Took effect from a gameweek that hasn't been played yet -- nothing to score until it has._
+
+| Manager | In | Out | Effective |
+|---|---|---|---|
+| Alastair Michael | Buendía | Scott | GW7 |
+| Greg Woodward | Cherif | Welbeck | GW7 |
+| Piers Black-Hawkins | Hinshelwood | Rayan | GW7 |
+| Elliott Bennett | Boscagli | Livramento | GW7 |
+| Andrew Hutchinson | Justin | James | GW7 |
+| Andrew Hutchinson | E.Le Fée | Lewis-Potter | GW7 |
+| Ollie Felts | Thomas-Asante | Abraham | GW7 |

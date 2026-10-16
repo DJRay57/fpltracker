@@ -49,44 +49,40 @@ _(This league doesn't use captaincy multipliers.)_
 ## Waiver Wire Activity (last 7 days)
 
 - **ADDED**: Walton → Jason Parmar
-- **ADDED**: Botman → Ollie Felts
+- **ADDED**: Buendía → Alastair Michael
+- **ADDED**: Boscagli → Elliott Bennett
+- **ADDED**: Justin → Andrew Hutchinson
+- **ADDED**: Thomas-Asante → Ollie Felts
 - **ADDED**: F.Kadıoğlu → Alastair Michael
+- **ADDED**: E.Le Fée → Andrew Hutchinson
 - **ADDED**: Sávio → Ollie Felts
-- **ADDED**: Gomez → Jason Parmar
-- **ADDED**: Manzambi → Elliott Bennett
+- **ADDED**: Hinshelwood → Piers Black-Hawkins
+- **ADDED**: Cherif → Greg Woodward
 - **DROPPED**: Scherpen (was Jason Parmar)
-- **DROPPED**: Ndiaye (was Jason Parmar)
 - **DROPPED**: Mainoo (was Ollie Felts)
 - **DROPPED**: Hato (was Alastair Michael)
-- **DROPPED**: Khusanov (was Ollie Felts)
-- **DROPPED**: Mbaye (was Elliott Bennett)
 
 ## Injury/Status Watch (last 7 days)
 
 - **Hincapie**: a → d — Ankle injury - 75% chance of playing
 - **Zubimendi**: a → d — Unspecified injury - 75% chance of playing
 - **George Hemmings**: a → d — Knee injury - 75% chance of playing
-- **Kluivert**: i → d — Unspecified injury - 75% chance of playing
-- **Adli**: i → d — Calf injury - 75% chance of playing
 - **Schuster**: a → d — Ankle injury - 75% chance of playing
 - **Schade**: a → d — Shoulder injury - 75% chance of playing
-- **Hinshelwood**: i → d — Ankle injury - 75% chance of playing
-- **Gittens**: d → i — Ankle injury - Unknown return date
-- **Robinson**: a → d — Ankle injury - 75% chance of playing
-- **Gakpo**: d → i — Ankle injury - Unknown return date
-- **Szoboszlai**: a → d — Hamstring injury - 75% chance of playing
+- **James**: a → i — Knee injury - Unknown return date
+- **Cairney**: i → d — Knee injury - 75% chance of playing
+- **Gakpo**: i → d — Ankle injury - 25% chance of playing
+- **Szoboszlai**: a → d — Hamstring injury - 25% chance of playing
 - **Gravenberch**: a → s — Suspended until 25 Oct
-- **Isak**: d → i — Thigh injury - Unknown return date
-- **Dorgu**: d → i — Hamstring injury - Expected back 25 Oct
+- **Isak**: i → d — Thigh injury - 25% chance of playing
 - **Shaw**: a → d — Unspecified injury - 75% chance of playing
-- **Šeško**: d → i — Shin injury - Expected back 18 Oct
 - **Touré**: a → d — Unspecified injury - 75% chance of playing
-- **Igor Jesus**: a → i — Calf injury - Unknown return date
-- **Pedro Porro**: d → i — Hamstring injury - Unknown return date
+- **Milenković**: i → d — Knee injury - 75% chance of playing
 - **Bentancur**: a → s — Suspended until 7 Nov
 - **Meunier**: a → d — Groin injury - 75% chance of playing
-- **Tzolis**: d → i — Hamstring injury - Expected back 1 Nov
-- **Targett**: d → i — Ankle injury - Unknown return date
-- **Tomiyasu**: d → i — Calf injury - Expected back 18 Oct
+- **Isidor**: a → d — Knock - 50% chance of playing
 - **Madjo**: i → d — Unspecified injury - 50% chance of playing
+- **Mendy**: a → i — Groin injury - Expected back 31 Oct
+- **Gourna-Douath**: a → i — Calf injury - Expected back 25 Oct
 - **Ruggeri**: a → i — Hamstring injury - Unknown return date
+- **Chilwell**: a → i — Unspecified injury - Unknown return date

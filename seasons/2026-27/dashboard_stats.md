@@ -64,10 +64,10 @@ _If everyone played everyone every week. Strips fixture luck out entirely; the S
 | GW6 pts | Player | Pos | Team |
 |---|---|---|---|
 | 18 | Henderson | MID | CHE |
-| 12 | Cherif | FWD | COV |
 | 11 | O'Shea | DEF | IPS |
 | 10 | McGinn | MID | AVL |
 | 10 | Ouattara | DEF | IPS |
+| 9 | Yeremy | MID | CRY |
 
 ## Trophy Cabinet
 

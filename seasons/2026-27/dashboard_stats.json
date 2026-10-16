@@ -660,12 +660,6 @@
       "gw_points": 18
     },
     {
-      "name": "Cherif",
-      "position": "FWD",
-      "team": "COV",
-      "gw_points": 12
-    },
-    {
       "name": "O'Shea",
       "position": "DEF",
       "team": "IPS",
@@ -682,6 +676,12 @@
       "position": "DEF",
       "team": "IPS",
       "gw_points": 10
+    },
+    {
+      "name": "Yeremy",
+      "position": "MID",
+      "team": "CRY",
+      "gw_points": 9
     }
   ]
 }
