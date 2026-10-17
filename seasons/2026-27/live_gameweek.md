@@ -1,6 +1,6 @@
 # Live Gameweek — GW7
 
-_State: live. 5 of 10 matches finished. Updated 2026-10-17 19:53 UTC._
+_State: live. 5 of 10 matches finished. Updated 2026-10-17 22:47 UTC._
 
 _Scores are computed from the live player feed and include provisional bonus, so they can run ahead of the official league table, which settles later._
 
