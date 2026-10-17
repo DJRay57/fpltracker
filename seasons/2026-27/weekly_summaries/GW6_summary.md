@@ -48,41 +48,51 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Waiver Wire Activity (last 7 days)
 
-- **ADDED**: Walton → Jason Parmar
 - **ADDED**: Buendía → Alastair Michael
 - **ADDED**: Boscagli → Elliott Bennett
 - **ADDED**: Justin → Andrew Hutchinson
 - **ADDED**: Thomas-Asante → Ollie Felts
-- **ADDED**: F.Kadıoğlu → Alastair Michael
 - **ADDED**: E.Le Fée → Andrew Hutchinson
-- **ADDED**: Sávio → Ollie Felts
 - **ADDED**: Hinshelwood → Piers Black-Hawkins
 - **ADDED**: Cherif → Greg Woodward
-- **DROPPED**: Scherpen (was Jason Parmar)
-- **DROPPED**: Mainoo (was Ollie Felts)
-- **DROPPED**: Hato (was Alastair Michael)
+- **DROPPED**: Welbeck (was Greg Woodward)
+- **DROPPED**: Abraham (was Ollie Felts)
+- **DROPPED**: James (was Andrew Hutchinson)
+- **DROPPED**: Lewis-Potter (was Andrew Hutchinson)
+- **DROPPED**: Livramento (was Elliott Bennett)
+- **DROPPED**: Rayan (was Piers Black-Hawkins)
+- **DROPPED**: Scott (was Alastair Michael)
 
 ## Injury/Status Watch (last 7 days)
 
-- **Hincapie**: a → d — Ankle injury - 75% chance of playing
+- **Hincapie**: a → i — Ankle injury - Expected back 24 Oct
 - **Zubimendi**: a → d — Unspecified injury - 75% chance of playing
+- **Barkley**: a → d — Unspecified injury - 75% chance of playing
 - **George Hemmings**: a → d — Knee injury - 75% chance of playing
+- **Collins**: i → d — Calf injury - 50% chance of playing
 - **Schuster**: a → d — Ankle injury - 75% chance of playing
 - **Schade**: a → d — Shoulder injury - 75% chance of playing
-- **James**: a → i — Knee injury - Unknown return date
+- **James**: d → i — Knee injury - Unknown return date
+- **Henderson**: i → d — Foot injury - 50% chance of playing
 - **Cairney**: i → d — Knee injury - 75% chance of playing
+- **Struijk**: a → d — Hamstring injury - 75% chance of playing
+- **James**: i → d — Back injury - 50% chance of playing
 - **Gakpo**: i → d — Ankle injury - 25% chance of playing
 - **Szoboszlai**: a → d — Hamstring injury - 25% chance of playing
 - **Gravenberch**: a → s — Suspended until 25 Oct
 - **Isak**: i → d — Thigh injury - 25% chance of playing
 - **Shaw**: a → d — Unspecified injury - 75% chance of playing
+- **Livramento**: d → i — Unspecified injury - Expected back 2 Nov
 - **Touré**: a → d — Unspecified injury - 75% chance of playing
 - **Milenković**: i → d — Knee injury - 75% chance of playing
+- **Gibbs-White**: a → d — Muscular injury - 75% chance of playing
 - **Bentancur**: a → s — Suspended until 7 Nov
 - **Meunier**: a → d — Groin injury - 75% chance of playing
 - **Isidor**: a → d — Knock - 50% chance of playing
-- **Madjo**: i → d — Unspecified injury - 50% chance of playing
+- **Chavarria**: a → d — Unspecified injury - 75% chance of playing
 - **Mendy**: a → i — Groin injury - Expected back 31 Oct
 - **Gourna-Douath**: a → i — Calf injury - Expected back 25 Oct
 - **Ruggeri**: a → i — Hamstring injury - Unknown return date
+- **Cho**: a → i — Unspecified injury - Expected back 25 Oct
 - **Chilwell**: a → i — Unspecified injury - Unknown return date
+- **Larsson**: a → d — Groin injury - 25% chance of playing
