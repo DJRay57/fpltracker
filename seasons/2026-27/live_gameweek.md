@@ -1,32 +1,32 @@
 # Live Gameweek — GW7
 
-_State: live. 5 of 10 matches finished. Updated 2026-10-18 12:53 UTC._
+_State: live. 9 of 10 matches finished. Updated 2026-10-18 17:41 UTC._
 
 _Scores are computed from the live player feed and include provisional bonus, so they can run ahead of the official league table, which settles later._
 
-_Win chances come from simulating the players still to play, drawing their scores from what players actually did this gameweek (forecast error 2.8 pts per starter) and letting teammates move together. They tighten as matches finish, so late in a gameweek they get lopsided quickly._
+_Win chances come from simulating the players still to play, drawing their scores from what players actually did this gameweek (forecast error 2.6 pts per starter) and letting teammates move together. They tighten as matches finish, so late in a gameweek they get lopsided quickly._
 
 ## Head to Head
 
 | Home | Now | Proj | Win% | Draw% | Away | Now | Proj | Win% |
 |---|---|---|---|---|---|---|---|---|
-| Piers Black-Hawkins | 10 | 30.1 | 56% | 4% | Jason Parmar | 6 | 28.1 | 40% |
-| Sam Wright | 6 | 19.4 | 20% | 3% | Alastair Michael | 7 | 26.2 | 77% |
-| Ash Cross | 19 | 30.3 | 1% | 0% | Ollie Felts | 39 | 48.6 | 99% |
-| Greg Woodward | 24 | 39.5 | 73% | 4% | Elliott Bennett | 22 | 34.5 | 23% |
-| Andrew Hutchinson | 34 | 40.6 | 99% | 0% | chris Purnell | 7 | 10.9 | 1% |
+| Piers Black-Hawkins | 49 | 49.0 | 100% | 0% | Jason Parmar | 36 | 36.0 | 0% |
+| Sam Wright | 41 | 44.0 | 99% | 0% | Alastair Michael | 27 | 32.8 | 1% |
+| Ash Cross | 47 | 47.0 | 1% | 0% | Ollie Felts | 49 | 55.0 | 99% |
+| Greg Woodward | 31 | 34.2 | 1% | 0% | Elliott Bennett | 53 | 53.0 | 99% |
+| Andrew Hutchinson | 38 | 38.0 | 100% | 0% | chris Purnell | 19 | 19.0 | 0% |
 
 ## Live Scores
 
 | Manager | Now | Projection | Players left |
 |---|---|---|---|
-| Ollie Felts | 39 | 48.6 | 4 |
-| Andrew Hutchinson | 34 | 40.6 | 2 |
-| Greg Woodward | 24 | 39.5 | 5 |
-| Elliott Bennett | 22 | 34.5 | 4 |
-| Ash Cross | 19 | 30.3 | 7 |
-| Piers Black-Hawkins | 10 | 30.1 | 6 |
-| chris Purnell | 7 | 10.9 | 3 |
-| Alastair Michael | 7 | 26.2 | 7 |
-| Jason Parmar | 6 | 28.1 | 7 |
-| Sam Wright | 6 | 19.4 | 6 |
+| Elliott Bennett | 53 | 53.0 | 0 |
+| Ollie Felts | 49 | 55.0 | 2 |
+| Piers Black-Hawkins | 49 | 49.0 | 0 |
+| Ash Cross | 47 | 47.0 | 0 |
+| Sam Wright | 41 | 44.0 | 1 |
+| Andrew Hutchinson | 38 | 38.0 | 0 |
+| Jason Parmar | 36 | 36.0 | 0 |
+| Greg Woodward | 31 | 34.2 | 1 |
+| Alastair Michael | 27 | 32.8 | 2 |
+| chris Purnell | 19 | 19.0 | 0 |
