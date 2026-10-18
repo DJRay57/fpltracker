@@ -3,7 +3,7 @@
   "sigma": 2.59,
   "team_rho": 0.1,
   "gameweek": 7,
-  "updated_at": "2026-10-18T19:54:06+00:00",
+  "updated_at": "2026-10-18T22:41:42+00:00",
   "fixtures_total": 10,
   "fixtures_finished": 9,
   "fixtures_started": 9,
@@ -86,12 +86,12 @@
       "home_high": 37,
       "away": "Elliott Bennett",
       "away_team": "You're Toast FC",
-      "away_current": 53,
+      "away_current": 52,
       "away_to_play": 0,
-      "away_projection": 53.0,
+      "away_projection": 52.0,
       "away_to_come": 0.0,
-      "away_low": 53,
-      "away_high": 53
+      "away_low": 52,
+      "away_high": 52
     },
     {
       "home_win": 100.0,
@@ -119,12 +119,12 @@
     {
       "manager": "Elliott Bennett",
       "team_name": "You're Toast FC",
-      "current": 53,
+      "current": 52,
       "official": 52,
       "to_play": 0,
-      "projection": 53.0,
-      "proj_low": 53,
-      "proj_high": 53,
+      "projection": 52.0,
+      "proj_low": 52,
+      "proj_high": 52,
       "to_come": 0.0,
       "auto_subbed": [
         "Sarr"
