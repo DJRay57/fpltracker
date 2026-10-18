@@ -67,32 +67,31 @@ _(This league doesn't use captaincy multipliers.)_
 
 - **Hincapie**: a → i — Ankle injury - Expected back 24 Oct
 - **Zubimendi**: a → d — Unspecified injury - 75% chance of playing
-- **Barkley**: a → d — Unspecified injury - 75% chance of playing
-- **George Hemmings**: a → d — Knee injury - 75% chance of playing
-- **Collins**: i → d — Calf injury - 50% chance of playing
-- **Schuster**: a → d — Ankle injury - 75% chance of playing
-- **Schade**: a → d — Shoulder injury - 75% chance of playing
+- **Martinez**: a → i — Head injury - Unknown return date
+- **Manzambi**: a → d — Calf injury - 75% chance of playing
+- **Janelt**: a → s — Suspended until 31 Oct
+- **Yarmoliuk**: a → s — Suspended until 23 Nov
 - **James**: d → i — Knee injury - Unknown return date
+- **Gusto**: a → d — Illness - 75% chance of playing
 - **Henderson**: i → d — Foot injury - 50% chance of playing
-- **Cairney**: i → d — Knee injury - 75% chance of playing
-- **Struijk**: a → d — Hamstring injury - 75% chance of playing
+- **Sessegnon**: a → s — Suspended until 21 Nov
+- **Struijk**: s → d — Hamstring injury - 75% chance of playing
 - **James**: i → d — Back injury - 50% chance of playing
-- **Gakpo**: i → d — Ankle injury - 25% chance of playing
-- **Szoboszlai**: a → d — Hamstring injury - 25% chance of playing
-- **Gravenberch**: a → s — Suspended until 25 Oct
-- **Isak**: i → d — Thigh injury - 25% chance of playing
+- **Frimpong**: a → i — Hamstring injury - Unknown return date
+- **Szoboszlai**: d → i — Hamstring injury - Unknown return date
+- **Semenyo**: a → d — Knee injury - 75% chance of playing
 - **Shaw**: a → d — Unspecified injury - 75% chance of playing
+- **Mainoo**: a → d — Unspecified injury - 75% chance of playing
 - **Livramento**: d → i — Unspecified injury - Expected back 2 Nov
-- **Touré**: a → d — Unspecified injury - 75% chance of playing
 - **Milenković**: i → d — Knee injury - 75% chance of playing
 - **Gibbs-White**: a → d — Muscular injury - 75% chance of playing
-- **Bentancur**: a → s — Suspended until 7 Nov
-- **Meunier**: a → d — Groin injury - 75% chance of playing
 - **Isidor**: a → d — Knock - 50% chance of playing
 - **Chavarria**: a → d — Unspecified injury - 75% chance of playing
 - **Mendy**: a → i — Groin injury - Expected back 31 Oct
 - **Gourna-Douath**: a → i — Calf injury - Expected back 25 Oct
-- **Ruggeri**: a → i — Hamstring injury - Unknown return date
+- **Ruggeri**: d → i — Hamstring injury - Unknown return date
+- **Wan-Bissaka**: a → d — Hamstring injury - 75% chance of playing
 - **Cho**: a → i — Unspecified injury - Expected back 25 Oct
 - **Chilwell**: a → i — Unspecified injury - Unknown return date
 - **Larsson**: a → d — Groin injury - 25% chance of playing
+- **Vaz**: a → d — Achilles injury - 50% chance of playing
