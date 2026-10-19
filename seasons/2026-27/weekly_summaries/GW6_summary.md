@@ -65,8 +65,7 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Injury/Status Watch (last 7 days)
 
-- **Hincapie**: a → i — Ankle injury - Expected back 24 Oct
-- **Zubimendi**: a → d — Unspecified injury - 75% chance of playing
+- **Hincapie**: d → i — Ankle injury - Expected back 24 Oct
 - **Martinez**: a → i — Head injury - Unknown return date
 - **Manzambi**: a → d — Calf injury - 75% chance of playing
 - **Janelt**: a → s — Suspended until 31 Oct
@@ -74,17 +73,27 @@ _(This league doesn't use captaincy multipliers.)_
 - **James**: d → i — Knee injury - Unknown return date
 - **Gusto**: a → d — Illness - 75% chance of playing
 - **Henderson**: i → d — Foot injury - 50% chance of playing
+- **Lukić**: a → d — Groin injury - 75% chance of playing
 - **Sessegnon**: a → s — Suspended until 21 Nov
 - **Struijk**: s → d — Hamstring injury - 75% chance of playing
 - **James**: i → d — Back injury - 50% chance of playing
 - **Frimpong**: a → i — Hamstring injury - Unknown return date
 - **Szoboszlai**: d → i — Hamstring injury - Unknown return date
-- **Semenyo**: a → d — Knee injury - 75% chance of playing
+- **O'Reilly**: a → d — Back injury - 75% chance of playing
+- **Matheus N.**: a → d — Unspecified injury - 75% chance of playing
+- **Semenyo**: a → i — Knee injury - Unknown return date
+- **Sávio**: a → i — Muscular injury - Expected back 7 Nov
+- **Kovačić**: a → d — Unspecified injury - 75% chance of playing
+- **Haaland**: a → d — Unspecified injury - 75% chance of playing
+- **Martinez**: a → d — Thigh injury - 75% chance of playing
 - **Shaw**: a → d — Unspecified injury - 75% chance of playing
 - **Mainoo**: a → d — Unspecified injury - 75% chance of playing
 - **Livramento**: d → i — Unspecified injury - Expected back 2 Nov
-- **Milenković**: i → d — Knee injury - 75% chance of playing
 - **Gibbs-White**: a → d — Muscular injury - 75% chance of playing
+- **Danso**: a → s — Suspended until 31 Oct
+- **Bergvall**: a → i — Knee injury - Expected back 31 Oct
+- **Kulusevski**: i → d — Knee injury - 75% chance of playing
+- **Brobbey**: i → d — Hamstring injury - 75% chance of playing
 - **Isidor**: a → d — Knock - 50% chance of playing
 - **Chavarria**: a → d — Unspecified injury - 75% chance of playing
 - **Mendy**: a → i — Groin injury - Expected back 31 Oct
