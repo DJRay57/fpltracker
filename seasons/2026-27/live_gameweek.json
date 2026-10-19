@@ -1,13 +1,13 @@
 {
-  "state": "live",
-  "sigma": 2.46,
+  "state": "done",
+  "sigma": 2.41,
   "team_rho": 0.1,
   "gameweek": 7,
-  "updated_at": "2026-10-19T16:02:30+00:00",
+  "updated_at": "2026-10-19T21:53:20+00:00",
   "fixtures_total": 10,
-  "fixtures_finished": 9,
-  "fixtures_started": 9,
-  "players_to_play": 6,
+  "fixtures_finished": 10,
+  "fixtures_started": 10,
+  "players_to_play": 0,
   "fixtures": [
     {
       "home_win": 100.0,
@@ -31,30 +31,30 @@
       "away_high": 36
     },
     {
-      "home_win": 99.0,
+      "home_win": 100.0,
       "draw": 0.0,
-      "away_win": 1.0,
+      "away_win": 0.0,
       "home": "Sam Wright",
       "home_team": "Middle court virgins",
-      "home_current": 41,
-      "home_to_play": 1,
-      "home_projection": 44.3,
-      "home_to_come": 3.3,
-      "home_low": 42,
-      "home_high": 49,
+      "home_current": 45,
+      "home_to_play": 0,
+      "home_projection": 45.0,
+      "home_to_come": 0.0,
+      "home_low": 45,
+      "home_high": 45,
       "away": "Alastair Michael",
       "away_team": "Shabbos Sly Boys",
-      "away_current": 27,
-      "away_to_play": 2,
-      "away_projection": 31.9,
-      "away_to_come": 4.9,
-      "away_low": 30,
-      "away_high": 35
+      "away_current": 33,
+      "away_to_play": 0,
+      "away_projection": 33.0,
+      "away_to_come": 0.0,
+      "away_low": 33,
+      "away_high": 33
     },
     {
-      "home_win": 1.0,
+      "home_win": 0.0,
       "draw": 0.0,
-      "away_win": 99.0,
+      "away_win": 100.0,
       "home": "Ash Cross",
       "home_team": "H\u00f8jbjerg\u2019s packet",
       "home_current": 49,
@@ -65,25 +65,25 @@
       "home_high": 49,
       "away": "Ollie Felts",
       "away_team": "FLASHMOB MRCAKEBREAD",
-      "away_current": 49,
-      "away_to_play": 2,
-      "away_projection": 54.9,
-      "away_to_come": 5.9,
-      "away_low": 53,
-      "away_high": 59
+      "away_current": 57,
+      "away_to_play": 0,
+      "away_projection": 57.0,
+      "away_to_come": 0.0,
+      "away_low": 57,
+      "away_high": 57
     },
     {
-      "home_win": 1.0,
+      "home_win": 0.0,
       "draw": 0.0,
-      "away_win": 99.0,
+      "away_win": 100.0,
       "home": "Greg Woodward",
       "home_team": "Sxci_Scorpion_69",
-      "home_current": 31,
-      "home_to_play": 1,
-      "home_projection": 34.0,
-      "home_to_come": 3.0,
-      "home_low": 33,
-      "home_high": 37,
+      "home_current": 32,
+      "home_to_play": 0,
+      "home_projection": 32.0,
+      "home_to_come": 0.0,
+      "home_low": 32,
+      "home_high": 32,
       "away": "Elliott Bennett",
       "away_team": "You're Toast FC",
       "away_current": 52,
@@ -117,6 +117,21 @@
   ],
   "managers": [
     {
+      "manager": "Ollie Felts",
+      "team_name": "FLASHMOB MRCAKEBREAD",
+      "current": 57,
+      "official": 49,
+      "to_play": 0,
+      "projection": 57.0,
+      "proj_low": 57,
+      "proj_high": 57,
+      "to_come": 0.0,
+      "auto_subbed": [
+        "S\u00e1vio"
+      ],
+      "yet_to_play": []
+    },
+    {
       "manager": "Elliott Bennett",
       "team_name": "You're Toast FC",
       "current": 52,
@@ -148,22 +163,6 @@
       "yet_to_play": []
     },
     {
-      "manager": "Ollie Felts",
-      "team_name": "FLASHMOB MRCAKEBREAD",
-      "current": 49,
-      "official": 49,
-      "to_play": 2,
-      "projection": 54.9,
-      "proj_low": 53,
-      "proj_high": 59,
-      "to_come": 5.9,
-      "auto_subbed": [],
-      "yet_to_play": [
-        "S\u00e1vio",
-        "Thomas-Asante"
-      ]
-    },
-    {
       "manager": "Piers Black-Hawkins",
       "team_name": "Really Kick FC",
       "current": 49,
@@ -181,19 +180,17 @@
     {
       "manager": "Sam Wright",
       "team_name": "Middle court virgins",
-      "current": 41,
+      "current": 45,
       "official": 33,
-      "to_play": 1,
-      "projection": 44.3,
-      "proj_low": 42,
-      "proj_high": 49,
-      "to_come": 3.3,
+      "to_play": 0,
+      "projection": 45.0,
+      "proj_low": 45,
+      "proj_high": 45,
+      "to_come": 0.0,
       "auto_subbed": [
         "Gakpo"
       ],
-      "yet_to_play": [
-        "Solanke"
-      ]
+      "yet_to_play": []
     },
     {
       "manager": "Andrew Hutchinson",
@@ -224,35 +221,30 @@
       "yet_to_play": []
     },
     {
-      "manager": "Greg Woodward",
-      "team_name": "Sxci_Scorpion_69",
-      "current": 31,
-      "official": 31,
-      "to_play": 1,
-      "projection": 34.0,
-      "proj_low": 33,
-      "proj_high": 37,
-      "to_come": 3.0,
-      "auto_subbed": [],
-      "yet_to_play": [
-        "Cherif"
-      ]
-    },
-    {
       "manager": "Alastair Michael",
       "team_name": "Shabbos Sly Boys",
-      "current": 27,
+      "current": 33,
       "official": 27,
-      "to_play": 2,
-      "projection": 31.9,
-      "proj_low": 30,
-      "proj_high": 35,
-      "to_come": 4.9,
+      "to_play": 0,
+      "projection": 33.0,
+      "proj_low": 33,
+      "proj_high": 33,
+      "to_come": 0.0,
       "auto_subbed": [],
-      "yet_to_play": [
-        "Kinsky",
-        "Van Hecke"
-      ]
+      "yet_to_play": []
+    },
+    {
+      "manager": "Greg Woodward",
+      "team_name": "Sxci_Scorpion_69",
+      "current": 32,
+      "official": 31,
+      "to_play": 0,
+      "projection": 32.0,
+      "proj_low": 32,
+      "proj_high": 32,
+      "to_come": 0.0,
+      "auto_subbed": [],
+      "yet_to_play": []
     },
     {
       "manager": "chris Purnell",
