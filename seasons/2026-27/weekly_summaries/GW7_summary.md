@@ -65,9 +65,11 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Injury/Status Watch (last 7 days)
 
-- **Hincapie**: d → i — Ankle injury - Expected back 24 Oct
 - **Martinez**: a → i — Head injury - Unknown return date
+- **Maatsen**: i → d — Ankle injury - 75% chance of playing
+- **A.García**: a → u — Has joined Getafe on loan for the rest of the season
 - **Manzambi**: a → d — Calf injury - 75% chance of playing
+- **Kroupi.Jr**: i → d — Foot injury - 50% chance of playing
 - **Janelt**: a → s — Suspended until 31 Oct
 - **Yarmoliuk**: a → s — Suspended until 8 Nov
 - **James**: d → i — Knee injury - Unknown return date
@@ -76,18 +78,22 @@ _(This league doesn't use captaincy multipliers.)_
 - **Henderson**: i → d — Foot injury - 50% chance of playing
 - **Lukić**: a → d — Groin injury - 75% chance of playing
 - **Sessegnon**: a → s — Suspended until 7 Nov
-- **Struijk**: s → d — Hamstring injury - 75% chance of playing
+- **Struijk**: a → d — Hamstring injury - 75% chance of playing
 - **James**: i → d — Back injury - 50% chance of playing
 - **Frimpong**: a → i — Hamstring injury - Unknown return date
 - **Szoboszlai**: d → i — Hamstring injury - Unknown return date
+- **Munoz**: a → d — Knee injury - 75% chance of playing
 - **O'Reilly**: a → d — Back injury - 75% chance of playing
 - **Matheus N.**: a → d — Unspecified injury - 75% chance of playing
 - **Semenyo**: a → i — Knee injury - Unknown return date
 - **Marmoush**: a → d — Calf injury - 75% chance of playing
 - **Sávio**: a → i — Muscular injury - Expected back 7 Nov
 - **Kovačić**: a → d — Unspecified injury - 75% chance of playing
-- **Haaland**: a → d — Unspecified injury - 75% chance of playing
 - **Martinez**: a → d — Thigh injury - 75% chance of playing
+- **Heaven**: a → d — Illness - 75% chance of playing
+- **Shaw**: d → i — Unspecified injury - Unknown return date
+- **Rashford**: a → d — Hip injury - 75% chance of playing
+- **Mainoo**: d → i — Unspecified injury - Expected back 8 Nov
 - **Livramento**: d → i — Unspecified injury - Expected back 2 Nov
 - **Gibbs-White**: a → d — Muscular injury - 75% chance of playing
 - **Danso**: a → s — Suspended until 31 Oct
@@ -98,10 +104,9 @@ _(This league doesn't use captaincy multipliers.)_
 - **Isidor**: a → d — Knock - 50% chance of playing
 - **Chavarria**: a → d — Unspecified injury - 75% chance of playing
 - **Mendy**: a → i — Groin injury - Expected back 31 Oct
-- **Gourna-Douath**: a → i — Calf injury - Expected back 25 Oct
-- **Ruggeri**: d → i — Hamstring injury - Expected back 2 Jan
-- **Wan-Bissaka**: a → d — Hamstring injury - 75% chance of playing
-- **Cho**: a → i — Unspecified injury - Expected back 25 Oct
+- **Gourna-Douath**: a → d — Calf injury - 50% chance of playing
+- **Wan-Bissaka**: a → i — Hamstring injury - Expected back 21 Nov
+- **Cho**: a → d — Unspecified injury - 50% chance of playing
 - **Chilwell**: a → i — Unspecified injury - Unknown return date
 - **Larsson**: a → d — Groin injury - 25% chance of playing
-- **Vaz**: a → d — Achilles injury - 50% chance of playing
+- **Vaz**: a → d — Achilles injury - 75% chance of playing
