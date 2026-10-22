@@ -65,8 +65,8 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Injury/Status Watch (last 7 days)
 
+- **Saka**: a → d — Thigh injury - 50% chance of playing
 - **Martinez**: a → i — Head injury - Unknown return date
-- **Maatsen**: i → d — Ankle injury - 75% chance of playing
 - **A.García**: a → u — Has joined Getafe on loan for the rest of the season
 - **Manzambi**: a → d — Calf injury - 75% chance of playing
 - **Kroupi.Jr**: i → d — Foot injury - 50% chance of playing
@@ -76,7 +76,7 @@ _(This league doesn't use captaincy multipliers.)_
 - **Gusto**: a → d — Illness - 75% chance of playing
 - **Tosin**: a → d — Calf injury - 75% chance of playing
 - **Henderson**: i → d — Foot injury - 50% chance of playing
-- **Lukić**: a → d — Groin injury - 75% chance of playing
+- **Lukić**: a → i — Groin injury - Expected back 23 Oct
 - **Sessegnon**: a → s — Suspended until 7 Nov
 - **Struijk**: a → d — Hamstring injury - 75% chance of playing
 - **James**: i → d — Back injury - 50% chance of playing
@@ -94,8 +94,7 @@ _(This league doesn't use captaincy multipliers.)_
 - **Shaw**: d → i — Unspecified injury - Unknown return date
 - **Rashford**: a → d — Hip injury - 75% chance of playing
 - **Mainoo**: d → i — Unspecified injury - Expected back 8 Nov
-- **Livramento**: d → i — Unspecified injury - Expected back 2 Nov
-- **Gibbs-White**: a → d — Muscular injury - 75% chance of playing
+- **Livramento**: d → i — Knee injury - Expected back 7 Nov
 - **Danso**: a → s — Suspended until 31 Oct
 - **Robertson**: a → d — Foot injury - 75% chance of playing
 - **Udogie**: a → d — Knee injury - 75% chance of playing
@@ -107,6 +106,6 @@ _(This league doesn't use captaincy multipliers.)_
 - **Gourna-Douath**: a → d — Calf injury - 50% chance of playing
 - **Wan-Bissaka**: a → i — Hamstring injury - Expected back 21 Nov
 - **Cho**: a → d — Unspecified injury - 50% chance of playing
-- **Chilwell**: a → i — Unspecified injury - Unknown return date
+- **Timber**: a → d — Hamstring injury - 75% chance of playing
 - **Larsson**: a → d — Groin injury - 25% chance of playing
 - **Vaz**: a → d — Achilles injury - 75% chance of playing
