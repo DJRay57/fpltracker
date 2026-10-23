@@ -1,6 +1,6 @@
 # Live Gameweek — GW8
 
-_State: pre. 0 of 10 matches finished. Updated 2026-10-23 18:48 UTC._
+_State: live. 1 of 10 matches finished. Updated 2026-10-23 23:41 UTC._
 
 _Scores are computed from the live player feed and include provisional bonus, so they can run ahead of the official league table, which settles later._
 
@@ -10,23 +10,23 @@ _Win chances come from simulating the players still to play, drawing their score
 
 | Home | Now | Proj | Win% | Draw% | Away | Now | Proj | Win% |
 |---|---|---|---|---|---|---|---|---|
-| Jason Parmar | 0 | 28.3 | 65% | 3% | Andrew Hutchinson | 0 | 23.2 | 32% |
-| chris Purnell | 0 | 16.4 | 53% | 4% | Greg Woodward | 0 | 15.1 | 43% |
-| Elliott Bennett | 0 | 30.3 | 92% | 1% | Ash Cross | 0 | 15.2 | 7% |
-| Ollie Felts | 0 | 32.0 | 61% | 3% | Sam Wright | 0 | 28.3 | 36% |
-| Alastair Michael | 0 | 27.7 | 37% | 3% | Piers Black-Hawkins | 0 | 31.7 | 60% |
+| Jason Parmar | 8 | 35.3 | 83% | 2% | Andrew Hutchinson | 2 | 23.8 | 15% |
+| chris Purnell | 2 | 18.0 | 27% | 4% | Greg Woodward | 10 | 22.6 | 69% |
+| Elliott Bennett | 0 | 29.9 | 90% | 2% | Ash Cross | 0 | 15.1 | 8% |
+| Ollie Felts | 0 | 32.6 | 63% | 3% | Sam Wright | 0 | 28.0 | 34% |
+| Alastair Michael | 1 | 27.3 | 31% | 3% | Piers Black-Hawkins | 2 | 32.6 | 66% |
 
 ## Live Scores
 
 | Manager | Now | Projection | Players left |
 |---|---|---|---|
-| Jason Parmar | 0 | 28.3 | 11 |
-| Sam Wright | 0 | 28.3 | 11 |
-| Ash Cross | 0 | 15.2 | 11 |
-| Greg Woodward | 0 | 15.1 | 11 |
-| Andrew Hutchinson | 0 | 23.2 | 11 |
-| chris Purnell | 0 | 16.4 | 11 |
-| Elliott Bennett | 0 | 30.3 | 11 |
-| Ollie Felts | 0 | 32.0 | 11 |
-| Alastair Michael | 0 | 27.7 | 11 |
-| Piers Black-Hawkins | 0 | 31.7 | 11 |
+| Greg Woodward | 10 | 22.6 | 9 |
+| Jason Parmar | 8 | 35.3 | 9 |
+| Andrew Hutchinson | 2 | 23.8 | 10 |
+| chris Purnell | 2 | 18.0 | 10 |
+| Piers Black-Hawkins | 2 | 32.6 | 10 |
+| Alastair Michael | 1 | 27.3 | 10 |
+| Sam Wright | 0 | 28.0 | 11 |
+| Ash Cross | 0 | 15.1 | 11 |
+| Elliott Bennett | 0 | 29.9 | 11 |
+| Ollie Felts | 0 | 32.6 | 11 |
