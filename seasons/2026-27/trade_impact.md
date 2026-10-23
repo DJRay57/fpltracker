@@ -137,3 +137,4 @@ _Took effect from a gameweek that hasn't been played yet -- nothing to score unt
 | Andrew Hutchinson | Madueke | Elanga | GW8 |
 | Alastair Michael | Thomas | Pedro Porro | GW8 |
 | Ollie Felts | Andrés | Yalcouyé | GW8 |
+| Sam Wright | Lewis-Potter | Szoboszlai | GW8 |
