@@ -665,12 +665,6 @@
   ],
   "free_agents": [
     {
-      "name": "Ayari",
-      "position": "MID",
-      "team": "BHA",
-      "gw_points": 13
-    },
-    {
       "name": "Iwobi",
       "position": "MID",
       "team": "FUL",
@@ -683,16 +677,22 @@
       "gw_points": 11
     },
     {
-      "name": "Maddison",
-      "position": "MID",
-      "team": "TOT",
-      "gw_points": 9
-    },
-    {
       "name": "Lindel\u00f6f",
       "position": "DEF",
       "team": "AVL",
       "gw_points": 9
+    },
+    {
+      "name": "Lewis-Potter",
+      "position": "MID",
+      "team": "BRE",
+      "gw_points": 9
+    },
+    {
+      "name": "Cash",
+      "position": "DEF",
+      "team": "AVL",
+      "gw_points": 8
     }
   ]
 }

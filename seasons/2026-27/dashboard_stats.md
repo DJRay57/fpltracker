@@ -63,11 +63,11 @@ _If everyone played everyone every week. Strips fixture luck out entirely; the S
 
 | GW7 pts | Player | Pos | Team |
 |---|---|---|---|
-| 13 | Ayari | MID | BHA |
 | 11 | Iwobi | MID | FUL |
 | 11 | Hato | DEF | CHE |
-| 9 | Maddison | MID | TOT |
 | 9 | Lindelöf | DEF | AVL |
+| 9 | Lewis-Potter | MID | BRE |
+| 8 | Cash | DEF | AVL |
 
 ## Trophy Cabinet
 
