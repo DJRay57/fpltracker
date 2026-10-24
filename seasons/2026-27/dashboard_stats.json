@@ -683,15 +683,15 @@
       "gw_points": 9
     },
     {
-      "name": "Lewis-Potter",
-      "position": "MID",
-      "team": "BRE",
-      "gw_points": 9
-    },
-    {
       "name": "Cash",
       "position": "DEF",
       "team": "AVL",
+      "gw_points": 8
+    },
+    {
+      "name": "Bassey",
+      "position": "DEF",
+      "team": "FUL",
       "gw_points": 8
     }
   ]

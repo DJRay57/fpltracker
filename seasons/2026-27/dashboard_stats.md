@@ -66,8 +66,8 @@ _If everyone played everyone every week. Strips fixture luck out entirely; the S
 | 11 | Iwobi | MID | FUL |
 | 11 | Hato | DEF | CHE |
 | 9 | Lindelöf | DEF | AVL |
-| 9 | Lewis-Potter | MID | BRE |
 | 8 | Cash | DEF | AVL |
+| 8 | Bassey | DEF | FUL |
 
 ## Trophy Cabinet
 

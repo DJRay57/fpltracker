@@ -52,55 +52,65 @@ _(This league doesn't use captaincy multipliers.)_
 - **ADDED**: Maddison → Andrew Hutchinson
 - **ADDED**: Ajer → Sam Wright
 - **ADDED**: Madueke → Andrew Hutchinson
+- **ADDED**: Lewis-Potter → Sam Wright
 - **ADDED**: Ndiaye → Elliott Bennett
 - **ADDED**: Kulusevski → Ollie Felts
 - **ADDED**: Thomas → Alastair Michael
 - **ADDED**: Ayari → Alastair Michael
 - **ADDED**: Andrés → Ollie Felts
 - **ADDED**: Flemming → Ollie Felts
+- **DROPPED**: Buendía (was Alastair Michael)
+- **DROPPED**: Frimpong (was Andrew Hutchinson)
+- **DROPPED**: Sarr (was Elliott Bennett)
+- **DROPPED**: Szoboszlai (was Sam Wright)
+- **DROPPED**: Isidor (was Ollie Felts)
+- **DROPPED**: Pedro Porro (was Alastair Michael)
+- **DROPPED**: Elanga (was Andrew Hutchinson)
+- **DROPPED**: E.Le Fée (was Andrew Hutchinson)
+- **DROPPED**: Sávio (was Ollie Felts)
+- **DROPPED**: Khalaili (was Sam Wright)
+- **DROPPED**: Yalcouyé (was Ollie Felts)
 
 ## Injury/Status Watch (last 7 days)
 
+- **Hincapie**: i → d — Ankle injury - 75% chance of playing
 - **Saka**: a → i — Thigh injury - Unknown return date
 - **Martinez**: a → i — Head injury - Unknown return date
 - **A.García**: a → u — Has joined Getafe on loan for the rest of the season
-- **Manzambi**: a → d — Calf injury - 75% chance of playing
 - **Tóth.A**: a → i — Hamstring injury - Unknown return date
 - **Kroupi.Jr**: i → d — Foot injury - 75% chance of playing
 - **Janelt**: a → s — Suspended until 31 Oct
 - **Yarmoliuk**: a → s — Suspended until 8 Nov
 - **Minteh**: i → d — Leg injury - 50% chance of playing
 - **Wieffer**: i → d — Knee injury - 25% chance of playing
-- **Henderson**: i → d — Foot injury - 50% chance of playing
+- **Strand Larsen**: a → d — Unspecified injury - 75% chance of playing
 - **Smith Rowe**: a → d — Knock - 75% chance of playing
-- **Lukić**: a → i — Groin injury - Expected back 23 Oct
+- **Lukić**: a → i — Groin injury - Unknown return date
 - **Sessegnon**: a → s — Suspended until 7 Nov
-- **Struijk**: a → d — Hamstring injury - 75% chance of playing
 - **Stach**: a → d — Foot injury - 50% chance of playing
 - **Okafor**: a → d — Thigh injury - 50% chance of playing
-- **James**: i → d — Back injury - 50% chance of playing
 - **Calvert-Lewin**: a → d — Foot injury - 50% chance of playing
 - **Frimpong**: a → i — Hamstring injury - Unknown return date
 - **Szoboszlai**: d → i — Hamstring injury - Unknown return date
 - **Munoz**: a → d — Knee injury - 25% chance of playing
-- **O'Reilly**: a → d — Back injury - 75% chance of playing
 - **Matheus N.**: a → d — Unspecified injury - 75% chance of playing
 - **Semenyo**: a → i — Knee injury - Unknown return date
 - **Sávio**: a → i — Muscular injury - Expected back 7 Nov
-- **Kovačić**: a → d — Unspecified injury - 75% chance of playing
 - **Martinez**: a → d — Thigh injury - 75% chance of playing
-- **Heaven**: a → d — Illness - 75% chance of playing
 - **Shaw**: d → i — Unspecified injury - Unknown return date
 - **Rashford**: a → d — Hip injury - 75% chance of playing
 - **Mainoo**: d → i — Unspecified injury - Expected back 8 Nov
-- **Livramento**: d → i — Knee injury - Expected back 7 Nov
+- **Elanga**: i → d — Hamstring injury - 75% chance of playing
+- **N.Williams**: a → d — Arm injury - 75% chance of playing
 - **Danso**: a → s — Suspended until 31 Oct
 - **Udogie**: a → i — Knee injury - Unknown return date
+- **Maddison**: a → d — Unspecified injury - 75% chance of playing
 - **Bergvall**: a → i — Knee injury - Expected back 31 Oct
 - **Brobbey**: a → d — Hamstring injury - 75% chance of playing
-- **Chavarria**: a → i — Unspecified injury - Expected back 31 Oct
+- **Chavarria**: d → i — Unspecified injury - Expected back 31 Oct
 - **Gourna-Douath**: i → d — Calf injury - 75% chance of playing
 - **Wan-Bissaka**: a → i — Hamstring injury - Expected back 21 Nov
-- **Cho**: a → d — Unspecified injury - 75% chance of playing
+- **Cho**: i → d — Unspecified injury - 75% chance of playing
 - **Timber**: a → d — Hamstring injury - 75% chance of playing
 - **Vaz**: a → d — Achilles injury - 75% chance of playing
+- **Fernandez-Pardo**: a → d — Illness - 75% chance of playing
