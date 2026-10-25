@@ -73,35 +73,31 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Injury/Status Watch (last 7 days)
 
-- **Hincapie**: i → d — Ankle injury - 75% chance of playing
+- **Calafiori**: a → d — Hip injury - 75% chance of playing
 - **Saka**: a → i — Thigh injury - Unknown return date
-- **Martinez**: a → i — Head injury - Unknown return date
 - **A.García**: a → u — Has joined Getafe on loan for the rest of the season
 - **Tóth.A**: a → i — Hamstring injury - Unknown return date
-- **Kroupi.Jr**: i → d — Foot injury - 75% chance of playing
-- **Janelt**: a → s — Suspended until 31 Oct
-- **Yarmoliuk**: a → s — Suspended until 8 Nov
 - **Minteh**: i → d — Leg injury - 50% chance of playing
 - **Wieffer**: i → d — Knee injury - 25% chance of playing
+- **João Pedro**: a → d — Unspecified injury - 75% chance of playing
+- **Thomas**: a → d — Unspecified injury - 75% chance of playing
 - **Strand Larsen**: a → d — Unspecified injury - 75% chance of playing
+- **Mykolenko**: a → d — Unspecified injury - 75% chance of playing
+- **Grealish**: a → d — Illness - 75% chance of playing
 - **Smith Rowe**: a → d — Knock - 75% chance of playing
 - **Lukić**: a → i — Groin injury - Unknown return date
-- **Sessegnon**: a → s — Suspended until 7 Nov
 - **Stach**: a → d — Foot injury - 50% chance of playing
 - **Okafor**: a → d — Thigh injury - 50% chance of playing
 - **Calvert-Lewin**: a → d — Foot injury - 50% chance of playing
-- **Frimpong**: a → i — Hamstring injury - Unknown return date
-- **Szoboszlai**: d → i — Hamstring injury - Unknown return date
 - **Munoz**: a → d — Knee injury - 25% chance of playing
 - **Matheus N.**: a → d — Unspecified injury - 75% chance of playing
-- **Semenyo**: a → i — Knee injury - Unknown return date
+- **Semenyo**: d → i — Knee injury - Unknown return date
 - **Sávio**: a → i — Muscular injury - Expected back 7 Nov
-- **Martinez**: a → d — Thigh injury - 75% chance of playing
 - **Shaw**: d → i — Unspecified injury - Unknown return date
 - **Rashford**: a → d — Hip injury - 75% chance of playing
 - **Mainoo**: d → i — Unspecified injury - Expected back 8 Nov
-- **Elanga**: i → d — Hamstring injury - 75% chance of playing
 - **N.Williams**: a → d — Arm injury - 75% chance of playing
+- **Dominguez**: a → d — Muscular injury - 75% chance of playing
 - **Danso**: a → s — Suspended until 31 Oct
 - **Udogie**: a → i — Knee injury - Unknown return date
 - **Maddison**: a → d — Unspecified injury - 75% chance of playing
@@ -109,8 +105,6 @@ _(This league doesn't use captaincy multipliers.)_
 - **Brobbey**: a → d — Hamstring injury - 75% chance of playing
 - **Chavarria**: d → i — Unspecified injury - Expected back 31 Oct
 - **Gourna-Douath**: i → d — Calf injury - 75% chance of playing
-- **Wan-Bissaka**: a → i — Hamstring injury - Expected back 21 Nov
-- **Cho**: i → d — Unspecified injury - 75% chance of playing
+- **Wan-Bissaka**: d → i — Hamstring injury - Expected back 21 Nov
 - **Timber**: a → d — Hamstring injury - 75% chance of playing
-- **Vaz**: a → d — Achilles injury - 75% chance of playing
 - **Fernandez-Pardo**: a → d — Illness - 75% chance of playing
