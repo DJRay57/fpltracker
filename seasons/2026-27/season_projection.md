@@ -12,5 +12,5 @@ _Monte Carlo simulation. Gameweeks already played are exact. For the rest, each 
 | chris Purnell | 6.0 | 8% | 75% | 16% |
 | Andrew Hutchinson | 6.3 | 7% | 71% | 22% |
 | Ash Cross | 8.0 | 0% | 26% | 74% |
-| Elliott Bennett | 8.3 | 0% | 18% | 81% |
+| Elliott Bennett | 8.3 | 0% | 18% | 82% |
 | Greg Woodward | 9.8 | 0% | 1% | 99% |
