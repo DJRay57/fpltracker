@@ -82,6 +82,7 @@ _(This league doesn't use captaincy multipliers.)_
 - **Wieffer**: i → d — Knee injury - 25% chance of playing
 - **João Pedro**: a → d — Unspecified injury - 75% chance of playing
 - **Thomas**: a → d — Unspecified injury - 75% chance of playing
+- **Sarr**: a → d — Groin injury - 75% chance of playing
 - **Strand Larsen**: a → d — Unspecified injury - 75% chance of playing
 - **Mykolenko**: a → d — Unspecified injury - 75% chance of playing
 - **Grealish**: a → d — Illness - 75% chance of playing
@@ -94,7 +95,7 @@ _(This league doesn't use captaincy multipliers.)_
 - **Mainoo**: d → i — Unspecified injury - Expected back 8 Nov
 - **N.Williams**: a → d — Arm injury - 75% chance of playing
 - **Dominguez**: a → d — Muscular injury - 75% chance of playing
-- **Udogie**: a → i — Knee injury - Unknown return date
+- **Udogie**: d → i — Knee injury - Unknown return date
 - **Maddison**: a → d — Unspecified injury - 75% chance of playing
 - **Chavarria**: d → i — Unspecified injury - Expected back 31 Oct
 - **Gourna-Douath**: i → d — Calf injury - 75% chance of playing
