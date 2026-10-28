@@ -75,32 +75,30 @@ _(This league doesn't use captaincy multipliers.)_
 
 - **Calafiori**: a → d — Hip injury - 75% chance of playing
 - **Saka**: a → i — Thigh injury - Unknown return date
-- **A.García**: a → u — Has joined Getafe on loan for the rest of the season
+- **Rice**: a → d — Unspecified injury - 75% chance of playing
+- **Madueke**: a → d — Ankle injury - 75% chance of playing
+- **Dowman**: a → s — Suspended until 29 Nov
 - **Tóth.A**: a → i — Hamstring injury - Unknown return date
+- **Henry**: a → i — Hip injury - Unknown return date
 - **F.Kadıoğlu**: a → d — Hip injury - 75% chance of playing
-- **Minteh**: i → d — Leg injury - 50% chance of playing
-- **Wieffer**: i → d — Knee injury - 25% chance of playing
-- **João Pedro**: a → d — Unspecified injury - 75% chance of playing
+- **Minteh**: i → d — Leg injury - 75% chance of playing
+- **Wieffer**: i → d — Knee injury - 75% chance of playing
+- **João Pedro**: a → i — Thigh injury - Unknown return date
 - **Thomas**: a → d — Unspecified injury - 75% chance of playing
 - **Sarr**: a → d — Groin injury - 75% chance of playing
-- **Strand Larsen**: a → d — Unspecified injury - 75% chance of playing
+- **Strand Larsen**: a → d — Ankle injury - 75% chance of playing
 - **Mykolenko**: a → d — Unspecified injury - 75% chance of playing
 - **Grealish**: a → d — Illness - 75% chance of playing
 - **Smith Rowe**: a → d — Knock - 75% chance of playing
 - **Lukić**: d → i — Groin injury - Unknown return date
 - **Wirtz**: a → d — Ankle injury - 75% chance of playing
-- **Munoz**: a → d — Knee injury - 25% chance of playing
-- **Shaw**: d → i — Unspecified injury - Unknown return date
-- **Rashford**: a → d — Hip injury - 75% chance of playing
-- **Mainoo**: d → i — Unspecified injury - Expected back 8 Nov
+- **L.Miley**: a → d — Muscular injury - 75% chance of playing
 - **N.Williams**: a → d — Arm injury - 75% chance of playing
 - **Dominguez**: a → d — Muscular injury - 75% chance of playing
 - **Udogie**: d → i — Knee injury - Unknown return date
 - **Maddison**: a → d — Unspecified injury - 75% chance of playing
 - **Chavarria**: d → i — Unspecified injury - Expected back 31 Oct
-- **Gourna-Douath**: i → d — Calf injury - 75% chance of playing
 - **Elvedi**: a → d — Illness - 75% chance of playing
-- **Wan-Bissaka**: d → i — Hamstring injury - Expected back 21 Nov
-- **Andrés**: a → d — Thigh injury - 75% chance of playing
+- **Andrés**: a → d — Hip injury - 75% chance of playing
 - **Timber**: a → d — Hamstring injury - 75% chance of playing
 - **Fernandez-Pardo**: a → d — Illness - 75% chance of playing
