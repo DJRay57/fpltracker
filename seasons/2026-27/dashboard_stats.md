@@ -63,11 +63,11 @@ _If everyone played everyone every week. Strips fixture luck out entirely; the S
 
 | GW8 pts | Player | Pos | Team |
 |---|---|---|---|
-| 11 | Hill | DEF | BOU |
 | 11 | Bobb | MID | FUL |
 | 11 | Tel | MID | TOT |
-| 11 | Dedić | DEF | NEW |
-| 10 | Rayan | MID | BOU |
+| 10 | O.Dango | MID | BRE |
+| 10 | Enciso | MID | IPS |
+| 9 | O'Nien | DEF | SUN |
 
 ## Trophy Cabinet
 

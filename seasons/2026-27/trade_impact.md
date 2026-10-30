@@ -131,3 +131,23 @@ _Every accepted waiver move, scored from the gameweek it took effect onward: poi
 | -21 | Ollie Felts | Sávio (10) | Manzambi (31) | GW1 |
 | -28 | Jason Parmar | Martinelli (0) | Xhaka (28) | GW1 |
 | -42 | Ollie Felts | David (1) | Kostoulas (43) | GW1 |
+
+## Pending
+
+_Took effect from a gameweek that hasn't been played yet -- nothing to score until it has._
+
+| Manager | In | Out | Effective |
+|---|---|---|---|
+| chris Purnell | Tonali | Enzo | GW9 |
+| Greg Woodward | Osula | Šeško | GW9 |
+| Greg Woodward | Penders | Martinez | GW9 |
+| Ash Cross | Hill | Ballard | GW9 |
+| Jason Parmar | Rudoni | Grealish | GW9 |
+| Ollie Felts | McGinn | Kulusevski | GW9 |
+| Alastair Michael | Hato | Thomas | GW9 |
+| Sam Wright | Rayan | Lewis-Potter | GW9 |
+| Elliott Bennett | Dedić | Aina | GW9 |
+| Andrew Hutchinson | Kroupi.Jr | Maddison | GW9 |
+| Alastair Michael | Buendía | Stach | GW9 |
+| Sam Wright | Robertson | Branthwaite | GW9 |
+| Ollie Felts | Lindelöf | Lacroix | GW9 |

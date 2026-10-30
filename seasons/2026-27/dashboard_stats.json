@@ -676,12 +676,6 @@
   ],
   "free_agents": [
     {
-      "name": "Hill",
-      "position": "DEF",
-      "team": "BOU",
-      "gw_points": 11
-    },
-    {
       "name": "Bobb",
       "position": "MID",
       "team": "FUL",
@@ -694,16 +688,22 @@
       "gw_points": 11
     },
     {
-      "name": "Dedi\u0107",
-      "position": "DEF",
-      "team": "NEW",
-      "gw_points": 11
+      "name": "O.Dango",
+      "position": "MID",
+      "team": "BRE",
+      "gw_points": 10
     },
     {
-      "name": "Rayan",
+      "name": "Enciso",
       "position": "MID",
-      "team": "BOU",
+      "team": "IPS",
       "gw_points": 10
+    },
+    {
+      "name": "O'Nien",
+      "position": "DEF",
+      "team": "SUN",
+      "gw_points": 9
     }
   ]
 }

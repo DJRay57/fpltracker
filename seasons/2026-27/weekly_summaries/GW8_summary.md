@@ -48,57 +48,46 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Waiver Wire Activity (last 7 days)
 
-- **ADDED**: Castagne → Andrew Hutchinson
-- **ADDED**: Maddison → Andrew Hutchinson
-- **ADDED**: Ajer → Sam Wright
-- **ADDED**: Madueke → Andrew Hutchinson
-- **ADDED**: Lewis-Potter → Sam Wright
-- **ADDED**: Ndiaye → Elliott Bennett
-- **ADDED**: Kulusevski → Ollie Felts
-- **ADDED**: Thomas → Alastair Michael
-- **ADDED**: Ayari → Alastair Michael
-- **ADDED**: Andrés → Ollie Felts
-- **ADDED**: Flemming → Ollie Felts
-- **DROPPED**: Buendía (was Alastair Michael)
-- **DROPPED**: Frimpong (was Andrew Hutchinson)
-- **DROPPED**: Sarr (was Elliott Bennett)
+- **ADDED**: Robertson → Sam Wright
+- **ADDED**: McGinn → Ollie Felts
+- **ADDED**: Lindelöf → Ollie Felts
+- **ADDED**: Tonali → chris Purnell
+- **ADDED**: Hill → Ash Cross
+- **ADDED**: Rudoni → Jason Parmar
+- **ADDED**: Rayan → Sam Wright
+- **ADDED**: Osula → Greg Woodward
+- **ADDED**: Penders → Greg Woodward
+- **ADDED**: Hato → Alastair Michael
+- **ADDED**: Kroupi.Jr → Andrew Hutchinson
+- **ADDED**: Dedić → Elliott Bennett
 - **DROPPED**: Szoboszlai (was Sam Wright)
-- **DROPPED**: Isidor (was Ollie Felts)
-- **DROPPED**: Pedro Porro (was Alastair Michael)
-- **DROPPED**: Elanga (was Andrew Hutchinson)
-- **DROPPED**: E.Le Fée (was Andrew Hutchinson)
-- **DROPPED**: Sávio (was Ollie Felts)
-- **DROPPED**: Khalaili (was Sam Wright)
-- **DROPPED**: Yalcouyé (was Ollie Felts)
 
 ## Injury/Status Watch (last 7 days)
 
 - **Calafiori**: a → d — Hip injury - 75% chance of playing
-- **Saka**: d → i — Thigh injury - Unknown return date
 - **Rice**: a → d — Unspecified injury - 75% chance of playing
-- **Madueke**: a → d — Ankle injury - 75% chance of playing
+- **Madueke**: a → d — Ankle injury - 50% chance of playing
 - **Dowman**: a → s — Suspended until 29 Nov
-- **Tóth.A**: a → i — Hamstring injury - Unknown return date
 - **Henry**: a → i — Hip injury - Unknown return date
+- **Carvalho**: a → i — Knock - Expected back 23 Nov
 - **F.Kadıoğlu**: a → d — Hip injury - 75% chance of playing
+- **Gusto**: a → d — Unspecified injury - 75% chance of playing
+- **Tosin**: a → i — Calf injury - Unknown return date
+- **Hato**: a → i — Unspecified injury - Unknown return date
 - **João Pedro**: a → i — Thigh injury - Unknown return date
-- **Thomas**: a → d — Unspecified injury - 75% chance of playing
-- **Lacroix**: a → d — Hamstring injury - 75% chance of playing
+- **Thomas**: a → d — Calf injury - 50% chance of playing
+- **Lacroix**: a → i — Hamstring injury - Unknown return date
 - **Sarr**: a → i — Groin injury - Expected back 8 Nov
 - **Strand Larsen**: a → d — Ankle injury - 75% chance of playing
-- **Mykolenko**: a → d — Unspecified injury - 75% chance of playing
-- **Grealish**: a → d — Illness - 75% chance of playing
-- **Smith Rowe**: a → d — Knock - 75% chance of playing
 - **Butland**: i → d — Arm injury - 50% chance of playing
 - **Struijk**: d → i — Hamstring injury - Expected back 8 Nov
-- **Stach**: a → d — Foot injury - 50% chance of playing
+- **Szoboszlai**: i → d — Hamstring injury - 50% chance of playing
 - **Mainoo**: i → d — Unspecified injury - 25% chance of playing
 - **L.Miley**: a → d — Muscular injury - 75% chance of playing
+- **Osula**: a → d — Ankle injury - 50% chance of playing
 - **Ndoye**: a → d — Hamstring injury - 50% chance of playing
 - **Dominguez**: a → d — Muscular injury - 75% chance of playing
-- **Udogie**: d → i — Knee injury - Unknown return date
-- **Maddison**: a → d — Unspecified injury - 75% chance of playing
-- **Chavarria**: d → i — Unspecified injury - Expected back 31 Oct
+- **Mukiele**: a → d — Knock - 75% chance of playing
+- **Tzolis**: i → d — Hamstring injury - 75% chance of playing
 - **Andrés**: a → d — Hip injury - 75% chance of playing
-- **Affengruber**: a → d — Unspecified injury - 75% chance of playing
 - **Fernandez-Pardo**: a → d — Illness - 75% chance of playing
