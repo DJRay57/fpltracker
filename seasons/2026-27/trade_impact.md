@@ -151,3 +151,4 @@ _Took effect from a gameweek that hasn't been played yet -- nothing to score unt
 | Alastair Michael | Buendía | Stach | GW9 |
 | Sam Wright | Robertson | Branthwaite | GW9 |
 | Ollie Felts | Lindelöf | Lacroix | GW9 |
+| Piers Black-Hawkins | Szoboszlai | Hinshelwood | GW9 |
