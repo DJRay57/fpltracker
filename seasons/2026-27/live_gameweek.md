@@ -1,6 +1,6 @@
 # Live Gameweek — GW9
 
-_State: live. 6 of 10 matches finished. Updated 2026-10-31 18:56 UTC._
+_State: live. 8 of 10 matches finished. Updated 2026-10-31 23:52 UTC._
 
 _Scores are computed from the live player feed and include provisional bonus, so they can run ahead of the official league table, which settles later._
 
@@ -10,23 +10,23 @@ _Win chances come from simulating the players still to play, drawing their score
 
 | Home | Now | Proj | Win% | Draw% | Away | Now | Proj | Win% |
 |---|---|---|---|---|---|---|---|---|
-| chris Purnell | 12 | 29.2 | 2% | 1% | Jason Parmar | 37 | 42.8 | 97% |
-| Elliott Bennett | 21 | 38.5 | 54% | 5% | Andrew Hutchinson | 21 | 37.4 | 41% |
-| Ollie Felts | 15 | 38.5 | 9% | 2% | Greg Woodward | 36 | 47.8 | 89% |
-| Alastair Michael | 41 | 52.2 | 99% | 0% | Ash Cross | 13 | 27.6 | 1% |
-| Piers Black-Hawkins | 24 | 34.5 | 1% | 0% | Sam Wright | 58 | 62.3 | 99% |
+| chris Purnell | 21 | 33.3 | 7% | 3% | Jason Parmar | 37 | 40.3 | 90% |
+| Elliott Bennett | 30 | 42.3 | 83% | 3% | Andrew Hutchinson | 23 | 36.0 | 14% |
+| Ollie Felts | 17 | 29.1 | 1% | 0% | Greg Woodward | 34 | 43.7 | 99% |
+| Alastair Michael | 50 | 59.0 | 99% | 0% | Ash Cross | 14 | 24.6 | 1% |
+| Piers Black-Hawkins | 24 | 34.4 | 1% | 0% | Sam Wright | 57 | 61.1 | 99% |
 
 ## Live Scores
 
 | Manager | Now | Projection | Players left |
 |---|---|---|---|
-| Sam Wright | 58 | 62.3 | 4 |
-| Alastair Michael | 41 | 52.2 | 4 |
-| Jason Parmar | 37 | 42.8 | 3 |
-| Greg Woodward | 36 | 47.8 | 4 |
-| Piers Black-Hawkins | 24 | 34.5 | 3 |
-| Andrew Hutchinson | 21 | 37.4 | 5 |
-| Elliott Bennett | 21 | 38.5 | 5 |
-| Ollie Felts | 15 | 38.5 | 6 |
-| Ash Cross | 13 | 27.6 | 5 |
-| chris Purnell | 12 | 29.2 | 8 |
+| Sam Wright | 57 | 61.1 | 2 |
+| Alastair Michael | 50 | 59.0 | 2 |
+| Jason Parmar | 37 | 40.3 | 1 |
+| Greg Woodward | 34 | 43.7 | 2 |
+| Elliott Bennett | 30 | 42.3 | 3 |
+| Piers Black-Hawkins | 24 | 34.4 | 3 |
+| Andrew Hutchinson | 23 | 36.0 | 4 |
+| chris Purnell | 21 | 33.3 | 6 |
+| Ollie Felts | 17 | 29.1 | 3 |
+| Ash Cross | 14 | 24.6 | 3 |
