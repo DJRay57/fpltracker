@@ -694,15 +694,15 @@
       "gw_points": 10
     },
     {
-      "name": "Enciso",
-      "position": "MID",
-      "team": "IPS",
-      "gw_points": 10
-    },
-    {
       "name": "O'Nien",
       "position": "DEF",
       "team": "SUN",
+      "gw_points": 9
+    },
+    {
+      "name": "Iroegbunam",
+      "position": "MID",
+      "team": "HUL",
       "gw_points": 9
     }
   ]

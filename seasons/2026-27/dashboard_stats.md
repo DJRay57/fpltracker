@@ -66,8 +66,8 @@ _If everyone played everyone every week. Strips fixture luck out entirely; the S
 | 11 | Bobb | MID | FUL |
 | 11 | Tel | MID | TOT |
 | 10 | O.Dango | MID | BRE |
-| 10 | Enciso | MID | IPS |
 | 9 | O'Nien | DEF | SUN |
+| 9 | Iroegbunam | MID | HUL |
 
 ## Trophy Cabinet
 
