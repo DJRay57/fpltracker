@@ -79,29 +79,29 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Injury/Status Watch (last 7 days)
 
-- **Calafiori**: a → d — Hip injury - 75% chance of playing
-- **Rice**: a → d — Unspecified injury - 75% chance of playing
-- **Madueke**: a → d — Ankle injury - 50% chance of playing
 - **Dowman**: a → s — Suspended until 29 Nov
+- **Cash**: a → s — Suspended until 21 Nov
 - **Henry**: a → i — Hip injury - Unknown return date
 - **Carvalho**: a → i — Knock - Expected back 23 Nov
 - **Henderson**: a → d — Illness - 75% chance of playing
 - **F.Kadıoğlu**: a → d — Hip injury - 75% chance of playing
 - **Tosin**: a → i — Calf injury - Unknown return date
 - **Hato**: a → i — Unspecified injury - Unknown return date
-- **João Pedro**: a → i — Thigh injury - Unknown return date
-- **Thomas**: a → d — Calf injury - 50% chance of playing
+- **João Pedro**: d → i — Thigh injury - Unknown return date
 - **Lacroix**: a → i — Hamstring injury - Unknown return date
 - **Sarr**: a → i — Groin injury - Expected back 8 Nov
+- **Mateta**: a → s — Suspended until 2 Dec
 - **Branthwaite**: a → d — Concussion - 75% chance of playing
 - **Lukić**: i → d — Groin injury - 75% chance of playing
 - **Butland**: i → d — Arm injury - 50% chance of playing
+- **Crooks**: a → s — Suspended until 22 Nov
 - **Struijk**: d → i — Hamstring injury - Expected back 8 Nov
 - **Szoboszlai**: i → d — Hamstring injury - 50% chance of playing
-- **Martinez**: d → s — Suspended until 22 Nov
+- **Martinez**: a → s — Suspended until 22 Nov
+- **Amad**: a → d — Calf injury - 75% chance of playing
 - **L.Miley**: a → d — Muscular injury - 75% chance of playing
 - **Osula**: a → d — Ankle injury - 50% chance of playing
-- **Dominguez**: a → d — Muscular injury - 75% chance of playing
-- **Mukiele**: a → d — Knock - 75% chance of playing
-- **Tzolis**: i → d — Hamstring injury - 75% chance of playing
+- **Mukiele**: a → d — Concussion - 75% chance of playing
+- **Alderete**: a → s — Suspended until 21 Nov
+- **Diarra**: a → d — Muscular injury - 75% chance of playing
 - **Anselmino**: a → i — Unspecified injury - Unknown return date

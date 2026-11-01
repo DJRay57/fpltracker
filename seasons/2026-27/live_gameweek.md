@@ -1,6 +1,6 @@
 # Live Gameweek — GW9
 
-_State: live. 8 of 10 matches finished. Updated 2026-10-31 23:52 UTC._
+_State: live. 8 of 10 matches finished. Updated 2026-11-01 15:37 UTC._
 
 _Scores are computed from the live player feed and include provisional bonus, so they can run ahead of the official league table, which settles later._
 
