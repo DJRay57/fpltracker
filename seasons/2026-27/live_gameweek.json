@@ -1,26 +1,26 @@
 {
   "state": "live",
-  "sigma": 2.38,
+  "sigma": 2.35,
   "team_rho": 0.1,
   "gameweek": 9,
-  "updated_at": "2026-11-01T15:37:18+00:00",
+  "updated_at": "2026-11-01T21:30:44+00:00",
   "fixtures_total": 10,
-  "fixtures_finished": 8,
-  "fixtures_started": 8,
-  "players_to_play": 29,
+  "fixtures_finished": 9,
+  "fixtures_started": 9,
+  "players_to_play": 12,
   "fixtures": [
     {
-      "home_win": 7.0,
-      "draw": 3.0,
-      "away_win": 90.0,
+      "home_win": 60.0,
+      "draw": 15.0,
+      "away_win": 25.0,
       "home": "chris Purnell",
       "home_team": "Gary fishcake  fc",
-      "home_current": 21,
-      "home_to_play": 6,
-      "home_projection": 33.3,
-      "home_to_come": 12.3,
-      "home_low": 28,
-      "home_high": 39,
+      "home_current": 36,
+      "home_to_play": 3,
+      "home_projection": 41.8,
+      "home_to_come": 5.8,
+      "home_low": 39,
+      "home_high": 46,
       "away": "Jason Parmar",
       "away_team": "Pain in Diaz",
       "away_current": 37,
@@ -31,25 +31,25 @@
       "away_high": 43
     },
     {
-      "home_win": 83.0,
-      "draw": 3.0,
-      "away_win": 14.0,
+      "home_win": 99.0,
+      "draw": 0.0,
+      "away_win": 1.0,
       "home": "Elliott Bennett",
       "home_team": "You're Toast FC",
-      "home_current": 30,
-      "home_to_play": 3,
-      "home_projection": 42.3,
-      "home_to_come": 12.3,
+      "home_current": 31,
+      "home_to_play": 2,
+      "home_projection": 41.6,
+      "home_to_come": 10.6,
       "home_low": 38,
-      "home_high": 47,
+      "home_high": 46,
       "away": "Andrew Hutchinson",
       "away_team": "Inter Da Pub",
-      "away_current": 23,
-      "away_to_play": 4,
-      "away_projection": 36.0,
-      "away_to_come": 13.0,
-      "away_low": 29,
-      "away_high": 43
+      "away_current": 30,
+      "away_to_play": 1,
+      "away_projection": 32.8,
+      "away_to_come": 2.8,
+      "away_low": 31,
+      "away_high": 36
     },
     {
       "home_win": 1.0,
@@ -57,20 +57,20 @@
       "away_win": 99.0,
       "home": "Ollie Felts",
       "home_team": "FLASHMOB MRCAKEBREAD",
-      "home_current": 17,
-      "home_to_play": 3,
-      "home_projection": 29.1,
-      "home_to_come": 12.1,
-      "home_low": 23,
-      "home_high": 36,
+      "home_current": 29,
+      "home_to_play": 1,
+      "home_projection": 31.9,
+      "home_to_come": 2.9,
+      "home_low": 30,
+      "home_high": 35,
       "away": "Greg Woodward",
       "away_team": "Sxci_Scorpion_69",
-      "away_current": 34,
-      "away_to_play": 2,
-      "away_projection": 43.7,
-      "away_to_come": 9.7,
-      "away_low": 42,
-      "away_high": 44
+      "away_current": 35,
+      "away_to_play": 1,
+      "away_projection": 40.7,
+      "away_to_come": 5.7,
+      "away_low": 41,
+      "away_high": 41
     },
     {
       "home_win": 99.0,
@@ -78,20 +78,20 @@
       "away_win": 1.0,
       "home": "Alastair Michael",
       "home_team": "Shabbos Sly Boys",
-      "home_current": 50,
-      "home_to_play": 2,
+      "home_current": 59,
+      "home_to_play": 0,
       "home_projection": 59.0,
-      "home_to_come": 9.0,
-      "home_low": 53,
-      "home_high": 65,
+      "home_to_come": 0.0,
+      "home_low": 59,
+      "home_high": 59,
       "away": "Ash Cross",
       "away_team": "H\u00f8jbjerg\u2019s packet",
-      "away_current": 14,
-      "away_to_play": 3,
-      "away_projection": 24.6,
-      "away_to_come": 10.6,
-      "away_low": 21,
-      "away_high": 29
+      "away_current": 28,
+      "away_to_play": 1,
+      "away_projection": 29.4,
+      "away_to_come": 1.4,
+      "away_low": 29,
+      "away_high": 31
     },
     {
       "home_win": 1.0,
@@ -99,56 +99,50 @@
       "away_win": 99.0,
       "home": "Piers Black-Hawkins",
       "home_team": "Really Kick FC",
-      "home_current": 24,
-      "home_to_play": 3,
-      "home_projection": 34.4,
-      "home_to_come": 10.4,
-      "home_low": 29,
-      "home_high": 40,
+      "home_current": 37,
+      "home_to_play": 2,
+      "home_projection": 43.5,
+      "home_to_come": 6.5,
+      "home_low": 40,
+      "home_high": 48,
       "away": "Sam Wright",
       "away_team": "Middle court virgins",
-      "away_current": 57,
-      "away_to_play": 2,
-      "away_projection": 61.1,
-      "away_to_come": 4.1,
-      "away_low": 59,
-      "away_high": 64
+      "away_current": 62,
+      "away_to_play": 0,
+      "away_projection": 62.0,
+      "away_to_come": 0.0,
+      "away_low": 62,
+      "away_high": 62
     }
   ],
   "managers": [
     {
       "manager": "Sam Wright",
       "team_name": "Middle court virgins",
-      "current": 57,
-      "official": 57,
-      "to_play": 2,
-      "projection": 61.1,
-      "proj_low": 59,
-      "proj_high": 64,
-      "to_come": 4.1,
+      "current": 62,
+      "official": 62,
+      "to_play": 0,
+      "projection": 62.0,
+      "proj_low": 62,
+      "proj_high": 62,
+      "to_come": 0.0,
       "auto_subbed": [],
-      "yet_to_play": [
-        "Gakpo",
-        "\u00d8degaard"
-      ]
+      "yet_to_play": []
     },
     {
       "manager": "Alastair Michael",
       "team_name": "Shabbos Sly Boys",
-      "current": 50,
-      "official": 49,
-      "to_play": 2,
+      "current": 59,
+      "official": 58,
+      "to_play": 0,
       "projection": 59.0,
-      "proj_low": 53,
-      "proj_high": 65,
-      "to_come": 9.0,
+      "proj_low": 59,
+      "proj_high": 59,
+      "to_come": 0.0,
       "auto_subbed": [
         "F.Kad\u0131o\u011flu"
       ],
-      "yet_to_play": [
-        "Bruno G.",
-        "Gabriel"
-      ]
+      "yet_to_play": []
     },
     {
       "manager": "Jason Parmar",
@@ -166,127 +160,118 @@
       ]
     },
     {
+      "manager": "Piers Black-Hawkins",
+      "team_name": "Really Kick FC",
+      "current": 37,
+      "official": 29,
+      "to_play": 2,
+      "projection": 43.5,
+      "proj_low": 40,
+      "proj_high": 48,
+      "to_come": 6.5,
+      "auto_subbed": [
+        "Gu\u00e9hi"
+      ],
+      "yet_to_play": [
+        "Barry",
+        "Dewsbury-Hall"
+      ]
+    },
+    {
+      "manager": "chris Purnell",
+      "team_name": "Gary fishcake  fc",
+      "current": 36,
+      "official": 35,
+      "to_play": 3,
+      "projection": 41.8,
+      "proj_low": 39,
+      "proj_high": 46,
+      "to_come": 5.8,
+      "auto_subbed": [
+        "White"
+      ],
+      "yet_to_play": [
+        "George",
+        "Tarkowski",
+        "Willock"
+      ]
+    },
+    {
       "manager": "Greg Woodward",
       "team_name": "Sxci_Scorpion_69",
-      "current": 34,
-      "official": 34,
-      "to_play": 2,
-      "projection": 43.7,
-      "proj_low": 42,
-      "proj_high": 44,
-      "to_come": 9.7,
+      "current": 35,
+      "official": 35,
+      "to_play": 1,
+      "projection": 40.7,
+      "proj_low": 41,
+      "proj_high": 41,
+      "to_come": 5.7,
       "auto_subbed": [],
       "yet_to_play": [
-        "Barcola",
         "Mykolenko"
       ]
     },
     {
       "manager": "Elliott Bennett",
       "team_name": "You're Toast FC",
-      "current": 30,
-      "official": 30,
-      "to_play": 3,
-      "projection": 42.3,
+      "current": 31,
+      "official": 31,
+      "to_play": 2,
+      "projection": 41.6,
       "proj_low": 38,
-      "proj_high": 47,
-      "to_come": 12.3,
+      "proj_high": 46,
+      "to_come": 10.6,
       "auto_subbed": [],
       "yet_to_play": [
         "Dedi\u0107",
-        "Horn\u00ed\u010dek",
-        "Kerkez"
-      ]
-    },
-    {
-      "manager": "Piers Black-Hawkins",
-      "team_name": "Really Kick FC",
-      "current": 24,
-      "official": 24,
-      "to_play": 3,
-      "projection": 34.4,
-      "proj_low": 29,
-      "proj_high": 40,
-      "to_come": 10.4,
-      "auto_subbed": [
-        "Gu\u00e9hi"
-      ],
-      "yet_to_play": [
-        "Barry",
-        "Dewsbury-Hall",
-        "Raya"
+        "Horn\u00ed\u010dek"
       ]
     },
     {
       "manager": "Andrew Hutchinson",
       "team_name": "Inter Da Pub",
-      "current": 23,
-      "official": 23,
-      "to_play": 4,
-      "projection": 36.0,
-      "proj_low": 29,
-      "proj_high": 43,
-      "to_come": 13.0,
+      "current": 30,
+      "official": 30,
+      "to_play": 1,
+      "projection": 32.8,
+      "proj_low": 31,
+      "proj_high": 36,
+      "to_come": 2.8,
       "auto_subbed": [],
       "yet_to_play": [
-        "Araujo",
-        "Hall",
-        "Isak",
-        "Virgil"
-      ]
-    },
-    {
-      "manager": "chris Purnell",
-      "team_name": "Gary fishcake  fc",
-      "current": 21,
-      "official": 21,
-      "to_play": 6,
-      "projection": 33.3,
-      "proj_low": 28,
-      "proj_high": 39,
-      "to_come": 12.3,
-      "auto_subbed": [],
-      "yet_to_play": [
-        "George",
-        "Havertz",
-        "J.Timber",
-        "Tarkowski",
-        "White",
-        "Willock"
+        "Hall"
       ]
     },
     {
       "manager": "Ollie Felts",
       "team_name": "FLASHMOB MRCAKEBREAD",
-      "current": 17,
-      "official": 17,
-      "to_play": 3,
-      "projection": 29.1,
-      "proj_low": 23,
-      "proj_high": 36,
-      "to_come": 12.1,
+      "current": 29,
+      "official": 29,
+      "to_play": 1,
+      "projection": 31.9,
+      "proj_low": 30,
+      "proj_high": 35,
+      "to_come": 2.9,
       "auto_subbed": [],
       "yet_to_play": [
-        "Botman",
-        "Konsa",
-        "Wirtz"
+        "Botman"
       ]
     },
     {
       "manager": "Ash Cross",
       "team_name": "H\u00f8jbjerg\u2019s packet",
-      "current": 14,
-      "official": 14,
-      "to_play": 3,
-      "projection": 24.6,
-      "proj_low": 21,
-      "proj_high": 29,
-      "to_come": 10.6,
-      "auto_subbed": [],
+      "current": 28,
+      "official": 22,
+      "to_play": 1,
+      "projection": 29.4,
+      "proj_low": 29,
+      "proj_high": 31,
+      "to_come": 1.4,
+      "auto_subbed": [
+        "Eze"
+      ],
       "yet_to_play": [
-        "Eze",
-        "Maitland-Niles",
-        "Rice"
+        "Maitland-Niles"
       ]
     }
   ]
