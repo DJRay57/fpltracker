@@ -3,7 +3,7 @@
   "sigma": 2.35,
   "team_rho": 0.1,
   "gameweek": 9,
-  "updated_at": "2026-11-01T21:30:44+00:00",
+  "updated_at": "2026-11-02T18:59:55+00:00",
   "fixtures_total": 10,
   "fixtures_finished": 9,
   "fixtures_started": 9,
@@ -99,12 +99,12 @@
       "away_win": 99.0,
       "home": "Piers Black-Hawkins",
       "home_team": "Really Kick FC",
-      "home_current": 37,
+      "home_current": 35,
       "home_to_play": 2,
-      "home_projection": 43.5,
+      "home_projection": 41.5,
       "home_to_come": 6.5,
-      "home_low": 40,
-      "home_high": 48,
+      "home_low": 38,
+      "home_high": 46,
       "away": "Sam Wright",
       "away_team": "Middle court virgins",
       "away_current": 62,
@@ -160,24 +160,6 @@
       ]
     },
     {
-      "manager": "Piers Black-Hawkins",
-      "team_name": "Really Kick FC",
-      "current": 37,
-      "official": 29,
-      "to_play": 2,
-      "projection": 43.5,
-      "proj_low": 40,
-      "proj_high": 48,
-      "to_come": 6.5,
-      "auto_subbed": [
-        "Gu\u00e9hi"
-      ],
-      "yet_to_play": [
-        "Barry",
-        "Dewsbury-Hall"
-      ]
-    },
-    {
       "manager": "chris Purnell",
       "team_name": "Gary fishcake  fc",
       "current": 36,
@@ -209,6 +191,24 @@
       "auto_subbed": [],
       "yet_to_play": [
         "Mykolenko"
+      ]
+    },
+    {
+      "manager": "Piers Black-Hawkins",
+      "team_name": "Really Kick FC",
+      "current": 35,
+      "official": 29,
+      "to_play": 2,
+      "projection": 41.5,
+      "proj_low": 38,
+      "proj_high": 46,
+      "to_come": 6.5,
+      "auto_subbed": [
+        "Gu\u00e9hi"
+      ],
+      "yet_to_play": [
+        "Barry",
+        "Dewsbury-Hall"
       ]
     },
     {
