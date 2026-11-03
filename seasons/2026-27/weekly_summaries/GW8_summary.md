@@ -88,9 +88,8 @@ _(This league doesn't use captaincy multipliers.)_
 - **Hato**: a → i — Unspecified injury - Unknown return date
 - **João Pedro**: d → i — Thigh injury - Unknown return date
 - **Lacroix**: a → i — Hamstring injury - Unknown return date
-- **Sarr**: a → i — Groin injury - Expected back 8 Nov
+- **Sarr**: d → i — Groin injury - Expected back 8 Nov
 - **Mateta**: a → s — Suspended until 2 Dec
-- **Branthwaite**: a → d — Concussion - 75% chance of playing
 - **Lukić**: i → d — Groin injury - 75% chance of playing
 - **Butland**: i → d — Arm injury - 50% chance of playing
 - **Crooks**: a → s — Suspended until 22 Nov
@@ -98,8 +97,8 @@ _(This league doesn't use captaincy multipliers.)_
 - **Okafor**: a → d — Thigh injury - 75% chance of playing
 - **Martinez**: a → s — Suspended until 22 Nov
 - **Amad**: a → d — Calf injury - 75% chance of playing
+- **J.Ramsey**: a → s — Suspended until 21 Nov
 - **L.Miley**: a → d — Muscular injury - 75% chance of playing
-- **Osula**: a → d — Ankle injury - 50% chance of playing
 - **Mukiele**: a → d — Concussion - 75% chance of playing
 - **Alderete**: a → s — Suspended until 21 Nov
 - **Diarra**: a → d — Muscular injury - 75% chance of playing
