@@ -147,3 +147,15 @@ _Every accepted waiver move, scored from the gameweek it took effect onward: poi
 | -28 | Ollie Felts | Sávio (10) | Manzambi (38) | GW1 |
 | -32 | Jason Parmar | Martinelli (0) | Xhaka (32) | GW1 |
 | -44 | Ollie Felts | David (1) | Kostoulas (45) | GW1 |
+
+## Pending
+
+_Took effect from a gameweek that hasn't been played yet -- nothing to score until it has._
+
+| Manager | In | Out | Effective |
+|---|---|---|---|
+| Greg Woodward | Acheampong | Ajayi | GW10 |
+| Greg Woodward | Iwobi | Xhaka | GW10 |
+| Greg Woodward | Awoniyi | Cherif | GW10 |
+| Piers Black-Hawkins | Pedro Porro | Mukiele | GW10 |
+| Elliott Bennett | Saliba | O'Reilly | GW10 |
