@@ -79,24 +79,23 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Injury/Status Watch (last 7 days)
 
-- **Saliba**: i → d — Back injury - 75% chance of playing
 - **Cash**: a → s — Suspended until 21 Nov
 - **Carvalho**: a → i — Knock - Expected back 23 Nov
 - **Henderson**: a → d — Illness - 75% chance of playing
+- **Onyeka**: a → d — Groin injury - 50% chance of playing
 - **Baleba**: a → d — Hamstring injury - 50% chance of playing
 - **Tosin**: a → i — Calf injury - Unknown return date
 - **Hato**: a → i — Unspecified injury - Unknown return date
-- **Lacroix**: a → i — Hamstring injury - Unknown return date
-- **Sarr**: d → i — Groin injury - Expected back 8 Nov
+- **Lacroix**: d → i — Hamstring injury - Unknown return date
 - **Mateta**: a → s — Suspended until 2 Dec
 - **Lukić**: i → d — Groin injury - 75% chance of playing
-- **Butland**: i → d — Arm injury - 50% chance of playing
 - **Crooks**: a → s — Suspended until 22 Nov
-- **Struijk**: d → i — Hamstring injury - Expected back 8 Nov
 - **Okafor**: a → d — Thigh injury - 75% chance of playing
 - **Gravenberch**: a → d — Foot injury - 75% chance of playing
 - **Martinez**: a → s — Suspended until 22 Nov
 - **J.Ramsey**: a → s — Suspended until 21 Nov
+- **Dominguez**: d → i — Muscular injury - Expected back 30 Dec
+- **Igor Jesus**: i → d — Calf injury - 75% chance of playing
 - **Mukiele**: a → d — Concussion - 75% chance of playing
 - **Alderete**: a → s — Suspended until 21 Nov
 - **Diarra**: a → d — Muscular injury - 75% chance of playing
