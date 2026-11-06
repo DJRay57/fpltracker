@@ -160,3 +160,4 @@ _Took effect from a gameweek that hasn't been played yet -- nothing to score unt
 | Piers Black-Hawkins | Pedro Porro | Mukiele | GW10 |
 | Elliott Bennett | Saliba | O'Reilly | GW10 |
 | Ollie Felts | Smith | Botman | GW10 |
+| Alastair Michael | Colwill | Hume | GW10 |
