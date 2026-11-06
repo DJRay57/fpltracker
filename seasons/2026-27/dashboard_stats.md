@@ -65,9 +65,9 @@ _If everyone played everyone every week. Strips fixture luck out entirely; the S
 |---|---|---|---|
 | 11 | Fofana | DEF | CHE |
 | 10 | Van den Berg | DEF | BRE |
-| 9 | Awoniyi | FWD | COV |
 | 9 | Branthwaite | DEF | EVE |
-| 9 | Acheampong | DEF | CHE |
+| 8 | Costinha | DEF | BHA |
+| 8 | E.Le Fée | MID | SUN |
 
 ## Trophy Cabinet
 

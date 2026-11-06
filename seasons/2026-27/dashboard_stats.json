@@ -699,22 +699,22 @@
       "gw_points": 10
     },
     {
-      "name": "Awoniyi",
-      "position": "FWD",
-      "team": "COV",
-      "gw_points": 9
-    },
-    {
       "name": "Branthwaite",
       "position": "DEF",
       "team": "EVE",
       "gw_points": 9
     },
     {
-      "name": "Acheampong",
+      "name": "Costinha",
       "position": "DEF",
-      "team": "CHE",
-      "gw_points": 9
+      "team": "BHA",
+      "gw_points": 8
+    },
+    {
+      "name": "E.Le F\u00e9e",
+      "position": "MID",
+      "team": "SUN",
+      "gw_points": 8
     }
   ]
 }

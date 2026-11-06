@@ -48,55 +48,48 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Waiver Wire Activity (last 7 days)
 
-- **ADDED**: Robertson → Sam Wright
-- **ADDED**: McGinn → Ollie Felts
-- **ADDED**: Lindelöf → Ollie Felts
+- **ADDED**: Smith → Ollie Felts
+- **ADDED**: Iwobi → Greg Woodward
+- **ADDED**: Awoniyi → Greg Woodward
 - **ADDED**: Szoboszlai → Piers Black-Hawkins
-- **ADDED**: Tonali → chris Purnell
-- **ADDED**: Hill → Ash Cross
-- **ADDED**: Rudoni → Jason Parmar
+- **ADDED**: Pedro Porro → Piers Black-Hawkins
+- **ADDED**: Saliba → Elliott Bennett
 - **ADDED**: Hume → Alastair Michael
-- **ADDED**: Rayan → Sam Wright
-- **ADDED**: Osula → Greg Woodward
-- **ADDED**: Penders → Greg Woodward
-- **ADDED**: Kroupi.Jr → Andrew Hutchinson
+- **ADDED**: Acheampong → Greg Woodward
 - **ADDED**: Enciso → Alastair Michael
-- **ADDED**: Dedić → Elliott Bennett
-- **DROPPED**: Martinez (was Greg Woodward)
-- **DROPPED**: Grealish (was Jason Parmar)
-- **DROPPED**: Aina (was Elliott Bennett)
-- **DROPPED**: Maddison (was Andrew Hutchinson)
-- **DROPPED**: Ballard (was Ash Cross)
-- **DROPPED**: Lewis-Potter (was Sam Wright)
-- **DROPPED**: Lacroix (was Ollie Felts)
-- **DROPPED**: Kulusevski (was Ollie Felts)
-- **DROPPED**: Enzo (was chris Purnell)
-- **DROPPED**: Thomas (was Alastair Michael)
-- **DROPPED**: Stach (was Alastair Michael)
-- **DROPPED**: Branthwaite (was Sam Wright)
-- **DROPPED**: Šeško (was Greg Woodward)
+- **DROPPED**: Buendía (was Alastair Michael)
 - **DROPPED**: Hinshelwood (was Piers Black-Hawkins)
+- **DROPPED**: Hato (was Alastair Michael)
 
 ## Injury/Status Watch (last 7 days)
 
+- **Martinez**: i → d — Head injury - 75% chance of playing
 - **Cash**: a → s — Suspended until 21 Nov
-- **Carvalho**: a → i — Knock - Expected back 23 Nov
+- **Scott**: i → d — Thigh injury - 75% chance of playing
 - **Henderson**: a → d — Illness - 75% chance of playing
+- **Dasilva**: i → d — Hamstring injury - 25% chance of playing
 - **Onyeka**: a → d — Groin injury - 50% chance of playing
-- **Baleba**: a → d — Hamstring injury - 50% chance of playing
-- **Tosin**: a → i — Calf injury - Unknown return date
-- **Hato**: a → i — Unspecified injury - Unknown return date
-- **Lacroix**: d → i — Hamstring injury - Unknown return date
+- **Baleba**: a → i — Hamstring injury - Unknown return date
+- **Caicedo**: a → d — Calf injury - 75% chance of playing
 - **Mateta**: a → s — Suspended until 2 Dec
+- **Branthwaite**: a → d — Unspecified injury - 75% chance of playing
+- **Cairney**: a → i — Knee injury - Expected back 21 Nov
 - **Lukić**: i → d — Groin injury - 75% chance of playing
 - **Crooks**: a → s — Suspended until 22 Nov
-- **Okafor**: a → d — Thigh injury - 75% chance of playing
+- **Gyabi**: i → d — Thigh injury - 75% chance of playing
+- **Okafor**: a → d — Thigh injury - 50% chance of playing
+- **Calvert-Lewin**: a → d — Foot injury - 75% chance of playing
 - **Gravenberch**: a → d — Foot injury - 75% chance of playing
+- **Dorgu**: i → d — Hamstring injury - 75% chance of playing
 - **Martinez**: a → s — Suspended until 22 Nov
+- **Rashford**: d → i — Hip injury - Unknown return date
 - **J.Ramsey**: a → s — Suspended until 21 Nov
+- **Joelinton**: a → i — Unspecified injury - Unknown return date
 - **Dominguez**: d → i — Muscular injury - Expected back 30 Dec
 - **Igor Jesus**: i → d — Calf injury - 75% chance of playing
-- **Mukiele**: a → d — Concussion - 75% chance of playing
 - **Alderete**: a → s — Suspended until 21 Nov
-- **Diarra**: a → d — Muscular injury - 75% chance of playing
+- **Diarra**: a → i — Muscular injury - Unknown return date
 - **Anselmino**: a → i — Unspecified injury - Unknown return date
+- **Morita**: a → i — Groin injury - Unknown return date
+- **Sanchez**: a → i — Ankle injury - Unknown return date
+- **Wan-Bissaka**: i → d — Hamstring injury - 50% chance of playing
