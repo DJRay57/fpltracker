@@ -51,37 +51,34 @@ _(This league doesn't use captaincy multipliers.)_
 - **ADDED**: Smith → Ollie Felts
 - **ADDED**: Iwobi → Greg Woodward
 - **ADDED**: Awoniyi → Greg Woodward
-- **ADDED**: Szoboszlai → Piers Black-Hawkins
 - **ADDED**: Pedro Porro → Piers Black-Hawkins
+- **ADDED**: Colwill → Alastair Michael
 - **ADDED**: Saliba → Elliott Bennett
-- **ADDED**: Hume → Alastair Michael
 - **ADDED**: Acheampong → Greg Woodward
-- **ADDED**: Enciso → Alastair Michael
-- **DROPPED**: Buendía (was Alastair Michael)
-- **DROPPED**: Hinshelwood (was Piers Black-Hawkins)
-- **DROPPED**: Hato (was Alastair Michael)
+- **DROPPED**: Xhaka (was Greg Woodward)
+- **DROPPED**: Ajayi (was Greg Woodward)
+- **DROPPED**: Mukiele (was Piers Black-Hawkins)
+- **DROPPED**: Botman (was Ollie Felts)
+- **DROPPED**: O'Reilly (was Elliott Bennett)
+- **DROPPED**: Hume (was Alastair Michael)
+- **DROPPED**: Cherif (was Greg Woodward)
 
 ## Injury/Status Watch (last 7 days)
 
 - **Martinez**: i → d — Head injury - 75% chance of playing
 - **Cash**: a → s — Suspended until 21 Nov
 - **Scott**: i → d — Thigh injury - 75% chance of playing
-- **Henderson**: a → d — Illness - 75% chance of playing
 - **Dasilva**: i → d — Hamstring injury - 25% chance of playing
 - **Onyeka**: a → d — Groin injury - 50% chance of playing
 - **Baleba**: a → i — Hamstring injury - Unknown return date
 - **Caicedo**: a → d — Calf injury - 75% chance of playing
 - **Mateta**: a → s — Suspended until 2 Dec
-- **Branthwaite**: a → d — Unspecified injury - 75% chance of playing
 - **Cairney**: a → i — Knee injury - Expected back 21 Nov
-- **Lukić**: i → d — Groin injury - 75% chance of playing
 - **Crooks**: a → s — Suspended until 22 Nov
 - **Gyabi**: i → d — Thigh injury - 75% chance of playing
-- **Okafor**: a → d — Thigh injury - 50% chance of playing
-- **Calvert-Lewin**: a → d — Foot injury - 75% chance of playing
+- **Stach**: a → d — Foot injury - 50% chance of playing
 - **Gravenberch**: a → d — Foot injury - 75% chance of playing
 - **Dorgu**: i → d — Hamstring injury - 75% chance of playing
-- **Martinez**: a → s — Suspended until 22 Nov
 - **Rashford**: d → i — Hip injury - Unknown return date
 - **J.Ramsey**: a → s — Suspended until 21 Nov
 - **Joelinton**: a → i — Unspecified injury - Unknown return date
@@ -89,7 +86,6 @@ _(This league doesn't use captaincy multipliers.)_
 - **Igor Jesus**: i → d — Calf injury - 75% chance of playing
 - **Alderete**: a → s — Suspended until 21 Nov
 - **Diarra**: a → i — Muscular injury - Unknown return date
-- **Anselmino**: a → i — Unspecified injury - Unknown return date
 - **Morita**: a → i — Groin injury - Unknown return date
 - **Sanchez**: a → i — Ankle injury - Unknown return date
 - **Wan-Bissaka**: i → d — Hamstring injury - 50% chance of playing
