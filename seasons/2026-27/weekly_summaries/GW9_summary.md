@@ -66,26 +66,26 @@ _(This league doesn't use captaincy multipliers.)_
 ## Injury/Status Watch (last 7 days)
 
 - **Martinez**: i → d — Head injury - 75% chance of playing
-- **Cash**: a → s — Suspended until 21 Nov
-- **Scott**: i → d — Thigh injury - 75% chance of playing
 - **Dasilva**: i → d — Hamstring injury - 25% chance of playing
 - **Onyeka**: a → d — Groin injury - 50% chance of playing
+- **Thiago**: a → s — Suspended until 5 Dec
 - **Baleba**: a → i — Hamstring injury - Unknown return date
-- **Caicedo**: a → d — Calf injury - 75% chance of playing
-- **Mateta**: a → s — Suspended until 2 Dec
+- **Acheampong**: a → d — Unspecified injury - 75% chance of playing
 - **Cairney**: a → i — Knee injury - Expected back 21 Nov
-- **Crooks**: a → s — Suspended until 22 Nov
+- **King**: a → d — Groin injury - 75% chance of playing
 - **Gyabi**: i → d — Thigh injury - 75% chance of playing
+- **Gudmundsson**: a → d — Hamstring injury - 75% chance of playing
 - **Stach**: a → d — Foot injury - 50% chance of playing
 - **Gravenberch**: a → d — Foot injury - 75% chance of playing
+- **Guéhi**: a → d — Unspecified injury - 75% chance of playing
+- **Gvardiol**: a → d — Unspecified injury - 75% chance of playing
 - **Dorgu**: i → d — Hamstring injury - 75% chance of playing
 - **Rashford**: d → i — Hip injury - Unknown return date
-- **J.Ramsey**: a → s — Suspended until 21 Nov
 - **Joelinton**: a → i — Unspecified injury - Unknown return date
 - **Dominguez**: d → i — Muscular injury - Expected back 30 Dec
-- **Igor Jesus**: i → d — Calf injury - 75% chance of playing
-- **Alderete**: a → s — Suspended until 21 Nov
-- **Diarra**: a → i — Muscular injury - Unknown return date
+- **Tel**: a → d — Ankle injury - 75% chance of playing
+- **Diarra**: d → i — Muscular injury - Unknown return date
+- **Xhaka**: a → d — Unspecified injury - 75% chance of playing
 - **Morita**: a → i — Groin injury - Unknown return date
 - **Sanchez**: a → i — Ankle injury - Unknown return date
 - **Wan-Bissaka**: i → d — Hamstring injury - 50% chance of playing
