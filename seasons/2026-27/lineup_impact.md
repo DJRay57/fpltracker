@@ -1,4 +1,4 @@
-# Lineup Impact — GW8 → GW9
+# Lineup Impact — GW9 → GW10
 
 _Starting XI changes between the two most recent gameweeks (trades and plain bench/start swaps both count). Net only counts players who actually played that gameweek -- others are listed but tagged DNP and excluded._
 
@@ -6,13 +6,13 @@ _Starting XI changes between the two most recent gameweeks (trades and plain ben
 
 | Net | Manager | Changes |
 |---|---|---|
-| +14 | Piers Black-Hawkins | +Barry (9pt), +Janelt (5pt), -Guéhi (DNP), -Mukiele (DNP) |
-| +9 | Greg Woodward | +Kudus (7pt), +McBurnie (12pt), -Xhaka (4pt), -Palestra (6pt) |
-| +8 | Alastair Michael | +Kinsky (6pt), +Georginio (1pt), +Hume (1pt), +Enciso (8pt), -F.Kadıoğlu (DNP), -Pickford (7pt), -Thomas (DNP), -Stach (1pt) |
-| +7 | Sam Wright | +Rayan (3pt), +Matheus N. (2pt), +Robertson (8pt), -Gyökeres (1pt), -King (2pt), -Lewis-Potter (3pt) |
-| +7 | Andrew Hutchinson | +Castagne (2pt), +Araujo (4pt), +Kroupi.Jr (4pt), -Wissa (1pt), -Maddison (DNP), -Justin (2pt) |
-| +7 | chris Purnell | +Rodríguez (1pt), +J.Timber (5pt), +Tonali (3pt), -White (DNP), -Enzo (2pt), -Saka (DNP) |
-| +6 | Jason Parmar | +Rudoni (9pt), -Murillo (3pt) |
-| +6 | Ash Cross | +Hill (6pt), -Eze (DNP) |
-| 0 | Ollie Felts | +McGinn (0pt), +Lindelöf (2pt), -Lacroix (DNP), -Jacquet (2pt) |
-| -2 | Elliott Bennett | +Dedić (2pt), +O'Reilly (1pt), +Horníček (3pt), -Fernandez-Pardo (DNP), -Boscagli (6pt), -A.Becker (2pt) |
+| +4 | Ollie Felts | +Smith (1pt), +Jacquet (4pt), -Kayode (1pt), -Flemming (0pt) |
+| +3 | Piers Black-Hawkins | +Szoboszlai (7pt), +Guéhi (0pt), -Janelt (2pt), -Egan (2pt) |
+| +2 | Sam Wright | +Tzolis (3pt), +King (3pt), -Robertson (2pt), -Ajer (2pt) |
+| +2 | Elliott Bennett | +Boscagli (5pt), +Igor Jesus (0pt), +A.Becker (4pt), -Dedić (3pt), -O'Reilly (1pt), -Horníček (3pt) |
+| +1 | Ash Cross | +Eze (1pt), -Mateta (DNP) |
+| 0 | Jason Parmar | No lineup changes |
+| 0 | chris Purnell | No lineup changes |
+| -2 | Greg Woodward | +Iwobi (2pt), +Awoniyi (2pt), +Penders (2pt), +Osula (2pt), +Palestra (2pt), -McBurnie (2pt), -Mitchell (1pt), -Sels (2pt), -Cherif (1pt), -Ajayi (6pt) |
+| -3 | Alastair Michael | +Pickford (3pt), +Colwill (0pt), +Strand Larsen (2pt), -Kinsky (2pt), -Hume (6pt), -Belloumi (DNP) |
+| -5 | Andrew Hutchinson | +Madueke (8pt), +Petrović (2pt), +Wissa (2pt), -Donnarumma (1pt), -Caicedo (3pt), -Delap (13pt) |

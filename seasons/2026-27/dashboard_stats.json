@@ -1,5 +1,5 @@
 {
-  "gameweek": 9,
+  "gameweek": 10,
   "finished_gameweeks": [
     1,
     2,
@@ -9,74 +9,75 @@
     6,
     7,
     8,
-    9
+    9,
+    10
   ],
   "results": [
     {
-      "home": "chris Purnell",
-      "home_team": "Gary fishcake  fc",
-      "home_pts": 49,
-      "away": "Jason Parmar",
-      "away_team": "Pain in Diaz",
-      "away_pts": 39,
-      "winner": "home",
-      "margin": 10
-    },
-    {
       "home": "Elliott Bennett",
       "home_team": "You're Toast FC",
-      "home_pts": 36,
-      "away": "Andrew Hutchinson",
-      "away_team": "Inter Da Pub",
-      "away_pts": 32,
-      "winner": "home",
-      "margin": 4
+      "home_pts": 34,
+      "away": "Jason Parmar",
+      "away_team": "Pain in Diaz",
+      "away_pts": 41,
+      "winner": "away",
+      "margin": 7
     },
     {
       "home": "Ollie Felts",
       "home_team": "FLASHMOB MRCAKEBREAD",
-      "home_pts": 30,
-      "away": "Greg Woodward",
-      "away_team": "Sxci_Scorpion_69",
-      "away_pts": 41,
-      "winner": "away",
+      "home_pts": 47,
+      "away": "chris Purnell",
+      "away_team": "Gary fishcake  fc",
+      "away_pts": 36,
+      "winner": "home",
       "margin": 11
     },
     {
       "home": "Alastair Michael",
       "home_team": "Shabbos Sly Boys",
-      "home_pts": 59,
-      "away": "Ash Cross",
-      "away_team": "H\u00f8jbjerg\u2019s packet",
-      "away_pts": 29,
-      "winner": "home",
-      "margin": 30
+      "home_pts": 27,
+      "away": "Andrew Hutchinson",
+      "away_team": "Inter Da Pub",
+      "away_pts": 46,
+      "winner": "away",
+      "margin": 19
     },
     {
       "home": "Piers Black-Hawkins",
       "home_team": "Really Kick FC",
-      "home_pts": 48,
-      "away": "Sam Wright",
-      "away_team": "Middle court virgins",
-      "away_pts": 62,
-      "winner": "away",
-      "margin": 14
+      "home_pts": 69,
+      "away": "Greg Woodward",
+      "away_team": "Sxci_Scorpion_69",
+      "away_pts": 30,
+      "winner": "home",
+      "margin": 39
+    },
+    {
+      "home": "Sam Wright",
+      "home_team": "Middle court virgins",
+      "home_pts": 44,
+      "away": "Ash Cross",
+      "away_team": "H\u00f8jbjerg\u2019s packet",
+      "away_pts": 38,
+      "winner": "home",
+      "margin": 6
     }
   ],
   "managers": [
     {
       "manager": "Jason Parmar",
       "team_name": "Pain in Diaz",
-      "xi": 39,
-      "bench": 4,
+      "xi": 41,
+      "bench": 6,
       "bench_detail": [
         [
           "Murillo",
-          3
+          4
         ],
         [
           "Walton",
-          1
+          2
         ],
         [
           "Rashford",
@@ -96,114 +97,53 @@
         "W",
         "L",
         "W",
-        "L"
+        "L",
+        "W"
       ],
       "real_rank": 1,
-      "real_pts": 19,
-      "pts_for": 403,
+      "real_pts": 22,
+      "pts_for": 444,
       "apa_rank": 2,
-      "apa_pts": 158,
+      "apa_pts": 173,
       "apa_record": [
-        52,
+        57,
         2,
-        27
+        31
       ],
       "luck": -1,
       "trophies": {
         "topped": 0,
         "bottomed": 0,
         "robbed": 0,
-        "won": 6,
+        "won": 7,
         "lost": 2,
         "drew": 1
       },
       "waiver": {
-        "avg": 9.2,
-        "windows": 10,
+        "avg": 9.3,
+        "windows": 11,
         "best": 5,
         "latest": 10,
         "gw1": 5
       },
-      "bench_season": 71
-    },
-    {
-      "manager": "Alastair Michael",
-      "team_name": "Shabbos Sly Boys",
-      "xi": 59,
-      "bench": 7,
-      "bench_detail": [
-        [
-          "Pickford",
-          7
-        ],
-        [
-          "F.Kad\u0131o\u011flu",
-          0
-        ],
-        [
-          "Strand Larsen",
-          0
-        ],
-        [
-          "Semenyo",
-          0
-        ]
-      ],
-      "form": [
-        "D",
-        "W",
-        "W",
-        "W",
-        "L",
-        "W",
-        "L",
-        "W",
-        "W"
-      ],
-      "real_rank": 2,
-      "real_pts": 19,
-      "pts_for": 394,
-      "apa_rank": 6,
-      "apa_pts": 137,
-      "apa_record": [
-        45,
-        2,
-        34
-      ],
-      "luck": -4,
-      "trophies": {
-        "topped": 0,
-        "bottomed": 0,
-        "robbed": 0,
-        "won": 6,
-        "lost": 2,
-        "drew": 1
-      },
-      "waiver": {
-        "avg": 7.7,
-        "windows": 10,
-        "best": 4,
-        "latest": 9,
-        "gw1": 4
-      },
-      "bench_season": 68
+      "bench_season": 77
     },
     {
       "manager": "Sam Wright",
       "team_name": "Middle court virgins",
-      "xi": 62,
-      "bench": 9,
+      "xi": 44,
+      "bench": 7,
       "bench_detail": [
         [
           "Henderson",
-          3
+          2
         ],
         [
-          "Tzolis",
-          3
+          "Robertson",
+          2
         ],
         [
-          "King",
+          "Ajer",
           2
         ],
         [
@@ -220,40 +160,167 @@
         "L",
         "W",
         "L",
+        "W",
         "W"
       ],
-      "real_rank": 3,
-      "real_pts": 18,
-      "pts_for": 406,
+      "real_rank": 2,
+      "real_pts": 21,
+      "pts_for": 450,
       "apa_rank": 3,
-      "apa_pts": 150,
+      "apa_pts": 168,
       "apa_record": [
-        49,
+        55,
         3,
-        29
+        32
       ],
-      "luck": 0,
+      "luck": -1,
       "trophies": {
         "topped": 3,
         "bottomed": 0,
         "robbed": 1,
-        "won": 6,
+        "won": 7,
         "lost": 3,
         "drew": 0
       },
       "waiver": {
-        "avg": 7.2,
-        "windows": 10,
+        "avg": 7.4,
+        "windows": 11,
         "best": 3,
-        "latest": 8,
+        "latest": 9,
         "gw1": 3
       },
-      "bench_season": 36
+      "bench_season": 43
+    },
+    {
+      "manager": "Alastair Michael",
+      "team_name": "Shabbos Sly Boys",
+      "xi": 27,
+      "bench": 2,
+      "bench_detail": [
+        [
+          "Kinsky",
+          2
+        ],
+        [
+          "F.Kad\u0131o\u011flu",
+          0
+        ],
+        [
+          "Belloumi",
+          0
+        ],
+        [
+          "Semenyo",
+          0
+        ]
+      ],
+      "form": [
+        "D",
+        "W",
+        "W",
+        "W",
+        "L",
+        "W",
+        "L",
+        "W",
+        "W",
+        "L"
+      ],
+      "real_rank": 3,
+      "real_pts": 19,
+      "pts_for": 421,
+      "apa_rank": 6,
+      "apa_pts": 137,
+      "apa_record": [
+        45,
+        2,
+        43
+      ],
+      "luck": -3,
+      "trophies": {
+        "topped": 0,
+        "bottomed": 1,
+        "robbed": 0,
+        "won": 6,
+        "lost": 3,
+        "drew": 1
+      },
+      "waiver": {
+        "avg": 7.7,
+        "windows": 11,
+        "best": 4,
+        "latest": 8,
+        "gw1": 4
+      },
+      "bench_season": 70
+    },
+    {
+      "manager": "Piers Black-Hawkins",
+      "team_name": "Really Kick FC",
+      "xi": 69,
+      "bench": 15,
+      "bench_detail": [
+        [
+          "Tzolakis",
+          6
+        ],
+        [
+          "Pedro Porro",
+          5
+        ],
+        [
+          "Janelt",
+          2
+        ],
+        [
+          "Egan",
+          2
+        ]
+      ],
+      "form": [
+        "W",
+        "L",
+        "W",
+        "W",
+        "L",
+        "W",
+        "W",
+        "L",
+        "L",
+        "W"
+      ],
+      "real_rank": 4,
+      "real_pts": 18,
+      "pts_for": 502,
+      "apa_rank": 1,
+      "apa_pts": 185,
+      "apa_record": [
+        61,
+        2,
+        27
+      ],
+      "luck": 3,
+      "trophies": {
+        "topped": 3,
+        "bottomed": 0,
+        "robbed": 3,
+        "won": 6,
+        "lost": 4,
+        "drew": 0
+      },
+      "waiver": {
+        "avg": 6.6,
+        "windows": 11,
+        "best": 2,
+        "latest": 7,
+        "gw1": 2
+      },
+      "bench_season": 96
     },
     {
       "manager": "chris Purnell",
       "team_name": "Gary fishcake  fc",
-      "xi": 49,
+      "xi": 36,
       "bench": 3,
       "bench_detail": [
         [
@@ -282,17 +349,18 @@
         "W",
         "L",
         "W",
-        "W"
+        "W",
+        "L"
       ],
-      "real_rank": 4,
+      "real_rank": 5,
       "real_pts": 18,
-      "pts_for": 385,
-      "apa_rank": 4,
-      "apa_pts": 145,
+      "pts_for": 421,
+      "apa_rank": 5,
+      "apa_pts": 154,
       "apa_record": [
-        48,
+        51,
         1,
-        32
+        38
       ],
       "luck": 0,
       "trophies": {
@@ -300,100 +368,38 @@
         "bottomed": 1,
         "robbed": 1,
         "won": 6,
-        "lost": 3,
-        "drew": 0
-      },
-      "waiver": {
-        "avg": 7.1,
-        "windows": 10,
-        "best": 5,
-        "latest": 7,
-        "gw1": 8
-      },
-      "bench_season": 12
-    },
-    {
-      "manager": "Piers Black-Hawkins",
-      "team_name": "Really Kick FC",
-      "xi": 48,
-      "bench": 2,
-      "bench_detail": [
-        [
-          "Tzolakis",
-          1
-        ],
-        [
-          "Szoboszlai",
-          1
-        ],
-        [
-          "Gu\u00e9hi",
-          0
-        ],
-        [
-          "Mukiele",
-          0
-        ]
-      ],
-      "form": [
-        "W",
-        "L",
-        "W",
-        "W",
-        "L",
-        "W",
-        "W",
-        "L",
-        "L"
-      ],
-      "real_rank": 5,
-      "real_pts": 15,
-      "pts_for": 433,
-      "apa_rank": 1,
-      "apa_pts": 158,
-      "apa_record": [
-        52,
-        2,
-        27
-      ],
-      "luck": 4,
-      "trophies": {
-        "topped": 2,
-        "bottomed": 0,
-        "robbed": 3,
-        "won": 5,
         "lost": 4,
         "drew": 0
       },
       "waiver": {
-        "avg": 6.6,
-        "windows": 10,
-        "best": 2,
+        "avg": 7.0,
+        "windows": 11,
+        "best": 5,
         "latest": 6,
-        "gw1": 2
+        "gw1": 8
       },
-      "bench_season": 81
+      "bench_season": 15
     },
     {
       "manager": "Ollie Felts",
       "team_name": "FLASHMOB MRCAKEBREAD",
-      "xi": 30,
-      "bench": 7,
+      "xi": 47,
+      "bench": 2,
       "bench_detail": [
         [
           "Lammens",
-          3
+          1
         ],
         [
-          "Jacquet",
-          2
+          "Kayode",
+          1
+        ],
+        [
+          "Flemming",
+          0
         ],
         [
           "Andr\u00e9s",
-          2
-        ],
-        [
-          "Botman",
           0
         ]
       ],
@@ -406,56 +412,57 @@
         "L",
         "W",
         "W",
-        "L"
+        "L",
+        "W"
       ],
       "real_rank": 6,
-      "real_pts": 13,
-      "pts_for": 392,
-      "apa_rank": 5,
-      "apa_pts": 143,
+      "real_pts": 16,
+      "pts_for": 439,
+      "apa_rank": 4,
+      "apa_pts": 167,
       "apa_record": [
-        47,
+        55,
         2,
-        32
+        33
       ],
-      "luck": 1,
+      "luck": 2,
       "trophies": {
         "topped": 2,
         "bottomed": 0,
         "robbed": 1,
-        "won": 4,
+        "won": 5,
         "lost": 4,
         "drew": 1
       },
       "waiver": {
-        "avg": 4.4,
-        "windows": 10,
+        "avg": 4.5,
+        "windows": 11,
         "best": 2,
         "latest": 5,
         "gw1": 10
       },
-      "bench_season": 40
+      "bench_season": 42
     },
     {
       "manager": "Andrew Hutchinson",
       "team_name": "Inter Da Pub",
-      "xi": 32,
-      "bench": 11,
+      "xi": 46,
+      "bench": 26,
       "bench_detail": [
         [
-          "Petrovi\u0107",
-          6
+          "Delap",
+          13
         ],
         [
           "Justin",
-          2
+          9
         ],
         [
-          "Madueke",
-          2
+          "Caicedo",
+          3
         ],
         [
-          "Wissa",
+          "Donnarumma",
           1
         ]
       ],
@@ -468,48 +475,49 @@
         "W",
         "W",
         "L",
-        "L"
+        "L",
+        "W"
       ],
       "real_rank": 7,
-      "real_pts": 13,
-      "pts_for": 336,
+      "real_pts": 16,
+      "pts_for": 382,
       "apa_rank": 7,
-      "apa_pts": 112,
+      "apa_pts": 133,
       "apa_record": [
-        37,
+        44,
         1,
-        43
+        45
       ],
       "luck": 0,
       "trophies": {
         "topped": 0,
         "bottomed": 0,
         "robbed": 1,
-        "won": 4,
+        "won": 5,
         "lost": 4,
         "drew": 1
       },
       "waiver": {
-        "avg": 5.1,
-        "windows": 10,
+        "avg": 5.0,
+        "windows": 11,
         "best": 4,
         "latest": 4,
         "gw1": 6
       },
-      "bench_season": 78
+      "bench_season": 104
     },
     {
       "manager": "Ash Cross",
       "team_name": "H\u00f8jbjerg\u2019s packet",
-      "xi": 29,
-      "bench": 1,
+      "xi": 38,
+      "bench": 9,
       "bench_detail": [
         [
           "Roefs",
-          1
+          9
         ],
         [
-          "Maitland-Niles",
+          "Mateta",
           0
         ],
         [
@@ -517,11 +525,138 @@
           0
         ],
         [
-          "Eze",
+          "Maitland-Niles",
           0
         ]
       ],
       "form": [
+        "L",
+        "W",
+        "L",
+        "L",
+        "L",
+        "L",
+        "L",
+        "W",
+        "L",
+        "L"
+      ],
+      "real_rank": 8,
+      "real_pts": 6,
+      "pts_for": 370,
+      "apa_rank": 8,
+      "apa_pts": 100,
+      "apa_record": [
+        32,
+        4,
+        54
+      ],
+      "luck": 0,
+      "trophies": {
+        "topped": 0,
+        "bottomed": 2,
+        "robbed": 3,
+        "won": 2,
+        "lost": 8,
+        "drew": 0
+      },
+      "waiver": {
+        "avg": 3.7,
+        "windows": 11,
+        "best": 3,
+        "latest": 3,
+        "gw1": 9
+      },
+      "bench_season": 46
+    },
+    {
+      "manager": "Elliott Bennett",
+      "team_name": "You're Toast FC",
+      "xi": 34,
+      "bench": 7,
+      "bench_detail": [
+        [
+          "Horn\u00ed\u010dek",
+          3
+        ],
+        [
+          "Dedi\u0107",
+          3
+        ],
+        [
+          "Fernandez-Pardo",
+          1
+        ],
+        [
+          "Saliba",
+          0
+        ]
+      ],
+      "form": [
+        "L",
+        "L",
+        "L",
+        "L",
+        "L",
+        "L",
+        "W",
+        "L",
+        "W",
+        "L"
+      ],
+      "real_rank": 9,
+      "real_pts": 6,
+      "pts_for": 342,
+      "apa_rank": 9,
+      "apa_pts": 69,
+      "apa_record": [
+        22,
+        3,
+        65
+      ],
+      "luck": 0,
+      "trophies": {
+        "topped": 0,
+        "bottomed": 3,
+        "robbed": 0,
+        "won": 2,
+        "lost": 8,
+        "drew": 0
+      },
+      "waiver": {
+        "avg": 1.8,
+        "windows": 11,
+        "best": 1,
+        "latest": 2,
+        "gw1": 1
+      },
+      "bench_season": 68
+    },
+    {
+      "manager": "Greg Woodward",
+      "team_name": "Sxci_Scorpion_69",
+      "xi": 30,
+      "bench": 5,
+      "bench_detail": [
+        [
+          "Sels",
+          2
+        ],
+        [
+          "McBurnie",
+          2
+        ],
+        [
+          "Mitchell",
+          1
+        ],
+        [
+          "Acheampong",
+          0
+        ]
+      ],
+      "form": [
+        "L",
         "L",
         "W",
         "L",
@@ -532,139 +667,15 @@
         "W",
         "L"
       ],
-      "real_rank": 8,
-      "real_pts": 6,
-      "pts_for": 332,
-      "apa_rank": 8,
-      "apa_pts": 88,
-      "apa_record": [
-        28,
-        4,
-        49
-      ],
-      "luck": 0,
-      "trophies": {
-        "topped": 0,
-        "bottomed": 2,
-        "robbed": 2,
-        "won": 2,
-        "lost": 7,
-        "drew": 0
-      },
-      "waiver": {
-        "avg": 3.8,
-        "windows": 10,
-        "best": 3,
-        "latest": 3,
-        "gw1": 9
-      },
-      "bench_season": 37
-    },
-    {
-      "manager": "Elliott Bennett",
-      "team_name": "You're Toast FC",
-      "xi": 36,
-      "bench": 8,
-      "bench_detail": [
-        [
-          "Boscagli",
-          6
-        ],
-        [
-          "A.Becker",
-          2
-        ],
-        [
-          "Igor Jesus",
-          0
-        ],
-        [
-          "Fernandez-Pardo",
-          0
-        ]
-      ],
-      "form": [
-        "L",
-        "L",
-        "L",
-        "L",
-        "L",
-        "L",
-        "W",
-        "L",
-        "W"
-      ],
-      "real_rank": 9,
-      "real_pts": 6,
-      "pts_for": 308,
-      "apa_rank": 9,
-      "apa_pts": 63,
-      "apa_record": [
-        20,
-        3,
-        58
-      ],
-      "luck": 0,
-      "trophies": {
-        "topped": 0,
-        "bottomed": 3,
-        "robbed": 0,
-        "won": 2,
-        "lost": 7,
-        "drew": 0
-      },
-      "waiver": {
-        "avg": 1.8,
-        "windows": 10,
-        "best": 1,
-        "latest": 2,
-        "gw1": 1
-      },
-      "bench_season": 61
-    },
-    {
-      "manager": "Greg Woodward",
-      "team_name": "Sxci_Scorpion_69",
-      "xi": 41,
-      "bench": 18,
-      "bench_detail": [
-        [
-          "Penders",
-          6
-        ],
-        [
-          "Palestra",
-          6
-        ],
-        [
-          "Xhaka",
-          4
-        ],
-        [
-          "Osula",
-          2
-        ]
-      ],
-      "form": [
-        "L",
-        "L",
-        "W",
-        "L",
-        "L",
-        "L",
-        "L",
-        "L",
-        "W"
-      ],
       "real_rank": 10,
       "real_pts": 6,
-      "pts_for": 275,
+      "pts_for": 305,
       "apa_rank": 10,
-      "apa_pts": 51,
+      "apa_pts": 54,
       "apa_record": [
-        17,
+        18,
         0,
-        64
+        72
       ],
       "luck": 0,
       "trophies": {
@@ -672,49 +683,49 @@
         "bottomed": 3,
         "robbed": 0,
         "won": 2,
-        "lost": 7,
+        "lost": 8,
         "drew": 0
       },
       "waiver": {
-        "avg": 2.1,
-        "windows": 10,
+        "avg": 2.0,
+        "windows": 11,
         "best": 1,
         "latest": 1,
         "gw1": 7
       },
-      "bench_season": 77
+      "bench_season": 82
     }
   ],
   "free_agents": [
     {
-      "name": "Fofana",
-      "position": "DEF",
-      "team": "CHE",
-      "gw_points": 11
-    },
-    {
-      "name": "Van den Berg",
-      "position": "DEF",
-      "team": "BRE",
-      "gw_points": 10
-    },
-    {
-      "name": "Branthwaite",
-      "position": "DEF",
-      "team": "EVE",
-      "gw_points": 9
-    },
-    {
-      "name": "Costinha",
-      "position": "DEF",
-      "team": "BHA",
-      "gw_points": 8
+      "name": "Alysson",
+      "position": "MID",
+      "team": "AVL",
+      "gw_points": 16
     },
     {
       "name": "E.Le F\u00e9e",
       "position": "MID",
       "team": "SUN",
-      "gw_points": 8
+      "gw_points": 11
+    },
+    {
+      "name": "Dorgu",
+      "position": "MID",
+      "team": "MUN",
+      "gw_points": 11
+    },
+    {
+      "name": "J.Murphy",
+      "position": "MID",
+      "team": "NEW",
+      "gw_points": 10
+    },
+    {
+      "name": "Mukiele",
+      "position": "DEF",
+      "team": "SUN",
+      "gw_points": 9
     }
   ]
 }
