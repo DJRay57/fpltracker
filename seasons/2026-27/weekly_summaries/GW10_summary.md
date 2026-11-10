@@ -72,7 +72,6 @@ _(This league doesn't use captaincy multipliers.)_
 - **Baleba**: a → i — Hamstring injury - Unknown return date
 - **Acheampong**: a → d — Unspecified injury - 75% chance of playing
 - **Cairney**: a → i — Knee injury - Expected back 21 Nov
-- **King**: a → d — Groin injury - 75% chance of playing
 - **Gyabi**: i → d — Thigh injury - 75% chance of playing
 - **Gudmundsson**: a → d — Hamstring injury - 75% chance of playing
 - **Stach**: a → d — Foot injury - 50% chance of playing
