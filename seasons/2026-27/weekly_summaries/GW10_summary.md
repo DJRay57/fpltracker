@@ -66,8 +66,8 @@ _(This league doesn't use captaincy multipliers.)_
 ## Injury/Status Watch (last 7 days)
 
 - **Martinez**: i → d — Head injury - 75% chance of playing
+- **Manzambi**: a → d — Calf injury - 75% chance of playing
 - **Dasilva**: i → d — Hamstring injury - 25% chance of playing
-- **Onyeka**: a → d — Groin injury - 50% chance of playing
 - **Thiago**: a → s — Suspended until 5 Dec
 - **Baleba**: d → i — Hamstring injury - Unknown return date
 - **Acheampong**: a → d — Unspecified injury - 75% chance of playing
@@ -82,7 +82,6 @@ _(This league doesn't use captaincy multipliers.)_
 - **Maguire**: a → d — Back injury - 75% chance of playing
 - **Rashford**: d → i — Hip injury - Unknown return date
 - **Joelinton**: a → i — Unspecified injury - Unknown return date
-- **Dominguez**: d → i — Muscular injury - Expected back 30 Dec
 - **Tel**: a → d — Ankle injury - 75% chance of playing
 - **Diarra**: d → i — Muscular injury - Unknown return date
 - **Xhaka**: a → d — Calf injury - 75% chance of playing
