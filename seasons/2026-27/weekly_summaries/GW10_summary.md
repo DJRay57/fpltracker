@@ -48,44 +48,21 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Waiver Wire Activity (last 7 days)
 
-- **ADDED**: Smith → Ollie Felts
-- **ADDED**: Iwobi → Greg Woodward
-- **ADDED**: Awoniyi → Greg Woodward
-- **ADDED**: Pedro Porro → Piers Black-Hawkins
 - **ADDED**: Colwill → Alastair Michael
-- **ADDED**: Saliba → Elliott Bennett
-- **ADDED**: Acheampong → Greg Woodward
-- **DROPPED**: Xhaka (was Greg Woodward)
-- **DROPPED**: Ajayi (was Greg Woodward)
-- **DROPPED**: Mukiele (was Piers Black-Hawkins)
-- **DROPPED**: Botman (was Ollie Felts)
-- **DROPPED**: O'Reilly (was Elliott Bennett)
 - **DROPPED**: Hume (was Alastair Michael)
-- **DROPPED**: Cherif (was Greg Woodward)
 
 ## Injury/Status Watch (last 7 days)
 
-- **Martinez**: i → d — Head injury - 75% chance of playing
 - **Manzambi**: a → d — Calf injury - 75% chance of playing
-- **Dasilva**: i → d — Hamstring injury - 25% chance of playing
 - **Thiago**: a → s — Suspended until 5 Dec
-- **Baleba**: d → i — Hamstring injury - Unknown return date
 - **Acheampong**: a → d — Unspecified injury - 75% chance of playing
-- **Cairney**: a → i — Knee injury - Expected back 21 Nov
+- **Strand Larsen**: a → d — Ankle injury - 75% chance of playing
 - **Belloumi**: a → d — Hamstring injury - 75% chance of playing
-- **Gyabi**: i → d — Thigh injury - 75% chance of playing
 - **Gudmundsson**: a → d — Hamstring injury - 75% chance of playing
-- **Stach**: a → d — Foot injury - 50% chance of playing
 - **Virgil**: a → d — Unspecified injury - 75% chance of playing
 - **Guéhi**: a → d — Unspecified injury - 75% chance of playing
 - **Gvardiol**: a → d — Unspecified injury - 75% chance of playing
 - **Maguire**: a → d — Back injury - 75% chance of playing
-- **Rashford**: d → i — Hip injury - Unknown return date
-- **Joelinton**: a → i — Unspecified injury - Unknown return date
 - **Tel**: a → d — Ankle injury - 75% chance of playing
-- **Diarra**: d → i — Muscular injury - Unknown return date
 - **Xhaka**: a → d — Calf injury - 75% chance of playing
 - **Brobbey**: a → d — Muscular injury - 75% chance of playing
-- **Morita**: a → i — Groin injury - Unknown return date
-- **Sanchez**: a → i — Ankle injury - Unknown return date
-- **Wan-Bissaka**: i → d — Hamstring injury - 50% chance of playing
