@@ -48,8 +48,7 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Waiver Wire Activity (last 7 days)
 
-- **ADDED**: Colwill → Alastair Michael
-- **DROPPED**: Hume (was Alastair Michael)
+_No pickups or drops detected._
 
 ## Injury/Status Watch (last 7 days)
 
@@ -66,3 +65,5 @@ _(This league doesn't use captaincy multipliers.)_
 - **Tel**: a → d — Ankle injury - 75% chance of playing
 - **Xhaka**: a → d — Calf injury - 75% chance of playing
 - **Brobbey**: a → d — Muscular injury - 75% chance of playing
+- **Hadjam**: a → d — Unspecified injury - 75% chance of playing
+- **Andrés**: a → d — Hip injury - 75% chance of playing
