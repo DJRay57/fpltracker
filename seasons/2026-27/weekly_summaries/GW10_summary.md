@@ -52,18 +52,12 @@ _No pickups or drops detected._
 
 ## Injury/Status Watch (last 7 days)
 
+- **Cash**: s → d — Concussion - 75% chance of playing
 - **Manzambi**: a → d — Calf injury - 75% chance of playing
-- **Thiago**: a → s — Suspended until 5 Dec
-- **Acheampong**: a → d — Unspecified injury - 75% chance of playing
 - **Strand Larsen**: a → d — Ankle injury - 75% chance of playing
 - **Belloumi**: a → d — Hamstring injury - 75% chance of playing
-- **Gudmundsson**: a → d — Hamstring injury - 75% chance of playing
 - **Virgil**: a → d — Unspecified injury - 75% chance of playing
-- **Guéhi**: a → d — Unspecified injury - 75% chance of playing
-- **Gvardiol**: a → d — Unspecified injury - 75% chance of playing
 - **Maguire**: a → d — Back injury - 75% chance of playing
-- **Tel**: a → d — Ankle injury - 75% chance of playing
-- **Xhaka**: a → d — Calf injury - 75% chance of playing
 - **Brobbey**: a → d — Muscular injury - 75% chance of playing
 - **Hadjam**: a → d — Unspecified injury - 75% chance of playing
 - **Andrés**: a → d — Hip injury - 75% chance of playing
