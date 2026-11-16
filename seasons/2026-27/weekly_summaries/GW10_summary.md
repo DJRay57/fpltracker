@@ -52,12 +52,17 @@ _No pickups or drops detected._
 
 ## Injury/Status Watch (last 7 days)
 
-- **Cash**: s → d — Concussion - 75% chance of playing
+- **Zubimendi**: a → d — Hamstring injury - 75% chance of playing
+- **Cash**: a → d — Concussion - 75% chance of playing
 - **Manzambi**: a → d — Calf injury - 75% chance of playing
+- **Collins**: a → d — Knee injury - 75% chance of playing
 - **Strand Larsen**: a → d — Ankle injury - 75% chance of playing
 - **Belloumi**: a → d — Hamstring injury - 75% chance of playing
-- **Virgil**: a → d — Unspecified injury - 75% chance of playing
+- **Dorgu**: a → d — Hamstring injury - 75% chance of playing
 - **Maguire**: a → d — Back injury - 75% chance of playing
+- **N.Williams**: a → d — Ankle injury - 75% chance of playing
 - **Brobbey**: a → d — Muscular injury - 75% chance of playing
+- **Schlager**: a → d — Thigh injury - 75% chance of playing
+- **Mendy**: a → d — Knee injury - 75% chance of playing
 - **Hadjam**: a → d — Unspecified injury - 75% chance of playing
 - **Andrés**: a → d — Hip injury - 75% chance of playing
