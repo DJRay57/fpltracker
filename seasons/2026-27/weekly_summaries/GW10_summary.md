@@ -56,12 +56,15 @@ _No pickups or drops detected._
 - **Cash**: a → d — Concussion - 75% chance of playing
 - **Collins**: a → d — Knee injury - 75% chance of playing
 - **Hickey**: a → d — Hamstring injury - 75% chance of playing
+- **Caicedo**: a → d — Unspecified injury - 75% chance of playing
+- **Mason-Clark**: a → d — Knee injury - 75% chance of playing
 - **Dorgu**: a → d — Hamstring injury - 75% chance of playing
 - **N.Williams**: a → d — Ankle injury - 75% chance of playing
 - **Hudson-Odoi**: a → i — Unspecified injury - Unknown return date
 - **Xhaka**: d → i — Calf injury - Unknown return date
 - **Brobbey**: d → i — Muscular injury - Unknown return date
 - **Schlager**: a → d — Thigh injury - 75% chance of playing
+- **Yirenkyi**: a → d — Unspecified injury - 75% chance of playing
 - **Mendy**: a → d — Knee injury - 75% chance of playing
 - **Hadjam**: a → d — Unspecified injury - 75% chance of playing
 - **Andrés**: a → d — Hip injury - 75% chance of playing
