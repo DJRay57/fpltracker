@@ -154,3 +154,16 @@ _Every accepted waiver move, scored from the gameweek it took effect onward: poi
 | -33 | Jason Parmar | Martinelli (0) | Xhaka (33) | GW1 |
 | -35 | Ollie Felts | Hinshelwood (9) | E.Le Fée (44) | GW2 |
 | -46 | Ollie Felts | David (1) | Kostoulas (47) | GW1 |
+
+## Pending
+
+_Took effect from a gameweek that hasn't been played yet -- nothing to score until it has._
+
+| Manager | In | Out | Effective |
+|---|---|---|---|
+| Ollie Felts | E.Le Fée | Andrés | GW11 |
+| Greg Woodward | Branthwaite | Mitchell | GW11 |
+| Jason Parmar | Bobb | Rashford | GW11 |
+| Elliott Bennett | Scott | M.Sangaré | GW11 |
+| Piers Black-Hawkins | O'Reilly | Egan | GW11 |
+| Piers Black-Hawkins | Kluivert | Janelt | GW11 |
