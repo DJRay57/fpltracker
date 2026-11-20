@@ -167,3 +167,4 @@ _Took effect from a gameweek that hasn't been played yet -- nothing to score unt
 | Elliott Bennett | Scott | M.Sangaré | GW11 |
 | Piers Black-Hawkins | O'Reilly | Egan | GW11 |
 | Piers Black-Hawkins | Kluivert | Janelt | GW11 |
+| Greg Woodward | Kamara | Anderson | GW11 |
