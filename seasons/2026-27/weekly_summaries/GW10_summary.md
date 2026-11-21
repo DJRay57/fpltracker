@@ -48,23 +48,42 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Waiver Wire Activity (last 7 days)
 
-_No pickups or drops detected._
+- **ADDED**: Kluivert → Piers Black-Hawkins
+- **ADDED**: Kamara → Greg Woodward
+- **ADDED**: Zirkzee → Ash Cross
+- **ADDED**: O'Reilly → Piers Black-Hawkins
+- **ADDED**: Bobb → Jason Parmar
+- **ADDED**: Branthwaite → Greg Woodward
+- **ADDED**: E.Le Fée → Ollie Felts
+- **ADDED**: Scott → Elliott Bennett
+- **DROPPED**: Egan (was Piers Black-Hawkins)
+- **DROPPED**: Rashford (was Jason Parmar)
+- **DROPPED**: Janelt (was Piers Black-Hawkins)
+- **DROPPED**: Richarlison (was Ash Cross)
+- **DROPPED**: Anderson (was Greg Woodward)
+- **DROPPED**: Mitchell (was Greg Woodward)
+- **DROPPED**: M.Sangaré (was Elliott Bennett)
+- **DROPPED**: Andrés (was Ollie Felts)
 
 ## Injury/Status Watch (last 7 days)
 
-- **Zubimendi**: a → d — Hamstring injury - 75% chance of playing
-- **Cash**: a → d — Concussion - 75% chance of playing
-- **Collins**: a → d — Knee injury - 75% chance of playing
-- **Hickey**: a → d — Hamstring injury - 75% chance of playing
-- **Caicedo**: a → d — Unspecified injury - 75% chance of playing
+- **Zubimendi**: a → i — Hamstring injury - Unknown return date
+- **Cash**: a → i — Concussion - Expected back 28 Nov
+- **Lindelöf**: a → d — Illness - 75% chance of playing
+- **Collins**: a → i — Knee injury - Expected back 2 Dec
+- **Hickey**: a → i — Hamstring injury - Expected back 2 Dec
+- **Carvalho**: i → d — Knock - 75% chance of playing
+- **Dasilva**: d → i — Hamstring injury - Unknown return date
+- **Tosin**: a → i — Calf injury - Expected back 29 Nov
 - **Mason-Clark**: a → d — Knee injury - 75% chance of playing
-- **Dorgu**: a → d — Hamstring injury - 75% chance of playing
-- **N.Williams**: a → d — Ankle injury - 75% chance of playing
+- **Lecomte**: a → i — Achilles injury - Unknown return date
+- **Smith Rowe**: a → i — Hip injury - Expected back 29 Nov
+- **Darlow**: a → d — Unspecified injury - 75% chance of playing
+- **Frimpong**: i → d — Hamstring injury - 75% chance of playing
+- **Matheus N.**: a → d — Unspecified injury - 50% chance of playing
+- **Heaven**: a → d — Unspecified injury - 75% chance of playing
 - **Hudson-Odoi**: a → i — Unspecified injury - Unknown return date
+- **Tel**: d → i — Ankle injury - Expected back 6 Dec
 - **Xhaka**: d → i — Calf injury - Unknown return date
 - **Brobbey**: d → i — Muscular injury - Unknown return date
-- **Schlager**: a → d — Thigh injury - 75% chance of playing
 - **Yirenkyi**: a → d — Unspecified injury - 75% chance of playing
-- **Mendy**: a → d — Knee injury - 75% chance of playing
-- **Hadjam**: a → d — Unspecified injury - 75% chance of playing
-- **Andrés**: a → d — Hip injury - 75% chance of playing

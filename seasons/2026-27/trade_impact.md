@@ -168,3 +168,4 @@ _Took effect from a gameweek that hasn't been played yet -- nothing to score unt
 | Piers Black-Hawkins | O'Reilly | Egan | GW11 |
 | Piers Black-Hawkins | Kluivert | Janelt | GW11 |
 | Greg Woodward | Kamara | Anderson | GW11 |
+| Ash Cross | Zirkzee | Richarlison | GW11 |

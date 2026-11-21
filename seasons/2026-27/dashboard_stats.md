@@ -64,10 +64,10 @@ _If everyone played everyone every week. Strips fixture luck out entirely; the S
 | GW10 pts | Player | Pos | Team |
 |---|---|---|---|
 | 16 | Alysson | MID | AVL |
-| 11 | E.Le Fée | MID | SUN |
 | 11 | Dorgu | MID | MUN |
 | 10 | J.Murphy | MID | NEW |
 | 9 | Mukiele | DEF | SUN |
+| 9 | Mac Allister | MID | LIV |
 
 ## Trophy Cabinet
 

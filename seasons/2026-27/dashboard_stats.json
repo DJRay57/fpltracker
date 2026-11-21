@@ -704,12 +704,6 @@
       "gw_points": 16
     },
     {
-      "name": "E.Le F\u00e9e",
-      "position": "MID",
-      "team": "SUN",
-      "gw_points": 11
-    },
-    {
       "name": "Dorgu",
       "position": "MID",
       "team": "MUN",
@@ -725,6 +719,12 @@
       "name": "Mukiele",
       "position": "DEF",
       "team": "SUN",
+      "gw_points": 9
+    },
+    {
+      "name": "Mac Allister",
+      "position": "MID",
+      "team": "LIV",
       "gw_points": 9
     }
   ]
