@@ -1,6 +1,6 @@
 # Live Gameweek — GW11
 
-_State: live. 7 of 10 matches finished. Updated 2026-11-21 22:38 UTC._
+_State: live. 8 of 10 matches finished. Updated 2026-11-22 16:48 UTC._
 
 _Scores are computed from the live player feed and include provisional bonus, so they can run ahead of the official league table, which settles later._
 
@@ -10,23 +10,23 @@ _Win chances come from simulating the players still to play, drawing their score
 
 | Home | Now | Proj | Win% | Draw% | Away | Now | Proj | Win% |
 |---|---|---|---|---|---|---|---|---|
-| Jason Parmar | 30 | 42.0 | 24% | 6% | Sam Wright | 39 | 45.2 | 70% |
-| Ash Cross | 43 | 51.0 | 81% | 4% | Piers Black-Hawkins | 27 | 44.3 | 15% |
-| Greg Woodward | 16 | 27.1 | 3% | 1% | Alastair Michael | 30 | 36.7 | 96% |
-| Andrew Hutchinson | 21 | 32.2 | 56% | 6% | Ollie Felts | 21 | 31.0 | 38% |
-| chris Purnell | 15 | 22.0 | 70% | 5% | Elliott Bennett | 7 | 18.1 | 25% |
+| Jason Parmar | 35 | 38.9 | 3% | 23% | Sam Wright | 41 | 42.1 | 74% |
+| Ash Cross | 48 | 51.6 | 58% | 7% | Piers Black-Hawkins | 38 | 50.2 | 35% |
+| Greg Woodward | 17 | 31.0 | 7% | 1% | Alastair Michael | 40 | 40.0 | 92% |
+| Andrew Hutchinson | 27 | 37.1 | 46% | 7% | Ollie Felts | 28 | 37.3 | 47% |
+| chris Purnell | 20 | 27.0 | 91% | 3% | Elliott Bennett | 16 | 20.2 | 6% |
 
 ## Live Scores
 
 | Manager | Now | Projection | Players left |
 |---|---|---|---|
-| Ash Cross | 43 | 51.0 | 5 |
-| Sam Wright | 39 | 45.2 | 2 |
-| Jason Parmar | 30 | 42.0 | 3 |
-| Alastair Michael | 30 | 36.7 | 3 |
-| Piers Black-Hawkins | 27 | 44.3 | 5 |
-| Andrew Hutchinson | 21 | 32.2 | 3 |
-| Ollie Felts | 21 | 31.0 | 3 |
-| Greg Woodward | 16 | 27.1 | 3 |
-| chris Purnell | 15 | 22.0 | 3 |
-| Elliott Bennett | 7 | 18.1 | 4 |
+| Ash Cross | 48 | 51.6 | 3 |
+| Sam Wright | 41 | 42.1 | 1 |
+| Alastair Michael | 40 | 40.0 | 0 |
+| Piers Black-Hawkins | 38 | 50.2 | 3 |
+| Jason Parmar | 35 | 38.9 | 1 |
+| Ollie Felts | 28 | 37.3 | 3 |
+| Andrew Hutchinson | 27 | 37.1 | 3 |
+| chris Purnell | 20 | 27.0 | 3 |
+| Greg Woodward | 17 | 31.0 | 3 |
+| Elliott Bennett | 16 | 20.2 | 2 |
