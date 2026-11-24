@@ -4,8 +4,8 @@ _Projected starting XI score = 50% season PPG so far + 50% current squad's summe
 
 | Home | Proj | Win% | Draw% | Proj | Away | Win% |
 |---|---|---|---|---|---|---|
-| Jason Parmar | 41.1 | 47% | 3% | 41.3 | Sam Wright | 50% |
-| Ash Cross | 38.2 | 33% | 2% | 44.8 | Piers Black-Hawkins | 65% |
-| Greg Woodward | 30.9 | 27% | 2% | 39.4 | Alastair Michael | 71% |
-| Andrew Hutchinson | 38.8 | 41% | 2% | 41.6 | Ollie Felts | 57% |
-| chris Purnell | 37.6 | 62% | 3% | 32.3 | Elliott Bennett | 35% |
+| Jason Parmar | 41.1 | 48% | 2% | 41.3 | Sam Wright | 50% |
+| Ash Cross | 38.2 | 32% | 2% | 45.1 | Piers Black-Hawkins | 66% |
+| Greg Woodward | 31.2 | 27% | 2% | 39.6 | Alastair Michael | 71% |
+| Andrew Hutchinson | 38.8 | 41% | 2% | 41.8 | Ollie Felts | 57% |
+| chris Purnell | 37.0 | 61% | 3% | 32.3 | Elliott Bennett | 36% |

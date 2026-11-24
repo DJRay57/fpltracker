@@ -79,6 +79,7 @@ _(This league doesn't use captaincy multipliers.)_
 - **Mason-Clark**: a → d — Knee injury - 75% chance of playing
 - **Mingueza**: a → d — Thigh injury - 75% chance of playing
 - **Yeremy**: a → s — Suspended until 2 Dec
+- **Tarkowski**: a → s — Suspended until 13 Dec
 - **Iroegbunam**: a → i — Hamstring injury - Unknown return date
 - **Lecomte**: a → i — Achilles injury - Unknown return date
 - **Smith Rowe**: a → i — Hip injury - Expected back 29 Nov
