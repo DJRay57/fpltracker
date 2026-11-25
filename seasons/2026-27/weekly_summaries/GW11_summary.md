@@ -69,9 +69,8 @@ _(This league doesn't use captaincy multipliers.)_
 
 - **Raya**: a → d — Shoulder injury - 50% chance of playing
 - **Zubimendi**: d → i — Hamstring injury - Unknown return date
-- **Lindelöf**: a → d — Illness - 75% chance of playing
 - **Collins**: d → i — Knee injury - Expected back 2 Dec
-- **Hickey**: a → i — Hamstring injury - Expected back 2 Dec
+- **Hickey**: d → i — Hamstring injury - Expected back 2 Dec
 - **Dasilva**: d → i — Hamstring injury - Unknown return date
 - **Costinha**: a → s — Suspended until 2 Dec
 - **Tosin**: a → i — Calf injury - Expected back 29 Nov
@@ -88,7 +87,7 @@ _(This league doesn't use captaincy multipliers.)_
 - **Gelhardt**: a → i — Thigh injury - Unknown return date
 - **Gakpo**: a → d — Calf injury - 75% chance of playing
 - **Sávio**: i → d — Hamstring injury - 75% chance of playing
-- **Yoro**: a → s — Suspended until 2 Dec
+- **Shaw**: i → d — Unspecified injury - 75% chance of playing
 - **Hall**: a → d — Unspecified injury - 75% chance of playing
 - **Hudson-Odoi**: a → i — Unspecified injury - Unknown return date
 - **Awoniyi**: a → d — Ankle injury - 75% chance of playing
