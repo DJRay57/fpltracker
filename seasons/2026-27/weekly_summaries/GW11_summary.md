@@ -72,6 +72,7 @@ _(This league doesn't use captaincy multipliers.)_
 - **Collins**: d → i — Knee injury - Expected back 2 Dec
 - **Hickey**: d → i — Hamstring injury - Expected back 2 Dec
 - **Dasilva**: d → i — Hamstring injury - Unknown return date
+- **Boscagli**: a → d — Illness - 75% chance of playing
 - **Costinha**: a → s — Suspended until 2 Dec
 - **Tosin**: a → i — Calf injury - Expected back 29 Nov
 - **Caicedo**: a → d — Back injury - 75% chance of playing
@@ -83,17 +84,13 @@ _(This league doesn't use captaincy multipliers.)_
 - **Lecomte**: a → i — Achilles injury - Unknown return date
 - **Smith Rowe**: a → i — Hip injury - Expected back 29 Nov
 - **Davis**: a → d — Calf injury - 75% chance of playing
-- **Darlow**: a → d — Unspecified injury - 75% chance of playing
 - **Gelhardt**: a → i — Thigh injury - Unknown return date
-- **Gakpo**: a → d — Calf injury - 75% chance of playing
+- **Gakpo**: a → i — Calf injury - Expected back 2 Dec
+- **Gravenberch**: d → i — Foot injury - Unknown return date
 - **Sávio**: i → d — Hamstring injury - 75% chance of playing
-- **Shaw**: i → d — Unspecified injury - 75% chance of playing
 - **Hall**: a → d — Unspecified injury - 75% chance of playing
-- **Hudson-Odoi**: a → i — Unspecified injury - Unknown return date
 - **Awoniyi**: a → d — Ankle injury - 75% chance of playing
 - **Danso**: a → n — Ineligible to face parent club - Expected back 2 Dec
 - **Tel**: d → i — Ankle injury - Expected back 6 Dec
-- **Xhaka**: d → i — Calf injury - Unknown return date
-- **Brobbey**: d → i — Muscular injury - Unknown return date
 - **Yirenkyi**: a → d — Unspecified injury - 75% chance of playing
 - **Yalcouyé**: a → i — Unspecified injury - Unknown return date
