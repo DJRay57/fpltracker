@@ -162,3 +162,14 @@ _Every accepted waiver move, scored from the gameweek it took effect onward: poi
 | -33 | Elliott Bennett | Livramento (1) | Ajer (34) | GW5 |
 | -37 | Ollie Felts | Hinshelwood (10) | E.Le Fée (47) | GW2 |
 | -47 | Ollie Felts | David (1) | Kostoulas (48) | GW1 |
+
+## Pending
+
+_Took effect from a gameweek that hasn't been played yet -- nothing to score until it has._
+
+| Manager | In | Out | Effective |
+|---|---|---|---|
+| Alastair Michael | Ajayi | Colwill | GW12 |
+| Andrew Hutchinson | Lewis-Potter | Caicedo | GW12 |
+| Ollie Felts | Okafor | Schade | GW12 |
+| Ash Cross | Muniz | Zirkzee | GW12 |
