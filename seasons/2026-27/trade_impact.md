@@ -175,3 +175,5 @@ _Took effect from a gameweek that hasn't been played yet -- nothing to score unt
 | Ash Cross | Muniz | Zirkzee | GW12 |
 | Sam Wright | Elvedi | Robertson | GW12 |
 | Ash Cross | Mukiele | Maitland-Niles | GW12 |
+| Greg Woodward | Williams-Barnett | Iwobi | GW12 |
+| Greg Woodward | Martinez | Penders | GW12 |
