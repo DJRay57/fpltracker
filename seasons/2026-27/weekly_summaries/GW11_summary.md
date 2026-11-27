@@ -48,14 +48,19 @@ _(This league doesn't use captaincy multipliers.)_
 
 ## Waiver Wire Activity (last 7 days)
 
+- **ADDED**: Ajayi → Alastair Michael
+- **ADDED**: Mukiele → Ash Cross
 - **ADDED**: Kluivert → Piers Black-Hawkins
 - **ADDED**: Kamara → Greg Woodward
-- **ADDED**: Zirkzee → Ash Cross
+- **ADDED**: Muniz → Ash Cross
+- **ADDED**: Lewis-Potter → Andrew Hutchinson
+- **ADDED**: Okafor → Ollie Felts
 - **ADDED**: O'Reilly → Piers Black-Hawkins
 - **ADDED**: Bobb → Jason Parmar
 - **ADDED**: Branthwaite → Greg Woodward
 - **ADDED**: E.Le Fée → Ollie Felts
 - **ADDED**: Scott → Elliott Bennett
+- **ADDED**: Elvedi → Sam Wright
 - **DROPPED**: Egan (was Piers Black-Hawkins)
 - **DROPPED**: Rashford (was Jason Parmar)
 - **DROPPED**: Janelt (was Piers Black-Hawkins)
@@ -69,15 +74,13 @@ _(This league doesn't use captaincy multipliers.)_
 
 - **Raya**: a → d — Shoulder injury - 50% chance of playing
 - **Zubimendi**: d → i — Hamstring injury - Unknown return date
+- **Kroupi.Jr**: a → d — Illness - 75% chance of playing
 - **Collins**: d → i — Knee injury - Expected back 2 Dec
 - **Hickey**: d → i — Hamstring injury - Expected back 2 Dec
 - **Dasilva**: d → i — Hamstring injury - Unknown return date
 - **Boscagli**: a → d — Illness - 75% chance of playing
 - **Costinha**: a → s — Suspended until 2 Dec
 - **Tosin**: a → i — Calf injury - Expected back 29 Nov
-- **Caicedo**: a → d — Back injury - 75% chance of playing
-- **Mason-Clark**: a → d — Knee injury - 75% chance of playing
-- **Mingueza**: a → d — Thigh injury - 75% chance of playing
 - **Yeremy**: a → s — Suspended until 2 Dec
 - **Tarkowski**: a → s — Suspended until 13 Dec
 - **Iroegbunam**: a → i — Hamstring injury - Unknown return date
@@ -87,10 +90,11 @@ _(This league doesn't use captaincy multipliers.)_
 - **Gelhardt**: a → i — Thigh injury - Unknown return date
 - **Gakpo**: a → i — Calf injury - Expected back 2 Dec
 - **Gravenberch**: d → i — Foot injury - Unknown return date
+- **Munoz**: a → d — Knee injury - 75% chance of playing
 - **Sávio**: i → d — Hamstring injury - 75% chance of playing
 - **Hall**: a → d — Unspecified injury - 75% chance of playing
-- **Awoniyi**: a → d — Ankle injury - 75% chance of playing
+- **Awoniyi**: a → i — Ankle injury - Unknown return date
 - **Danso**: a → n — Ineligible to face parent club - Expected back 2 Dec
 - **Tel**: d → i — Ankle injury - Expected back 6 Dec
-- **Yirenkyi**: a → d — Unspecified injury - 75% chance of playing
 - **Yalcouyé**: a → i — Unspecified injury - Unknown return date
+- **Methalie**: a → d — Illness - 75% chance of playing
