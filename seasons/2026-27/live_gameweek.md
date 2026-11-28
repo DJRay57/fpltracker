@@ -1,6 +1,6 @@
 # Live Gameweek — GW12
 
-_State: pre. 0 of 10 matches finished. Updated 2026-11-27 18:36 UTC._
+_State: live. 1 of 10 matches finished. Updated 2026-11-28 03:00 UTC._
 
 _Scores are computed from the live player feed and include provisional bonus, so they can run ahead of the official league table, which settles later._
 
@@ -10,23 +10,23 @@ _Win chances come from simulating the players still to play, drawing their score
 
 | Home | Now | Proj | Win% | Draw% | Away | Now | Proj | Win% |
 |---|---|---|---|---|---|---|---|---|
-| Ollie Felts | 0 | 35.4 | 44% | 3% | Jason Parmar | 0 | 37.2 | 53% |
-| Alastair Michael | 0 | 36.2 | 82% | 2% | Elliott Bennett | 0 | 25.6 | 16% |
-| Piers Black-Hawkins | 0 | 43.6 | 82% | 2% | chris Purnell | 0 | 31.4 | 16% |
-| Sam Wright | 0 | 30.9 | 37% | 3% | Andrew Hutchinson | 0 | 34.2 | 60% |
-| Ash Cross | 0 | 40.5 | 91% | 1% | Greg Woodward | 0 | 24.9 | 8% |
+| Ollie Felts | 0 | 30.4 | 33% | 3% | Jason Parmar | 3 | 34.8 | 64% |
+| Alastair Michael | 0 | 30.8 | 71% | 3% | Elliott Bennett | 2 | 24.3 | 26% |
+| Piers Black-Hawkins | 13 | 48.2 | 96% | 1% | chris Purnell | 0 | 25.3 | 3% |
+| Sam Wright | 0 | 26.4 | 47% | 4% | Andrew Hutchinson | 6 | 27.1 | 49% |
+| Ash Cross | 0 | 32.6 | 59% | 3% | Greg Woodward | 13 | 29.3 | 38% |
 
 ## Live Scores
 
 | Manager | Now | Projection | Players left |
 |---|---|---|---|
-| Jason Parmar | 0 | 37.2 | 11 |
-| Sam Wright | 0 | 30.9 | 11 |
-| Ash Cross | 0 | 40.5 | 11 |
-| Greg Woodward | 0 | 24.9 | 11 |
-| Andrew Hutchinson | 0 | 34.2 | 11 |
-| chris Purnell | 0 | 31.4 | 11 |
-| Elliott Bennett | 0 | 25.6 | 11 |
-| Ollie Felts | 0 | 35.4 | 11 |
-| Alastair Michael | 0 | 36.2 | 11 |
-| Piers Black-Hawkins | 0 | 43.6 | 11 |
+| Greg Woodward | 13 | 29.3 | 7 |
+| Piers Black-Hawkins | 13 | 48.2 | 10 |
+| Andrew Hutchinson | 6 | 27.1 | 9 |
+| Jason Parmar | 3 | 34.8 | 10 |
+| Elliott Bennett | 2 | 24.3 | 10 |
+| Sam Wright | 0 | 26.4 | 11 |
+| Ash Cross | 0 | 32.6 | 11 |
+| chris Purnell | 0 | 25.3 | 11 |
+| Ollie Felts | 0 | 30.4 | 11 |
+| Alastair Michael | 0 | 30.8 | 11 |

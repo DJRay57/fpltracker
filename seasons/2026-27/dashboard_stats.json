@@ -715,12 +715,6 @@
       "gw_points": 13
     },
     {
-      "name": "Williams-Barnett",
-      "position": "MID",
-      "team": "TOT",
-      "gw_points": 13
-    },
-    {
       "name": "Yeremy",
       "position": "MID",
       "team": "CRY",
@@ -736,6 +730,12 @@
       "name": "Anderson",
       "position": "MID",
       "team": "MCI",
+      "gw_points": 10
+    },
+    {
+      "name": "Anthony",
+      "position": "MID",
+      "team": "BRE",
       "gw_points": 10
     }
   ]

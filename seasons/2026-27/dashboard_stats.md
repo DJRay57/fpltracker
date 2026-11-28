@@ -64,10 +64,10 @@ _If everyone played everyone every week. Strips fixture luck out entirely; the S
 | GW11 pts | Player | Pos | Team |
 |---|---|---|---|
 | 13 | Ngumoha | MID | LIV |
-| 13 | Williams-Barnett | MID | TOT |
 | 12 | Yeremy | MID | CRY |
 | 10 | Janelt | MID | BRE |
 | 10 | Anderson | MID | MCI |
+| 10 | Anthony | MID | BRE |
 
 ## Trophy Cabinet
 
